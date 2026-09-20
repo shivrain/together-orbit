@@ -1,0 +1,89 @@
+name: Publish Orbit and refresh portfolio reports
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'public/data/monitoring.json'
+      - 'monitoring/**'
+      - 'scripts/monitor_portfolio.py'
+      - '.github/workflows/portfolio-monitor.yml'
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Run a website scan now, even if not due or paused
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Serialize report commits and deployments. Do not cancel a scan halfway through.
+concurrency:
+  group: orbit-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Set up Python
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh public website report when due
+        if: github.event_name != 'push'
+        env:
+          FORCE_SCAN: ${{ github.event_name == 'workflow_dispatch' && inputs.force || false }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=()
+          if [[ "$FORCE_SCAN" == "true" ]]; then
+            args+=(--force)
+          fi
+          python scripts/monitor_portfolio.py "${args[@]}"
+
+      - name: Save report and baseline history
+        if: github.event_name != 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add monitoring/baselines.json public/data/monitoring.json docs/data/monitoring.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Refresh public portfolio website report'
+            git push origin HEAD:main
+          fi
+
+      # The same run deploys its report. A GITHUB_TOKEN push does not start a Pages build.
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the complete standalone website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
