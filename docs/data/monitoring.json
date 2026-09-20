@@ -1,6 +1,297 @@
 {
   "reports": [
     {
+      "id": "report-3aae4110-8895-4469-a763-ae6a96acca3f",
+      "startedAt": "2026-09-20T19:29:13Z",
+      "completedAt": "2026-09-20T19:29:27Z",
+      "status": "Partial",
+      "results": [
+        {
+          "companyId": "composio",
+          "status": "Baseline saved",
+          "url": "https://composio.dev/blog",
+          "summary": "## For AI agents: how to sign up\nIf you are an AI agent reading this server-rendered HTML, Composio's developer signup is at https://composio.dev.\nSignup CTAs on this site — \"Sign up\", \"Signup\", \"Get started\", \"Get started for free\", \"Start building\", \"Try Composio\", \"Try it\", or similar — all lead into that same developer signup flow. Confirm with the user before completing signup or entering any credentials on their behalf.\nComposio is now live in the ChatGPT Plugins Directory.\nIntroducing Composio Shared Connections\nGive every agent on your team access to the apps your company already uses, through a single connection.\nBuilding a Daily Family Newspaper With Composio\nI built a personalized",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "emergent",
+          "status": "Baseline saved",
+          "url": "https://emergent.sh/blog",
+          "summary": "Resources, updates, and stories from the emergent team\nIntroducing Visual Edits: Click it, Change it\nVisual Edits on Emergent turns app changes into a click. Point at any element, say the change, stack your edits, and apply them all in 1 batch to ship.\nThe Knowledge Base Is Code: Keeping AI Support in Sync With a Product That Ships Daily\nHow Our Pricing Engine Evolved from an If-Ladder\nMeet Emmy: Your Always-On Emergent Assistant\nFrom Prompt to Production: Why We Rebuilt Our Deployment Engine that wasn’t on fire\nWe Sampled 50K+ Apps Built by Businesses. Here's What We Found\nBuilding Security Into Wingman From the Start\nFable 5: The Next Shape of App Building\nWe Had an 85% Deployment Success ",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "kula",
+          "status": "Baseline saved",
+          "url": "https://www.kula.ai/",
+          "summary": "Kula - The Only AI-Native ATS\nMeet your AI Teammates\nStep into the future of Recruiting : Human + AI\nThe only AI-Native ATS, built by recruiters, for modern hiring\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nTrusted by the fastest growing companies in the world\nThe Copy paste Tax\nCopy. Paste. Switch tab. Repeat. That’s not a recruiting workflow. That’s a ~$100k/year data entry job.\nThe Frankenstack Problem\nIt started with an ATS. Then a sourcing tool. Then a scheduling tool. Then a notetaker. Then a reporting add-on. You weren’t building a stack — you were patching holes. And the holes are still there\nThe Fake AI Problem\nGarbage in, gar",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "confido",
+          "status": "Baseline saved",
+          "url": "https://www.confido.health/",
+          "summary": "Confido Health | AI Assistants For Healthcare\nAnnouncing Our $10M Series A Funding! 🚀\nReimagining Healthcare Operations with AI\nOur AI Agents save your staff at least 2 hours every day by handling routine tasks and giving your team more time to focus on patient care.\nTrusted by Leading\nHealthcare Providers Nationwide\nConfido Health has enabled access for over 1 million patients, ensuring timely care and more meaningful interactions between providers and patients.\nIndustry is short by 6.5 million staff, excluding doctors, in 2023\nHigh cost of operations\nThe shortage has led to constrained patient access, overworked staff, and reduced margins\nOur AI Agents work 24/7 alongside your team, handli",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "runable",
+          "status": "Baseline saved",
+          "url": "https://runable.com/careers",
+          "summary": "Careers at Runable\nWe have raised $21M to help grow your business\n5 open positions across Bangalore.\nAll locationsBangalore\nAll departmentsEngineeringGrowth\nStaff Software Engineer\nBangalore, On-site\nSenior Software Engineer\nGrowth Engineer (GTM)\nGrowth Engineer Intern (New Grad)\nSoftware Engineer Intern (New Grad)\nA different kind of work\nWe're not making another place to chat with AI. We're making the place work gets finished.\nBuilding now, from Bangalore\nMake the impossible feel like a first draft.\nWe turn intent into work people can actually use.\nCare about the last ten percent.\nThe finish is the product, not a handoff to someone else.\nSmall enough to know every pixel matters.\nDirect own",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "rapid-claims",
+          "status": "Baseline saved",
+          "url": "https://www.rapidclaims.ai/",
+          "summary": "RCM Simplified, at Scale\nCapture every dollar of earned revenue\nFrost & Sullivan 2025 Technology Innovation Leader\nAutonomous agents that code charts, improve documentation, prevent denials, and recover revenue with full compliance and control.\nCalculate your ROIGo live in weeks. See ROI in 30 days.\nTrusted by Leading Healthcare Organizations\nThe OS for your mid revenue cycle.\nDrag the slider. See what changes for every role — CDI, coding, denials, finance.\nFriction at every desk.\nCDI chasing queries. Coding behind. Denials weeks late.\nDay 0Day 3Day 7Day 10Day 14\nFriction at every desk\nSarah · CDI lead. Chases physicians for queries from last week. 3-day average response time.\nDavid · CFO. S",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "bytebeam",
+          "status": "Baseline saved",
+          "url": "https://www.bytebeam.io/",
+          "summary": "Bytebeam: Integrated Solutions for Connected Vehicles\nSimplifying connectivity for next-gen IoT devices\nBytebeam is your all-in-one platform to connected devices. From seamless integration and real-time monitoring to over-the-air updates and remote diagnostics, Bytebeam accelerates your product development, enhances user experience, and helps you scale with confidence.\nOne stop solution to all IoT device use cases\nPredictive Maintenance\nDeep OTA Management\nAlerts & Notifications\nRemote Diagnostics\nConfiguration Management\nBytebeam handles 1M data points per device per hour for Exponent Energy\nBytebeam's secure data monitoring and streaming services help Exponent evaluate battery conditions t",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:13Z"
+        },
+        {
+          "companyId": "spendflo",
+          "status": "Baseline saved",
+          "url": "https://www.spendflo.com/",
+          "summary": "Spendflo | Meet Flo. AI Agents for Procurement.\nBook a demo to learn how Spendflo can deliver spend control, compliance, and efficiency for your business.\nYou can schedule a meeting time on the next screen.\nProcurement and Finance, Powered by One AI Workforce.\nFrom sourcing and contracting to purchasing, invoices and payment workflows, Spendflo helps every procurement process move faster with AI working alongside your team.\nBook a DemoMeet your AI Workforce\nfaster procurement cycle\nreduction in approval times\nhours reclaimed per year\nSpendflo for Finance and Procurement\nBuilt for Procurement and Finance teams who own the number and do the work.\nDeploy an army of AI agents, analysts, and assi",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "thesys",
+          "status": "Baseline saved",
+          "url": "https://www.thesys.dev/",
+          "summary": "Thesys - The Generative UI Company\nOpenUI Cloud is here.View Docs\nMake AI Appsrespond with DashboardsFormsChartsDashboardsSlidesReportsForms\nThesys provides the Generative UI foundation for teams building AI products that go beyond text.\nTell me about the correlation between our Ad spends and salesTry demo\nChartsCardsDashboardsSlidesReports\nTrusted by the best AI-native teams\nRead customer stories",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "zipy",
+          "status": "Baseline saved",
+          "url": "https://www.zipy.ai/",
+          "summary": "Zipy: AI Session Replays, Error Tracking & Analytics\nAI Debugging OS for Product & Frontend Teams.\nZipy enables engineers and PMs to debug real-user issues 10× faster with AI-driven session intelligence, error tracking, and UX analytics—across web and mobile.\nTry for FreeTake a Tour\nSee how thousands of Engineering, Product and Marketing Teams are accelerating their growth with Zipy.\nFor the teams building what’s next\nReal Results From Industry Leaders\nExplore how Zipy surfaces critical data, giving teams complete visibility into their production environments. Read all case studies.\nZipy AI has freed up nearly 50% of developer bandwidth previously lost in reproducing and fixing bugs.\nHead of",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "scalekit",
+          "status": "Baseline saved",
+          "url": "https://www.scalekit.com/",
+          "summary": "Authentication & Authorization for Agents | Scalekit\nEvaluating Composio?\nSerious teams choose Scalekit.\nAuthentication & Authorization for agents\nLet your agents act as the user.\n‍Not a shared service account.\nYour agent calls tools. Our auth runtime handles the OAuth flows, token refresh, and credential storage in between.\nnpx @scalekit-inc/cli setup\nTalk to an Engineer\nTrusted by teams shipping agents to production\nOne MCP proxy between\n‍your agent and any tool it calls.\nOne SDK call handles the token, the scoped tool call, and the structured response. Tokens never enter your agent or the model.\nBuilt-in token vault\nDelegated authentication\nTokens stored in an AES-256 encrypted vault. OAu",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "status": "Baseline saved",
+          "url": "https://www.sprypt.com/",
+          "summary": "SPRY : Physical Therapy Software - #1 Rated Software for PT, OT and SLP\nSPRY partners with Luna to advance the next generation of in-home rehabilitation\n#1 EHR for PT/OT Rehab\nThe AI-Native Platform Built for Outpatient Rehab\nSPRY connects intake, scheduling, documentation, prior auth, billing, collections, and reporting on one platform. Clinicians stay present. Billers work the exceptions. Owners grow without adding overhead.\nTrusted by 1000+ Rehab Clinics\nReal Outcomes from Rehab Teams Using SPRY\nSee how outpatient rehab clinics are using SPRY to reduce documentation burden, clean up claims, and grow with more visibility across the clinic day.\nI actually enjoy doing notes to some degree no",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "wispr-flow",
+          "status": "Baseline saved",
+          "url": "https://wisprflow.ai/",
+          "summary": "Wispr Flow | Effortless Voice Dictation\nWispr Flow Notetaker is now available on Windows and Mac.\nWispr raises $81M to build the Voice OS.\nWISPR FLOW Dictation\nThe voice-to-text AI that turns speech into clear, polished writing in every app.\nAvailable on Mac, Windows, iPhone, and Android\nUsed by professionals at\n4x faster than typing\nVoice that finally works is here. Flow lets you create, code, message, and write at the speed of thought, 4x faster than your keyboard.\nHey so um can you actually wait can you tell\nthe team that the the launch is gonna slip I think to like not Friday the following Monday because we're still waiting on uh legal to sign off on the the new terms page and uh yeah ju",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "metaforms",
+          "status": "Baseline saved",
+          "url": "https://www.metaforms.ai/",
+          "summary": "Metaforms — AI infrastructure for research delivery teams\nHonest and Grounded AI infrastructure for every research delivery team.\nHonest and GroundedAI infrastructure for every research delivery team.\nMetaforms helps market research agencies and sample providers standardize and scale delivery with agents that work alongside their team at every step, on workflows they already know and use.\n35+ research agencies use Metaforms for their research ops\nImprove programming efficiency\nGenerate surveys in reviewable batches so programmers stay on the parts that need a decision.\nIncrease delivery capacity\nTake on more projects without adding headcount or stretching the team thin.\nProtect quality and m",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "protecto",
+          "status": "Baseline saved",
+          "url": "https://www.protecto.ai/",
+          "summary": "AI Data Control Plane For Agentic AI | Protecto\nAI Data Control Plane\nProtect Enterprise Data Across Every AI Interaction\nOne platform across LLMs, agents, and MCP pipelines. Protecto integrates across your AI stack to protect enterprise data wherever it flows. It detects sensitive information, masks it in real time, enforces who sees what, and logs everything.\nTry the Live PII Demo\nDetection accuracy\nWhat data is this user allowed to see or use?\nWhat retrieved content can safely enter the AI context?\nWhat data agents are allowed to read, use, and share?\nWhat exact fields does this approved action need?\nWhat data should be allowed to reach the model?\nAI data control plane\nDetects and protect",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "securden",
+          "status": "Baseline saved",
+          "url": "https://www.securden.com/",
+          "summary": "Securden – The World’s First Unified Identity Security Platform | Unifying PAM, EPM, IGA, CIEM & AI\nSecurden is one among the top 150 fastest-growing cybersecurity startups in the world. Learn more.\nDesigned for the AI Era\nThe World’s First Truly\nUnified Identity Security Platform\nSecurden is the only platform that unifies PAM, EPM, IGA, CIEM, and AI Agent Security in a single package to protect the full spectrum of modern identities—human, machine, and AI.\nNo fragmented tools.\nJust one value-packed platform.\nYou have more identities than ever.\nLess control than you think.\nEnterprises are in the midst of The Identity Crisis. Identities are exploding across users, machines, AI, and cloud – bu",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "revenue-hero",
+          "status": "Baseline saved",
+          "url": "https://www.revenuehero.io/",
+          "summary": "RevenueHero | Lead routing and scheduling you can explain\n🚀 Introducing the Attio native integration : Match, qualify, and route leads to the right rep in under 3 seconds. Every booking and account owner syncs back to the Attio automatically Learn more →\nSign InBook a Demo\nLead routing and scheduling\nyou can finally explain.\nRevenueHero books every meeting with the right rep, on rules you set, and can tell you why it went there.\n500+ B2B companies route and schedule leads with RevenueHero\nWhat really sold us on RevenueHero is the excellent team and support we’ve had from implementation onward.\nDirector of Operations\nThanks to RevenueHero, we’re able to book meetings with 75%+ of qualified in",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "hunar",
+          "status": "Baseline saved",
+          "url": "https://hunar.ai/",
+          "summary": "AI HRs for frontline workforce management | Hunar.ai\nTurn conversations into better workforce outcomes.\nVoice AI and autonomous HR operations for sourcing, onboarding, engagement, retention, and everything in between.\nVoice AI calls every applicant in their language and screens for role fit.\nLearn about hiring\nVoice AI guides new hires through documentation and compliance checks.\nLearn about onboarding\nTraining & Engaging\nRuns voice-based training and skill checks in workers’ own language.\nLearn about training\nHunar makes workforce\nmanagement efficient for every scale.\nWe help businesses build, manage, and engage their workforce at scale through AI-powered conversations.\nConversational Voice",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "hivel",
+          "status": "Baseline saved",
+          "url": "https://www.hivel.ai/",
+          "summary": "Software Engineering Analytics Platform | Hivel\nGet the full picture on your AI adoption and impact.\nWe'll show you exactly how AI is impacting your speed and code quality.\nFREE AI ROI REPORT\nMaximize your organization's AI ROI with the SURGE Framework today - Download Now ➤\nFree AI ROI Report\nThe ROI of AI · SURGE Framework by Hivel\nIs your AI actually working?\nKnow it. Prove it. Improve it.\nSURGE-Hivel's five-question framework for the ROI of AI-runs on a context graph that maps every AI tool, commit, and deploy to the same engineers, teams, and projects.\nSpend - know where the dollars go\nOne view of cost across every tool, model, and team: license cost per seat, variable token and usage s",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "rocket",
+          "status": "Baseline saved",
+          "url": "https://www.rocket.new/",
+          "summary": "Rocket | AI App Builder & Vibe Solutioning Platform\n1.5 million people have tried Rocket across 180 countries.\nMost AI tools help you build faster.\nNone of them tell you what to build.\nOr how to win after you build.\nRocket is the world's first Vibe Solutioning platform.\nResearch the market. Decide what to build. Ship it. Watch what your\ncompetition does next. One system. One shared context.\nThree capabilities. One system. One shared context.\nStart anywhere- Rocket carries everything you already know into your next step.\nDescribe any market problem, decision, or opportunity. Rocket returns research, evidence, and a clear recommendation. Ready to present, ready to build from.\nPRD and product d",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:14Z"
+        },
+        {
+          "companyId": "architect-labs",
+          "status": "Failed",
+          "url": "https://architectchips.com/",
+          "summary": "No readable public page text; the source may require JavaScript or sign-in",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:15Z"
+        },
+        {
+          "companyId": "capitol",
+          "status": "Baseline saved",
+          "url": "https://www.capitol.ai/",
+          "summary": "Capitol AI — Clarity on Command\nClarity on Command\nTurn your data into decision-grade outputs through no-code-necessary AI workflows, designed for when output quality, governance, and speed are mission-critical.\nFor work that has to hold up.\nChat tools answer questions. Capitol AI transforms institutional knowledge and expertise into governed, repeatable workflows. Your data remains protected, operating within your existing controls and providing the auditability required for high-stakes enterprise decisions.\nSecurely use approved data where it already lives instead of moving files into one-off chats.\nInstitutional workflows.\nTurn individual methods into canonical workflows the whole organiz",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:15Z"
+        },
+        {
+          "companyId": "chaotix-ai",
+          "status": "Baseline saved",
+          "url": "https://chaotix.ai/",
+          "summary": "Make Your Own Free AI Generated Game From Text With Chaotix.ai\nNo CodingCreate Games in\nWe’ve built a powerful AI game generator from text. This is real text to game AI. Our games AI builds entire games, unique levels, and cutscenes in seconds. Our ultimate AI game generator brings your ideas to reality instantly.\nYour first artificial intelligence game is just the starting line. Tweak the storyline, add more levels, or modify the ending. Turn your base game made with AI text prompt into a masterpiece with our AI text to game generator and editor.\nDo I need to know how to code to make a game?\nNo. Chaotix is a 100% no-code platform. Your ideas are all you need. You type the prompts, and our g",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:15Z"
+        },
+        {
+          "companyId": "coreworks",
+          "status": "Baseline saved",
+          "url": "https://www.coreworks.ai/",
+          "summary": "Coreworks | AI-Powered Business Intelligence\nNEWAnnouncing our $5M Seed RoundRead More\nYour data has a story.\nWe help you tell it.\nCoreworks reads your data and builds an editable report or presentation, with every number fully traceable to its source.\nNo credit card needed · See your first deck in 5 minutes\n$5MSeed round raised\n2,300+Presentations created\n0Data analysts or designers needed\nThe old way of building reports is broken.\nSpending 2–3 days assembling a presentation\nA number gets questioned in a meeting and you can't trace where it came from\nChasing teammates for \"the latest version\" of the spreadsheet\nReformatting the same template for the fifth time this quarter\nYour analyst is t",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:15Z"
+        },
+        {
+          "companyId": "dreamteam",
+          "status": "Baseline saved",
+          "url": "https://dreamteam.co/",
+          "summary": "Dreamteam - AI-Native CRM Software\nSkip to Main Content\nthat works while you sell\nA CRM that understands your company context automatically, reasons like a human, and gets work done through specialised AI teammates\nThank you for your submission!\nOops! Something went wrong while submitting the form.\nNo credit card. No setup fees. Get started free.\nYour GTM command center\nDreamteam CRM plans your day and tells you exactly what to do\nEvery sales call is full of intel.\n‍Most CRMs capture none of it\nDreamteam extracts the signals that matter from every email, call, and meeting, automatically. Competitor mentions, objections, stakeholder sentiment - all captured, stored, and searchable.\nYour Perso",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:15Z"
+        },
+        {
+          "companyId": "gibran",
+          "status": "Baseline saved",
+          "url": "https://gibran.ai/",
+          "summary": "We are building intelligence that unlocks causal knowledge and augments human autonomy.\nWe are pioneering the next major transition. Shaped by the biological principles that govern intelligence across natural systems and enabled the rise of human cognition, Gibran moves beyond isolated, inward-looking limits to unlock the frontier of discovery through the self-organizing mechanisms of evolutionary biology.\nBy shifting the focus from individual learning to the collective wisdom of interacting populations, we have created an intelligence that continuously generates its own novel data to solve problems where information is sparse, noisy, or causally opaque. This approach achieves compounding in",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:16Z"
+        },
+        {
+          "companyId": "jhana",
+          "status": "Baseline saved",
+          "url": "https://jhana.ai/",
+          "summary": "jhana — India's First AI Paralegal | National Legal Archive | Frontier Legal Intelligence Lab | Founded at Harvard, ₹15Cr Funded\nPUBSEC, a new GovTech benchmark\njhana is your legal AI\nSearch across 16M+ judgments, statutes & your own case files—\nwith instant citations you can trust.\nJoin our Free Tier\nBrute-forced best citations\nArguments, opinions, drafts\nBulk upload to extraction\nExhaustive, not exhausting\nAI brute-forces research and reads citations till correct.\nAI handles prompts, keywords, and booleans\nIterative search with filtering for best results\nAuto detects contradictions or outdated citations\nIndia's first AI paralegal—works till done, shows its work. Transparent & honest.\nVerif",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:16Z"
+        },
+        {
+          "companyId": "nex",
+          "status": "Baseline saved",
+          "url": "https://nex.ai/",
+          "summary": "Nex AI - AI agents that run RevOps on autopilot\nFIRE YOUR REVOPS AGENCY\nWe build and deploy AI agents that run CRM hygiene, lead scoring, routing, qualification, revenue recovery, forecasting, prospecting and all the RevOps work in between, on autopilot.\nBook a FREE call with an agent builder. Get your first agent before the call ends.\nTalk to an agent builder\nTry the agent platform\nIndependently audited\nsecurity you can rely on\nWe built & ran one of the world's largest RevOps systems\nNajmuzzaman and Francisco managed the three largest platforms at HubSpot. Francisco was a founding engineer on the HubSpot CRM.\nBacked by RevOps giants\nOur investors include the founders of HubSpot and Freshwor",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:16Z"
+        },
+        {
+          "companyId": "optexity",
+          "status": "Baseline saved",
+          "url": "https://optexity.com/",
+          "summary": "Optexity: Turn Any UI Task Into an API | Browser Automation\nWe’ve just raised $4M in funding\nWe are open source.\nIntegrate any web portal, even ones without APIs\nEnable your agents to extract data, fill forms, and automate back-office work across third-party websites at scale.\nGet Started For Free\n(No credit card required)\nTrusted by Developers at\nIntegrate with any\nHealthcare & Insurance\nLogistics & Supply Chain\nLegal & Government\nIntegrate with any EHR , insurance systems, Clinical Trial Management Systems to automate workflows like patient intake, prior authorization, eligibility verification, claims status checks, medical records and document extraction.\nConnect to any carrier or freight",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:16Z"
+        },
+        {
+          "companyId": "presentations-ai",
+          "status": "Baseline saved",
+          "url": "https://www.presentations.ai/",
+          "summary": "Presentations.AI - The AI Presentation Platform\nHigh-Quality AI Presentations in Minutes\nCreate high-quality, on-brand AI presentations at scale. Generate editable PowerPoint files faster than ever.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nTrusted by over 12 million professional users\nWhat is Presentations.AI?\nPresentations.AI is an AI presentation platform that turns ideas, documents, and URLs into professional slide decks in minutes. It automatically applies your brand, helps create compelling content, and exports directly to PowerPoint, making it effortless to go from concept to presentation-ready deck.\nBuilt by a Team That Unders",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:17Z"
+        },
+        {
+          "companyId": "privado",
+          "status": "Baseline saved",
+          "url": "https://www.privado.ai/",
+          "summary": "AI privacy automation software | Privado AI\nMeet Wren: Your new AI privacy analyst\nLaunch announcement\nCopy logo to clipboard (png)\nDownload Brand assets\nAI Privacy Automation Software\nFight modern privacy risks with modern technology\nEliminate manual compliance work and reduce risk with complete data visibility and AI agents\nAgentic Assessments\nAuto-Risk Discovery\nAI PRIVACY AUTOMATION SOFTWARE TRUSTED BY PRIVACY LEADERS AT\nManual privacy solutions can’t keep up with today’s technology\nToday’s Privacy Solutions\nQuestionnaire-based software for data maps and assessments\nManual compliance testing for websites, apps, and CMPs\nToday’s Technology\nWebsites, apps, and backend software get updated ",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:17Z"
+        },
+        {
+          "companyId": "sentra",
+          "status": "Baseline saved",
+          "url": "https://www.sentra.app/",
+          "summary": "Sentra · The managed organization memory\nforget. But Sentra\nSentra is the managed organization memory: every meeting, message, document, line of code, and deal compiled into permissioned context for your teams and AI agents.\nBook DemoStart Free\nUsed by teams and engineers at\nLenskartHappy ScribeLenskartHappy Scribe\nBuilt from years of research at MIT and Caltech\nYour knowledge is scattered among ten tools. And no human or agent can reason across them.\nHumans can't connect the dots.\nDecisions are made in a meeting, changed in a Slack thread, and lost by Friday. When context lives in silos, the smartest people waste hours hunting for the why behind the what.\nAI can't reason across tools.\nStand",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:17Z"
+        },
+        {
+          "companyId": "togai",
+          "status": "Failed",
+          "url": "https://www.togai.com/",
+          "summary": "Website redirected outside its company domain; review the source manually",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:17Z"
+        },
+        {
+          "companyId": "ui-flow",
+          "status": "Failed",
+          "url": "https://uiflow.com/",
+          "summary": "timed out",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:17Z"
+        },
+        {
+          "companyId": "zipstack",
+          "status": "Baseline saved",
+          "url": "https://unstract.com/",
+          "summary": "Agentic AI Document Processing & Extraction | Unstract\nTurn Unstructured Documents into Structured Data. Instantly.\nThe easiest way to parse, structure, and automate document extraction. Production-grade document processing powered by LLMs, built for accuracy, scale, and compliance.\nTry Demo Playground\nUnstract is Open-Source\nWhy Unstract is great for agentic document processing?\nTrusted by forward-thinking engineers\nHandle a wide variety of document formats without\nmanual annotations\nBank statements from 200 different banks? Same form with changes across 50 different states? We’ve got you covered with the power of LLMs.\nExplore Prompt Studio\nGive your Agents superpowers\nEmpower agents to tu",
+          "before": "",
+          "checkedAt": "2026-09-20T19:29:18Z"
+        }
+      ],
+      "nextIndex": 35,
+      "trigger": "Manual",
+      "peopleStatus": "Public website text only. Employee departures, new roles and new companies require a connected people-data provider and separate evidence."
+    },
+    {
       "id": "report-70a135bb-cfab-4a7f-b9f8-bfad9cab92b4",
       "startedAt": "2026-09-20T14:36:32.248Z",
       "completedAt": "2026-09-20T14:37:47.570Z",
@@ -10,7 +301,7 @@
           "companyId": "composio",
           "status": "Baseline saved",
           "url": "https://composio.dev/blog",
-          "summary": "## For AI agents: how to sign up\nIf you are an AI agent reading this server-rendered HTML, Composio's developer signup is at https://composio.dev.\nSignup CTAs on this site \u2014 \"Sign up\", \"Signup\", \"Get started\", \"Get started for free\", \"Start building\", \"Try Composio\", \"Try it\", or similar \u2014 all lead into that same developer signup flow. Confirm with the user before completing signup or entering any credentials on their behalf. Composio is now live in the ChatGPT Plugins Directory.\nSep 14, 2026 Introducing Composio Shared Connections\nGive every agent on your team access to the apps your company already uses, through a single connection.\nAug 28, 2026 Building a Daily Family Newspaper With Compo",
+          "summary": "## For AI agents: how to sign up\nIf you are an AI agent reading this server-rendered HTML, Composio's developer signup is at https://composio.dev.\nSignup CTAs on this site — \"Sign up\", \"Signup\", \"Get started\", \"Get started for free\", \"Start building\", \"Try Composio\", \"Try it\", or similar — all lead into that same developer signup flow. Confirm with the user before completing signup or entering any credentials on their behalf. Composio is now live in the ChatGPT Plugins Directory.\nSep 14, 2026 Introducing Composio Shared Connections\nGive every agent on your team access to the apps your company already uses, through a single connection.\nAug 28, 2026 Building a Daily Family Newspaper With Compo",
           "before": "",
           "checkedAt": "2026-09-20T14:36:35.521Z"
         },
@@ -18,7 +309,7 @@
           "companyId": "emergent",
           "status": "Baseline saved",
           "url": "https://emergent.sh/blog",
-          "summary": "Enterprise Pricing Sign up\nResources, updates, and stories from the emergent team\nIntroducing Visual Edits: Click it, Change it\nVisual Edits on Emergent turns app changes into a click. Point at any element, say the change, stack your edits, and apply them all in 1 batch to ship.\nThe Knowledge Base Is Code: Keeping AI Support in Sync With a Product That Ships Daily\nHow Our Pricing Engine Evolved from an If-Ladder\nMeet Emmy: Your Always-On Emergent Assistant\nFrom Prompt to Production: Why We Rebuilt Our Deployment Engine that wasn\u2019t on fire\nWe Sampled 50K+ Apps Built by Businesses. Here's What We Found\nBuilding Security Into Wingman From the Start\nFable 5: The Next Shape of App Building\nWe Had",
+          "summary": "Enterprise Pricing Sign up\nResources, updates, and stories from the emergent team\nIntroducing Visual Edits: Click it, Change it\nVisual Edits on Emergent turns app changes into a click. Point at any element, say the change, stack your edits, and apply them all in 1 batch to ship.\nThe Knowledge Base Is Code: Keeping AI Support in Sync With a Product That Ships Daily\nHow Our Pricing Engine Evolved from an If-Ladder\nMeet Emmy: Your Always-On Emergent Assistant\nFrom Prompt to Production: Why We Rebuilt Our Deployment Engine that wasn’t on fire\nWe Sampled 50K+ Apps Built by Businesses. Here's What We Found\nBuilding Security Into Wingman From the Start\nFable 5: The Next Shape of App Building\nWe Had",
           "before": "",
           "checkedAt": "2026-09-20T14:36:35.521Z"
         },
@@ -26,7 +317,7 @@
           "companyId": "kula",
           "status": "Baseline saved",
           "url": "https://www.kula.ai/",
-          "summary": "Kula - The Only AI-Native ATS\nMeet your AI Teammates\nStep into the future of Recruiting : Human + AI\nThe only AI-Native ATS, built by recruiters, for modern hiring\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nTrusted by the fastest growing companies in the world\nThe Copy paste Tax\nCopy. Paste. Switch tab. Repeat. That\u2019s not a recruiting workflow. That\u2019s a ~$100k/year data entry job.\nThe Frankenstack Problem\nIt started with an ATS. Then a sourcing tool. Then a scheduling tool. Then a notetaker. Then a reporting add-on. You weren\u2019t building a stack \u2014 you were patching holes. And the holes are still there\nThe Fake AI Problem\nGarbage in, gar",
+          "summary": "Kula - The Only AI-Native ATS\nMeet your AI Teammates\nStep into the future of Recruiting : Human + AI\nThe only AI-Native ATS, built by recruiters, for modern hiring\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nTrusted by the fastest growing companies in the world\nThe Copy paste Tax\nCopy. Paste. Switch tab. Repeat. That’s not a recruiting workflow. That’s a ~$100k/year data entry job.\nThe Frankenstack Problem\nIt started with an ATS. Then a sourcing tool. Then a scheduling tool. Then a notetaker. Then a reporting add-on. You weren’t building a stack — you were patching holes. And the holes are still there\nThe Fake AI Problem\nGarbage in, gar",
           "before": "",
           "checkedAt": "2026-09-20T14:36:35.521Z"
         },
@@ -34,7 +325,7 @@
           "companyId": "confido",
           "status": "Baseline saved",
           "url": "https://www.confido.health/",
-          "summary": "Confido Health | AI Assistants For Healthcare\nAnnouncing Our $10M Series A Funding! \ud83d\ude80\nReimagining Healthcare Operations with AI\nOur AI Agents save your staff at least 2 hours every day by handling routine tasks and giving your team more time to focus on patient care.\nTrusted by Leading\nHealthcare Providers Nationwide\nConfido Health has enabled access for over 1 million patients, ensuring timely care and more meaningful interactions between providers and patients.\nIndustry is short by 6.5 million staff, excluding doctors, in 2023\nHigh cost of operations\nThe shortage has led to constrained patient access, overworked staff, and reduced margins\nOur AI Agents work 24/7 alongside your team, handl",
+          "summary": "Confido Health | AI Assistants For Healthcare\nAnnouncing Our $10M Series A Funding! 🚀\nReimagining Healthcare Operations with AI\nOur AI Agents save your staff at least 2 hours every day by handling routine tasks and giving your team more time to focus on patient care.\nTrusted by Leading\nHealthcare Providers Nationwide\nConfido Health has enabled access for over 1 million patients, ensuring timely care and more meaningful interactions between providers and patients.\nIndustry is short by 6.5 million staff, excluding doctors, in 2023\nHigh cost of operations\nThe shortage has led to constrained patient access, overworked staff, and reduced margins\nOur AI Agents work 24/7 alongside your team, handl",
           "before": "",
           "checkedAt": "2026-09-20T14:36:40.584Z"
         },
@@ -50,7 +341,7 @@
           "companyId": "rapid-claims",
           "status": "Baseline saved",
           "url": "https://www.rapidclaims.ai/",
-          "summary": "Revenue Cycle Automation | RapidClaims\nRCM Simplified, at Scale\nCapture every dollar of earned revenue\nFrost & Sullivan 2025 Technology Innovation Leader\nAutonomous agents that code charts, improve documentation, prevent denials, and recover revenue with full compliance and control.\nCalculate your ROI Go live in weeks. See ROI in 30 days.\nTrusted by Leading Healthcare Organizations\nThe OS for your mid revenue cycle.\nDrag the slider. See what changes for every role \u2014 CDI, coding, denials, finance.\nFriction at every desk.\nCDI chasing queries. Coding behind. Denials weeks late.\nDay 0 Day 3 Day 7 Day 10 Day 14\nFriction at every desk\nSarah \u00b7 CDI lead. Chases physicians for queries from last week.",
+          "summary": "Revenue Cycle Automation | RapidClaims\nRCM Simplified, at Scale\nCapture every dollar of earned revenue\nFrost & Sullivan 2025 Technology Innovation Leader\nAutonomous agents that code charts, improve documentation, prevent denials, and recover revenue with full compliance and control.\nCalculate your ROI Go live in weeks. See ROI in 30 days.\nTrusted by Leading Healthcare Organizations\nThe OS for your mid revenue cycle.\nDrag the slider. See what changes for every role — CDI, coding, denials, finance.\nFriction at every desk.\nCDI chasing queries. Coding behind. Denials weeks late.\nDay 0 Day 3 Day 7 Day 10 Day 14\nFriction at every desk\nSarah · CDI lead. Chases physicians for queries from last week.",
           "before": "",
           "checkedAt": "2026-09-20T14:36:40.584Z"
         },
@@ -82,7 +373,7 @@
           "companyId": "zipy",
           "status": "Baseline saved",
           "url": "https://www.zipy.ai/",
-          "summary": "Zipy: AI Session Replays, Error Tracking & Analytics\nBook a Demo Try for Free\nLogin Book a Demo Try for Free\nAI Debugging OS for Product & Frontend Teams.\nZipy enables engineers and PMs to debug real-user issues 10\u00d7 faster with AI-driven session intelligence, error tracking, and UX analytics\u2014across web and mobile .\nTry for Free Take a Tour\nSee how thousands of Engineering, Product and Marketing Teams are accelerating their growth with Zipy.\nFor the teams building what\u2019s next\nReal Results From Industry Leaders\nExplore how Zipy surfaces critical data, giving teams complete visibility into their production environments. Read all case studies.\nZipy AI has freed up nearly 50% of developer bandwid",
+          "summary": "Zipy: AI Session Replays, Error Tracking & Analytics\nBook a Demo Try for Free\nLogin Book a Demo Try for Free\nAI Debugging OS for Product & Frontend Teams.\nZipy enables engineers and PMs to debug real-user issues 10× faster with AI-driven session intelligence, error tracking, and UX analytics—across web and mobile .\nTry for Free Take a Tour\nSee how thousands of Engineering, Product and Marketing Teams are accelerating their growth with Zipy.\nFor the teams building what’s next\nReal Results From Industry Leaders\nExplore how Zipy surfaces critical data, giving teams complete visibility into their production environments. Read all case studies.\nZipy AI has freed up nearly 50% of developer bandwid",
           "before": "",
           "checkedAt": "2026-09-20T14:36:52.255Z"
         },
@@ -90,7 +381,7 @@
           "companyId": "scalekit",
           "status": "Baseline saved",
           "url": "https://www.scalekit.com/",
-          "summary": "Authentication & Authorization for Agents | Scalekit\nEvaluating Composio?\nSerious teams choose Scalekit.\nTalk to US Start for free\nAuthentication & Authorization for agents\nLet your agents act as the user.\n\u200d Not a shared service account .\nYour agent calls tools. Our auth runtime handles the OAuth flows, token refresh, and credential storage in between.\nnpx @scalekit-inc/cli setup\nTalk to an Engineer\nTrusted by teams shipping agents to production\nOne MCP proxy between\n\u200d your agent and any tool it calls.\nOne SDK call handles the token, the scoped tool call, and the structured response. Tokens never enter your agent or the model.\nBuilt-in token vault\nDelegated authentication\nTokens stored in an",
+          "summary": "Authentication & Authorization for Agents | Scalekit\nEvaluating Composio?\nSerious teams choose Scalekit.\nTalk to US Start for free\nAuthentication & Authorization for agents\nLet your agents act as the user.\n‍ Not a shared service account .\nYour agent calls tools. Our auth runtime handles the OAuth flows, token refresh, and credential storage in between.\nnpx @scalekit-inc/cli setup\nTalk to an Engineer\nTrusted by teams shipping agents to production\nOne MCP proxy between\n‍ your agent and any tool it calls.\nOne SDK call handles the token, the scoped tool call, and the structured response. Tokens never enter your agent or the model.\nBuilt-in token vault\nDelegated authentication\nTokens stored in an",
           "before": "",
           "checkedAt": "2026-09-20T14:36:52.255Z"
         },
@@ -114,7 +405,7 @@
           "companyId": "metaforms",
           "status": "Baseline saved",
           "url": "https://www.metaforms.ai/",
-          "summary": "Metaforms \u2014 AI infrastructure for research delivery teams\nHonest and Grounded AI infrastructure for every research delivery team.\nMetaforms helps market research agencies and sample providers standardize and scale delivery with agents that work alongside their team at every step, on workflows they already know and use.\n35+ research agencies use Metaforms for their research ops\nImprove programming efficiency\nGenerate surveys in reviewable batches so programmers stay on the parts that need a decision.\nIncrease delivery capacity\nTake on more projects without adding headcount or stretching the team thin.\nProtect quality and margins\nKeep output reviewable and standards consistent across every del",
+          "summary": "Metaforms — AI infrastructure for research delivery teams\nHonest and Grounded AI infrastructure for every research delivery team.\nMetaforms helps market research agencies and sample providers standardize and scale delivery with agents that work alongside their team at every step, on workflows they already know and use.\n35+ research agencies use Metaforms for their research ops\nImprove programming efficiency\nGenerate surveys in reviewable batches so programmers stay on the parts that need a decision.\nIncrease delivery capacity\nTake on more projects without adding headcount or stretching the team thin.\nProtect quality and margins\nKeep output reviewable and standards consistent across every del",
           "before": "",
           "checkedAt": "2026-09-20T14:36:56.481Z"
         },
@@ -130,7 +421,7 @@
           "companyId": "securden",
           "status": "Baseline saved",
           "url": "https://www.securden.com/",
-          "summary": "Securden \u2013 The World\u2019s First Unified Identity Security Platform | Unifying PAM, EPM, IGA, CIEM & AI\nSecurden is one among the top 150 fastest-growing cybersecurity startups in the world. Learn more.\n[Expert-led webinar + AMA] Modernizing PAM with a unified, comprehensive approach.\nDesigned for the AI Era\nThe World\u2019s First Truly\nUnified Identity Security Platform\nSecurden is the only platform that unifies PAM, EPM, IGA, CIEM, and AI Agent Security in a single package to protect the full spectrum of modern identities\u2014human, machine, and AI.\nNo fragmented tools.\nJust one value-packed platform.\nYou have more identities than ever.\nLess control than you think.\nEnterprises are in the midst of The I",
+          "summary": "Securden – The World’s First Unified Identity Security Platform | Unifying PAM, EPM, IGA, CIEM & AI\nSecurden is one among the top 150 fastest-growing cybersecurity startups in the world. Learn more.\n[Expert-led webinar + AMA] Modernizing PAM with a unified, comprehensive approach.\nDesigned for the AI Era\nThe World’s First Truly\nUnified Identity Security Platform\nSecurden is the only platform that unifies PAM, EPM, IGA, CIEM, and AI Agent Security in a single package to protect the full spectrum of modern identities—human, machine, and AI.\nNo fragmented tools.\nJust one value-packed platform.\nYou have more identities than ever.\nLess control than you think.\nEnterprises are in the midst of The I",
           "before": "",
           "checkedAt": "2026-09-20T14:37:01.528Z"
         },
@@ -138,7 +429,7 @@
           "companyId": "revenue-hero",
           "status": "Baseline saved",
           "url": "https://www.revenuehero.io/",
-          "summary": "RevenueHero | Lead routing and scheduling you can explain\n\ud83d\ude80 Introducing the Attio native integration : Match, qualify, and route leads to the right rep in under 3 seconds. Every booking and account owner syncs back to the Attio automatically Learn more \u2192\nPricing Sign In Request a Demo\nSign In Book a Demo\nLead routing and scheduling\nyou can finally explain.\nRevenueHero books every meeting with the right rep, on rules you set, and can tell you why it went there.\n500+ B2B companies route and schedule leads with RevenueHero\nWhat really sold us on RevenueHero is the excellent team and support we\u2019ve had from implementation onward.\nDirector of Operations\nThanks to RevenueHero, we\u2019re able to book m",
+          "summary": "RevenueHero | Lead routing and scheduling you can explain\n🚀 Introducing the Attio native integration : Match, qualify, and route leads to the right rep in under 3 seconds. Every booking and account owner syncs back to the Attio automatically Learn more →\nPricing Sign In Request a Demo\nSign In Book a Demo\nLead routing and scheduling\nyou can finally explain.\nRevenueHero books every meeting with the right rep, on rules you set, and can tell you why it went there.\n500+ B2B companies route and schedule leads with RevenueHero\nWhat really sold us on RevenueHero is the excellent team and support we’ve had from implementation onward.\nDirector of Operations\nThanks to RevenueHero, we’re able to book m",
           "before": "",
           "checkedAt": "2026-09-20T14:37:01.528Z"
         },
@@ -146,7 +437,7 @@
           "companyId": "hunar",
           "status": "Baseline saved",
           "url": "https://hunar.ai/",
-          "summary": "AI HRs for frontline workforce management | Hunar.ai\nTurn conversations into better workforce outcomes.\nVoice AI and autonomous HR operations for sourcing, onboarding, engagement, retention, and everything in between.\nVoice AI calls every applicant in their language and screens for role fit.\nLearn about hiring\nVoice AI guides new hires through documentation and compliance checks.\nLearn about onboarding\nTraining & Engaging\nRuns voice-based training and skill checks in workers\u2019 own language.\nLearn about training\nHunar makes workforce management efficient for every scale.\nWe help businesses build, manage, and engage their workforce at scale through AI-powered conversations.\nConversational Voice",
+          "summary": "AI HRs for frontline workforce management | Hunar.ai\nTurn conversations into better workforce outcomes.\nVoice AI and autonomous HR operations for sourcing, onboarding, engagement, retention, and everything in between.\nVoice AI calls every applicant in their language and screens for role fit.\nLearn about hiring\nVoice AI guides new hires through documentation and compliance checks.\nLearn about onboarding\nTraining & Engaging\nRuns voice-based training and skill checks in workers’ own language.\nLearn about training\nHunar makes workforce management efficient for every scale.\nWe help businesses build, manage, and engage their workforce at scale through AI-powered conversations.\nConversational Voice",
           "before": "",
           "checkedAt": "2026-09-20T14:37:01.528Z"
         },
@@ -154,7 +445,7 @@
           "companyId": "hivel",
           "status": "Baseline saved",
           "url": "https://www.hivel.ai/",
-          "summary": "Software Engineering Analytics Platform | Hivel\nGet the full picture on your AI adoption and impact.\nWe'll show you exactly how AI is impacting your speed and code quality.\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nFREE AI ROI REPORT\nMaximize your organization's AI ROI with the SURGE Framework today - Download Now \u27a4\nFree AI ROI Report\nThe ROI of AI \u00b7 SURGE Framework by Hivel\nIs your AI actually working?\nKnow it. Prove it. Improve it.\nSURGE-Hivel's five-question framework for the ROI of AI-runs on a context graph that maps every AI tool, commit, and deploy to the same engineers, teams, and projects.\nSpend - know where the dollars go\nOne view of cost across every too",
+          "summary": "Software Engineering Analytics Platform | Hivel\nGet the full picture on your AI adoption and impact.\nWe'll show you exactly how AI is impacting your speed and code quality.\n╚══════════════════════════════════════════════════════════════════╝\nFREE AI ROI REPORT\nMaximize your organization's AI ROI with the SURGE Framework today - Download Now ➤\nFree AI ROI Report\nThe ROI of AI · SURGE Framework by Hivel\nIs your AI actually working?\nKnow it. Prove it. Improve it.\nSURGE-Hivel's five-question framework for the ROI of AI-runs on a context graph that maps every AI tool, commit, and deploy to the same engineers, teams, and projects.\nSpend - know where the dollars go\nOne view of cost across every too",
           "before": "",
           "checkedAt": "2026-09-20T14:37:06.788Z"
         },
@@ -178,7 +469,7 @@
           "companyId": "capitol",
           "status": "Baseline saved",
           "url": "https://www.capitol.ai/",
-          "summary": "Capitol AI \u2014 Clarity on Command\nClarity on Command\nTurn your data into decision-grade outputs through no-code-necessary AI workflows, designed for when output quality, governance, and speed are mission-critical.\nFor work that has to hold up.\nChat tools answer questions. Capitol AI transforms institutional knowledge and expertise into governed, repeatable workflows. Your data remains protected, operating within your existing controls and providing the auditability required for high-stakes enterprise decisions.\nSecurely use approved data where it already lives instead of moving files into one-off chats.\nInstitutional workflows.\nTurn individual methods into canonical workflows the whole organiz",
+          "summary": "Capitol AI — Clarity on Command\nClarity on Command\nTurn your data into decision-grade outputs through no-code-necessary AI workflows, designed for when output quality, governance, and speed are mission-critical.\nFor work that has to hold up.\nChat tools answer questions. Capitol AI transforms institutional knowledge and expertise into governed, repeatable workflows. Your data remains protected, operating within your existing controls and providing the auditability required for high-stakes enterprise decisions.\nSecurely use approved data where it already lives instead of moving files into one-off chats.\nInstitutional workflows.\nTurn individual methods into canonical workflows the whole organiz",
           "before": "",
           "checkedAt": "2026-09-20T14:37:12.329Z"
         },
@@ -186,7 +477,7 @@
           "companyId": "chaotix-ai",
           "status": "Baseline saved",
           "url": "https://chaotix.ai/",
-          "summary": "Make Your Own Free AI Generated Game From Text With Chaotix.ai\nNo Coding Create Games in Seconds No Coding\nWe\u2019ve built a powerful AI game generator from text. This is real text to game AI. Our games AI builds entire games, unique levels, and cutscenes in seconds. Our ultimate AI game generator brings your ideas to reality instantly.\nYour first artificial intelligence game is just the starting line. Tweak the storyline, add more levels, or modify the ending. Turn your base game made with AI text prompt into a masterpiece with our AI text to game generator and editor.\nDo I need to know how to code to make a game?\nNo. Chaotix is a 100% no-code platform. Your ideas are all you need. You type the",
+          "summary": "Make Your Own Free AI Generated Game From Text With Chaotix.ai\nNo Coding Create Games in Seconds No Coding\nWe’ve built a powerful AI game generator from text. This is real text to game AI. Our games AI builds entire games, unique levels, and cutscenes in seconds. Our ultimate AI game generator brings your ideas to reality instantly.\nYour first artificial intelligence game is just the starting line. Tweak the storyline, add more levels, or modify the ending. Turn your base game made with AI text prompt into a masterpiece with our AI text to game generator and editor.\nDo I need to know how to code to make a game?\nNo. Chaotix is a 100% no-code platform. Your ideas are all you need. You type the",
           "before": "",
           "checkedAt": "2026-09-20T14:37:12.329Z"
         },
@@ -194,7 +485,7 @@
           "companyId": "coreworks",
           "status": "Baseline saved",
           "url": "https://www.coreworks.ai/",
-          "summary": "Coreworks | AI-Powered Business Intelligence\nNEW Announcing our $5M Seed Round Read More\nYour data has a story.\nWe help you tell it.\nCoreworks reads your data and builds an editable report or presentation, with every number fully traceable to its source.\nNo credit card needed \u00b7 See your first deck in 5 minutes\n$5M Seed round raised\n2,300+ Presentations created\n0 Data analysts or designers needed\nThe old way of building reports is broken.\nSpending 2\u20133 days assembling a presentation\nA number gets questioned in a meeting and you can't trace where it came from\nChasing teammates for \"the latest version\" of the spreadsheet\nReformatting the same template for the fifth time this quarter\nYour analyst",
+          "summary": "Coreworks | AI-Powered Business Intelligence\nNEW Announcing our $5M Seed Round Read More\nYour data has a story.\nWe help you tell it.\nCoreworks reads your data and builds an editable report or presentation, with every number fully traceable to its source.\nNo credit card needed · See your first deck in 5 minutes\n$5M Seed round raised\n2,300+ Presentations created\n0 Data analysts or designers needed\nThe old way of building reports is broken.\nSpending 2–3 days assembling a presentation\nA number gets questioned in a meeting and you can't trace where it came from\nChasing teammates for \"the latest version\" of the spreadsheet\nReformatting the same template for the fifth time this quarter\nYour analyst",
           "before": "",
           "checkedAt": "2026-09-20T14:37:12.329Z"
         },
@@ -202,7 +493,7 @@
           "companyId": "dreamteam",
           "status": "Baseline saved",
           "url": "https://dreamteam.co/",
-          "summary": "Dreamteam - AI-Native CRM Software\nSkip to Main Content Team\nthat works while you sell\nA CRM that understands your company context automatically, reasons like a human, and gets work done through specialised AI teammates\nThank you for your submission!\nOops! Something went wrong while submitting the form.\nNo credit card. No setup fees. Get started free.\nYour GTM command center\nDreamteam CRM plans your day and tells you exactly what to do\nEvery sales call is full of intel.\n\u200d Most CRMs capture none of it\nDreamteam extracts the signals that matter from every email, call, and meeting, automatically. Competitor mentions, objections, stakeholder sentiment - all captured, stored, and searchable.\nYour",
+          "summary": "Dreamteam - AI-Native CRM Software\nSkip to Main Content Team\nthat works while you sell\nA CRM that understands your company context automatically, reasons like a human, and gets work done through specialised AI teammates\nThank you for your submission!\nOops! Something went wrong while submitting the form.\nNo credit card. No setup fees. Get started free.\nYour GTM command center\nDreamteam CRM plans your day and tells you exactly what to do\nEvery sales call is full of intel.\n‍ Most CRMs capture none of it\nDreamteam extracts the signals that matter from every email, call, and meeting, automatically. Competitor mentions, objections, stakeholder sentiment - all captured, stored, and searchable.\nYour",
           "before": "",
           "checkedAt": "2026-09-20T14:37:21.641Z"
         },
@@ -218,7 +509,7 @@
           "companyId": "jhana",
           "status": "Baseline saved",
           "url": "https://jhana.ai/",
-          "summary": "jhana \u2014 India's First AI Paralegal | National Legal Archive | Frontier Legal Intelligence Lab | Founded at Harvard, \u20b915Cr Funded PUBSEC, a new GovTech benchmark\njhana is your legal AI\nSearch across 16M+ judgments, statutes & your own case files\u2014\nwith instant citations you can trust.\nJoin our Free Tier\nBrute-forced best citations\nArguments, opinions, drafts\nBulk upload to extraction\nExhaustive, not exhausting\nAI brute-forces research and reads citations till correct.\nAI handles prompts, keywords, and booleans\nIterative search with filtering for best results\nAuto detects contradictions or outdated citations\nIndia's first AI paralegal\u2014works till done, shows its work. Transparent & honest.\nVerif",
+          "summary": "jhana — India's First AI Paralegal | National Legal Archive | Frontier Legal Intelligence Lab | Founded at Harvard, ₹15Cr Funded PUBSEC, a new GovTech benchmark\njhana is your legal AI\nSearch across 16M+ judgments, statutes & your own case files—\nwith instant citations you can trust.\nJoin our Free Tier\nBrute-forced best citations\nArguments, opinions, drafts\nBulk upload to extraction\nExhaustive, not exhausting\nAI brute-forces research and reads citations till correct.\nAI handles prompts, keywords, and booleans\nIterative search with filtering for best results\nAuto detects contradictions or outdated citations\nIndia's first AI paralegal—works till done, shows its work. Transparent & honest.\nVerif",
           "before": "",
           "checkedAt": "2026-09-20T14:37:21.641Z"
         },
@@ -234,7 +525,7 @@
           "companyId": "optexity",
           "status": "Baseline saved",
           "url": "https://optexity.com/",
-          "summary": "Optexity: Turn Any UI Task Into an API | Browser Automation\nWe\u2019ve just raised $4M in funding\nWe are open source.\nIntegrate any web portal , even ones without APIs\nEnable your agents to extract data, fill forms, and automate back-office work across third-party websites at scale.\nGet Started For Free\n(No credit card required)\nTrusted by Developers at\nIntegrate with any\nHealthcare & Insurance\nLogistics & Supply Chain\nLegal & Government\nIntegrate with any EHR , insurance systems, Clinical Trial Management Systems to automate workflows like patient intake, prior authorization, eligibility verification, claims status checks, medical records and document extraction.\nConnect to any carrier or freigh",
+          "summary": "Optexity: Turn Any UI Task Into an API | Browser Automation\nWe’ve just raised $4M in funding\nWe are open source.\nIntegrate any web portal , even ones without APIs\nEnable your agents to extract data, fill forms, and automate back-office work across third-party websites at scale.\nGet Started For Free\n(No credit card required)\nTrusted by Developers at\nIntegrate with any\nHealthcare & Insurance\nLogistics & Supply Chain\nLegal & Government\nIntegrate with any EHR , insurance systems, Clinical Trial Management Systems to automate workflows like patient intake, prior authorization, eligibility verification, claims status checks, medical records and document extraction.\nConnect to any carrier or freigh",
           "before": "",
           "checkedAt": "2026-09-20T14:37:26.975Z"
         },
@@ -258,7 +549,7 @@
           "companyId": "sentra",
           "status": "Baseline saved",
           "url": "https://www.sentra.app/",
-          "summary": "Sentra \u00b7 The managed organization memory\nforget. But Sentra\nSentra is the managed organization memory: every meeting, message, document, line of code, and deal compiled into permissioned context for your teams and AI agents.\nBook Demo Start Free\nUsed by teams and engineers at\nLenskart Happy Scribe Lenskart Happy Scribe\nBuilt from years of research at MIT and Caltech\nYour knowledge is scattered among ten tools. And no human or agent can reason across them.\nHumans can't connect the dots.\nDecisions are made in a meeting, changed in a Slack thread, and lost by Friday. When context lives in silos, the smartest people waste hours hunting for the why behind the what.\nAI can't reason across tools.\nS",
+          "summary": "Sentra · The managed organization memory\nforget. But Sentra\nSentra is the managed organization memory: every meeting, message, document, line of code, and deal compiled into permissioned context for your teams and AI agents.\nBook Demo Start Free\nUsed by teams and engineers at\nLenskart Happy Scribe Lenskart Happy Scribe\nBuilt from years of research at MIT and Caltech\nYour knowledge is scattered among ten tools. And no human or agent can reason across them.\nHumans can't connect the dots.\nDecisions are made in a meeting, changed in a Slack thread, and lost by Friday. When context lives in silos, the smartest people waste hours hunting for the why behind the what.\nAI can't reason across tools.\nS",
           "before": "",
           "checkedAt": "2026-09-20T14:37:32.730Z"
         },
@@ -294,6 +585,14 @@
   ],
   "notices": [
     {
+      "id": "notice-report-3aae4110-8895-4469-a763-ae6a96acca3f",
+      "title": "Portfolio report ready",
+      "detail": "32/35 company websites checked. 3 sources unavailable. Public website changes do not establish employee moves.",
+      "reportId": "report-3aae4110-8895-4469-a763-ae6a96acca3f",
+      "read": false,
+      "createdAt": "2026-09-20T19:29:27Z"
+    },
+    {
       "id": "notice-report-70a135bb-cfab-4a7f-b9f8-bfad9cab92b4",
       "title": "Portfolio report ready",
       "detail": "31/35 company websites checked. 4 sources unavailable. People-provider coverage is shown separately.",
@@ -305,7 +604,7 @@
   "settings": {
     "enabled": true,
     "frequencyDays": 2,
-    "schedulerRegistered": false
+    "schedulerRegistered": true
   },
-  "generatedAt": "2026-09-20T14:37:47.570Z"
+  "generatedAt": "2026-09-20T19:29:27Z"
 }
