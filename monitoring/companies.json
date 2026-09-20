@@ -1,0 +1,177 @@
+[
+  {
+    "id": "composio",
+    "name": "Composio",
+    "website": "https://composio.dev/"
+  },
+  {
+    "id": "emergent",
+    "name": "Emergent",
+    "website": "https://app.emergent.sh/"
+  },
+  {
+    "id": "kula",
+    "name": "Kula",
+    "website": "https://www.kula.ai/"
+  },
+  {
+    "id": "confido",
+    "name": "Confido",
+    "website": "https://www.confido.health/"
+  },
+  {
+    "id": "runable",
+    "name": "Runable",
+    "website": "https://runable.com/"
+  },
+  {
+    "id": "rapid-claims",
+    "name": "Rapid Claims",
+    "website": "https://www.rapidclaims.ai/"
+  },
+  {
+    "id": "bytebeam",
+    "name": "Bytebeam",
+    "website": "https://www.bytebeam.io/"
+  },
+  {
+    "id": "spendflo",
+    "name": "Spendflo",
+    "website": "https://www.spendflo.com/"
+  },
+  {
+    "id": "thesys",
+    "name": "Thesys",
+    "website": "https://www.thesys.dev/"
+  },
+  {
+    "id": "zipy",
+    "name": "Zipy",
+    "website": "https://www.zipy.ai/"
+  },
+  {
+    "id": "scalekit",
+    "name": "ScaleKit",
+    "website": "https://www.scalekit.com/"
+  },
+  {
+    "id": "spry-therapeutics",
+    "name": "Spry Therapeutics",
+    "website": "https://www.sprypt.com/"
+  },
+  {
+    "id": "wispr-flow",
+    "name": "Wispr Flow",
+    "website": "https://wisprflow.ai/"
+  },
+  {
+    "id": "metaforms",
+    "name": "Metaforms",
+    "website": "https://metaforms.ai/"
+  },
+  {
+    "id": "protecto",
+    "name": "Protecto",
+    "website": "https://www.protecto.ai/"
+  },
+  {
+    "id": "securden",
+    "name": "Securden",
+    "website": "https://www.securden.com/"
+  },
+  {
+    "id": "revenue-hero",
+    "name": "Revenue Hero",
+    "website": "https://www.revenuehero.io/"
+  },
+  {
+    "id": "hunar",
+    "name": "Hunar",
+    "website": "https://www.hunar.ai/"
+  },
+  {
+    "id": "hivel",
+    "name": "Hivel",
+    "website": "https://www.hivel.ai/"
+  },
+  {
+    "id": "rocket",
+    "name": "Rocket",
+    "website": "https://rocket.new/"
+  },
+  {
+    "id": "architect-labs",
+    "name": "Architect Labs",
+    "website": "https://architectchips.com/"
+  },
+  {
+    "id": "capitol",
+    "name": "Capitol",
+    "website": "https://www.capitol.ai/"
+  },
+  {
+    "id": "chaotix-ai",
+    "name": "Chaotix.AI",
+    "website": "https://chaotix.ai/"
+  },
+  {
+    "id": "coreworks",
+    "name": "Coreworks",
+    "website": "https://www.coreworks.ai/"
+  },
+  {
+    "id": "dreamteam",
+    "name": "DreamTeam",
+    "website": "https://dreamteam.co/"
+  },
+  {
+    "id": "gibran",
+    "name": "Gibran",
+    "website": "https://gibran.ai/"
+  },
+  {
+    "id": "jhana",
+    "name": "Jhana",
+    "website": "https://jhana.ai/"
+  },
+  {
+    "id": "nex",
+    "name": "Nex",
+    "website": "https://nex.ai/"
+  },
+  {
+    "id": "optexity",
+    "name": "Optexity",
+    "website": "https://www.optexity.com/"
+  },
+  {
+    "id": "presentations-ai",
+    "name": "Presentations AI",
+    "website": "https://www.presentations.ai/"
+  },
+  {
+    "id": "privado",
+    "name": "Privado",
+    "website": "https://www.privado.ai/"
+  },
+  {
+    "id": "sentra",
+    "name": "Sentra",
+    "website": "https://www.sentra.app/"
+  },
+  {
+    "id": "togai",
+    "name": "Togai",
+    "website": "https://www.togai.com/"
+  },
+  {
+    "id": "ui-flow",
+    "name": "UI Flow",
+    "website": "https://uiflow.com/"
+  },
+  {
+    "id": "zipstack",
+    "name": "Zipstack",
+    "website": "https://unstract.com/"
+  }
+]

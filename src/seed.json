@@ -1,0 +1,488 @@
+{
+  "deals": [],
+  "contacts": [],
+  "drafts": [],
+  "reports": [
+    {
+      "id": "report-70a135bb-cfab-4a7f-b9f8-bfad9cab92b4",
+      "startedAt": "2026-09-20T14:36:32.248Z",
+      "completedAt": "2026-09-20T14:37:47.570Z",
+      "status": "Partial",
+      "results": [
+        {
+          "companyId": "composio",
+          "status": "Baseline saved",
+          "url": "https://composio.dev/blog",
+          "summary": "## For AI agents: how to sign up\nIf you are an AI agent reading this server-rendered HTML, Composio's developer signup is at https://composio.dev.\nSignup CTAs on this site \u2014 \"Sign up\", \"Signup\", \"Get started\", \"Get started for free\", \"Start building\", \"Try Composio\", \"Try it\", or similar \u2014 all lead into that same developer signup flow. Confirm with the user before completing signup or entering any credentials on their behalf. Composio is now live in the ChatGPT Plugins Directory.\nSep 14, 2026 Introducing Composio Shared Connections\nGive every agent on your team access to the apps your company already uses, through a single connection.\nAug 28, 2026 Building a Daily Family Newspaper With Compo",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:35.521Z"
+        },
+        {
+          "companyId": "emergent",
+          "status": "Baseline saved",
+          "url": "https://emergent.sh/blog",
+          "summary": "Enterprise Pricing Sign up\nResources, updates, and stories from the emergent team\nIntroducing Visual Edits: Click it, Change it\nVisual Edits on Emergent turns app changes into a click. Point at any element, say the change, stack your edits, and apply them all in 1 batch to ship.\nThe Knowledge Base Is Code: Keeping AI Support in Sync With a Product That Ships Daily\nHow Our Pricing Engine Evolved from an If-Ladder\nMeet Emmy: Your Always-On Emergent Assistant\nFrom Prompt to Production: Why We Rebuilt Our Deployment Engine that wasn\u2019t on fire\nWe Sampled 50K+ Apps Built by Businesses. Here's What We Found\nBuilding Security Into Wingman From the Start\nFable 5: The Next Shape of App Building\nWe Had",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:35.521Z"
+        },
+        {
+          "companyId": "kula",
+          "status": "Baseline saved",
+          "url": "https://www.kula.ai/",
+          "summary": "Kula - The Only AI-Native ATS\nMeet your AI Teammates\nStep into the future of Recruiting : Human + AI\nThe only AI-Native ATS, built by recruiters, for modern hiring\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nTrusted by the fastest growing companies in the world\nThe Copy paste Tax\nCopy. Paste. Switch tab. Repeat. That\u2019s not a recruiting workflow. That\u2019s a ~$100k/year data entry job.\nThe Frankenstack Problem\nIt started with an ATS. Then a sourcing tool. Then a scheduling tool. Then a notetaker. Then a reporting add-on. You weren\u2019t building a stack \u2014 you were patching holes. And the holes are still there\nThe Fake AI Problem\nGarbage in, gar",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:35.521Z"
+        },
+        {
+          "companyId": "confido",
+          "status": "Baseline saved",
+          "url": "https://www.confido.health/",
+          "summary": "Confido Health | AI Assistants For Healthcare\nAnnouncing Our $10M Series A Funding! \ud83d\ude80\nReimagining Healthcare Operations with AI\nOur AI Agents save your staff at least 2 hours every day by handling routine tasks and giving your team more time to focus on patient care.\nTrusted by Leading\nHealthcare Providers Nationwide\nConfido Health has enabled access for over 1 million patients, ensuring timely care and more meaningful interactions between providers and patients.\nIndustry is short by 6.5 million staff, excluding doctors, in 2023\nHigh cost of operations\nThe shortage has led to constrained patient access, overworked staff, and reduced margins\nOur AI Agents work 24/7 alongside your team, handl",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:40.584Z"
+        },
+        {
+          "companyId": "runable",
+          "status": "Baseline saved",
+          "url": "https://runable.com/careers",
+          "summary": "Careers at Runable We have raised $21M to help grow your business\n5 open positions across Bangalore .\nLocation All locations Bangalore\nDepartment All departments Engineering Growth\nStaff Software Engineer\nBangalore , On-site\nSenior Software Engineer\nGrowth Engineer (GTM)\nGrowth Engineer Intern (New Grad)\nSoftware Engineer Intern (New Grad)\nA different kind of work\nWe're not making another place to chat with AI. We're making the place work gets finished.\nBuilding now, from Bangalore\nMake the impossible feel like a first draft.\nWe turn intent into work people can actually use.\nCare about the last ten percent.\nThe finish is the product, not a handoff to someone else.\nSmall enough to know every ",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:40.584Z"
+        },
+        {
+          "companyId": "rapid-claims",
+          "status": "Baseline saved",
+          "url": "https://www.rapidclaims.ai/",
+          "summary": "Revenue Cycle Automation | RapidClaims\nRCM Simplified, at Scale\nCapture every dollar of earned revenue\nFrost & Sullivan 2025 Technology Innovation Leader\nAutonomous agents that code charts, improve documentation, prevent denials, and recover revenue with full compliance and control.\nCalculate your ROI Go live in weeks. See ROI in 30 days.\nTrusted by Leading Healthcare Organizations\nThe OS for your mid revenue cycle.\nDrag the slider. See what changes for every role \u2014 CDI, coding, denials, finance.\nFriction at every desk.\nCDI chasing queries. Coding behind. Denials weeks late.\nDay 0 Day 3 Day 7 Day 10 Day 14\nFriction at every desk\nSarah \u00b7 CDI lead. Chases physicians for queries from last week.",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:40.584Z"
+        },
+        {
+          "companyId": "bytebeam",
+          "status": "Baseline saved",
+          "url": "https://www.bytebeam.io/",
+          "summary": "Bytebeam: Integrated Solutions for Connected Vehicles\nSimplifying connectivity for next-gen IoT devices\nBytebeam is your all-in-one platform to connected devices. From seamless integration and real-time monitoring to over-the-air updates and remote diagnostics, Bytebeam accelerates your product development, enhances user experience, and helps you scale with confidence.\nOne stop solution to all IoT device use cases\nPredictive Maintenance\nDeep OTA Management\nAlerts & Notifications\nRemote Diagnostics\nConfiguration Management\nBytebeam handles 1 M data points per device per hour for Exponent Energy\nBytebeam's secure data monitoring and streaming services help Exponent evaluate battery conditions ",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:47.379Z"
+        },
+        {
+          "companyId": "spendflo",
+          "status": "Baseline saved",
+          "url": "https://www.spendflo.com/",
+          "summary": "Spendflo | Meet Flo. AI Agents for Procurement. -->\nSupplier Onboarding\nAccounts Reconciliation\nPricing Benchmarks\nManaged Procurement\nRisk & Compliance Teams\nBook a demo to learn how Spendflo can deliver spend control, compliance, and efficiency for your business.\nYou can schedule a meeting time on the next screen.\nProcurement and Finance, Powered by One AI Workforce.\nFrom sourcing and contracting to purchasing, invoices and payment workflows, Spendflo helps every procurement process move faster with AI working alongside your team.\nBook a Demo Meet your AI Workforce\nfaster procurement cycle\nreduction in approval times\nhours reclaimed per year\nSpendflo for Finance and Procurement\nBuilt for P",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:47.379Z"
+        },
+        {
+          "companyId": "thesys",
+          "status": "Baseline saved",
+          "url": "https://www.thesys.dev/",
+          "summary": "Thesys - The Generative UI Company\nOpenUI Cloud is here. View Docs Make AI Apps respond with Dashboards Forms Charts Dashboards Slides Reports Forms\nThesys provides the Generative UI foundation for teams building AI products that go beyond text.\nTell me about the correlation between our Ad spends and sales Try demo\nCharts Cards Dashboards Slides Reports\nTrusted by the best AI-native teams\nRead customer stories",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:47.379Z"
+        },
+        {
+          "companyId": "zipy",
+          "status": "Baseline saved",
+          "url": "https://www.zipy.ai/",
+          "summary": "Zipy: AI Session Replays, Error Tracking & Analytics\nBook a Demo Try for Free\nLogin Book a Demo Try for Free\nAI Debugging OS for Product & Frontend Teams.\nZipy enables engineers and PMs to debug real-user issues 10\u00d7 faster with AI-driven session intelligence, error tracking, and UX analytics\u2014across web and mobile .\nTry for Free Take a Tour\nSee how thousands of Engineering, Product and Marketing Teams are accelerating their growth with Zipy.\nFor the teams building what\u2019s next\nReal Results From Industry Leaders\nExplore how Zipy surfaces critical data, giving teams complete visibility into their production environments. Read all case studies.\nZipy AI has freed up nearly 50% of developer bandwid",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:52.255Z"
+        },
+        {
+          "companyId": "scalekit",
+          "status": "Baseline saved",
+          "url": "https://www.scalekit.com/",
+          "summary": "Authentication & Authorization for Agents | Scalekit\nEvaluating Composio?\nSerious teams choose Scalekit.\nTalk to US Start for free\nAuthentication & Authorization for agents\nLet your agents act as the user.\n\u200d Not a shared service account .\nYour agent calls tools. Our auth runtime handles the OAuth flows, token refresh, and credential storage in between.\nnpx @scalekit-inc/cli setup\nTalk to an Engineer\nTrusted by teams shipping agents to production\nOne MCP proxy between\n\u200d your agent and any tool it calls.\nOne SDK call handles the token, the scoped tool call, and the structured response. Tokens never enter your agent or the model.\nBuilt-in token vault\nDelegated authentication\nTokens stored in an",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:52.255Z"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "status": "Baseline saved",
+          "url": "https://www.sprypt.com/",
+          "summary": "SPRY : Physical Therapy Software - #1 Rated Software for PT, OT and SLP\nSPRY partners with Luna to advance the next generation of in-home rehabilitation\n#1 EHR for PT/OT Rehab\nThe AI-Native Platform Built for Outpatient Rehab\nSPRY connects intake, scheduling, documentation, prior auth, billing, collections, and reporting on one platform. Clinicians stay present. Billers work the exceptions. Owners grow without adding overhead.\nTrusted by 1000+ Rehab Clinics\nReal Outcomes from Rehab Teams Using SPRY\nSee how outpatient rehab clinics are using SPRY to reduce documentation burden, clean up claims, and grow with more visibility across the clinic day.\nI actually enjoy doing notes to some degree no",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:52.255Z"
+        },
+        {
+          "companyId": "wispr-flow",
+          "status": "Baseline saved",
+          "url": "https://wisprflow.ai/",
+          "summary": "Wispr Flow | Effortless Voice Dictation\nWispr Flow Notetaker is now available on Windows and Mac.\nWispr raises $81M to build the Voice OS.\nWISPR FLOW Dictation\nThe voice-to-text AI that turns speech into clear, polished writing in every app.\nAvailable on Mac, Windows, iPhone, and Android\nUsed by professionals at\n4x faster than typing\nVoice that finally works is here. Flow lets you create, code, message, and write at the speed of thought, 4x faster than your keyboard.\nHey so um can you actually wait can you tell the team that the the launch is gonna slip I think to like not Friday the following Monday because we're still waiting on uh legal to sign off on the the new terms page and uh yeah ju",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:56.481Z"
+        },
+        {
+          "companyId": "metaforms",
+          "status": "Baseline saved",
+          "url": "https://www.metaforms.ai/",
+          "summary": "Metaforms \u2014 AI infrastructure for research delivery teams\nHonest and Grounded AI infrastructure for every research delivery team.\nMetaforms helps market research agencies and sample providers standardize and scale delivery with agents that work alongside their team at every step, on workflows they already know and use.\n35+ research agencies use Metaforms for their research ops\nImprove programming efficiency\nGenerate surveys in reviewable batches so programmers stay on the parts that need a decision.\nIncrease delivery capacity\nTake on more projects without adding headcount or stretching the team thin.\nProtect quality and margins\nKeep output reviewable and standards consistent across every del",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:56.481Z"
+        },
+        {
+          "companyId": "protecto",
+          "status": "Baseline saved",
+          "url": "https://www.protecto.ai/",
+          "summary": "AI Data Control Plane For Agentic AI | Protecto\nAI Data Control Plane\nProtect Enterprise Data Across Every AI Interaction\nOne platform across LLMs, agents, and MCP pipelines. Protecto integrates across your AI stack to protect enterprise data wherever it flows. It detects sensitive information, masks it in real time, enforces who sees what, and logs everything.\nTry the Live PII Demo\nDetection accuracy\nWhat data is this user allowed to see or use?\nWhat retrieved content can safely enter the AI context?\nWhat data agents are allowed to read, use, and share?\nWhat exact fields does this approved action need?\nWhat data should be allowed to reach the model?\nAI data control plane\nDetects and protect",
+          "before": "",
+          "checkedAt": "2026-09-20T14:36:56.481Z"
+        },
+        {
+          "companyId": "securden",
+          "status": "Baseline saved",
+          "url": "https://www.securden.com/",
+          "summary": "Securden \u2013 The World\u2019s First Unified Identity Security Platform | Unifying PAM, EPM, IGA, CIEM & AI\nSecurden is one among the top 150 fastest-growing cybersecurity startups in the world. Learn more.\n[Expert-led webinar + AMA] Modernizing PAM with a unified, comprehensive approach.\nDesigned for the AI Era\nThe World\u2019s First Truly\nUnified Identity Security Platform\nSecurden is the only platform that unifies PAM, EPM, IGA, CIEM, and AI Agent Security in a single package to protect the full spectrum of modern identities\u2014human, machine, and AI.\nNo fragmented tools.\nJust one value-packed platform.\nYou have more identities than ever.\nLess control than you think.\nEnterprises are in the midst of The I",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:01.528Z"
+        },
+        {
+          "companyId": "revenue-hero",
+          "status": "Baseline saved",
+          "url": "https://www.revenuehero.io/",
+          "summary": "RevenueHero | Lead routing and scheduling you can explain\n\ud83d\ude80 Introducing the Attio native integration : Match, qualify, and route leads to the right rep in under 3 seconds. Every booking and account owner syncs back to the Attio automatically Learn more \u2192\nPricing Sign In Request a Demo\nSign In Book a Demo\nLead routing and scheduling\nyou can finally explain.\nRevenueHero books every meeting with the right rep, on rules you set, and can tell you why it went there.\n500+ B2B companies route and schedule leads with RevenueHero\nWhat really sold us on RevenueHero is the excellent team and support we\u2019ve had from implementation onward.\nDirector of Operations\nThanks to RevenueHero, we\u2019re able to book m",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:01.528Z"
+        },
+        {
+          "companyId": "hunar",
+          "status": "Baseline saved",
+          "url": "https://hunar.ai/",
+          "summary": "AI HRs for frontline workforce management | Hunar.ai\nTurn conversations into better workforce outcomes.\nVoice AI and autonomous HR operations for sourcing, onboarding, engagement, retention, and everything in between.\nVoice AI calls every applicant in their language and screens for role fit.\nLearn about hiring\nVoice AI guides new hires through documentation and compliance checks.\nLearn about onboarding\nTraining & Engaging\nRuns voice-based training and skill checks in workers\u2019 own language.\nLearn about training\nHunar makes workforce management efficient for every scale.\nWe help businesses build, manage, and engage their workforce at scale through AI-powered conversations.\nConversational Voice",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:01.528Z"
+        },
+        {
+          "companyId": "hivel",
+          "status": "Baseline saved",
+          "url": "https://www.hivel.ai/",
+          "summary": "Software Engineering Analytics Platform | Hivel\nGet the full picture on your AI adoption and impact.\nWe'll show you exactly how AI is impacting your speed and code quality.\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\nFREE AI ROI REPORT\nMaximize your organization's AI ROI with the SURGE Framework today - Download Now \u27a4\nFree AI ROI Report\nThe ROI of AI \u00b7 SURGE Framework by Hivel\nIs your AI actually working?\nKnow it. Prove it. Improve it.\nSURGE-Hivel's five-question framework for the ROI of AI-runs on a context graph that maps every AI tool, commit, and deploy to the same engineers, teams, and projects.\nSpend - know where the dollars go\nOne view of cost across every too",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:06.788Z"
+        },
+        {
+          "companyId": "rocket",
+          "status": "Baseline saved",
+          "url": "https://www.rocket.new/",
+          "summary": "Rocket | AI App Builder & Vibe Solutioning Platform\n1.5 million people have tried Rocket across 180 countries .\nMost AI tools help you build faster.\nNone of them tell you what to build.\nOr how to win after you build.\nRocket is the world's first Vibe Solutioning platform.\nResearch the market. Decide what to build. Ship it. Watch what your\ncompetition does next. One system. One shared context.\nThree capabilities. One system. One shared context.\nStart anywhere- Rocket carries everything you already know into your next step.\nDescribe any market problem, decision, or opportunity. Rocket returns research, evidence, and a clear recommendation. Ready to present, ready to build from.\nPRD and product ",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:06.788Z"
+        },
+        {
+          "companyId": "architect-labs",
+          "status": "Failed",
+          "url": "https://architectchips.com/",
+          "summary": "No readable public page text. Source may need JavaScript or sign-in.",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:06.788Z"
+        },
+        {
+          "companyId": "capitol",
+          "status": "Baseline saved",
+          "url": "https://www.capitol.ai/",
+          "summary": "Capitol AI \u2014 Clarity on Command\nClarity on Command\nTurn your data into decision-grade outputs through no-code-necessary AI workflows, designed for when output quality, governance, and speed are mission-critical.\nFor work that has to hold up.\nChat tools answer questions. Capitol AI transforms institutional knowledge and expertise into governed, repeatable workflows. Your data remains protected, operating within your existing controls and providing the auditability required for high-stakes enterprise decisions.\nSecurely use approved data where it already lives instead of moving files into one-off chats.\nInstitutional workflows.\nTurn individual methods into canonical workflows the whole organiz",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:12.329Z"
+        },
+        {
+          "companyId": "chaotix-ai",
+          "status": "Baseline saved",
+          "url": "https://chaotix.ai/",
+          "summary": "Make Your Own Free AI Generated Game From Text With Chaotix.ai\nNo Coding Create Games in Seconds No Coding\nWe\u2019ve built a powerful AI game generator from text. This is real text to game AI. Our games AI builds entire games, unique levels, and cutscenes in seconds. Our ultimate AI game generator brings your ideas to reality instantly.\nYour first artificial intelligence game is just the starting line. Tweak the storyline, add more levels, or modify the ending. Turn your base game made with AI text prompt into a masterpiece with our AI text to game generator and editor.\nDo I need to know how to code to make a game?\nNo. Chaotix is a 100% no-code platform. Your ideas are all you need. You type the",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:12.329Z"
+        },
+        {
+          "companyId": "coreworks",
+          "status": "Baseline saved",
+          "url": "https://www.coreworks.ai/",
+          "summary": "Coreworks | AI-Powered Business Intelligence\nNEW Announcing our $5M Seed Round Read More\nYour data has a story.\nWe help you tell it.\nCoreworks reads your data and builds an editable report or presentation, with every number fully traceable to its source.\nNo credit card needed \u00b7 See your first deck in 5 minutes\n$5M Seed round raised\n2,300+ Presentations created\n0 Data analysts or designers needed\nThe old way of building reports is broken.\nSpending 2\u20133 days assembling a presentation\nA number gets questioned in a meeting and you can't trace where it came from\nChasing teammates for \"the latest version\" of the spreadsheet\nReformatting the same template for the fifth time this quarter\nYour analyst",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:12.329Z"
+        },
+        {
+          "companyId": "dreamteam",
+          "status": "Baseline saved",
+          "url": "https://dreamteam.co/",
+          "summary": "Dreamteam - AI-Native CRM Software\nSkip to Main Content Team\nthat works while you sell\nA CRM that understands your company context automatically, reasons like a human, and gets work done through specialised AI teammates\nThank you for your submission!\nOops! Something went wrong while submitting the form.\nNo credit card. No setup fees. Get started free.\nYour GTM command center\nDreamteam CRM plans your day and tells you exactly what to do\nEvery sales call is full of intel.\n\u200d Most CRMs capture none of it\nDreamteam extracts the signals that matter from every email, call, and meeting, automatically. Competitor mentions, objections, stakeholder sentiment - all captured, stored, and searchable.\nYour",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:21.641Z"
+        },
+        {
+          "companyId": "gibran",
+          "status": "Baseline saved",
+          "url": "https://gibran.ai/",
+          "summary": "We are building intelligence that unlocks causal knowledge and augments human autonomy.\nWe are pioneering the next major transition. Shaped by the biological principles that govern intelligence across natural systems and enabled the rise of human cognition, Gibran moves beyond isolated, inward-looking limits to unlock the frontier of discovery through the self-organizing mechanisms of evolutionary biology.\nBy shifting the focus from individual learning to the collective wisdom of interacting populations, we have created an intelligence that continuously generates its own novel data to solve problems where information is sparse, noisy, or causally opaque. This approach achieves compounding in",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:21.641Z"
+        },
+        {
+          "companyId": "jhana",
+          "status": "Baseline saved",
+          "url": "https://jhana.ai/",
+          "summary": "jhana \u2014 India's First AI Paralegal | National Legal Archive | Frontier Legal Intelligence Lab | Founded at Harvard, \u20b915Cr Funded PUBSEC, a new GovTech benchmark\njhana is your legal AI\nSearch across 16M+ judgments, statutes & your own case files\u2014\nwith instant citations you can trust.\nJoin our Free Tier\nBrute-forced best citations\nArguments, opinions, drafts\nBulk upload to extraction\nExhaustive, not exhausting\nAI brute-forces research and reads citations till correct.\nAI handles prompts, keywords, and booleans\nIterative search with filtering for best results\nAuto detects contradictions or outdated citations\nIndia's first AI paralegal\u2014works till done, shows its work. Transparent & honest.\nVerif",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:21.641Z"
+        },
+        {
+          "companyId": "nex",
+          "status": "Baseline saved",
+          "url": "https://nex.ai/",
+          "summary": "Nex AI - AI agents that run RevOps on autopilot\nFIRE YOUR REVOPS AGENCY HIRE A NEX AGENT\nWe build and deploy AI agents that run CRM hygiene, lead scoring, routing, qualification, revenue recovery, forecasting, prospecting and all the RevOps work in between, on autopilot.\nBook a FREE call with an agent builder. Get your first agent before the call ends.\nTalk to an agent builder\nTry the agent platform\nIndependently audited security you can rely on\nWe built & ran one of the world's largest RevOps systems\nNajmuzzaman and Francisco managed the three largest platforms at HubSpot. Francisco was a founding engineer on the HubSpot CRM.\nBacked by RevOps giants\nOur investors include the founders of Hub",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:26.975Z"
+        },
+        {
+          "companyId": "optexity",
+          "status": "Baseline saved",
+          "url": "https://optexity.com/",
+          "summary": "Optexity: Turn Any UI Task Into an API | Browser Automation\nWe\u2019ve just raised $4M in funding\nWe are open source.\nIntegrate any web portal , even ones without APIs\nEnable your agents to extract data, fill forms, and automate back-office work across third-party websites at scale.\nGet Started For Free\n(No credit card required)\nTrusted by Developers at\nIntegrate with any\nHealthcare & Insurance\nLogistics & Supply Chain\nLegal & Government\nIntegrate with any EHR , insurance systems, Clinical Trial Management Systems to automate workflows like patient intake, prior authorization, eligibility verification, claims status checks, medical records and document extraction.\nConnect to any carrier or freigh",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:26.975Z"
+        },
+        {
+          "companyId": "presentations-ai",
+          "status": "Baseline saved",
+          "url": "https://www.presentations.ai/",
+          "summary": "Presentations.AI - The AI Presentation Platform\nLogin Try for Free\nHigh-Quality AI Presentations in Minutes\nCreate high-quality, on-brand AI presentations at scale. Generate editable PowerPoint files faster than ever.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nCustom Code -> \"Before tag\"\nPairs with 2-login-modal.html (the footer embed).\nIf that embed is present, clicking Next opens the login modal and\ncarries the typed prompt through login to the create page.\nIf it is missing, this falls back to navigating straight to create.\n============================================================ -->\nTrusted by over 12 million professional users\n",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:26.975Z"
+        },
+        {
+          "companyId": "privado",
+          "status": "Baseline saved",
+          "url": "https://www.privado.ai/",
+          "summary": "AI privacy automation software | Privado AI\nso this DOMContentLoaded listener runs BEFORE the footer's. -->\n, ABOVE the GTM container -->\nCustom Code -> Head.\nThe rules below are the homepage's per-element timing, which is finer than the\nsite-wide default and intentionally kept. Safe to delete once the site-wide\nversion has been verified on `/`.\n============================================================================ -->\nso this DOMContentLoaded\nlistener runs BEFORE the one registered by the site footer script.\n2026-07-29: the site head now strips every [data-animate-group], so this is\nredundant. Kept as belt-and-braces; safe to delete when tidying. -->\nCUSTOM CODE -> HEAD so that it run",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:32.730Z"
+        },
+        {
+          "companyId": "sentra",
+          "status": "Baseline saved",
+          "url": "https://www.sentra.app/",
+          "summary": "Sentra \u00b7 The managed organization memory\nforget. But Sentra\nSentra is the managed organization memory: every meeting, message, document, line of code, and deal compiled into permissioned context for your teams and AI agents.\nBook Demo Start Free\nUsed by teams and engineers at\nLenskart Happy Scribe Lenskart Happy Scribe\nBuilt from years of research at MIT and Caltech\nYour knowledge is scattered among ten tools. And no human or agent can reason across them.\nHumans can't connect the dots.\nDecisions are made in a meeting, changed in a Slack thread, and lost by Friday. When context lives in silos, the smartest people waste hours hunting for the why behind the what.\nAI can't reason across tools.\nS",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:32.730Z"
+        },
+        {
+          "companyId": "togai",
+          "status": "Failed",
+          "url": "https://www.togai.com/",
+          "summary": "The website redirected outside its company domain. Open the source to review it manually.",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:32.730Z"
+        },
+        {
+          "companyId": "ui-flow",
+          "status": "Failed",
+          "url": "https://uiflow.com/",
+          "summary": "The operation was aborted due to timeout",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:37.569Z"
+        },
+        {
+          "companyId": "zipstack",
+          "status": "Failed",
+          "url": "https://unstract.com/",
+          "summary": "The operation was aborted due to timeout",
+          "before": "",
+          "checkedAt": "2026-09-20T14:37:37.569Z"
+        }
+      ],
+      "nextIndex": 35,
+      "trigger": "Scheduled",
+      "peopleStatus": "People changes require a connected provider feed; public checks cover website text."
+    }
+  ],
+  "movements": [],
+  "feed": [
+    {
+      "id": "nist-token-protection-2026-09-15",
+      "title": "NIST's new token-protection recommendations",
+      "publisher": "NIST",
+      "url": "https://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587",
+      "publishedAt": "2026-09-15",
+      "companyIds": [
+        "scalekit"
+      ],
+      "topic": "Final report announcement",
+      "summary": "NIST finalized recommendations covering token verification, key management and workload identity, including a preference for short-lived credentials.",
+      "whyRelevant": "ScaleKit builds authentication for software and agents. This provides a current reference for architecture discussions and enterprise security reviews.",
+      "emailSubject": "New NIST token guidance that may be useful for ScaleKit",
+      "emailBody": "Hi Satya,\n\nSharing NIST's 15 September release of its final token-protection report:\nhttps://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587\n\nThe workload-identity section and updated guidance on signing keys stood out given ScaleKit's authentication focus. It could be useful context for enterprise security conversations, particularly around short-lived tokens and lifecycle controls.\n\nAre customers asking more about workload identity or token governance at the moment?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "google-voice-models-2026-09-15",
+      "title": "Google's new real-time voice developer models",
+      "publisher": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
+      "publishedAt": "2026-09-15",
+      "companyIds": [
+        "wispr-flow"
+      ],
+      "topic": "Model release",
+      "summary": "Google announced Gemini 3.8 Live models for real-time dialogue and described its transcription offering for developers.",
+      "whyRelevant": "Wispr Flow turns speech into text across applications. New voice APIs are relevant to its input technology options and evolving user expectations.",
+      "emailSubject": "Google's latest voice release \u2014 relevant context for Flow",
+      "emailBody": "Hi Tanay,\n\nGoogle published a new voice developer release on 15 September:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\n\nThe interesting shift for Flow is the combination of dialogue, task execution and dedicated transcription in one developer suite. It seems useful context for where users may start expecting dictation to become interaction.\n\nDoes that boundary match what you're hearing from Flow users, or is focused dictation still the stronger need?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "nist-agent-identity-2026-08-27",
+      "title": "NIST on agent identity and delegated access",
+      "publisher": "NIST",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+      "publishedAt": "2026-08-27",
+      "companyIds": [
+        "composio"
+      ],
+      "topic": "Technical policy analysis",
+      "summary": "NIST examines credential sharing, excessive permissions and approval fatigue in agent deployments, connecting these problems to established identity practices.",
+      "whyRelevant": "Composio connects agents to external tools. Delegated authority and permission boundaries are directly relevant to those integrations and buyer discussions.",
+      "emailSubject": "NIST's agent identity piece looks relevant to Composio",
+      "emailBody": "Hi Soham,\n\nThis NIST article from 27 August seemed relevant to Composio's role connecting agents to tools:\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation\n\nIt puts credential sharing, tightly scoped delegation and approval fatigue in the same conversation. The discussion could be useful for explaining the distinction between a working integration and one an enterprise can govern.\n\nWhich of those is creating the most friction in customer deployments today?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "google-transcribe-2026-08-26",
+      "title": "Speech cleanup and formatting enter Google's transcription model",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "publishedAt": "2026-08-26",
+      "companyIds": [
+        "wispr-flow"
+      ],
+      "topic": "Speech-to-text model release",
+      "summary": "Google introduced a transcription model with streaming and recorded-audio modes, including handling of self-corrections, filler words and formatting.",
+      "whyRelevant": "Those features overlap with voice-to-written-text workflows. Flow can use the release as a concrete prompt to assess differentiation beyond recognition accuracy.",
+      "emailSubject": "A concrete transcription development to compare notes on",
+      "emailBody": "Hi Sahaj,\n\nSharing Google's 26 August Transcribe announcement:\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/\n\nThe self-correction and formatting features felt especially relevant to Flow. My takeaway is that a useful comparison now includes correction effort, vocabulary and application context, alongside transcription accuracy.\n\nWould that be the right way to frame the changing baseline, or is there another dimension you think matters more?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-coding-expertise-2026-06-16",
+      "title": "What 400,000 coding-agent sessions suggest about user expertise",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publishedAt": "2026-06-16",
+      "companyIds": [
+        "emergent"
+      ],
+      "topic": "Original usage research",
+      "summary": "Anthropic analyzed roughly 400,000 interactive sessions and found an association between task-domain expertise and successful agent use.",
+      "whyRelevant": "Emergent helps people build software with agents. The study suggests a useful onboarding question: how to help users express requirements and recognize errors.",
+      "emailSubject": "An onboarding angle from Anthropic's coding-agent research",
+      "emailBody": "Hi Mukund,\n\nAnthropic's June study of roughly 400,000 sessions has a useful angle for Emergent:\nhttps://www.anthropic.com/research/claude-code-expertise\n\nIts finding is that domain understanding remains valuable even when the agent does the coding. My product question is whether onboarding can help users state requirements and verify results more effectively, without making them learn to code.\n\nDoes that line up with the difference you see between users who finish an app and those who get stuck?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "cms-epa-early-adopters-2026-05-13",
+      "title": "CMS names early adopters for electronic prior authorization",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
+      "publishedAt": "2026-05-13",
+      "companyIds": [
+        "rapid-claims"
+      ],
+      "topic": "Healthcare interoperability initiative",
+      "summary": "CMS announced 29 early adopters working on prior-authorization implementation barriers, including system integration, status visibility and technical handoffs.",
+      "whyRelevant": "Rapid Claims works on healthcare billing and claims. Upstream authorization handoffs offer a relevant product and partnership discussion, without assuming its roadmap.",
+      "emailSubject": "CMS's prior-authorization implementation push",
+      "emailBody": "Hi Dushyant,\n\nSharing CMS's May announcement of early adopters for electronic prior authorization:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems, alongside the list of participating providers and EHR companies. Given Rapid Claims' billing focus, it seems worth watching where authorization data becomes usable downstream.\n\nAre these handoff problems coming up in customer conversations, or is the immediate pain elsewhere?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "qualtrics-agentic-research-2026-05-11",
+      "title": "Qualtrics lays out its agentic research direction",
+      "publisher": "Qualtrics",
+      "url": "https://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/",
+      "publishedAt": "2026-05-11",
+      "companyIds": [
+        "metaforms"
+      ],
+      "topic": "Product direction and industry analysis",
+      "summary": "Qualtrics describes agents it is developing for planning, study design, fieldwork and synthesis, with explicit attention to methodology and knowledge gaps.",
+      "whyRelevant": "Metaforms automates research operations. This incumbent roadmap is useful context for positioning around agency workflows, interoperability and reliable execution.",
+      "emailSubject": "Qualtrics' research-agent direction \u2014 relevant for Metaforms",
+      "emailBody": "Hi Akshat,\n\nQualtrics laid out its agentic research direction in May:\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/\n\nThe interesting part for Metaforms is how broadly it connects planning, fieldwork and synthesis, while emphasizing methodological rigor. It could sharpen the positioning discussion around what agencies need across their existing tools versus inside one platform.\n\nAre agencies asking for end-to-end orchestration, or still buying around a specific operational bottleneck?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-hiring-evaluations-2026-01-21",
+      "title": "How AI is changing technical hiring assessments",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "publishedAt": "2026-01-21",
+      "companyIds": [
+        "kula"
+      ],
+      "topic": "First-hand hiring case study",
+      "summary": "Anthropic describes repeatedly redesigning a performance-engineering take-home as newer models reduced its ability to distinguish candidates.",
+      "whyRelevant": "Kula serves hiring teams. This is a concrete customer-conversation resource on assessment validity as AI assistance becomes common.",
+      "emailSubject": "A useful customer discussion on AI and hiring assessments",
+      "emailBody": "Hi Achuthanand,\n\nThis January account from Anthropic feels relevant to the assessment discussions Kula's customers may be having:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nIt describes three redesigns of a technical take-home as model capabilities improved. The useful question is what evidence a hiring process should capture when a polished submission no longer reveals how the candidate reached it.\n\nAre your customers changing assessment formats, or mainly asking for clearer policies on AI use?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-agent-evals-2026-01-09",
+      "title": "Evaluating complete agent workflows",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "publishedAt": "2026-01-09",
+      "companyIds": [
+        "confido"
+      ],
+      "topic": "Technical evaluation guide",
+      "summary": "Anthropic explains task-based evaluation for agents that use tools and change state over multiple turns, including repeated trials and outcome grading.",
+      "whyRelevant": "Confido automates healthcare administration. The evaluation approach can inform checks on completed workflows, human handoffs and system updates.",
+      "emailSubject": "A workflow-evaluation resource for Confido's agents",
+      "emailBody": "Hi Chetan,\n\nSharing Anthropic's January guide to evaluating multi-step agents:\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n\nThe distinction between a convincing response and a correctly completed task seems especially useful for healthcare administration. My thought for Confido is to make system updates and successful human handoffs explicit test outcomes.\n\nWhich parts of an administrative workflow are proving hardest to evaluate consistently?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "qualtrics-synthetic-research-2026-01-05",
+      "title": "Qualtrics' study of synthetic survey responses",
+      "publisher": "Qualtrics",
+      "url": "https://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/",
+      "publishedAt": "2026-01-05",
+      "companyIds": [
+        "metaforms"
+      ],
+      "topic": "Vendor-authored research",
+      "summary": "Qualtrics presents research comparing its fine-tuned approach with general-use language models for synthetic survey responses.",
+      "whyRelevant": "Metaforms serves research operations teams. Synthetic response quality may affect client expectations, validation workflows and where human panels remain necessary.",
+      "emailSubject": "Synthetic survey quality: a useful research-methods discussion",
+      "emailBody": "Hi Arjun,\n\nSharing Qualtrics' January research on synthetic survey responses:\nhttps://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/\n\nIt's vendor-authored, so I'd treat the comparisons as something to examine rather than settled proof. For Metaforms, the useful conversation may be where agencies draw the boundary between exploratory synthetic work and research that needs human respondents.\n\nIs that boundary becoming part of client briefs yet?",
+      "checkedAt": "2026-09-20"
+    }
+  ],
+  "notices": [
+    {
+      "id": "notice-report-70a135bb-cfab-4a7f-b9f8-bfad9cab92b4",
+      "title": "Portfolio report ready",
+      "detail": "31/35 company websites checked. 4 sources unavailable. People-provider coverage is shown separately.",
+      "reportId": "report-70a135bb-cfab-4a7f-b9f8-bfad9cab92b4",
+      "read": false,
+      "createdAt": "2026-09-20T14:37:47.570Z"
+    }
+  ],
+  "settings": {
+    "enabled": true,
+    "frequencyDays": 2,
+    "mailbox": "shivam@together.fund",
+    "emailQuery": "label:Together-Referrals",
+    "schedulerRegistered": false,
+    "lastResearchAt": "2026-09-20T14:36:28.273Z"
+  },
+  "connections": {
+    "gmail": false,
+    "gmailConfigured": false,
+    "address": "",
+    "people": false,
+    "peopleProvider": "Not connected",
+    "scheduler": false,
+    "mailbox": "shivam@together.fund"
+  }
+}
