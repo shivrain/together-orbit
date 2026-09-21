@@ -57,3 +57,10 @@
 .sw-dialog label.sw-import{display:inline-flex;flex-direction:row;align-items:center;gap:8px;min-height:42px;padding:0 6px;margin:0;color:var(--o-accent);font-size:14px;font-weight:500;cursor:pointer}
 .sw-dialog label.sw-import:hover{text-decoration:underline}
 .sw-dialog .sw-import input{display:none}
+.sw-send-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
+.sw-send-row .sw-button{font-weight:600}
+.sw-send-row .sw-disabled{opacity:.45;pointer-events:auto;cursor:not-allowed}
+.sw-dialog .sw-quiet{background:transparent;color:var(--o-accent);border-color:var(--o-line-strong)}
+.sw-dialog .sw-quiet:hover{background:var(--o-soft);border-color:var(--o-accent)}
+.sw-dialog .sw-send-row+.sw-footnote{margin:10px 0 4px}
+

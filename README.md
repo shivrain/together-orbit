@@ -8,18 +8,17 @@ The complete React application runs on GitHub Pages. It does not redirect to or 
 
 ## Content
 
-The library answers one question: **why would this founder be glad we wrote?** Sector news a founder already follows more closely than we do is not content — 11 such briefs were removed on September 21, 2026 and replaced with material that earns a reply. Each brief is tagged with the reason it does:
+The library answers one question: **why would this founder be glad we wrote?** Company announcements, podcasts, opinion newsletters and press releases were removed — a founder does not need their investor to forward them the news. What remains is research.
 
-- **Together** — something the fund itself published. The most natural reason to write.
-- **Portfolio peer** — a post, benchmark or war story by another portfolio founder, with an offer to connect the two.
-- **Operating playbook** — dated, sourced guidance on a decision the founder is actually making: pricing, first GTM hire, segment choice, when to add sales.
-- **Buyer data** — third-party survey evidence the founder can use in their own sales conversations.
+- **Research breakthrough (110)** — recent papers from arXiv, harvested through the public arXiv API across 38 topic areas mapped to what each portfolio company builds: agent tool use, agent memory, retrieval grounding, speech recognition, document extraction, clinical NLP, PII detection, prompt-injection defence, chip-design ML, recommender systems, evolutionary search and more. Every title, abstract, author list, date and URL comes from the API; takeaways are quoted verbatim from the abstract and labelled as such. Framing and questions are ours.
+- **Industry research (7)** — original datasets: RevenueHero's million-submission funnel benchmarks, ChartMogul segment persistence across 1,043 companies, Sumble GTM hiring across 22,988 job posts, DORA, LinkedIn.
+- **Buyer data (5)** — third-party surveys a founder can quote in their own sales calls: MGMA, Battery, Deloitte CFO Signals, FinOps, APTA.
 
-22 briefs cover 30 portfolio companies with 96 recipient-specific messages. Every brief carries publication and research dates, two or three takeaways quoted from the source, an explicit engagement move (what to do with it), a discussion question, and named recipients with a reason grounded in their public role.
+122 briefs cover 34 portfolio companies with 251 recipient-specific messages. Each carries publication and research dates, takeaways, an engagement move, a discussion question, and named recipients with a reason grounded in their public role. Recipients rotate across a company's mapped people rather than always addressing the CEO.
 
-Choose a read and a person to see the relevant context and personal note. Prepare, edit, save or copy a draft, or open your email app. A saved or archived draft never implies an email was sent.
+Choose a read and a person, then **Send in Gmail** opens a compose window already written and addressed — you press Send there. Outlook and your desktop email app are alongside it, and drafts save locally. Nothing is sent automatically, and a saved or archived draft never implies an email was sent.
 
-Source findings and our suggested applications are distinct. Public roles inform relevance; they do not establish private interests, current company problems, relationships or consent. Older references retain their original dates. Podcast notes do not imply access to paywalled transcripts.
+Source findings and our suggested applications are distinct. Quoting an abstract is not the same as having read the paper, and the briefs say so. Public roles inform relevance; they do not establish private interests, current company problems, relationships or consent.
 
 ## Referrals
 

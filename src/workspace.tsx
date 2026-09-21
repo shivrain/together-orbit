@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-import {ArrowRight,ArrowUpRight,Check,Copy,Download,Mail,Settings2,Upload} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,Check,Copy,Download,Mail,Send,Settings2,Upload} from 'lucide-react';
 import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Toaster} from '@/components/ui/sonner';
 import {toast} from 'sonner';
@@ -21,6 +21,15 @@ const route=()=>location.hash==='#refer'?'refer':location.hash==='#referrals'?'r
 const formUrl=(mailbox='shivam@together.fund')=>{const url=new URL(location.pathname,location.origin);url.hash='refer';url.searchParams.set('to',mailbox);return url.href};
 const referralMailbox=()=>{const address=new URL(location.href).searchParams.get('to');return address&&/^[^\s@,;:]+@[^\s@,;:]+\.[^\s@,;:]+$/.test(address)?address:undefined};
 const safeUrl=(value:string)=>/^https?:\/\//i.test(value)?value:undefined;
+/** Deep links that open a prefilled compose window. The person still presses Send. */
+const sendLinks=(draft:{to:string;subject:string;body:string})=>{
+ const to=encodeURIComponent(draft.to),su=encodeURIComponent(draft.subject),bo=encodeURIComponent(draft.body);
+ return {
+  gmail:`https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${bo}`,
+  outlook:`https://outlook.office.com/mail/deeplink/compose?to=${to}&subject=${su}&body=${bo}`,
+  mailto:`mailto:${to}?subject=${su}&body=${bo}`,
+ };
+};
 function initialState(){try{return readLocalData()}catch{return null}}
 
 export default function Workspace(){
@@ -92,7 +101,13 @@ export default function Workspace(){
     <label>Subject<input required value={draft.subject} onChange={e=>setDraft({...draft,subject:e.target.value})}/></label>
     <label>Message<textarea required rows={11} value={draft.body} onChange={e=>setDraft({...draft,body:e.target.value})}/></label>
     {source&&<div className="fw-source"><a href={safeUrl(source.url)} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={13}/></a><small>{source.publisher} · {date(source.publishedAt)}</small></div>}
-    <div className="sw-actions"><button className="sw-button" disabled={busy||!draft.body.trim()||!draft.subject.trim()}><Check size={14}/>Save draft</button><button className="sw-outline" type="button" onClick={()=>void copy(`Subject: ${draft.subject}\n\n${draft.body}`)}><Copy size={14}/>Copy message</button><a className="sw-text" href={`mailto:${encodeURIComponent(draft.to)}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`}>Open email app<ArrowUpRight size={13}/></a></div>
+    <div className="sw-send-row">
+     <a className="sw-button" href={sendLinks(draft).gmail} target="_blank" rel="noreferrer" onClick={()=>void perform(async()=>{await save('draft',draft);toast.success(draft.to.trim()?'Saved, and opened in Gmail':'Saved, and opened in Gmail — add the address there')})}><Send size={15}/>Send in Gmail<ArrowUpRight size={13}/></a>
+     <a className="sw-outline" href={sendLinks(draft).mailto}>Email app</a>
+     <a className="sw-outline" href={sendLinks(draft).outlook} target="_blank" rel="noreferrer">Outlook</a>
+    </div>
+    <p className="sw-footnote">{draft.to.trim()?'Opens the message already written and addressed. You press Send there — nothing leaves this browser on its own.':'No email address is saved for this person, so the message opens with the address blank. You add it and press Send — nothing leaves this browser on its own.'}</p>
+    <div className="sw-actions"><button className="sw-button sw-quiet" disabled={busy||!draft.body.trim()||!draft.subject.trim()}><Check size={14}/>Save draft</button><button className="sw-outline" type="button" onClick={()=>void copy(`Subject: ${draft.subject}\n\n${draft.body}`)}><Copy size={14}/>Copy message</button></div>
    </form>
    <button className="sw-text sw-handle" disabled={busy} onClick={()=>void perform(async()=>{await save('draft',{...draft,archivedAt:draft.archivedAt?undefined:new Date().toISOString()});setModal('');toast.success(draft.archivedAt?'Draft restored':'Draft archived')})}>{draft.archivedAt?'Restore draft':'Archive draft'}</button><p className="sw-footnote">Saving or archiving a draft does not mark it sent.</p>
   </>}
