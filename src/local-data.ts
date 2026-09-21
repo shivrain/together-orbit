@@ -1,14 +1,20 @@
 import seed from './seed.json';
+import bundledNetwork from '../public/data/network.json';
+import bundledEngagement from '../public/data/engagement.json';
 import {sampleDeals} from './sample-referrals';
 import {mergePeopleContacts,personIdentity} from './people';
 import {companies} from './data';
-import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement,MeetingNote} from './platform-types';
+import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement,MeetingNote,NetworkResearch,FeedItem} from './platform-types';
 const storageKey='together-orbit-standalone-v1';
 export const workflowUrl='https://github.com/shivrain/together-orbit/actions/workflows/portfolio-monitor.yml';
 type Published={reports:MonitorReport[];notices:Notice[];settings:Pick<Settings,'enabled'|'frequencyDays'|'schedulerRegistered'>;generatedAt:string};
-let engagement=seed.feed;
+let engagement:FeedItem[]=bundledEngagement.feed;
+let network=bundledNetwork as NetworkResearch;
+type MovementEdit={changes:Partial<Movement>;sourceAtReview?:string};
+type SavedData=Partial<PlatformData>&{publicMovementEdits?:Record<string,MovementEdit>};
+const movementSource=(m:Movement)=>JSON.stringify([m.sourceUrl,m.evidence,m.eventDate,m.previousCompany,m.previousRole,m.currentCompany,m.currentRole]);
 let published:Published={reports:seed.reports as MonitorReport[],notices:seed.notices,settings:{enabled:seed.settings.enabled,frequencyDays:2,schedulerRegistered:false},generatedAt:seed.reports[0]?.completedAt||''};
-function saved():Partial<PlatformData>{const raw=localStorage.getItem(storageKey)||localStorage.getItem('together-orbit-public-demo-v1');if(!raw)return {};try{const d=JSON.parse(raw);if(!Array.isArray(d.deals)||!Array.isArray(d.drafts)||!Array.isArray(d.contacts)||(d.movements!==undefined&&!Array.isArray(d.movements)))throw Error();return d}catch{throw Error('Saved browser data could not be read. Use Reset local data to restore the initial workspace.')}}
+function saved():SavedData{const raw=localStorage.getItem(storageKey)||localStorage.getItem('together-orbit-public-demo-v1');if(!raw)return {};try{const d=JSON.parse(raw);if(!Array.isArray(d.deals)||!Array.isArray(d.drafts)||!Array.isArray(d.contacts)||(d.movements!==undefined&&!Array.isArray(d.movements)))throw Error();return d}catch{throw Error('Saved browser data could not be read. Use Reset local data to restore the initial workspace.')}}
 function validDate(value:unknown):value is string{
  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(value))return false;
  const day=value.slice(0,10),dayTime=Date.parse(`${day}T00:00:00Z`);
@@ -18,13 +24,25 @@ function latestDate(dates:(string|undefined)[]):string|undefined{return dates.fi
 export function readLocalData():PlatformData{
  const local=saved();const base=seed as unknown as PlatformData;const settings={...base.settings,...local.settings,...published.settings};
  const readNotices=new Set((local.notices||[]).filter(n=>n.read).map(n=>n.id));
- const movements=[...new Map([...base.movements,...(local.movements||[])].map(m=>[m.id,m])).values()];
- return structuredClone({...base,deals:(local.deals||[...base.deals,...sampleDeals]).map(deal=>({...deal,intake:deal.intake??'Passed to Together'})),contacts:mergePeopleContacts(local.contacts||base.contacts),drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
+ const contacts=mergePeopleContacts(local.contacts||base.contacts,network.people);
+ const refreshedMoves=network.movements.map(m=>{
+  const edit=local.publicMovementEdits?.[m.id],merged={...m,...edit?.changes};
+  if(merged.confirmed&&edit?.sourceAtReview!==movementSource(merged))merged.confirmed=false;
+  return merged;
+ });
+ const movements=[...new Map([...base.movements,...refreshedMoves,...(local.movements||[])].map(m=>[m.id,m])).values()].map(m=>{
+  // Public IDs may have been merged into a user's earlier contact ID.
+  const source=network.people.find(p=>p.id===m.personId);
+  const person=source&&contacts.find(p=>personIdentity(p)===personIdentity(source));
+  return person?{...m,personId:person.id}:m;
+ });
+ return structuredClone({...base,deals:(local.deals||[...base.deals,...sampleDeals]).map(deal=>({...deal,intake:deal.intake??'Passed to Together'})),contacts,drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
 }
 export async function loadLocalData():Promise<PlatformData>{
  try{const response=await fetch(new URL('data/monitoring.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.reports)&&Array.isArray(value.notices)&&[2,7].includes(value.settings?.frequencyDays))published=value;}}
  catch{/* The bundled last published report remains available offline. */}
  try{const response=await fetch(new URL('data/engagement.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.feed))engagement=value.feed;}}catch{}
+ try{const response=await fetch(new URL('data/network.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(value.schemaVersion===1&&Array.isArray(value.people)&&Array.isArray(value.movements))network=value;}}catch{}
  return readLocalData();
 }
 export function resetLocalData(){localStorage.removeItem(storageKey);localStorage.removeItem('together-orbit-public-demo-v1')}
@@ -64,5 +82,14 @@ export async function localRequest(path:string,body:unknown){
  }
  else if(kind==='notice'){const n=state.notices.find(n=>n.id===value.id);if(n)n.read=true;}
  else throw Error('This action is not supported.');
- localStorage.setItem(storageKey,JSON.stringify({deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements,settings:state.settings,notices:state.notices}));return {ok:true};
+ const publicIds=new Set(network.movements.map(m=>m.id));
+ const publicMovementEdits:Record<string,MovementEdit>={};
+ for(const original of network.movements){
+  const current=state.movements.find(m=>m.id===original.id);if(!current)continue;
+  const source=network.people.find(p=>p.id===original.personId),person=source&&state.contacts.find(p=>personIdentity(p)===personIdentity(source));
+  const baseline=person?{...original,personId:person.id}:original;
+  const changes=Object.fromEntries(Object.entries(current).filter(([key,value])=>JSON.stringify(value)!==JSON.stringify(baseline[key as keyof Movement]))) as Partial<Movement>;
+  if(Object.keys(changes).length)publicMovementEdits[current.id]={changes,sourceAtReview:current.confirmed?movementSource(current):undefined};
+ }
+ localStorage.setItem(storageKey,JSON.stringify({deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements.filter(m=>!publicIds.has(m.id)),publicMovementEdits,settings:state.settings,notices:state.notices}));return {ok:true};
 }

@@ -38,7 +38,7 @@ function subjects(text:string):string[]{
   return subjectSignals.filter(([,signals])=>signals.some(signal=>normalized.includes(` ${signal.replace(/[^a-z0-9]+/g,' ')} `))).map(([subject])=>subject);
 }
 function recordedSubjects(person:Contact):string[]{
-  return subjects([person.interests,...(person.meetingNotes||[]).flatMap(note=>note.topics||[])].join(' '));
+  return subjects([person.interests,...(person.research?.interests||[]),...(person.meetingNotes||[]).flatMap(note=>note.topics||[])].join(' '));
 }
 
 /** One transparent next step, selected from saved evidence; no inferred intent. */
@@ -74,7 +74,7 @@ export function getNextAction(data:PlatformData,companyId:string,now=new Date())
     };
   }
 
-  const moves=data.movements.filter(move=>move.companyId===companyId&&past(move.observedAt)!==null)
+  const moves=data.movements.filter(move=>move.companyId===companyId&&!move.historical&&past(move.observedAt)!==null&&(!move.eventDate||past(move.eventDate)!==null))
     .sort((a,b)=>past(b.observedAt)!-past(a.observedAt)!||stable(a,b));
   const unreviewed=moves.find(move=>!move.confirmed);
   if(unreviewed)return {kind:'review-move',title:`Check the update about ${unreviewed.person}`,reason:'A saved move needs review against its source before you act on it.',button:'Review source',movementId:unreviewed.id,personId:personFor(unreviewed.personId)?.id};
@@ -134,13 +134,13 @@ export function getNextAction(data:PlatformData,companyId:string,now=new Date())
       const matches=recordedSubjects(person).filter(subject=>resourceSubjects.includes(subject));
       return matches.length&&!alreadyHandled(item.id,person.id)?[{item,person,matches,personOrder}]:[];
     });
-  }).sort((a,b)=>b.matches.length-a.matches.length
-    ||Number(b.item.companyIds.includes(companyId))-Number(a.item.companyIds.includes(companyId))
+  }).sort((a,b)=>Number(b.item.companyIds.includes(companyId))-Number(a.item.companyIds.includes(companyId))
+    ||b.matches.length-a.matches.length
     ||past(b.item.publishedAt)!-past(a.item.publishedAt)!
     ||a.personOrder-b.personOrder||stable(a.item,b.item))[0];
   if(topical)return {
     kind:'share-resource',title:`Share a useful read with ${topical.person.name}`,button:'Prepare a message',
-    reason:`Matched to ${topical.person.name}'s recorded topics: ${topical.matches.join(', ')}. ${topical.item.summary||topical.item.title}`,
+    reason:`Matched to ${topical.person.name}'s expertise and topics: ${topical.matches.join(', ')}. ${topical.item.summary||topical.item.title}`,
     feedId:topical.item.id,personId:topical.person.id,
   };
   const recipients=relationships.filter(person=>ready(person)||person.kind==='Founder');

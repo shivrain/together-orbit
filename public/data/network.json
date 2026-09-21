@@ -1,0 +1,1962 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21",
+  "people": [
+    {
+      "id": "research-composio-soham-ganatra",
+      "companyId": "composio",
+      "name": "Soham Ganatra",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "AI agents",
+        "Developer tools",
+        "Agent reliability",
+        "API integrations"
+      ],
+      "summary": "Composio co-founder working on agent infrastructure. Lightspeed’s investment account identifies both founders as IIT Bombay alumni with experience building integrations.",
+      "networkAngles": [
+        "Ask which agent builders are hitting authentication or reliability problems.",
+        "Use the IIT Bombay connection as a conversation angle; no alumni relationship is assumed."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · composio",
+          "url": "https://www.together.fund/portfolio/composio",
+          "evidence": "Lists Soham Ganatra as co-founder."
+        },
+        {
+          "title": "Lightspeed · Investing in Composio",
+          "url": "https://lsvp.com/stories/investing-in-composio-building-the-backbone-of-ai-agent-intelligence/",
+          "evidence": "The founders met before IIT Bombay and built integrations before Composio.",
+          "publishedAt": "2025-07-22"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-composio-karan-vaidya",
+      "companyId": "composio",
+      "name": "Karan Vaidya",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "AI agents",
+        "Developer tools",
+        "Authentication",
+        "Agent reliability"
+      ],
+      "summary": "Composio co-founder. Lightspeed describes his software engineering and developer community work; the founders’ shared IIT Bombay background is public.",
+      "networkAngles": [
+        "Ask about developers building tools or infrastructure around agent execution.",
+        "A useful engagement topic is enterprise authentication for agents."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · composio",
+          "url": "https://www.together.fund/portfolio/composio",
+          "evidence": "Lists Karan Vaidya as co-founder."
+        },
+        {
+          "title": "Lightspeed · Investing in Composio",
+          "url": "https://lsvp.com/stories/investing-in-composio-building-the-backbone-of-ai-agent-intelligence/",
+          "evidence": "Describes Karan’s engineering and developer community experience.",
+          "publishedAt": "2025-07-22"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-composio-sujay-choubey",
+      "companyId": "composio",
+      "name": "Sujay Choubey",
+      "role": "GTM operations lead",
+      "kind": "Leadership",
+      "interests": [
+        "Enterprise AI",
+        "GTM",
+        "AI agents",
+        "Tool infrastructure"
+      ],
+      "summary": "Composio’s author bio says he leads GTM operations and helps enterprises plan AI adoption and the supporting tool infrastructure.",
+      "networkAngles": [
+        "Ask what infrastructure gaps enterprise buyers raise during AI rollouts.",
+        "Share specific enterprise agent adoption findings before asking about relevant builders."
+      ],
+      "sources": [
+        {
+          "title": "Composio · Sujay Choubey",
+          "url": "https://composio.dev/authors/sujay-choubey",
+          "evidence": "Official bio identifies responsibility for GTM and enterprise AI deployment."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://composio.dev/authors/sujay-choubey"
+    },
+    {
+      "id": "research-composio-shawn-esquivel",
+      "companyId": "composio",
+      "name": "Shawn Esquivel",
+      "role": "Developer Relations",
+      "kind": "Team",
+      "interests": [
+        "Developer relations",
+        "AI agents",
+        "Developer tools",
+        "API integrations"
+      ],
+      "summary": "Listed by Composio as working in Developer Relations. His public author profile is a source for developer-facing work, without implying a seniority level.",
+      "networkAngles": [
+        "Ask which integration problems recur in developer conversations.",
+        "Share a useful agent integration example and invite technical feedback."
+      ],
+      "sources": [
+        {
+          "title": "Composio · Shawn Esquivel",
+          "url": "https://composio.dev/authors/shawn-esquivel",
+          "evidence": "Identifies Shawn Esquivel in Developer Relations."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://composio.dev/authors/shawn-esquivel"
+    },
+    {
+      "id": "research-composio-sunil-kumar-dash",
+      "companyId": "composio",
+      "name": "Sunil Kumar Dash",
+      "role": "Growth and Content",
+      "kind": "Team",
+      "interests": [
+        "Developer tools",
+        "AI agents",
+        "Agent evaluations",
+        "Technical content"
+      ],
+      "summary": "Composio’s author bio lists Growth and Content. His published work covers agent tools, integrations and developer use cases.",
+      "networkAngles": [
+        "Ask what builders find hard when moving from an agent demo to a working integration.",
+        "Offer a specific technical resource that could be useful to Composio’s developer audience."
+      ],
+      "sources": [
+        {
+          "title": "Composio · Sunil Kumar Dash",
+          "url": "https://composio.dev/authors/sunil-kumar-dash",
+          "evidence": "Official author bio lists Growth and Content at Composio."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://composio.dev/authors/sunil-kumar-dash"
+    },
+    {
+      "id": "research-emergent-mukund-jha",
+      "companyId": "emergent",
+      "name": "Mukund Jha",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "AI coding",
+        "Developer tools",
+        "Agent reliability",
+        "Consumer software"
+      ],
+      "summary": "Emergent’s YC profile identifies Mukund as CEO, formerly Dunzo’s co-founder/CTO and a Google engineer, with a Columbia Engineering background.",
+      "networkAngles": [
+        "Ask about former Dunzo or Google operators exploring new software problems.",
+        "Engage on production reliability and how nontechnical users ship apps."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator · Emergent",
+          "url": "https://www.ycombinator.com/companies/emergent",
+          "evidence": "Founder-written company profile states CEO role, Dunzo, Google and Columbia background."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-emergent-madhav-jha",
+      "companyId": "emergent",
+      "name": "Madhav Jha",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "AI coding",
+        "Machine learning infrastructure",
+        "Agent evaluations",
+        "Theoretical computer science"
+      ],
+      "summary": "Emergent’s YC profile describes a Penn State PhD, a Sandia von Neumann fellowship and research work on Amazon SageMaker.",
+      "networkAngles": [
+        "Ask which ML infrastructure researchers are building independently.",
+        "Share concrete work on coding-agent evaluation or reliable deployment."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator · Emergent",
+          "url": "https://www.ycombinator.com/companies/emergent",
+          "evidence": "Identifies CTO role and the Penn State, Sandia and SageMaker background."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-kula-achuthanand-ravi",
+      "companyId": "kula",
+      "name": "Achuthanand Ravi",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Recruiting",
+        "AI hiring",
+        "Talent networks",
+        "Recruitment automation"
+      ],
+      "summary": "Kula’s founder letter describes recruiting at Stripe, Uber, Freshworks and Practo after beginning as a Microsoft engineer.",
+      "networkAngles": [
+        "Ask which recruiting or HR-tech builders he has recently advised.",
+        "Explore operators from his past hiring teams who are testing a new product."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · kula",
+          "url": "https://www.together.fund/portfolio/kula",
+          "evidence": "Identifies Achuthanand Ravi as CEO and co-founder."
+        },
+        {
+          "title": "Kula · First Day at Kula",
+          "url": "https://www.kula.ai/blog/first-day-at-kula",
+          "evidence": "Achu describes his engineering-to-recruiting career and previous employers."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-kula-sathappan-muthupalaniappan",
+      "companyId": "kula",
+      "name": "Sathappan Muthupalaniappan",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Recruiting technology",
+        "SaaS engineering",
+        "Security",
+        "Developer tools"
+      ],
+      "summary": "Kula’s founder letter identifies Sathappan as Freshworks’ third engineer and a later engineering leader at Grab.",
+      "networkAngles": [
+        "Ask about Freshworks and Grab engineers working on new B2B software ideas.",
+        "Use hiring-manager workflows or security-conscious product development as engagement topics."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · kula",
+          "url": "https://www.together.fund/portfolio/kula",
+          "evidence": "Lists Sathappan M as co-founder and CTO."
+        },
+        {
+          "title": "Kula · First Day at Kula",
+          "url": "https://www.kula.ai/blog/first-day-at-kula",
+          "evidence": "Describes early Freshworks engineering and later Grab leadership."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://www.kula.ai/author/sathappan"
+    },
+    {
+      "id": "research-kula-suman-kumar-dey",
+      "companyId": "kula",
+      "name": "Suman Kumar Dey",
+      "role": "Co-founder & Architect",
+      "kind": "Founder",
+      "interests": [
+        "SaaS infrastructure",
+        "Recruiting technology",
+        "Data infrastructure"
+      ],
+      "summary": "Kula’s founder letter describes early infrastructure roles at Freshworks and Grab, followed by an architect role at Salesforce.",
+      "networkAngles": [
+        "Ask about infrastructure builders from the Freshworks, Grab or Salesforce ecosystem.",
+        "Share a concrete resource on scaling AI-enabled recruitment systems."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · kula",
+          "url": "https://www.together.fund/portfolio/kula",
+          "evidence": "Lists Suman Kumar Dey as co-founder and architect."
+        },
+        {
+          "title": "Kula · First Day at Kula",
+          "url": "https://www.kula.ai/blog/first-day-at-kula",
+          "evidence": "Names his Freshworks and Grab infrastructure work and Salesforce architect role."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-confido-chetan-reddy",
+      "companyId": "confido",
+      "name": "Chetan Reddy",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare operations",
+        "Voice AI",
+        "Patient access",
+        "Workflow automation"
+      ],
+      "summary": "Confido’s company-issued funding release describes Chetan and Vichar as repeat founders who previously built DroneNation. His focus is reducing healthcare administrative work.",
+      "networkAngles": [
+        "Ask about healthcare workflow founders or operators seeking product advice.",
+        "Share concrete learning on voice-agent handoffs, patient access or EHR integration."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · confido",
+          "url": "https://www.together.fund/portfolio/confido",
+          "evidence": "Lists Chetan Reddy as CEO and co-founder."
+        },
+        {
+          "title": "Confido Health · Funding announcement",
+          "url": "https://www.globenewswire.com/news-release/2024/12/19/2999992/0/en/Confido-Health-secures-3M-to-put-AI-powered-digital-workers-on-healthcare-s-front-lines.html",
+          "evidence": "Company release links both founders to DroneNation and healthcare automation.",
+          "publishedAt": "2024-12-19"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-confido-vichar-shroff",
+      "companyId": "confido",
+      "name": "Vichar Shroff",
+      "role": "Co-founder & Chief Product Officer",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare operations",
+        "Voice AI",
+        "EHR integrations",
+        "Patient access"
+      ],
+      "summary": "Confido’s March 2026 webinar lists Vichar as CPO and co-founder. He previously built DroneNation with Chetan, according to the company’s funding release.",
+      "networkAngles": [
+        "Ask what products clinicians or practice operators have recently pitched to him.",
+        "Engage on deployment friction: handoffs, scheduling and integrating into practice workflows."
+      ],
+      "sources": [
+        {
+          "title": "Confido · AI in Dental Ops",
+          "url": "https://www.confido.health/resources/webinars/ai-in-dental-ops-how-practices-are-moving-from-missed-calls-to-maximized-chairs",
+          "evidence": "Dated company webinar identifies Vichar as CPO and co-founder.",
+          "publishedAt": "2026-03-25"
+        },
+        {
+          "title": "Confido Health · Funding announcement",
+          "url": "https://www.globenewswire.com/news-release/2024/12/19/2999992/0/en/Confido-Health-secures-3M-to-put-AI-powered-digital-workers-on-healthcare-s-front-lines.html",
+          "evidence": "Company release describes the founders’ prior DroneNation venture.",
+          "publishedAt": "2024-12-19"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://www.linkedin.com/in/vichar-shroff"
+    },
+    {
+      "id": "research-confido-dr-raihan-faroqui",
+      "companyId": "confido",
+      "name": "Dr. Raihan Faroqui",
+      "role": "VP Partnerships",
+      "kind": "Leadership",
+      "interests": [
+        "Healthcare partnerships",
+        "Voice AI",
+        "Patient access",
+        "Dental operations"
+      ],
+      "summary": "Confido’s March 25, 2026 dental-operations webinar identifies Raihan as MD and VP Partnerships alongside practice operators and the company’s CPO.",
+      "networkAngles": [
+        "Ask which healthcare operators are experimenting with their own workflow products.",
+        "Share a targeted patient-access case study or implementation insight."
+      ],
+      "sources": [
+        {
+          "title": "Confido · AI in Dental Ops",
+          "url": "https://www.confido.health/resources/webinars/ai-in-dental-ops-how-practices-are-moving-from-missed-calls-to-maximized-chairs",
+          "evidence": "Company webinar lists Raihan Faroqui as MD and VP Partnerships.",
+          "publishedAt": "2026-03-25"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-runable-umesh-kumar",
+      "companyId": "runable",
+      "name": "Umesh Kumar",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "AI agents",
+        "GTM",
+        "Small business software",
+        "Workflow automation"
+      ],
+      "summary": "Together’s August 2026 investment account describes Umesh moving from hands-on coding to customer conversations and growth as Runable expanded.",
+      "networkAngles": [
+        "Ask which small-business operators or AI builders have shown him interesting products.",
+        "Engage on distribution and what businesses need after an app is created."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · runable",
+          "url": "https://www.together.fund/portfolio/runable",
+          "evidence": "Lists Umesh Kumar as CEO and co-founder."
+        },
+        {
+          "title": "Together · Runable investment",
+          "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+          "evidence": "Describes Umesh’s customer and growth focus and Runable’s small-business direction.",
+          "publishedAt": "2026-08-26"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://in.linkedin.com/in/umesh-k-iitr"
+    },
+    {
+      "id": "research-runable-saksham-sarda",
+      "companyId": "runable",
+      "name": "Saksham Sarda",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "AI agents",
+        "Agent reliability",
+        "Developer tools",
+        "Workflow automation"
+      ],
+      "summary": "Together’s August 2026 account credits Saksham with building Runable’s product with a small engineering team; the portfolio page confirms his co-founder role.",
+      "networkAngles": [
+        "Ask which agent infrastructure problems his engineering team still has to solve themselves.",
+        "Share specific work on evaluations and reliable execution across tools."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · runable",
+          "url": "https://www.together.fund/portfolio/runable",
+          "evidence": "Lists Saksham Sarda as co-founder."
+        },
+        {
+          "title": "Together · Runable investment",
+          "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+          "evidence": "Describes Saksham leading product building with fewer than ten engineers.",
+          "publishedAt": "2026-08-26"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rapid-claims-dushyant-mishra",
+      "companyId": "rapid-claims",
+      "name": "Dushyant Mishra",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare revenue cycle",
+        "Medical coding",
+        "Healthcare AI",
+        "GTM"
+      ],
+      "summary": "Together’s investment account says Dushyant worked at Abbott and then Together before incubating RapidClaims in 2023; he is an IIT Kharagpur graduate.",
+      "networkAngles": [
+        "Ask about healthcare operators turning recurring revenue-cycle problems into products.",
+        "Use hospital workflow economics as a specific engagement topic."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · rapid-claims",
+          "url": "https://www.together.fund/portfolio/rapid-claims",
+          "evidence": "Lists Dushyant Mishra as CEO and co-founder."
+        },
+        {
+          "title": "Together · Gen AI thesis",
+          "url": "https://www.together.fund/perspectives/insights/why-together-fund-is-bullish-about-the-gen-ai-wave",
+          "evidence": "Describes Abbott, Together and IIT Kharagpur background before RapidClaims.",
+          "publishedAt": "2024-08-02"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rapid-claims-jot-sarup-singh",
+      "companyId": "rapid-claims",
+      "name": "Jot Sarup Singh",
+      "role": "Co-founder & CPTO",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare AI",
+        "Medical coding",
+        "Developer tools",
+        "Agent reliability"
+      ],
+      "summary": "Together identifies prior roles at Postman and Goldman Sachs. RapidClaims’ own engineering page confirms his CPTO role and AI medical-billing focus.",
+      "networkAngles": [
+        "Ask about API or enterprise-software builders approaching him for technical advice.",
+        "Engage on auditability and evaluating AI coding systems."
+      ],
+      "sources": [
+        {
+          "title": "RapidClaims · Engineering team",
+          "url": "https://engineering.rapidclaims.ai/about",
+          "evidence": "Lists Jot as founder and CPTO focused on AI medical billing."
+        },
+        {
+          "title": "Together · Gen AI thesis",
+          "url": "https://www.together.fund/perspectives/insights/why-together-fund-is-bullish-about-the-gen-ai-wave",
+          "evidence": "Identifies previous work at Postman and Goldman Sachs.",
+          "publishedAt": "2024-08-02"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rapid-claims-abhinay-vyas",
+      "companyId": "rapid-claims",
+      "name": "Abhinay Vyas",
+      "role": "Co-founder & CDO",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare AI",
+        "Data science",
+        "Medical coding",
+        "Healthcare data"
+      ],
+      "summary": "Together lists Abhinay as co-founder and CDO, and describes his previous data-science work at Novartis.",
+      "networkAngles": [
+        "Ask about healthcare data scientists working on new clinical or administrative products.",
+        "Share research on medical coding quality and data evaluation."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · rapid-claims",
+          "url": "https://www.together.fund/portfolio/rapid-claims",
+          "evidence": "Lists Abhinay Vyas as co-founder and CDO."
+        },
+        {
+          "title": "Together · Gen AI thesis",
+          "url": "https://www.together.fund/perspectives/insights/why-together-fund-is-bullish-about-the-gen-ai-wave",
+          "evidence": "Identifies Abhinay as a data scientist with Novartis experience.",
+          "publishedAt": "2024-08-02"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rapid-claims-krishna-konidala",
+      "companyId": "rapid-claims",
+      "name": "Krishna Konidala",
+      "role": "VP Engineering",
+      "kind": "Leadership",
+      "interests": [
+        "Healthcare AI",
+        "Platform engineering",
+        "Medical coding",
+        "AI models"
+      ],
+      "summary": "RapidClaims’ engineering team page names Krishna as VP Engineering responsible for platform development, AI models and technology strategy.",
+      "networkAngles": [
+        "Ask which infrastructure problems recur while shipping healthcare AI.",
+        "Discuss new builders in platform engineering only after learning his actual connections."
+      ],
+      "sources": [
+        {
+          "title": "RapidClaims · Engineering team",
+          "url": "https://engineering.rapidclaims.ai/about",
+          "evidence": "Official team bio names VP Engineering role and platform and AI-model responsibilities."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rapid-claims-varun",
+      "companyId": "rapid-claims",
+      "name": "Varun",
+      "role": "Lead Engineer",
+      "kind": "Team",
+      "interests": [
+        "Agentic workflows",
+        "Healthcare AI",
+        "Agent reliability",
+        "Real-time learning"
+      ],
+      "summary": "RapidClaims’ engineering page lists Varun as Lead Engineer, covering research, architecture and deployment of adaptive healthcare AI systems.",
+      "networkAngles": [
+        "Share work on adaptive agents and learning from production feedback.",
+        "Ask about tools his team has evaluated and any builders worth meeting."
+      ],
+      "sources": [
+        {
+          "title": "RapidClaims · Engineering team",
+          "url": "https://engineering.rapidclaims.ai/about",
+          "evidence": "Official bio identifies lead engineering work on agent workflows and real-time learning."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-bytebeam-gautam-bt",
+      "companyId": "bytebeam",
+      "name": "Gautam BT",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "IoT infrastructure",
+        "Connected vehicles",
+        "Data infrastructure",
+        "Developer tools"
+      ],
+      "summary": "Bytebeam names Gautam as CEO. Accel’s founder story records his IIT Madras background, Flipkart engineering and Ather software-architecture work.",
+      "networkAngles": [
+        "Ask about Ather or connected-device builders tackling unmet infrastructure needs.",
+        "Discuss reusable infrastructure for hardware startups."
+      ],
+      "sources": [
+        {
+          "title": "Bytebeam · About",
+          "url": "https://www.bytebeam.io/about-us",
+          "evidence": "Lists Gautam BT as co-founder and CEO."
+        },
+        {
+          "title": "Accel · Bytebeam founder story",
+          "url": "https://atoms.accel.com/news/accel-founder-stories-004-introducing-bytebeam",
+          "evidence": "Records IIT Madras, Flipkart and Ather background.",
+          "publishedAt": "2022-02-24"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-bytebeam-raviteja-kommareddy",
+      "companyId": "bytebeam",
+      "name": "Raviteja Kommareddy",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Rust",
+        "MQTT",
+        "Open source",
+        "IoT infrastructure"
+      ],
+      "summary": "Bytebeam lists Ravi Teja as CTO. Accel’s portfolio bio describes his open-source Rust MQTT libraries and technology leadership.",
+      "networkAngles": [
+        "Ask which Rust or IoT open-source maintainers are solving a problem commercially.",
+        "Share a practical resource on reliable device-to-cloud messaging."
+      ],
+      "sources": [
+        {
+          "title": "Bytebeam · About",
+          "url": "https://www.bytebeam.io/about-us",
+          "evidence": "Lists Ravi Teja as co-founder and CTO."
+        },
+        {
+          "title": "Accel Atoms · Bytebeam",
+          "url": "https://atoms.accel.com/startups/bytebeam",
+          "evidence": "Describes Ravi’s Rust MQTT open-source work and technology leadership."
+        },
+        {
+          "title": "Together Fund · bytebeam",
+          "url": "https://www.together.fund/portfolio/bytebeam",
+          "evidence": "Lists Raviteja Kommareddy among the founders."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-bytebeam-bharadwaaj-ramakrishnan",
+      "companyId": "bytebeam",
+      "name": "Bharadwaaj Ramakrishnan",
+      "role": "Co-founder & VP Embedded",
+      "kind": "Founder",
+      "interests": [
+        "Embedded systems",
+        "IoT SDKs",
+        "Connected vehicles",
+        "Hardware"
+      ],
+      "summary": "Bytebeam lists Bharadwaaj as VP Embedded. Accel describes Ather experience and a later VP Embedded Systems role at Grinntech before Bytebeam.",
+      "networkAngles": [
+        "Ask about embedded-systems teams facing repeated device SDK problems.",
+        "Explore hardware builders he encounters; do not assume an existing referral relationship."
+      ],
+      "sources": [
+        {
+          "title": "Bytebeam · About",
+          "url": "https://www.bytebeam.io/about-us",
+          "evidence": "Lists Bharadwaaj R as co-founder and VP Embedded."
+        },
+        {
+          "title": "Accel · Bytebeam founder story",
+          "url": "https://atoms.accel.com/news/accel-founder-stories-004-introducing-bytebeam",
+          "evidence": "Records prior Ather and Grinntech work.",
+          "publishedAt": "2022-02-24"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-bytebeam-achal-kothari",
+      "companyId": "bytebeam",
+      "name": "Achal Kothari",
+      "role": "Co-founder & VP Business",
+      "kind": "Founder",
+      "interests": [
+        "IoT",
+        "Connected devices",
+        "Enterprise GTM"
+      ],
+      "summary": "Bytebeam’s own team page lists Achal as co-founder and VP Business, extending the three-founder list on Together’s portfolio page.",
+      "networkAngles": [
+        "Ask what new connected-device companies he encounters in business conversations.",
+        "Offer introductions or useful market context before asking for referrals."
+      ],
+      "sources": [
+        {
+          "title": "Bytebeam · About",
+          "url": "https://www.bytebeam.io/about-us",
+          "evidence": "Official founder roster includes Achal Kothari as VP Business."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-spendflo-siddharth-sridharan",
+      "companyId": "spendflo",
+      "name": "Siddharth Sridharan",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "AI procurement",
+        "SaaS spend",
+        "Finance operations",
+        "GTM"
+      ],
+      "summary": "Spendflo’s company story describes an operations background at a California EV company and the purchasing friction that led to founding Spendflo.",
+      "networkAngles": [
+        "Ask about finance or procurement operators testing new workflow products.",
+        "Engage on where autonomous procurement still requires a human decision."
+      ],
+      "sources": [
+        {
+          "title": "Spendflo · About",
+          "url": "https://www.spendflo.com/about-us",
+          "evidence": "Names Siddharth as CEO and describes his operations-to-procurement founding context."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-spendflo-rajiv-ramanan",
+      "companyId": "spendflo",
+      "name": "Rajiv Ramanan",
+      "role": "Co-founder & CPO",
+      "kind": "Founder",
+      "interests": [
+        "AI procurement",
+        "SaaS spend",
+        "Product strategy",
+        "Workflow automation"
+      ],
+      "summary": "Spendflo’s current company page names Rajiv as CPO and co-founder. The product now centers on AI agents across procurement, contracts and accounts payable.",
+      "networkAngles": [
+        "Ask which adjacent procurement or finance tools he has been pitched.",
+        "Discuss a concrete approval or exception-handling problem in procurement agents."
+      ],
+      "sources": [
+        {
+          "title": "Spendflo · About",
+          "url": "https://www.spendflo.com/about-us",
+          "evidence": "Company page names Rajiv co-founder and CPO and describes Flo’s scope."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-spendflo-ajay-vardhan",
+      "companyId": "spendflo",
+      "name": "Ajay Vardhan",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "AI procurement",
+        "Agent reliability",
+        "SaaS engineering",
+        "Workflow automation"
+      ],
+      "summary": "Spendflo’s company page identifies Ajay as CTO and co-founder, alongside its shift toward autonomous intake-to-payment workflows.",
+      "networkAngles": [
+        "Share work on reliable agent execution and approvals in business workflows.",
+        "Ask about builders solving integration or procurement-data problems."
+      ],
+      "sources": [
+        {
+          "title": "Spendflo · About",
+          "url": "https://www.spendflo.com/about-us",
+          "evidence": "Company founder roster identifies Ajay as CTO."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-thesys-parikshit-deshmukh",
+      "companyId": "thesys",
+      "name": "Parikshit Deshmukh",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "Generative UI",
+        "AI product design",
+        "Developer tools",
+        "Product strategy"
+      ],
+      "summary": "Thesys’ own company page records Parikshit’s prior design leadership at DevRev and Recko, which was acquired by Stripe.",
+      "networkAngles": [
+        "Ask about designers becoming founders and AI interface products he has seen.",
+        "Engage on evaluation and usability of generated interfaces."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · thesys",
+          "url": "https://www.together.fund/portfolio/thesys",
+          "evidence": "Lists Parikshit Deshmukh as co-founder."
+        },
+        {
+          "title": "Thesys · Company",
+          "url": "https://www.thesys.dev/company",
+          "evidence": "Describes previous Head of Design roles at DevRev and Recko."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://in.linkedin.com/in/parikshitd"
+    },
+    {
+      "id": "research-thesys-rabi-shanker-guha",
+      "companyId": "thesys",
+      "name": "Rabi Shanker Guha",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Generative UI",
+        "AI infrastructure",
+        "SaaS engineering",
+        "Developer tools"
+      ],
+      "summary": "Thesys’ company page records Google experience, engineering leadership at DevRev India and co-founding Payzie, later acquired by Google.",
+      "networkAngles": [
+        "Ask about engineering leaders from DevRev or Google exploring new AI infrastructure.",
+        "Discuss production constraints in generative interfaces."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · thesys",
+          "url": "https://www.together.fund/portfolio/thesys",
+          "evidence": "Lists Rabi Shanker Guha as CEO and co-founder."
+        },
+        {
+          "title": "Thesys · Company",
+          "url": "https://www.thesys.dev/company",
+          "evidence": "Describes Google, DevRev India and Payzie background."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-zipy-vishalini-paliwal",
+      "companyId": "zipy",
+      "name": "Vishalini Paliwal",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Developer tools",
+        "Product strategy",
+        "Observability",
+        "AI debugging"
+      ],
+      "summary": "Zipy’s CEO bio records MindTickle experience, IIT Roorkee and Illinois Institute of Technology education, and startup mentoring.",
+      "networkAngles": [
+        "Ask which founders she has recently advised.",
+        "Engage on debugging and developer productivity."
+      ],
+      "sources": [
+        {
+          "title": "Zipy · Team",
+          "url": "https://www.zipy.ai/about-us",
+          "evidence": "Official CEO bio records education, MindTickle experience and startup mentoring."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-zipy-karthik-msn",
+      "companyId": "zipy",
+      "name": "Karthik MSN",
+      "role": "Co-founder · portfolio listing",
+      "kind": "Founder",
+      "interests": [
+        "Product design",
+        "Developer tools",
+        "GTM",
+        "Customer experience"
+      ],
+      "summary": "Together lists Karthik as co-founder. Vishalini’s public announcement describes his earlier product/design and broader operating work; no current executive title is assumed.",
+      "networkAngles": [
+        "Ask about product builders or teams seeking design advice.",
+        "Confirm his current operating focus before choosing a specific engagement topic."
+      ],
+      "sources": [
+        {
+          "title": "Together Fund · zipy",
+          "url": "https://www.together.fund/portfolio/zipy",
+          "evidence": "Lists Karthik MSN as co-founder."
+        },
+        {
+          "title": "Vishalini Paliwal · Cofounder announcement",
+          "url": "https://www.linkedin.com/posts/vishalini-paliwal-16b2478_startuplife-founderlife-founderstories-activity-7092125776728236033-v1cg",
+          "evidence": "Describes Karthik’s product/design work and co-founder appointment."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-zipy-anchal-rastogi",
+      "companyId": "zipy",
+      "name": "Anchal Rastogi",
+      "role": "CTO",
+      "kind": "Leadership",
+      "interests": [
+        "Developer tools",
+        "Engineering leadership",
+        "Observability",
+        "SaaS engineering"
+      ],
+      "summary": "Zipy names Anchal as CTO, with an IIT Roorkee background and earlier MindTree experience.",
+      "networkAngles": [
+        "Ask about technical leaders building developer tools.",
+        "Share specific work on debugging or engineering effectiveness."
+      ],
+      "sources": [
+        {
+          "title": "Zipy · Team",
+          "url": "https://www.zipy.ai/about-us",
+          "evidence": "Official CTO bio describes engineering leadership, IIT Roorkee and MindTree."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-zipy-sandesh-murdia",
+      "companyId": "zipy",
+      "name": "Sandesh Murdia",
+      "role": "Frontend Engineer",
+      "kind": "Team",
+      "interests": [
+        "Frontend engineering",
+        "Developer tools",
+        "Webflow",
+        "User experience"
+      ],
+      "summary": "Zipy’s bio describes frontend engineering and Webflow work, plus a Computer and Communication Engineering degree from Manipal University.",
+      "networkAngles": [
+        "Share a practical frontend resource.",
+        "Ask about useful tools he has tried and their builders."
+      ],
+      "sources": [
+        {
+          "title": "Zipy · Team",
+          "url": "https://www.zipy.ai/about-us",
+          "evidence": "Official team bio identifies frontend engineering, Webflow and Manipal education."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-scalekit-0",
+      "companyId": "scalekit",
+      "name": "Satya Devarakonda",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Agent authentication",
+        "Enterprise SaaS",
+        "MCP security"
+      ],
+      "summary": "Leads Scalekit's authentication infrastructure for AI applications. His public writing discusses production-agent reliability and an Agents in Production community in San Francisco.",
+      "networkAngles": [
+        "Explore builders encountered through the Agents in Production community; referral activity itself is unverified.",
+        "Share a concrete agent-authentication design or security finding to invite technical feedback.",
+        "Ask which teams are struggling to move agents from demos into production."
+      ],
+      "sources": [
+        {
+          "title": "Together: ScaleKit founders",
+          "url": "https://www.together.fund/portfolio/scalekit",
+          "evidence": "Together identifies Satya as co-founder and CEO."
+        },
+        {
+          "title": "Satya Devarakonda: public profile and writing",
+          "url": "https://www.linkedin.com/in/satyapd",
+          "evidence": "His profile lists a June 2026 article about the Agents in Production community and September writing on reliability."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://www.linkedin.com/in/satyapd"
+    },
+    {
+      "id": "founder-scalekit-1",
+      "companyId": "scalekit",
+      "name": "Ravi Madabhushi",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "MCP security",
+        "Enterprise authentication",
+        "SSO",
+        "Developer tools"
+      ],
+      "summary": "Writes Scalekit's technical material on OAuth, MCP, SAML and agent authentication. In a first-person interview, described his redBus background and meeting Satya through BITS Pilani alumni connections.",
+      "networkAngles": [
+        "Possible conversation: identity infrastructure founders and BITS Pilani builders; confirm actual relationships before requesting introductions.",
+        "Share a concrete agent-authentication design or security finding to invite technical feedback.",
+        "Ask which teams are struggling to move agents from demos into production."
+      ],
+      "sources": [
+        {
+          "title": "Scalekit: Ravi Madabhushi",
+          "url": "https://www.scalekit.com/authors/ravi-madabhushi",
+          "evidence": "The company lists Ravi as cofounder and publishes his authentication engineering work."
+        },
+        {
+          "title": "Ravi Madabhushi interview",
+          "url": "https://adi.bio/07-ravi-madabhushi-co-founder-scalekit-on-enterprise-auth-sso-and-passwordless-future",
+          "evidence": "Ravi describes working at redBus and reconnecting with Satya at a BITS Pilani alumni event."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-scalekit-shri-mithran",
+      "companyId": "scalekit",
+      "name": "Shri Mithran",
+      "role": "Director of Marketing",
+      "kind": "Leadership",
+      "interests": [
+        "Developer marketing",
+        "Agent integrations",
+        "GTM"
+      ],
+      "summary": "Leads marketing at Scalekit and authors practical material on agent integrations, including Gong, Exa and LeadIQ.",
+      "networkAngles": [
+        "Discuss developer adoption and integration tooling builders encountered through technical marketing.",
+        "Share a concrete agent-authentication design or security finding to invite technical feedback.",
+        "Ask which teams are struggling to move agents from demos into production."
+      ],
+      "sources": [
+        {
+          "title": "Scalekit: building on Gong",
+          "url": "https://www.scalekit.com/blog/gong-mcp-vs-api",
+          "evidence": "The byline identifies Shri Mithran as Director of Marketing.",
+          "publishedAt": "2026-08-31"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-spry-therapeutics-0",
+      "companyId": "spry-therapeutics",
+      "name": "Brijraj Bhuptani",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Healthcare AI",
+        "Rehabilitation workflows",
+        "Revenue cycle",
+        "Interoperability"
+      ],
+      "summary": "Former Ola CTO, now leading SPRY's outpatient rehabilitation platform. His recent writing focuses on connecting clinical workflows, interoperability and revenue operations.",
+      "networkAngles": [
+        "Explore clinic-operator problems and health infrastructure builders he meets; historical Ola experience may offer an additional conversation angle.",
+        "Share practical research about prior authorization, rehabilitation operations or EHR integration.",
+        "Ask which unsolved clinic workflows keep appearing in customer conversations."
+      ],
+      "sources": [
+        {
+          "title": "SPRY: company story",
+          "url": "https://www.sprypt.com/about",
+          "evidence": "The company describes Brijraj's former Ola CTO role and cofounding SPRY in 2021."
+        },
+        {
+          "title": "Your EHR is Part of Your Revenue Strategy",
+          "url": "https://www.sprypt.com/blog/your-ehr-is-part-of-your-revenue-strategy",
+          "evidence": "Brijraj's CEO byline discusses clinical and financial infrastructure converging.",
+          "publishedAt": "2026-09-15"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-spry-therapeutics-1",
+      "companyId": "spry-therapeutics",
+      "name": "Riyaz Rehman",
+      "role": "Co-founder",
+      "kind": "Founder",
+      "interests": [
+        "Rehabilitation technology",
+        "Healthcare operations",
+        "Practice management"
+      ],
+      "summary": "Co-founded SPRY with Brijraj Bhuptani to replace fragmented clinic tools with connected practice-management workflows. Public company history establishes the founder role; current functional remit is not specified there.",
+      "networkAngles": [
+        "Start with frontline clinic workflow problems and people building around rehabilitation operations.",
+        "Share practical research about prior authorization, rehabilitation operations or EHR integration.",
+        "Ask which unsolved clinic workflows keep appearing in customer conversations."
+      ],
+      "sources": [
+        {
+          "title": "SPRY: company story",
+          "url": "https://www.sprypt.com/about",
+          "evidence": "SPRY identifies Riyaz Rehman and Brijraj Bhuptani as its founders in 2021."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-wispr-flow-0",
+      "companyId": "wispr-flow",
+      "name": "Tanay Kothari",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Voice AI",
+        "Consumer productivity",
+        "Product design",
+        "Habit formation"
+      ],
+      "summary": "Previously founded FeatherX, acquired by Cerebra, and then led engineering and product there. Studied computer science and AI at Stanford and led its Venture Capital Club.",
+      "networkAngles": [
+        "Potential community context: Stanford builders, AI product founders and consumer productivity teams; do not assume a warm introduction.",
+        "Share a speech-evaluation or human-computer-interface research result tied to real usage.",
+        "Ask which voice-product teams or researchers have brought an interesting problem recently."
+      ],
+      "sources": [
+        {
+          "title": "Wispr Flow: media kit",
+          "url": "https://wisprflow.ai/media-kit",
+          "evidence": "The company biography documents Tanay's role, FeatherX/Cerebra history and Stanford background."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://tanaykothari.com/"
+    },
+    {
+      "id": "founder-wispr-flow-1",
+      "companyId": "wispr-flow",
+      "name": "Sahaj Garg",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Speech recognition",
+        "Multimodal AI",
+        "ML systems",
+        "Human-computer interaction"
+      ],
+      "summary": "Former AI team lead and fifth employee at Luminous Computing, where he worked across ML and photonic system architecture. His Stanford research background includes generative modeling.",
+      "networkAngles": [
+        "Discuss speech and multimodal research builders, grounded in his published research and prior technical work.",
+        "Share a speech-evaluation or human-computer-interface research result tied to real usage.",
+        "Ask which voice-product teams or researchers have brought an interesting problem recently."
+      ],
+      "sources": [
+        {
+          "title": "Wispr Flow: media kit",
+          "url": "https://wisprflow.ai/media-kit",
+          "evidence": "The company biography documents Sahaj's CTO role, Luminous Computing work and Stanford AI research."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://sahajgarg.github.io/"
+    },
+    {
+      "id": "research-wispr-flow-ariya-rastrow",
+      "companyId": "wispr-flow",
+      "name": "Ariya Rastrow",
+      "role": "Chief Scientist · CSO",
+      "kind": "Leadership",
+      "interests": [
+        "Voice AI",
+        "Multimodal models",
+        "Generative interfaces",
+        "AI research"
+      ],
+      "summary": "Announced joining Wispr and building its Advanced Interfaces Lab in July 2026. Previously led voice and multimodal model work at Meta and helped build Amazon's Alexa team.",
+      "networkAngles": [
+        "Useful discussion: emerging voice-interface research and researchers building products; joining a portfolio company is not startup intent.",
+        "Share a speech-evaluation or human-computer-interface research result tied to real usage.",
+        "Ask which voice-product teams or researchers have brought an interesting problem recently."
+      ],
+      "sources": [
+        {
+          "title": "Introducing Wispr Advanced Interfaces Lab",
+          "url": "https://wisprflow.ai/post/wispr-labs",
+          "evidence": "Ariya's first-person announcement lists his CSO role and describes prior Meta and Alexa work.",
+          "publishedAt": "2026-07-24"
+        },
+        {
+          "title": "Wispr: Series B and research priorities",
+          "url": "https://wisprflow.ai/post/series-b",
+          "publishedAt": "2026-08-17",
+          "evidence": "Wispr's CEO calls Ariya Chief Scientist and says he joined to lead the Advanced Interfaces Lab."
+        },
+        {
+          "title": "Wispr Series B announcement",
+          "url": "https://wisprflow.ai/post/series-b",
+          "evidence": "Company announcement identifies Ariya Rastrow as Chief Scientist and leader of the Advanced Interfaces Lab."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-metaforms-0",
+      "companyId": "metaforms",
+      "name": "Akshat Tyagi",
+      "role": "Founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Research operations",
+        "Market research",
+        "AI agents"
+      ],
+      "summary": "Leads Metaforms, which builds agents for market-research agencies and survey-panel businesses. The company describes learning the industry's operational workflows directly from experienced research operators.",
+      "networkAngles": [
+        "Explore founders solving survey delivery and research-agency operations problems.",
+        "Discuss survey delivery bottlenecks and tools research agencies are evaluating."
+      ],
+      "sources": [
+        {
+          "title": "Metaforms: team and mission",
+          "url": "https://www.metaforms.ai/about",
+          "evidence": "The current team page names Akshat as Founder and CEO and describes research operations."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-metaforms-1",
+      "companyId": "metaforms",
+      "name": "Arjun Santhoshkumar",
+      "role": "Co-founder & CTPO · Together listing",
+      "kind": "Founder",
+      "interests": [
+        "Research operations",
+        "AI product",
+        "Survey automation"
+      ],
+      "summary": "Together lists Arjun S. as Metaforms co-founder and CTPO. The current company team page does not list him; that absence alone does not establish a departure.",
+      "networkAngles": [
+        "Confirm current remit directly before planning outreach; research-product builders remain a relevant discussion topic.",
+        "Discuss survey delivery bottlenecks and tools research agencies are evaluating."
+      ],
+      "sources": [
+        {
+          "title": "Together: Metaforms founders",
+          "url": "https://www.together.fund/portfolio/metaforms",
+          "evidence": "Together names Arjun S. as co-founder and CTPO, with the founder photo caption using Arjun Santhoshkumar."
+        },
+        {
+          "title": "Metaforms current team roster",
+          "url": "https://www.metaforms.ai/about",
+          "evidence": "Current roster does not list Arjun. This does not establish a departure."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-metaforms-sunny-gupta",
+      "companyId": "metaforms",
+      "name": "Sunny R. Gupta",
+      "role": "Head of Engineering & India Site Lead",
+      "kind": "Leadership",
+      "interests": [
+        "Research operations",
+        "Engineering leadership",
+        "AI agents"
+      ],
+      "summary": "Named engineering leader and India site lead on Metaforms' current team page.",
+      "networkAngles": [
+        "Possible conversation: engineering teams building automation for research workflows.",
+        "Discuss survey delivery bottlenecks and tools research agencies are evaluating."
+      ],
+      "sources": [
+        {
+          "title": "Metaforms: current team",
+          "url": "https://www.metaforms.ai/about",
+          "evidence": "The roster identifies Sunny's engineering and India site leadership."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-metaforms-chris-gimenez",
+      "companyId": "metaforms",
+      "name": "Chris Gimenez",
+      "role": "Founding GTM Executive, Enterprise Accounts",
+      "kind": "Leadership",
+      "interests": [
+        "Enterprise GTM",
+        "Market research",
+        "Research operations"
+      ],
+      "summary": "Metaforms lists Chris as its founding GTM executive for enterprise accounts.",
+      "networkAngles": [
+        "Ask about recurring problems heard from research businesses and relevant early products in that market.",
+        "Discuss survey delivery bottlenecks and tools research agencies are evaluating."
+      ],
+      "sources": [
+        {
+          "title": "Metaforms: current team",
+          "url": "https://www.metaforms.ai/about",
+          "evidence": "The roster identifies Chris's enterprise-account GTM role."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-protecto-0",
+      "companyId": "protecto",
+      "name": "Amar Kanagaraj",
+      "role": "Founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "AI data security",
+        "Privacy engineering",
+        "Enterprise GTM",
+        "Data governance"
+      ],
+      "summary": "Former Microsoft Search & AI product leader and Sun Microsystems developer. Protecto's biography also identifies Carnegie Mellon MBA and LSU computer-science training.",
+      "networkAngles": [
+        "Potential context: enterprise data-security builders and Microsoft/CMU alumni; specific referral relationships need confirmation.",
+        "Share a concrete AI-data privacy or access-control research result.",
+        "Ask which enterprise data problems remain underserved by current vendors."
+      ],
+      "sources": [
+        {
+          "title": "Protecto: leadership",
+          "url": "https://www.protecto.ai/about/",
+          "evidence": "Protecto documents Amar's leadership role, Microsoft and Sun history, and education."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-protecto-1",
+      "companyId": "protecto",
+      "name": "Baskaran Alagarsamy",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Privacy engineering",
+        "Data engineering",
+        "AI data security"
+      ],
+      "summary": "Spent over 18 years at Apple, including privacy engineering and large-scale data work, according to Protecto. Studied at the College of Engineering, Guindy.",
+      "networkAngles": [
+        "Discuss privacy infrastructure and data-engineering founders; Apple and CEG are sourced prior affiliations, not verified warm connections.",
+        "Share a concrete AI-data privacy or access-control research result.",
+        "Ask which enterprise data problems remain underserved by current vendors."
+      ],
+      "sources": [
+        {
+          "title": "Protecto: leadership",
+          "url": "https://www.protecto.ai/about/",
+          "evidence": "The company documents Baskaran's CTO role, Apple experience and CEG background."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-securden-0",
+      "companyId": "securden",
+      "name": "Bala Venkatramani",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Identity security",
+        "Privileged access",
+        "AI agent security"
+      ],
+      "summary": "Leads Securden's identity-security business. The company's 2026 product announcements extend its platform into securing human, machine and AI-agent identities.",
+      "networkAngles": [
+        "Discuss builders tackling non-human identity, enterprise access and agent governance.",
+        "Share an agent-identity security finding with a specific technical question.",
+        "Ask about new security products customers or peers are testing."
+      ],
+      "sources": [
+        {
+          "title": "Securden: unified identity platform launch",
+          "url": "https://www.securden.com/news/rsaconf-2026-unified-identity-security-platform.html",
+          "evidence": "The announcement identifies Bala as co-founder and CEO and explains its identity-security focus.",
+          "publishedAt": "2026-03-24"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-securden-1",
+      "companyId": "securden",
+      "name": "Kumaran Balan",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Identity security",
+        "Privileged access",
+        "AI agent governance"
+      ],
+      "summary": "Securden's CTO is named in its June 2026 AI Agent Security and Governance launch. Together also identifies him as co-founder.",
+      "networkAngles": [
+        "Explore engineering lessons from agent privilege control and enterprise security deployments.",
+        "Share an agent-identity security finding with a specific technical question.",
+        "Ask about new security products customers or peers are testing."
+      ],
+      "sources": [
+        {
+          "title": "Securden: AI Agent Security and Governance launch",
+          "url": "https://www.securden.com/news/unified-ai-agent-security-and-governance-platform.html",
+          "evidence": "The release names Chief Technology Officer Kumaran Balan as available for product demonstrations.",
+          "publishedAt": "2026-06-17"
+        },
+        {
+          "title": "Together: Securden",
+          "url": "https://www.together.fund/portfolio/securden",
+          "evidence": "Together lists Kumaran as Co-Founder and CTO."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-revenue-hero-0",
+      "companyId": "revenue-hero",
+      "name": "Sudharshan Karthik",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Revenue operations",
+        "Lead routing",
+        "B2B SaaS"
+      ],
+      "summary": "Leads RevenueHero, focused on routing qualified buyers to sales conversations. Together lists the CEO and founder role, which is also named in RevenueHero's published DPA.",
+      "networkAngles": [
+        "Discuss RevOps and sales-workflow problems surfaced by the product's customer conversations.",
+        "Discuss lead-routing edge cases and the tooling RevOps teams still build internally.",
+        "Share a GTM experiment with a measurable hypothesis, rather than generic AI news."
+      ],
+      "sources": [
+        {
+          "title": "Together: Revenue Hero",
+          "url": "https://www.together.fund/portfolio/revenue-hero",
+          "evidence": "Together lists Sudharshan as co-founder and CEO."
+        },
+        {
+          "title": "RevenueHero: product",
+          "url": "https://www.revenuehero.io/",
+          "evidence": "The company describes its lead-routing and meeting-scheduling workflows."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-revenue-hero-2",
+      "companyId": "revenue-hero",
+      "name": "Charanyan Venkataraghavan",
+      "role": "Co-founder · Marketing",
+      "kind": "Founder",
+      "interests": [
+        "B2B marketing",
+        "Revenue operations",
+        "Partnerships",
+        "GTM"
+      ],
+      "summary": "Hosts RevenueHero's Revenue Stream conversations with GTM operators. In the partnership episode he describes leading the marketing team.",
+      "networkAngles": [
+        "Natural conversation: GTM operators and founders encountered through the podcast; participation does not imply willingness to refer.",
+        "Discuss lead-routing edge cases and the tooling RevOps teams still build internally.",
+        "Share a GTM experiment with a measurable hypothesis, rather than generic AI news."
+      ],
+      "sources": [
+        {
+          "title": "The Revenue Stream: partnership-driven pipeline",
+          "url": "https://www.revenuehero.io/the-pipeline/the-revenue-stream/pipeline-from-partnerships-channel",
+          "evidence": "Chara introduces himself as RevenueHero co-founder and head of marketing."
+        },
+        {
+          "title": "Together: Revenue Hero",
+          "url": "https://www.together.fund/portfolio/revenue-hero",
+          "evidence": "Together identifies Charanyan Venkataraghavan as co-founder."
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "profile": "https://www.linkedin.com/in/charanyan/"
+    },
+    {
+      "id": "founder-hunar-0",
+      "companyId": "hunar",
+      "name": "Shantanu Bhattacharyya",
+      "role": "Co-founder & CTO",
+      "kind": "Founder",
+      "interests": [
+        "Voice AI",
+        "Frontline workforce",
+        "Recruiting automation"
+      ],
+      "summary": "Hunar identifies Shantanu as CTO and co-founder. Its product focus connects voice AI with frontline hiring, onboarding, engagement and retention.",
+      "networkAngles": [
+        "Explore applied voice-AI builders and people solving frontline-workforce problems.",
+        "Share a multilingual speech-evaluation finding tied to frontline conversations.",
+        "Ask which workforce workflows need better products beyond initial recruiting."
+      ],
+      "sources": [
+        {
+          "title": "Hunar: team and mission",
+          "url": "https://hunar.ai/about",
+          "evidence": "The official leadership page names Shantanu and describes the voice-AI workforce focus."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-hunar-1",
+      "companyId": "hunar",
+      "name": "Krishna Khandelwal",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Frontline workforce",
+        "Voice AI",
+        "Workforce operations"
+      ],
+      "summary": "Hunar identifies Krishna as CEO and co-founder, leading a business focused on AI-supported communication with distributed frontline teams.",
+      "networkAngles": [
+        "Discuss workforce operators' unmet needs and early products encountered in that market.",
+        "Share a multilingual speech-evaluation finding tied to frontline conversations.",
+        "Ask which workforce workflows need better products beyond initial recruiting."
+      ],
+      "sources": [
+        {
+          "title": "Hunar: team and mission",
+          "url": "https://hunar.ai/about",
+          "evidence": "The official leadership page names Krishna and describes hiring-to-retention workflows."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-hivel-0",
+      "companyId": "hivel",
+      "name": "Sudheer Bandaru",
+      "role": "Founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "Developer productivity",
+        "Engineering leadership",
+        "AI code review"
+      ],
+      "summary": "Started Hivel after managing distributed engineering teams and seeing gaps in decision-making data. Hivel's biography describes more than a decade of CTO experience.",
+      "networkAngles": [
+        "Explore engineering leaders testing new developer tools and builders addressing delivery bottlenecks.",
+        "Share evidence on AI-code-review quality or engineering productivity measurement.",
+        "Ask which developer tools engineering leaders are testing and where they fall short."
+      ],
+      "sources": [
+        {
+          "title": "Hivel: leadership",
+          "url": "https://www.hivel.ai/about-us",
+          "evidence": "Hivel documents Sudheer's founder role and distributed engineering leadership background."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-hivel-harish-dittakavi",
+      "companyId": "hivel",
+      "name": "Harish Dittakavi",
+      "role": "Co-founder & CRO",
+      "kind": "Founder",
+      "interests": [
+        "Enterprise GTM",
+        "Sales operations",
+        "Data analytics"
+      ],
+      "summary": "Hivel lists Harish as co-founder and CRO with prior leadership experience at Aviso AI, ServiceNow and VMware.",
+      "networkAngles": [
+        "Potential discussion: SaaS GTM operators and analytics builders, based on his documented professional background.",
+        "Share evidence on AI-code-review quality or engineering productivity measurement.",
+        "Ask which developer tools engineering leaders are testing and where they fall short."
+      ],
+      "sources": [
+        {
+          "title": "Hivel: leadership",
+          "url": "https://www.hivel.ai/about-us",
+          "evidence": "The company names Harish as co-founder/CRO and lists Aviso AI, ServiceNow and VMware."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-rocket-0",
+      "companyId": "rocket",
+      "name": "Vishal Virani",
+      "role": "Co-founder & CEO",
+      "kind": "Founder",
+      "interests": [
+        "AI app development",
+        "Product-led growth",
+        "Developer tools"
+      ],
+      "summary": "Rocket's CEO writes its product announcements, including the expansion from generating apps to researching what to build.",
+      "networkAngles": [
+        "Discuss founders prototyping real businesses with AI and the unmet needs they encounter.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Vishal Virani",
+          "url": "https://www.rocket.new/author/vishal-virani",
+          "evidence": "The official author biography lists CEO and his Rocket product announcements."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-rocket-1",
+      "companyId": "rocket",
+      "name": "Rahul Shingala",
+      "role": "Co-founder & CTO · DhiWise / Rocket",
+      "kind": "Founder",
+      "interests": [
+        "Developer tools",
+        "AI app development",
+        "Database optimization"
+      ],
+      "summary": "Rocket's official author biography identifies Rahul as DhiWise co-founder/CTO and describes custom-software, database-optimization and deep-learning experience.",
+      "networkAngles": [
+        "Discuss developer-tool builders and production constraints encountered while generating full applications.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Rahul Shingala",
+          "url": "https://www.rocket.new/author/rahul-shingala",
+          "evidence": "The company biography lists his DhiWise co-founder/CTO role and technical interests."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rocket-deepak-dhanak",
+      "companyId": "rocket",
+      "name": "Deepak Dhanak",
+      "role": "Co-founder & COO",
+      "kind": "Founder",
+      "interests": [
+        "Strategy",
+        "Finance",
+        "GTM",
+        "Operations"
+      ],
+      "summary": "Rocket identifies Deepak as co-founder and COO, responsible for strategy, finance, GTM and operations.",
+      "networkAngles": [
+        "Discuss experienced operators evaluating AI tools and new business workflows.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Deepak Dhanak",
+          "url": "https://www.rocket.new/author/deepak-dhanak",
+          "evidence": "The official author page states his founder/COO role and responsibilities."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rocket-nidhi-desai",
+      "companyId": "rocket",
+      "name": "Nidhi Desai",
+      "role": "Director of Engineering",
+      "kind": "Leadership",
+      "interests": [
+        "Agent architectures",
+        "Prompt engineering",
+        "AI product development"
+      ],
+      "summary": "Rocket's engineering-director biography focuses on designing agent architectures and turning AI capabilities into usable products.",
+      "networkAngles": [
+        "Explore agent engineering lessons and promising builders working on production reliability.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Nidhi Desai",
+          "url": "https://www.rocket.new/author/nidhi-desai",
+          "evidence": "The official biography identifies Nidhi's engineering role and agent-architecture focus."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rocket-khyati-brahmbhatt",
+      "companyId": "rocket",
+      "name": "Khyati Brahmbhatt",
+      "role": "Director of Product & Growth",
+      "kind": "Leadership",
+      "interests": [
+        "Product growth",
+        "Startup communities",
+        "Business strategy"
+      ],
+      "summary": "Rocket lists Khyati as Director of Product & Growth, a startup advisor and an eChai community leader.",
+      "networkAngles": [
+        "Particularly relevant for a conversation about early founders in eChai and product communities; actual referral access is unverified.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Khyati Brahmbhatt",
+          "url": "https://www.rocket.new/author/khyati-brahmbhatt",
+          "evidence": "The official biography identifies her product/growth role, startup advising and eChai leadership."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "research-rocket-priyanka-shah",
+      "companyId": "rocket",
+      "name": "Priyanka Shah",
+      "role": "Director of Growth and Marketing",
+      "kind": "Leadership",
+      "interests": [
+        "GTM",
+        "Growth marketing",
+        "Partnerships",
+        "Product adoption"
+      ],
+      "summary": "Owns Rocket's marketing and GTM work across positioning, acquisition, lifecycle, partnerships and launches, according to her official biography.",
+      "networkAngles": [
+        "Discuss growth-tool builders and product-distribution problems encountered through campaigns and partnerships.",
+        "Share a concrete finding about reliability and evaluation of generated applications.",
+        "Ask what new products builders are attempting and where existing tools fail them."
+      ],
+      "sources": [
+        {
+          "title": "Rocket: Priyanka Shah",
+          "url": "https://www.rocket.new/author/priyanka-shah",
+          "evidence": "The official biography names Priyanka's role and outlines her GTM responsibilities."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-ui-flow-1",
+      "companyId": "ui-flow",
+      "name": "Eric Rowell",
+      "role": "Uiflow co-founder; now Wayline co-founder & CTO",
+      "kind": "Alumni",
+      "interests": [
+        "Voice AI",
+        "Property technology",
+        "Developer tools",
+        "Enterprise UI"
+      ],
+      "summary": "Currently identified by Y Combinator as Wayline co-founder and CTO (Summer 2025). His first-person bio describes previously founding Uiflow and Second, plus architecture roles at LinkedIn, Yahoo and Workday.",
+      "networkAngles": [
+        "A concrete alumni-founder reconnect: Wayline builds voice AI for property managers. This is historical career context, not a new 2026 departure.",
+        "Reconnect around voice workflows in property operations; the startup was founded in 2025."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: Wayline founders",
+          "url": "https://www.ycombinator.com/companies/wayline",
+          "evidence": "Eric's biography identifies the current Wayline role and prior Uiflow and Second founder roles."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-togai-0",
+      "companyId": "togai",
+      "name": "Tholkappiyan Velavan",
+      "role": "Togai co-founder · acquired by Zuora",
+      "kind": "Founder",
+      "interests": [
+        "Usage-based billing",
+        "Metering",
+        "Data infrastructure"
+      ],
+      "summary": "Zuora named Tholkappiyan among Togai's three founders when announcing its acquisition in April 2024. This is historical acquisition context; the source does not establish his present job title.",
+      "networkAngles": [
+        "Potential discussion: usage-based pricing infrastructure. Confirm current affiliation before outreach.",
+        "Discuss how usage pricing changes when AI inference becomes a material product cost."
+      ],
+      "sources": [
+        {
+          "title": "Zuora to acquire Togai",
+          "url": "https://www.zuora.com/press-release/zuora-to-acquire-togai/",
+          "evidence": "The April 2024 announcement names all three founders and says they would join Zuora.",
+          "publishedAt": "2024-04-30"
+        },
+        {
+          "title": "Zuora confirms Togai acquisition in usage-monetization release",
+          "url": "https://www.zuora.com/press-release/zuora-accelerates-usage-monetization-with-new-capabilities/",
+          "publishedAt": "2024-09-24",
+          "evidence": "Describes Togai as a recent acquisition, establishing completion by this release date."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-togai-1",
+      "companyId": "togai",
+      "name": "Abhishek Rajagopal",
+      "role": "Togai co-founder & CEO at acquisition",
+      "kind": "Founder",
+      "interests": [
+        "Usage-based billing",
+        "Monetization",
+        "Developer infrastructure"
+      ],
+      "summary": "Named as Togai co-founder and CEO in Zuora's April 2024 acquisition announcement. Spoke about developers' challenges building internal metering and rating systems.",
+      "networkAngles": [
+        "Historical expertise to reconnect around: AI pricing and usage infrastructure. Current title needs confirmation.",
+        "Discuss how usage pricing changes when AI inference becomes a material product cost."
+      ],
+      "sources": [
+        {
+          "title": "Zuora to acquire Togai",
+          "url": "https://www.zuora.com/press-release/zuora-to-acquire-togai/",
+          "evidence": "Zuora identifies Abhishek's then-CEO role and includes his account of billing infrastructure challenges.",
+          "publishedAt": "2024-04-30"
+        },
+        {
+          "title": "Zuora confirms Togai acquisition in usage-monetization release",
+          "url": "https://www.zuora.com/press-release/zuora-accelerates-usage-monetization-with-new-capabilities/",
+          "publishedAt": "2024-09-24",
+          "evidence": "Describes Togai as a recent acquisition, establishing completion by this release date."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-togai-2",
+      "companyId": "togai",
+      "name": "Aravind Sriraman",
+      "role": "Togai co-founder · acquired by Zuora",
+      "kind": "Founder",
+      "interests": [
+        "Usage-based billing",
+        "Metering",
+        "Developer infrastructure"
+      ],
+      "summary": "Named as a Togai co-founder in Zuora's April 2024 acquisition announcement. The release says the founders and employees would join Zuora; it does not specify his current remit.",
+      "networkAngles": [
+        "Discuss metering and billing infrastructure builders after confirming his current affiliation.",
+        "Discuss how usage pricing changes when AI inference becomes a material product cost."
+      ],
+      "sources": [
+        {
+          "title": "Zuora to acquire Togai",
+          "url": "https://www.zuora.com/press-release/zuora-to-acquire-togai/",
+          "evidence": "Zuora lists Aravind among the founders in its historical acquisition announcement.",
+          "publishedAt": "2024-04-30"
+        },
+        {
+          "title": "Zuora confirms Togai acquisition in usage-monetization release",
+          "url": "https://www.zuora.com/press-release/zuora-accelerates-usage-monetization-with-new-capabilities/",
+          "publishedAt": "2024-09-24",
+          "evidence": "Describes Togai as a recent acquisition, establishing completion by this release date."
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-zipstack-0",
+      "companyId": "zipstack",
+      "name": "Shuveb Hussain",
+      "role": "Co-founder & CEO · Unstract",
+      "kind": "Founder",
+      "interests": [
+        "Document AI",
+        "Enterprise workflows",
+        "LLM extraction"
+      ],
+      "summary": "Publicly explains Unstract's LLM document-processing strategy in its company webinar, including lessons from enterprise document workflows.",
+      "networkAngles": [
+        "Discuss founders solving document-heavy enterprise workflows and teams adopting extraction APIs.",
+        "Share a document-extraction or retrieval-evaluation research finding.",
+        "Ask which document-heavy processes still require manual work despite current tooling."
+      ],
+      "sources": [
+        {
+          "title": "Unstract: enterprise document workflows",
+          "url": "https://unstract.com/webinar-recording/the-enterprise-playbook-for-llm-powered-document-workflows/",
+          "evidence": "The company webinar introduces Shuveb as co-founder and CEO.",
+          "publishedAt": "2025-07-16"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "founder-zipstack-1",
+      "companyId": "zipstack",
+      "name": "Arun Venkataswamy",
+      "role": "Co-founder & CTO · Unstract",
+      "kind": "Founder",
+      "interests": [
+        "Document AI",
+        "RAG",
+        "AI agent pipelines",
+        "Data infrastructure"
+      ],
+      "summary": "Former Director of Engineering at Freshworks, now Unstract CTO. His 2026 technical writing details a multi-agent approach to extracting difficult PDF tables.",
+      "networkAngles": [
+        "Relevant context: Freshworks engineering alumni and builders working on reliable document AI.",
+        "Share a document-extraction or retrieval-evaluation research finding.",
+        "Ask which document-heavy processes still require manual work despite current tooling."
+      ],
+      "sources": [
+        {
+          "title": "Unstract: multi-agent PDF table extraction",
+          "url": "https://unstract.com/blog/multi-agent-pdf-table-extraction/",
+          "evidence": "The author biography identifies Arun's CTO role and former Freshworks engineering directorship.",
+          "publishedAt": "2026-06-29"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    }
+  ],
+  "movements": [
+    {
+      "id": "public-wispr-ariya-rastrow-2026-07-24",
+      "companyId": "wispr-flow",
+      "person": "Ariya Rastrow",
+      "profile": "https://wisprflow.ai/post/wispr-labs",
+      "previousRole": "Led voice and multimodal foundation-model work",
+      "currentRole": "CSO · leading Advanced Interfaces Lab",
+      "previousCompany": "Meta",
+      "currentCompany": "Wispr Flow",
+      "type": "New role",
+      "observedAt": "2026-09-21",
+      "sourceUrl": "https://wisprflow.ai/post/wispr-labs",
+      "provider": "Public source",
+      "evidence": "In his July 24, 2026 first-person announcement, Ariya says he decided to join Wispr and is building its Advanced Interfaces Lab. He describes his preceding work at Meta on voice and multimodal models for wearables. The post identifies him as CSO. No exact departure date or reason for leaving Meta is stated.",
+      "confirmed": false,
+      "personId": "research-wispr-flow-ariya-rastrow",
+      "eventDate": "2026-07-24"
+    }
+  ]
+}

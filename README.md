@@ -18,7 +18,7 @@ Introductions distinguish **Known to referrer** from **Passed to Together**. The
 
 Meeting notes live on the person, with date, topic tags and whether the top-three-founder question was actually asked. Saving or handling a draft never counts as a conversation or sent email. This has no dependency on NetworkDB or its Replit app.
 
-People, notes, assessments, focus choices, manual movements, introductions and drafts are stored only in each visitor's browser. Export backs up those records. They are not synchronized between teammates. Public founder listings are a starter map, not verification of current employment. Gmail and people-data providers are not connected; no automatic outreach is represented as live.
+People, notes, assessments, focus choices, manual movements, introductions and drafts are stored only in each visitor's browser. Export backs up those records. They are not synchronized between teammates. Public founder listings are enriched with sourced professional research. Company bios and dated announcements establish only what their sources state; undated bios do not establish employment start dates. Gmail and people-data providers are not connected; no automatic outreach is represented as live.
 
 ## Development
 
@@ -28,6 +28,12 @@ Public website scans run through GitHub Actions daily at 10:00 IST, with a due c
 
 The published report is `public/data/monitoring.json`; the same data is copied to `docs/data/monitoring.json`. Website scans report source text changes and failures, not employee departures or startup intent.
 
+Public network research is published as `public/data/network.json` and copied to `docs/data/network.json`. Profiles include professional context, sources, research dates and suggested conversation angles. They never populate private relationship assessments or fictional introductions. Public movement corrections refresh without erasing local review or edits; changed source evidence requires review again.
+
 The engagement feed is independently published as `public/data/engagement.json` and `docs/data/engagement.json`; editing those files does not require rebuilding the UI.
 
 No credentials belong in this repository or browser bundle.
+
+The September 21, 2026 research pass added 67 sourced profiles across 23 companies, including 15 nonfounder leaders and team members, one dated role-change signal, and 20 engagement resources covering all of the first 20 portfolio companies. Older career context is shown in profiles rather than as a new departure.
+
+Validation: `node scripts/check-local.mjs`, `node scripts/check-next-action.mjs`, `node scripts/check-network-research.mjs`, TypeScript and the production build.

@@ -130,7 +130,7 @@ try{
   assert.equal(matched.kind,'share-resource');
   assert.equal(matched.personId,'team');
   assert.equal(matched.feedId,'voice-source');
-  assert.match(matched.reason,/recorded topics: Voice and speech/);
+  assert.match(matched.reason,/expertise and topics: Voice and speech/);
   assert.doesNotMatch(matched.reason,/strong relationship|positive view/);
   const explicitMeeting={id:'meeting',date:'2026-09-19',body:'Unstructured discussion',topics:['Voice'],askedForReferrals:false};
   assert.equal(choose({...base(),contacts:[{...teammate,meetingNotes:[explicitMeeting]}],feed:[voiceResource]}).feedId,'voice-source');
@@ -215,7 +215,7 @@ try{
   const beforeDraft=structuredClone(person);
   await localRequest('/api/platform',{kind:'draft',value:{...draft,id:'meeting-draft',companyId:person.companyId,personId:person.id,to:'',body:'Request referrals later',resourceId:'resource-for-meeting'}});
   assert.deepEqual(readLocalData().contacts.find(contact=>contact.id===person.id),beforeDraft);
-  assert.deepEqual(JSON.parse(storage.get('together-orbit-standalone-v1')).contacts.find(contact=>contact.id===person.id),beforeDraft);
+  assert.deepEqual(JSON.parse(storage.get('together-orbit-standalone-v1')).contacts.find(contact=>contact.id===person.id),JSON.parse(JSON.stringify(beforeDraft)));
   await localRequest('/api/platform',{kind:'draft',value:{id:'meeting-draft',archivedAt:'2026-09-21T10:00:00Z'}});
   const archived=readLocalData().drafts.find(item=>item.id==='meeting-draft');
   assert.equal(archived.archivedAt,'2026-09-21T10:00:00Z');

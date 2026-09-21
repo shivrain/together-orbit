@@ -20,6 +20,12 @@ The checkout may contain user changes. Inspect git status, preserve those change
 
 Update both `public/data/engagement.json` and `docs/data/engagement.json` identically. These published files can be changed without a frontend rebuild. Commit only the intended changed files, push through the user's existing GitHub connection, and verify the Pages workflow succeeds. Update `monitoring/engagement-status.json` with the last research-check date, even if no useful new content was found. Do not modify the website scan workflow or cadence as part of research.
 
+## Public people research
+
+`public/data/network.json` contains source-backed professional profiles and dated movement evidence. Copy updates identically to `docs/data/network.json`, or rebuild. Stable IDs and company IDs are required. `checkedAt` is the research date; movement `eventDate` is the actual announcement date. Never infer startup intent from a departure or from absence on a team page. Mark historical events explicitly, and do not fabricate recent signals to fill an empty company panel.
+
+Profile conversation angles are editorial suggestions, not established personal networks. Keep private assessments, email addresses, meeting notes and referral activity out of public research. Existing private browser IDs and edits take precedence; public provenance refreshes independently. Review `scripts/check-network-research.mjs` when changing the data contract.
+
 ## Records and email
 
 People, meeting histories, expertise tags, relationship assessments, focus lists, manual movements, introductions and drafts are browser-local. The automation cannot read them. Do not access the former hosting service to retrieve them. Gmail and people providers are not connected here. Never send emails, create provider drafts, or export private records automatically.

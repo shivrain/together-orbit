@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import {createServer} from 'vite';
+import {readFileSync} from 'node:fs';
+const network=JSON.parse(readFileSync('public/data/network.json','utf8'));
+const engagement=JSON.parse(readFileSync('public/data/engagement.json','utf8'));
 
 const storage=new Map();
 globalThis.localStorage={getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};
@@ -10,15 +13,17 @@ try{
  const {mergePeopleContacts}=await server.ssrLoadModule('/src/people.ts');
  let state=readLocalData();
  assert.equal(state.deals.length,8);
- assert.equal(state.feed.length,10);
+ assert.equal(state.feed.length,engagement.feed.length);
  assert.equal(state.reports[0].results.length,35);
  assert.equal(state.reports[0].status,'Partial');
  assert.equal(state.connections.gmail,false);
  assert.equal(state.connections.people,false);
  const founderCount=companies.reduce((count,company)=>count+company.founders.length,0);
- assert.equal(state.contacts.length,founderCount);
- assert.equal(new Set(state.contacts.map(contact=>contact.id)).size,founderCount);
- assert.ok(state.contacts.every(contact=>contact.sourceUrl&&contact.kind==='Founder'&&!contact.email&&!contact.lastContactAt));
+ const publicCount=mergePeopleContacts([],network.people).length;
+ const initialMoves=structuredClone(state.movements);
+ assert.equal(state.contacts.length,publicCount);
+ assert.equal(new Set(state.contacts.map(contact=>contact.id)).size,publicCount);
+ assert.ok(state.contacts.every(contact=>contact.sourceUrl&&!contact.email&&!contact.lastContactAt));
  // Already-saved colliding names must retain both exact IDs and their distinct data.
  const soham=state.contacts.find(contact=>contact.id==='founder-composio-0');
  const karan=state.contacts.find(contact=>contact.id==='founder-composio-1');
@@ -46,16 +51,17 @@ try{
  delete existing.movements;
  storage.set('together-orbit-standalone-v1',JSON.stringify(existing));
  state=readLocalData();
- assert.equal(state.contacts.length,founderCount+1);
+ assert.equal(state.contacts.length,publicCount+1);
  assert.equal(state.contacts.filter(contact=>contact.companyId==='composio'&&contact.name==='Soham Ganatra').length,1);
  const founder=state.contacts.find(contact=>contact.id==='existing-soham');
  assert.equal(founder.email,'known@example.com');
  assert.equal(founder.role,'Existing saved role');
  assert.equal(founder.kind,'Founder');
- assert.ok(founder.sourceUrl.includes('together.fund'));
+ assert.ok(founder.sourceUrl.startsWith('https://'));
+ assert.equal(founder.research?.summary,network.people.find(p=>p.companyId==='composio'&&p.name==='Soham Ganatra')?.summary);
  assert.ok(state.contacts.some(contact=>contact.id==='existing-team'));
  assert.equal(state.deals[0].notes,'local verification');
- assert.deepEqual(state.movements,[]);
+ assert.deepEqual(state.movements,initialMoves);
 
  await localRequest('/api/platform',{kind:'contact',value:{...founder,notes:'Met through a portfolio workshop',lastContactAt:'2026-09-20',nextFollowUpAt:'2026-10-20'}});
  await localRequest('/api/platform',{kind:'draft',value:{id:'draft-check',subject:'A useful resource',body:'For review',status:'Draft',companyId:'composio',createdAt:new Date().toISOString(),to:founder.email,personId:founder.id}});
@@ -65,14 +71,14 @@ try{
  await localRequest('/api/platform',{kind:'movement',value:{...movement,confirmed:true}});
  await localRequest('/api/platform',{kind:'deal',value:{...first,referrerPersonId:founder.id,notes:'Relationship-linked referral'}});
  state=readLocalData();
- assert.equal(state.movements.length,1);
- assert.equal(state.movements[0].confirmed,true);
- assert.equal(state.movements[0].personId,'existing-team');
+ assert.equal(state.movements.length,initialMoves.length+1);
+ assert.equal(state.movements.find(m=>m.id===movement.id).confirmed,true);
+ assert.equal(state.movements.find(m=>m.id===movement.id).personId,'existing-team');
  assert.equal(state.contacts.find(contact=>contact.id===founder.id).notes,'Met through a portfolio workshop');
  assert.equal(state.contacts.find(contact=>contact.id===founder.id).nextFollowUpAt,'2026-10-20');
  assert.equal(state.drafts[0].personId,founder.id);
  assert.equal(state.deals[0].referrerPersonId,founder.id);
- assert.equal(readLocalData().contacts.length,founderCount+1);
+ assert.equal(readLocalData().contacts.length,publicCount+1);
  // Duplicate Add and colliding rename fail atomically; relationship IDs and links survive.
  const beforeCollision=readLocalData();
  const beforeCollisionStorage=storage.get('together-orbit-standalone-v1');
@@ -84,7 +90,7 @@ try{
  assert.equal(readLocalData().contacts.find(contact=>contact.id===karan.id).name,'Karan Vaidya');
  assert.equal(readLocalData().drafts[0].personId,founder.id);
  assert.equal(readLocalData().deals[0].referrerPersonId,founder.id);
- assert.equal(readLocalData().movements[0].personId,'existing-team');
+ assert.equal(readLocalData().movements.find(m=>m.id===movement.id).personId,'existing-team');
 
  // Clearing a relationship removes the saved link; editing a sample keeps its provenance.
  await localRequest('/api/platform',{kind:'deal',value:{...readLocalData().deals[0],referrerPersonId:undefined}});
@@ -92,11 +98,11 @@ try{
  assert.equal(JSON.parse(storage.get('together-orbit-standalone-v1')).deals[0].referrerPersonId,undefined);
  assert.equal(readLocalData().deals[0].source,'sample');
  // Updating an observation retains its deliberately chosen source metadata.
- await localRequest('/api/platform',{kind:'movement',value:{...readLocalData().movements[0],previousCompany:'Earlier employer chosen by reviewer',provider:'Harmonic'}});
+ await localRequest('/api/platform',{kind:'movement',value:{...readLocalData().movements.find(m=>m.id===movement.id),previousCompany:'Earlier employer chosen by reviewer',provider:'Harmonic'}});
  await localRequest('/api/platform',{kind:'movement',value:{id:movement.id,companyId:movement.companyId,person:movement.person,sourceUrl:movement.sourceUrl,evidence:'Revised evidence after review',confirmed:false}});
- assert.equal(readLocalData().movements[0].previousCompany,'Earlier employer chosen by reviewer');
- assert.equal(readLocalData().movements[0].provider,'Harmonic');
- assert.equal(readLocalData().movements[0].personId,'existing-team');
+ assert.equal(readLocalData().movements.find(m=>m.id===movement.id).previousCompany,'Earlier employer chosen by reviewer');
+ assert.equal(readLocalData().movements.find(m=>m.id===movement.id).provider,'Harmonic');
+ assert.equal(readLocalData().movements.find(m=>m.id===movement.id).personId,'existing-team');
  await assert.rejects(()=>localRequest('/api/mail',{action:'sync'}),/not connected/);
  await assert.rejects(()=>localRequest('/api/platform',{kind:'movement',value:{id:'missing-source',companyId:'composio',person:'Test person'}}),/source link/);
 
@@ -109,14 +115,14 @@ try{
  exportLocalData();
  const exported=JSON.parse(await exportedBlob.text());
  assert.equal(exported.version,2);
- assert.equal(exported.movements[0].id,movement.id);
+ assert.equal(exported.movements.find(m=>m.id===movement.id).id,movement.id);
  assert.equal(exported.contacts.find(contact=>contact.id===founder.id).email,'known@example.com');
  assert.equal(exported.drafts[0].personId,founder.id);
  URL.createObjectURL=originalCreate;URL.revokeObjectURL=originalRevoke;
  resetLocalData();
  assert.equal(readLocalData().drafts.length,0);
- assert.equal(readLocalData().movements.length,0);
- assert.equal(readLocalData().contacts.length,founderCount);
+ assert.equal(readLocalData().movements.length,initialMoves.length);
+ assert.equal(readLocalData().contacts.length,publicCount);
  assert.equal(readLocalData().reports[0].results.length,35);
  console.log('Passed: original content, public founder map, legacy-contact migration, collision-safe IDs, duplicate rejection without data loss, relationship links, sample provenance, unchanged draft touchpoint dates, movement metadata, browser persistence, complete export, and honest disconnected integrations.');
 }finally{await server.close()}

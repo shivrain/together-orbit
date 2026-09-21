@@ -2,163 +2,355 @@
   "feed": [
     {
       "id": "nist-token-protection-2026-09-15",
-      "title": "NIST's new token-protection recommendations",
+      "title": "NIST's final guidance on protecting identity tokens",
       "publisher": "NIST",
-      "url": "https://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587",
+      "url": "https://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation",
       "publishedAt": "2026-09-15",
       "companyIds": [
-        "scalekit"
+        "scalekit",
+        "securden",
+        "composio"
       ],
-      "topic": "Final report announcement",
-      "summary": "NIST finalized recommendations covering token verification, key management and workload identity, including a preference for short-lived credentials.",
-      "whyRelevant": "ScaleKit builds authentication for software and agents. This provides a current reference for architecture discussions and enterprise security reviews.",
-      "emailSubject": "New NIST token guidance that may be useful for ScaleKit",
-      "emailBody": "Hi Satya,\n\nSharing NIST's 15 September release of its final token-protection report:\nhttps://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587\n\nThe workload-identity section and updated guidance on signing keys stood out given ScaleKit's authentication focus. It could be useful context for enterprise security conversations, particularly around short-lived tokens and lifecycle controls.\n\nAre customers asking more about workload identity or token governance at the moment?",
-      "checkedAt": "2026-09-20"
-    },
-    {
-      "id": "google-voice-models-2026-09-15",
-      "title": "Google's new real-time voice developer models",
-      "publisher": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
-      "publishedAt": "2026-09-15",
-      "companyIds": [
-        "wispr-flow"
-      ],
-      "topic": "Model release",
-      "summary": "Google announced Gemini 3.8 Live models for real-time dialogue and described its transcription offering for developers.",
-      "whyRelevant": "Wispr Flow turns speech into text across applications. New voice APIs are relevant to its input technology options and evolving user expectations.",
-      "emailSubject": "Google's latest voice release \u2014 relevant context for Flow",
-      "emailBody": "Hi Tanay,\n\nGoogle published a new voice developer release on 15 September:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\n\nThe interesting shift for Flow is the combination of dialogue, task execution and dedicated transcription in one developer suite. It seems useful context for where users may start expecting dictation to become interaction.\n\nDoes that boundary match what you're hearing from Flow users, or is focused dictation still the stronger need?",
-      "checkedAt": "2026-09-20"
+      "topic": "Agent security · identity and access",
+      "summary": "NIST IR 8587 addresses token forgery, theft and misuse through key management, verification and lifecycle controls for SSO, federation and APIs.",
+      "whyRelevant": "ScaleKit's authentication, Securden's privileged access and Composio's tool integrations all touch these boundaries. Useful material for an enterprise security review, without treating guidance as a certification.",
+      "emailSubject": "A useful reference for token-security reviews",
+      "emailBody": "Sharing NIST's final token-protection guidance from 15 September:\nhttps://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation\n\nThe practical value is its treatment of signing keys, verification and token lifecycle together. It could make a useful checklist for the security questions that arise as customers connect more systems.\n\nWhich part creates the most friction in your enterprise reviews: credential handling, revocation or auditability?",
+      "checkedAt": "2026-09-21"
     },
     {
       "id": "nist-agent-identity-2026-08-27",
-      "title": "NIST on agent identity and delegated access",
+      "title": "NIST on identity and delegated authority for agents",
       "publisher": "NIST",
       "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
       "publishedAt": "2026-08-27",
       "companyIds": [
-        "composio"
+        "composio",
+        "protecto",
+        "scalekit",
+        "securden"
       ],
-      "topic": "Technical policy analysis",
-      "summary": "NIST examines credential sharing, excessive permissions and approval fatigue in agent deployments, connecting these problems to established identity practices.",
-      "whyRelevant": "Composio connects agents to external tools. Delegated authority and permission boundaries are directly relevant to those integrations and buyer discussions.",
-      "emailSubject": "NIST's agent identity piece looks relevant to Composio",
-      "emailBody": "Hi Soham,\n\nThis NIST article from 27 August seemed relevant to Composio's role connecting agents to tools:\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation\n\nIt puts credential sharing, tightly scoped delegation and approval fatigue in the same conversation. The discussion could be useful for explaining the distinction between a working integration and one an enterprise can govern.\n\nWhich of those is creating the most friction in customer deployments today?",
-      "checkedAt": "2026-09-20"
+      "topic": "Agent security · delegated access",
+      "summary": "NIST discusses familiar identity failures resurfacing in agent deployments, including shared credentials, excessive authority and dependence on human approvals.",
+      "whyRelevant": "A concrete discussion starter for founders building tool access, authorization and data protection. The useful question is how an agent's permissions remain bounded throughout a workflow.",
+      "emailSubject": "A sharp framing for agent permissions",
+      "emailBody": "This NIST piece connects agent security to identity practices enterprises already understand:\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation\n\nThe point that stood out is that human approval cannot substitute for clearly bounded authority. My takeaway is that a customer should be able to explain what an agent can do, on whose behalf, and how that permission ends.\n\nAre buyers asking for that level of delegation control yet, or mainly trying to get their first integrations working?",
+      "checkedAt": "2026-09-21"
     },
     {
-      "id": "google-transcribe-2026-08-26",
-      "title": "Speech cleanup and formatting enter Google's transcription model",
-      "publisher": "Google",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
-      "publishedAt": "2026-08-26",
+      "id": "google-a2ui-2025-12-15",
+      "title": "A2UI: exchanging agent-generated interfaces as structured data",
+      "publisher": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/",
+      "publishedAt": "2025-12-15",
       "companyIds": [
-        "wispr-flow"
+        "thesys",
+        "ui-flow"
       ],
-      "topic": "Speech-to-text model release",
-      "summary": "Google introduced a transcription model with streaming and recorded-audio modes, including handling of self-corrections, filler words and formatting.",
-      "whyRelevant": "Those features overlap with voice-to-written-text workflows. Flow can use the release as a concrete prompt to assess differentiation beyond recognition accuracy.",
-      "emailSubject": "A concrete transcription development to compare notes on",
-      "emailBody": "Hi Sahaj,\n\nSharing Google's 26 August Transcribe announcement:\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/\n\nThe self-correction and formatting features felt especially relevant to Flow. My takeaway is that a useful comparison now includes correction effort, vocabulary and application context, alongside transcription accuracy.\n\nWould that be the right way to frame the changing baseline, or is there another dimension you think matters more?",
-      "checkedAt": "2026-09-20"
+      "topic": "Generative UI · interoperability",
+      "summary": "Google introduced A2UI, an open format that lets agents describe interfaces while the host application controls rendering through its own components.",
+      "whyRelevant": "An evergreen technical reference for Thesys's generative UI work and UI Flow's interface tooling: interoperability, renderer control and trust boundaries are concrete product design choices.",
+      "emailSubject": "A2UI and the boundary between generated UI and the host app",
+      "emailBody": "This older A2UI introduction is still a useful architecture reference:\nhttps://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/\n\nThe interesting choice is to pass a structured interface description while keeping rendering with the host application. That makes the component contract and update model particularly important.\n\nWhere do you see the harder customer problem: expressing the interaction, fitting their design system, or preserving state as the agent changes the interface?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "anthropic-app-harness-2026-03-24",
+      "title": "How Anthropic evaluates long-running app-building agents",
+      "publisher": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "publishedAt": "2026-03-24",
+      "companyIds": [
+        "emergent",
+        "runable",
+        "rocket",
+        "thesys"
+      ],
+      "topic": "Coding agents · evaluation and application quality",
+      "summary": "Anthropic describes a planner, generator and evaluator architecture, using explicit criteria and structured handoffs to improve autonomous application development.",
+      "whyRelevant": "Emergent, Runable and Rocket turn requests into working applications. Thesys addresses generated interfaces. This provides a specific way to discuss usability and completion beyond code generation.",
+      "emailSubject": "A useful evaluator pattern for app-building agents",
+      "emailBody": "Sharing Anthropic's write-up on long-running application development:\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps\n\nIt separates generation from evaluation and makes design quality explicit enough to grade. My takeaway is that a working build needs checks for the user's actual task as well as functional correctness.\n\nWhich failure is currently harder to catch automatically in your product: an unfinished flow, a weak interface, or a feature that technically works but misses the request?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "anthropic-agent-evals-2026-01-09",
+      "title": "Evaluate whether an agent completed the task",
+      "publisher": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "publishedAt": "2026-01-09",
+      "companyIds": [
+        "confido",
+        "rapid-claims",
+        "runable",
+        "optexity"
+      ],
+      "topic": "Agent reliability · workflow evaluation",
+      "summary": "The guide distinguishes an agent's transcript from the final state it produced, and combines repeated trials, task grading, production monitoring and human review.",
+      "whyRelevant": "For healthcare administration and workflow automation, a persuasive response does not establish that an appointment, record update or other intended action actually happened.",
+      "emailSubject": "An evaluation idea for completed workflows",
+      "emailBody": "This guide has a useful distinction between what an agent says and the final state it leaves behind:\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n\nFor operational workflows, my takeaway is to test the completed system change and the exception handoff separately. That seems especially useful when a workflow crosses several tools.\n\nWhere do you still need the most human review: detecting incomplete work, checking the resulting records, or judging whether an escalation was appropriate?",
+      "checkedAt": "2026-09-21"
     },
     {
       "id": "anthropic-coding-expertise-2026-06-16",
-      "title": "What 400,000 coding-agent sessions suggest about user expertise",
-      "publisher": "Anthropic",
+      "title": "Coding-agent research: domain knowledge still matters",
+      "publisher": "Anthropic Research",
       "url": "https://www.anthropic.com/research/claude-code-expertise",
       "publishedAt": "2026-06-16",
       "companyIds": [
-        "emergent"
+        "emergent",
+        "rocket",
+        "runable"
       ],
-      "topic": "Original usage research",
-      "summary": "Anthropic analyzed roughly 400,000 interactive sessions and found an association between task-domain expertise and successful agent use.",
-      "whyRelevant": "Emergent helps people build software with agents. The study suggests a useful onboarding question: how to help users express requirements and recognize errors.",
-      "emailSubject": "An onboarding angle from Anthropic's coding-agent research",
-      "emailBody": "Hi Mukund,\n\nAnthropic's June study of roughly 400,000 sessions has a useful angle for Emergent:\nhttps://www.anthropic.com/research/claude-code-expertise\n\nIts finding is that domain understanding remains valuable even when the agent does the coding. My product question is whether onboarding can help users state requirements and verify results more effectively, without making them learn to code.\n\nDoes that line up with the difference you see between users who finish an app and those who get stuck?",
-      "checkedAt": "2026-09-20"
+      "topic": "Coding agents · user onboarding",
+      "summary": "An observational study of roughly 400,000 Claude Code sessions links domain expertise with successful use. People generally direct planning while the agent handles execution.",
+      "whyRelevant": "A product question for platforms serving non-programmers: how can onboarding help people specify the problem and verify a useful result? The study is about Claude Code, not these companies' users.",
+      "emailSubject": "An onboarding question from real coding-agent usage",
+      "emailBody": "Anthropic's session study has an interesting angle for people building software without a coding background:\nhttps://www.anthropic.com/research/claude-code-expertise\n\nDomain understanding remains useful even when the agent writes the code. The product implication I take from it is to help users express constraints and recognize whether the result solves their problem.\n\nDo successful users arrive with a clearer problem, or does your product help them discover that clarity while building?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "google-voice-models-2026-09-15",
+      "title": "Google's voice APIs combine conversation, tools and transcription",
+      "publisher": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
+      "publishedAt": "2026-09-15",
+      "companyIds": [
+        "wispr-flow",
+        "confido"
+      ],
+      "topic": "Voice AI · speech-to-text and live agents",
+      "summary": "Google's announcement covers Gemini 3.8 Live and 3.5 Transcribe, including background tool calls, custom vocabulary and formatted transcription. These are vendor-described capabilities.",
+      "whyRelevant": "For Wispr, the changing baseline includes vocabulary and usable written output. For Confido, continued dialogue during tool use suggests a specific administrative-call evaluation case.",
+      "emailSubject": "A voice release worth testing against real workflows",
+      "emailBody": "Google's 15 September voice release looks worth a focused test:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\n\nTwo practical claims caught my attention: keeping dialogue moving while tools run, and improving transcription with custom vocabulary. I'd test these on real task completion and correction effort, alongside raw recognition accuracy.\n\nWhich is the bigger issue in your voice workflows today: latency, specialist vocabulary, or recovering gracefully when the system misunderstands?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "anthropic-hiring-evaluations-2026-01-21",
+      "title": "A first-hand account of redesigning hiring assessments for AI",
+      "publisher": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "publishedAt": "2026-01-21",
+      "companyIds": [
+        "kula",
+        "hunar"
+      ],
+      "topic": "Recruiting · assessment design",
+      "summary": "Anthropic's performance-engineering team explains three versions of its take-home assessment as improving models made earlier tests less discriminating.",
+      "whyRelevant": "A concrete employer case for Kula and Hunar when discussing evidence of candidate ability. It concerns one specialist engineering role and should not be generalized to all hiring.",
+      "emailSubject": "A concrete hiring-assessment problem to compare notes on",
+      "emailBody": "This first-hand account from Anthropic is a useful prompt for hiring teams:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nThey kept redesigning a take-home as models caught up. The broader question it raises for me is what evidence an assessment captures about the candidate's judgment, especially when AI help is permitted.\n\nAre your customers changing the assessment itself, or mainly asking how to interpret AI-assisted submissions?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "linkedin-talent-research-2026-01-07",
+      "title": "LinkedIn's hiring research: more applications, harder matching",
+      "publisher": "LinkedIn Research",
+      "url": "https://news.linkedin.com/2026/LinkedIn-Research-Talent-2026",
+      "publishedAt": "2026-01-07",
+      "companyIds": [
+        "kula",
+        "hunar"
+      ],
+      "topic": "Recruiting · candidate matching",
+      "summary": "LinkedIn reports that US applications per role doubled since spring 2022, while surveyed recruiters describe difficulty finding qualified talent and growing interest in AI screening.",
+      "whyRelevant": "This frames a useful product discussion about qualification quality versus application volume for Kula and Hunar. It is LinkedIn's own research, with US-specific application data.",
+      "emailSubject": "More applicants, but harder matching",
+      "emailBody": "LinkedIn's January research puts application growth and recruiter frustration side by side:\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026\n\nThe useful tension is that more applications do not necessarily make the right candidate easier to find. It suggests measuring the quality of the shortlist, not just time saved in screening.\n\nWhat signal do your customers trust most when deciding that a candidate deserves a conversation?",
+      "checkedAt": "2026-09-21"
     },
     {
       "id": "cms-epa-early-adopters-2026-05-13",
-      "title": "CMS names early adopters for electronic prior authorization",
+      "title": "CMS's prior-authorization effort targets real workflow handoffs",
       "publisher": "Centers for Medicare & Medicaid Services",
       "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
       "publishedAt": "2026-05-13",
       "companyIds": [
-        "rapid-claims"
+        "rapid-claims",
+        "confido",
+        "spry-therapeutics"
       ],
-      "topic": "Healthcare interoperability initiative",
-      "summary": "CMS announced 29 early adopters working on prior-authorization implementation barriers, including system integration, status visibility and technical handoffs.",
-      "whyRelevant": "Rapid Claims works on healthcare billing and claims. Upstream authorization handoffs offer a relevant product and partnership discussion, without assuming its roadmap.",
-      "emailSubject": "CMS's prior-authorization implementation push",
-      "emailBody": "Hi Dushyant,\n\nSharing CMS's May announcement of early adopters for electronic prior authorization:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems, alongside the list of participating providers and EHR companies. Given Rapid Claims' billing focus, it seems worth watching where authorization data becomes usable downstream.\n\nAre these handoff problems coming up in customer conversations, or is the immediate pain elsewhere?",
-      "checkedAt": "2026-09-20"
+      "topic": "Healthcare operations · prior authorization",
+      "summary": "CMS named 29 early adopters working on electronic prior authorization, emphasizing integration, status visibility and handoffs across clinical and administrative systems.",
+      "whyRelevant": "Rapid Claims, Confido and SPRY serve different parts of healthcare administration. This is an ecosystem and workflow discussion, not an assertion about a company's regulatory obligations.",
+      "emailSubject": "Where prior-authorization handoffs still break",
+      "emailBody": "Sharing CMS's electronic prior-authorization initiative:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems. The named provider and EHR participants also give a concrete set of implementations to watch.\n\nIn the workflows you see, is the larger bottleneck getting the required information together, finding the authorization status, or moving the decision into the next system?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "apta-admin-burden-2025-11-05",
+      "title": "APTA's survey of administrative burden in physical therapy",
+      "publisher": "American Physical Therapy Association",
+      "url": "https://www.apta.org/advocacy/issues/administrative-burden/report",
+      "publishedAt": "2025-11-05",
+      "companyIds": [
+        "spry-therapeutics"
+      ],
+      "topic": "Healthcare operations · physical therapy",
+      "summary": "APTA's survey connects payer administration with staffing burden, delayed authorization and reported treatment abandonment. It captures respondents' experiences, not a causal trial.",
+      "whyRelevant": "Directly relevant to SPRY's physical-therapy practice workflows. An evergreen source for selecting measurable administrative outcomes that matter to clinic operators.",
+      "emailSubject": "A clinic-operator lens on administrative ROI",
+      "emailBody": "This APTA report from November is still a useful clinic-operator reference:\nhttps://www.apta.org/advocacy/issues/administrative-burden/report\n\nIt links administrative burden with staffing needs and delays in getting patients into treatment. My takeaway for a workflow product is to connect hours saved to a concrete operational result, such as fewer pending authorizations or less time until treatment starts.\n\nWhich of those outcomes is easiest for a clinic to measure and act on today?",
+      "checkedAt": "2026-09-21"
     },
     {
       "id": "qualtrics-agentic-research-2026-05-11",
-      "title": "Qualtrics lays out its agentic research direction",
+      "title": "Qualtrics' agentic-research direction and its quality questions",
       "publisher": "Qualtrics",
       "url": "https://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/",
       "publishedAt": "2026-05-11",
       "companyIds": [
         "metaforms"
       ],
-      "topic": "Product direction and industry analysis",
-      "summary": "Qualtrics describes agents it is developing for planning, study design, fieldwork and synthesis, with explicit attention to methodology and knowledge gaps.",
-      "whyRelevant": "Metaforms automates research operations. This incumbent roadmap is useful context for positioning around agency workflows, interoperability and reliable execution.",
-      "emailSubject": "Qualtrics' research-agent direction \u2014 relevant for Metaforms",
-      "emailBody": "Hi Akshat,\n\nQualtrics laid out its agentic research direction in May:\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/\n\nThe interesting part for Metaforms is how broadly it connects planning, fieldwork and synthesis, while emphasizing methodological rigor. It could sharpen the positioning discussion around what agencies need across their existing tools versus inside one platform.\n\nAre agencies asking for end-to-end orchestration, or still buying around a specific operational bottleneck?",
-      "checkedAt": "2026-09-20"
+      "topic": "Research operations · agentic workflows",
+      "summary": "Qualtrics describes an agentic research direction spanning the research lifecycle, while asking how methodology, uncertainty and the connection to decisions survive automation.",
+      "whyRelevant": "An incumbent's own positioning is useful context for Metaforms. It raises a practical question about reliable agency workflows across existing tools versus a single research platform.",
+      "emailSubject": "A useful research-automation positioning question",
+      "emailBody": "Qualtrics' agentic research piece seems relevant to Metaforms:\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/\n\nThe interesting questions are whether methodological rigor travels with automation and whether gaps are flagged rather than filled with plausible output. It's also a useful view of an incumbent's direction.\n\nWhere do agencies most want stronger automation today: coordinating fieldwork, checking quality, or turning the result into a decision-ready deliverable?",
+      "checkedAt": "2026-09-21"
     },
     {
-      "id": "anthropic-hiring-evaluations-2026-01-21",
-      "title": "How AI is changing technical hiring assessments",
-      "publisher": "Anthropic",
-      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
-      "publishedAt": "2026-01-21",
-      "companyIds": [
-        "kula"
-      ],
-      "topic": "First-hand hiring case study",
-      "summary": "Anthropic describes repeatedly redesigning a performance-engineering take-home as newer models reduced its ability to distinguish candidates.",
-      "whyRelevant": "Kula serves hiring teams. This is a concrete customer-conversation resource on assessment validity as AI assistance becomes common.",
-      "emailSubject": "A useful customer discussion on AI and hiring assessments",
-      "emailBody": "Hi Achuthanand,\n\nThis January account from Anthropic feels relevant to the assessment discussions Kula's customers may be having:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nIt describes three redesigns of a technical take-home as model capabilities improved. The useful question is what evidence a hiring process should capture when a polished submission no longer reveals how the candidate reached it.\n\nAre your customers changing assessment formats, or mainly asking for clearer policies on AI use?",
-      "checkedAt": "2026-09-20"
-    },
-    {
-      "id": "anthropic-agent-evals-2026-01-09",
-      "title": "Evaluating complete agent workflows",
-      "publisher": "Anthropic",
-      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
-      "publishedAt": "2026-01-09",
-      "companyIds": [
-        "confido"
-      ],
-      "topic": "Technical evaluation guide",
-      "summary": "Anthropic explains task-based evaluation for agents that use tools and change state over multiple turns, including repeated trials and outcome grading.",
-      "whyRelevant": "Confido automates healthcare administration. The evaluation approach can inform checks on completed workflows, human handoffs and system updates.",
-      "emailSubject": "A workflow-evaluation resource for Confido's agents",
-      "emailBody": "Hi Chetan,\n\nSharing Anthropic's January guide to evaluating multi-step agents:\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n\nThe distinction between a convincing response and a correctly completed task seems especially useful for healthcare administration. My thought for Confido is to make system updates and successful human handoffs explicit test outcomes.\n\nWhich parts of an administrative workflow are proving hardest to evaluate consistently?",
-      "checkedAt": "2026-09-20"
-    },
-    {
-      "id": "qualtrics-synthetic-research-2026-01-05",
-      "title": "Qualtrics' study of synthetic survey responses",
-      "publisher": "Qualtrics",
-      "url": "https://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/",
-      "publishedAt": "2026-01-05",
+      "id": "aapor-responsible-ai-2026-05-08",
+      "title": "AAPOR's framework for responsible AI in survey research",
+      "publisher": "AAPOR",
+      "url": "https://aapor.org/announcements/task-force-on-responsible-ai-integration-in-survey-research-report/",
+      "publishedAt": "2026-05-08",
       "companyIds": [
         "metaforms"
       ],
-      "topic": "Vendor-authored research",
-      "summary": "Qualtrics presents research comparing its fine-tuned approach with general-use language models for synthetic survey responses.",
-      "whyRelevant": "Metaforms serves research operations teams. Synthetic response quality may affect client expectations, validation workflows and where human panels remain necessary.",
-      "emailSubject": "Synthetic survey quality: a useful research-methods discussion",
-      "emailBody": "Hi Arjun,\n\nSharing Qualtrics' January research on synthetic survey responses:\nhttps://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/\n\nIt's vendor-authored, so I'd treat the comparisons as something to examine rather than settled proof. For Metaforms, the useful conversation may be where agencies draw the boundary between exploratory synthetic work and research that needs human respondents.\n\nIs that boundary becoming part of client briefs yet?",
-      "checkedAt": "2026-09-20"
+      "topic": "Research operations · quality and disclosure",
+      "summary": "AAPOR's task-force report covers AI across survey design, interviewing, processing and reporting, with attention to data quality, disclosure, transparency and human oversight.",
+      "whyRelevant": "A professional-association reference for Metaforms' conversations with research agencies about which checks and disclosures clients expect around automated research work.",
+      "emailSubject": "A research-quality reference for agency conversations",
+      "emailBody": "AAPOR's May report could be useful in agency conversations:\nhttps://aapor.org/announcements/task-force-on-responsible-ai-integration-in-survey-research-report/\n\nIt treats AI use across the survey lifecycle, including quality, human oversight and disclosure. My product question is whether these checks can be built into the workflow rather than left to the final report.\n\nAre clients already asking agencies to document where AI was used, and what evidence would make that easier?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "finops-state-2026-02-19",
+      "title": "FinOps expands from cloud bills into SaaS and AI value",
+      "publisher": "FinOps Foundation",
+      "url": "https://data.finops.org/",
+      "publishedAt": "2026-02-19",
+      "companyIds": [
+        "spendflo",
+        "togai"
+      ],
+      "topic": "SaaS procurement · AI spend management",
+      "summary": "The 2026 survey shows FinOps teams broadening into SaaS and AI, with demand for granular cost visibility, forecasting and business-value attribution.",
+      "whyRelevant": "Spendflo's procurement workflow and Togai's usage-billing context intersect with how finance and engineering explain AI costs. The survey population is FinOps practitioners, not every software buyer.",
+      "emailSubject": "An interesting shift in who owns SaaS and AI spend",
+      "emailBody": "The State of FinOps 2026 report has a useful shift in buying context:\nhttps://data.finops.org/\n\nFinOps is increasingly covering SaaS and AI alongside cloud infrastructure. My takeaway is that buyers may need a shared view of commitments, usage and business value, beyond a renewal-saving number.\n\nAre your conversations moving toward variable AI consumption and attribution, or is the immediate need still visibility into existing contracts?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "profound-ai-pricing-2026-09-03",
+      "title": "What AI answers say about software pricing",
+      "publisher": "Profound · Kyle Poyar and Nikolas Laskaris",
+      "url": "https://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing",
+      "publishedAt": "2026-09-03",
+      "companyIds": [
+        "revenue-hero",
+        "spendflo"
+      ],
+      "topic": "B2B GTM · pricing discovery",
+      "summary": "The authors tested 7,600 pricing responses across six AI engines and Cloud 100 companies, finding that company pricing pages often were not the primary cited source.",
+      "whyRelevant": "For RevenueHero, buyers may arrive at the demo with a preformed pricing view. For Spendflo, it is a prompt to examine how buyers research and compare vendors. Vendor-authored, time-bounded research.",
+      "emailSubject": "What buyers may believe before they request a demo",
+      "emailBody": "This pricing study from Kyle Poyar and Profound is worth a look:\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing\n\nThey tested AI-generated pricing answers and found that official pricing pages often were not the main source. A practical experiment would be to audit a handful of common buyer questions against the actual offer.\n\nAre pricing misunderstandings showing up earlier in your funnel, or only once a sales conversation begins?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "aws-device-connectivity-2026-08-25",
+      "title": "AWS's practical map for diagnosing IoT fleet connectivity",
+      "publisher": "AWS IoT Blog",
+      "url": "https://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/",
+      "publishedAt": "2026-08-25",
+      "companyIds": [
+        "bytebeam"
+      ],
+      "topic": "IoT · fleet observability",
+      "summary": "AWS maps fleet indexing, live connection inspection, event notifications and historical logs to different diagnostic tasks, including rechecking status before acting on delayed events.",
+      "whyRelevant": "A concrete architecture and competitive reference for Bytebeam's device-management work. It separates knowing a device is offline from explaining why and safely recovering it.",
+      "emailSubject": "A useful fleet-connectivity comparison",
+      "emailBody": "AWS's August connectivity guide has a useful breakdown of device diagnostics:\nhttps://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/\n\nIt separates live status, connection inspection, event-driven recovery and historical evidence. The recheck-before-action advice is especially practical when disconnect events can arrive late or twice.\n\nFor Bytebeam customers, is the larger pain identifying the cause of an outage, or getting from diagnosis to a safe recovery action?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "dora-ai-tensions-2026-03-10",
+      "title": "DORA: code-generation gains can shift work into verification",
+      "publisher": "DORA · Google Cloud",
+      "url": "https://dora.dev/insights/balancing-ai-tensions/",
+      "publishedAt": "2026-03-10",
+      "companyIds": [
+        "hivel",
+        "zipy"
+      ],
+      "topic": "Developer productivity · delivery quality",
+      "summary": "A qualitative analysis of 1,110 Google engineers' responses describes tradeoffs in AI-assisted development, including time saved creating code moving into auditing and verification.",
+      "whyRelevant": "Relevant to Hivel's engineering-performance context and Zipy's debugging workflows. It supports discussing end-to-end delivery measures rather than treating code-generation activity as productivity.",
+      "emailSubject": "A measurement question beyond code-generation speed",
+      "emailBody": "DORA's March analysis is useful for the AI-productivity conversation:\nhttps://dora.dev/insights/balancing-ai-tensions/\n\nEngineers describe some creation-time savings moving into review and verification. My takeaway is to look at the full delivery path, including rework and stability, when judging the impact of AI tools.\n\nWhich downstream measure gives your customers the clearest signal that faster development is actually improving delivery?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "sentry-agent-tracing-2026-09-11",
+      "title": "Sentry's own agent-debugging case: from bad query to regression test",
+      "publisher": "Sentry Engineering",
+      "url": "https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/",
+      "publishedAt": "2026-09-11",
+      "companyIds": [
+        "zipy",
+        "hivel",
+        "composio"
+      ],
+      "topic": "Developer tools · agent observability",
+      "summary": "Sentry traced a failed natural-language query through the prompt and tool-call data to a field-formatting error, then added an evaluation case and verified the fix in production.",
+      "whyRelevant": "A recent, concrete engineering example for debugging tools and agent integrations: connect a user-visible failure to the underlying API interaction and a reproducible check.",
+      "emailSubject": "A concrete example of debugging an agent failure",
+      "emailBody": "Sentry's September debugging case is useful:\nhttps://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/\n\nA natural-language query failed because tool output became the wrong field representation in the prompt. Following the conversation into the backend trace made the cause visible and gave them a regression case.\n\nIs connecting user-visible failures to the exact tool interaction becoming a common request from your customers?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "elena-plg-sales-2026-09-11",
+      "title": "Elena Verna on where product-led growth and enterprise sales collide",
+      "publisher": "Elena's Growth Scoop · Substack",
+      "url": "https://www.elenaverna.com/p/congrats-your-sales-problems-in-plg",
+      "publishedAt": "2026-09-11",
+      "companyIds": [
+        "revenue-hero",
+        "emergent",
+        "rocket",
+        "wispr-flow",
+        "composio"
+      ],
+      "topic": "B2B GTM · product-led sales",
+      "summary": "Verna's practitioner essay examines premature sales outreach, confusing signups with qualified demand and weakening self-serve adoption while chasing enterprise contracts.",
+      "whyRelevant": "Directly relevant to RevenueHero's lead handoffs and to products balancing self-serve adoption with enterprise sales. This is a practitioner's view, not a universal conversion benchmark.",
+      "emailSubject": "When should a product user actually hear from sales?",
+      "emailBody": "Elena Verna's recent piece on PLG-to-enterprise friction is a useful discussion starter:\nhttps://www.elenaverna.com/p/congrats-your-sales-problems-in-plg\n\nHer argument is that a signup alone does not mean someone needs a sales conversation. Team adoption, usage expansion or governance needs can be more meaningful triggers.\n\nWhat behavior most reliably tells you that a person would benefit from a human conversation at that point in their journey?",
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "lenny-jen-abel-enterprise-2026-08-23",
+      "title": "Jen Abel's step-by-step enterprise sales conversation",
+      "publisher": "Lenny's Podcast · Jen Abel",
+      "url": "https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by",
+      "publishedAt": "2026-08-23",
+      "companyIds": [
+        "spendflo",
+        "revenue-hero",
+        "protecto",
+        "securden",
+        "scalekit"
+      ],
+      "topic": "B2B GTM · enterprise sales podcast",
+      "summary": "Abel walks through the enterprise buying process, from executive relevance and discovery to jointly defined pilot success, procurement and contracting. Her advice is practitioner judgment.",
+      "whyRelevant": "Useful for founders selling into enterprise procurement and security processes. It can anchor a focused conversation about where promising evaluations lose momentum.",
+      "emailSubject": "A practical enterprise-sales episode to compare notes on",
+      "emailBody": "Sharing Jen Abel's August conversation with Lenny:\nhttps://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by\n\nThe useful distinction is between a CRM stage and the actual buyer work needed to progress. The discussion of defining pilot success jointly feels particularly actionable.\n\nWhere do good-fit opportunities tend to slow down for you: aligning on the business case, agreeing what the pilot proves, or navigating procurement?",
+      "checkedAt": "2026-09-21"
     }
   ]
 }
