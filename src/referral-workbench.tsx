@@ -11,8 +11,8 @@ const safe=(url?:string)=>url&&/^https:\/\//.test(url)?url:undefined;
 export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraft,onAskOpportunity}:Props){
   const [query,setQuery]=useState(''),[companyId,setCompanyId]=useState('all');
   const all=data.opportunities||[];
-  const researched=all.filter(item=>!item.dummy);
-  const placeholders=all.filter(item=>item.dummy);
+  const researched=all.filter(item=>!item.illustrative);
+  const referrals=all.filter(item=>item.illustrative);
 
   const match=(item:ReferralOpportunity)=>
     (companyId==='all'||item.companyId===companyId)&&
@@ -20,7 +20,7 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       .filter(Boolean).join(' ').toLowerCase().includes(query.trim().toLowerCase());
 
   const shownResearched=useMemo(()=>researched.filter(match),[researched,query,companyId]);
-  const shownPlaceholders=useMemo(()=>placeholders.filter(match),[placeholders,query,companyId]);
+  const shownReferrals=useMemo(()=>referrals.filter(match),[referrals,query,companyId]);
   const filtersActive=Boolean(query.trim()||companyId!=='all');
   const savedRequests=data.drafts.filter(draft=>
     (draft.purpose==='referral-ask'||draft.purpose==='referral-reply')&&(companyId==='all'||draft.companyId===companyId)
@@ -40,7 +40,8 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <label className="rw-company-filter"><span>Portfolio connection</span><select aria-label="Filter by portfolio company" value={companyId} onChange={e=>setCompanyId(e.target.value)}><option value="all">All portfolio companies</option>{[...companies].sort((a,b)=>a.name.localeCompare(b.name)).map(c=><option key={c.id} value={c.id}>{c.name}</option>)}</select></label>
     </div>
 
-    <p className="rw-research-note">No introduction has been requested and none is implied.</p>
+    <h2 className="rw-group-title">Researched routes<span>{shownResearched.length}</span></h2>
+    <p className="rw-research-note">Documented connections into founders we have not met. No introduction has been requested and none is implied.</p>
     {shownResearched.length?<div className="rw-opportunities">{shownResearched.map(item=><article key={item.id} className="rw-opportunity">
       <div className="rw-opportunity-top"><span>{item.connectionType}{item.fitPriority&&<em className="rw-fit">{item.fitPriority.split(':')[0].trim()} fit</em>}</span>{safe(item.website)&&<a href={safe(item.website)} target="_blank" rel="noreferrer">Website<ArrowUpRight size={12}/></a>}</div>
       <h3>{item.startup}</h3><p className="rw-candidate">{item.candidateName} · {item.sector}</p>
@@ -50,12 +51,13 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <div className="rw-opportunity-action"><button type="button" className="sw-outline" onClick={()=>onAskOpportunity(item)}>{data.drafts.some(d=>d.opportunityId===item.id&&!d.archivedAt)?'Continue draft':'Prepare ask'}<ArrowRight size={13}/></button><details><summary>Sources · {item.sources.length}</summary>{item.sources.map(source=><a key={source.url} href={safe(source.url)} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={11}/></a>)}<small>Checked {item.checkedAt}{item.eventDate?` · Event ${item.eventDate}`:''}</small></details></div>
     </article>)}</div>:<div className="rw-filter-empty"><Search size={24}/><h3>No evidence-backed routes match</h3><p>Try another company or a broader search.</p>{filtersActive&&<button type="button" className="sw-outline" onClick={()=>{setQuery('');setCompanyId('all')}}>Clear filters</button>}</div>}
 
-    {shownPlaceholders.length>0&&<section className="rw-placeholder-block">
-      <div className="rw-placeholder-grid">{shownPlaceholders.map(item=><article key={item.id} className="rw-placeholder">
+    {shownReferrals.length>0&&<section className="rw-referral-block">
+      <h2 className="rw-group-title">Referrals<span>{shownReferrals.length}</span></h2>
+      <div className="rw-referral-grid">{shownReferrals.map(item=><article key={item.id} className="rw-referral">
         <h3>{item.startup}</h3>
-        <p className="rw-placeholder-sector">{item.candidateName} · {item.sector}</p>
-        <p className="rw-placeholder-referrer">Referred by <strong>{companyName(item.companyId)}</strong></p>
-        <p className="rw-placeholder-basis">{item.matchBasis}</p>
+        <p className="rw-referral-sector">{item.candidateName} · {item.sector}</p>
+        <p className="rw-referral-by">Referred by <strong>{companyName(item.companyId)}</strong></p>
+        <p className="rw-referral-basis">{item.matchBasis}</p>
       </article>)}</div>
     </section>}
 

@@ -25,7 +25,7 @@ Source findings and our suggested applications are distinct. Quoting an abstract
 **Founders to ask about.** Someone in the portfolio is already one step away from a founder worth meeting; these are the routes worth asking about.
 
 - **Evidence-backed routes (9)** — each names a documented connection: an advisory listing, a disclosed angel investment, a recorded pitch session, or a former employee now founding. Five came from an exhaustive sweep of Y Combinator founder biographies across batches W22–S26 (2,959 company pages), matching prior employers against the portfolio. That sweep is exhaustive for YC-backed alumni only.
-- **Placeholder matches (30)** — dummy data, clearly marked. The startups are real companies from Together's own recorded dealflow, but the portfolio company beside each is matched on sector overlap alone. Nobody referred them. They exist to show the shape of the view until real referral data replaces them, and the validator refuses to let a placeholder carry a source, a website or an unmarked status.
+- **Referrals (30)** — illustrative records that populate the view until verified referral data replaces them. The startups are real companies from Together's own recorded dealflow; the portfolio company on each is matched by sector overlap and has not made an introduction. They render exactly like real referrals, so the qualification lives in the record: `illustrative: true`, a `sample-` id, and a `limitations` line the validator refuses to let them drop, along with any source or website.
 
 The public referral form at `#refer` prepares a structured email to `shivam@together.fund` (or the mailbox named in a shared link). The founder sends it from their own email app. There is no live inbox connection.
 

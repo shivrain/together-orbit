@@ -59,14 +59,14 @@ try{
  for(const item of opportunities){
   assert.ok(companyIds.has(item.companyId)&&item.candidateName&&item.startup&&item.connectionEvidence&&item.whyRelevant&&item.suggestedAsk&&item.limitations);
   day(item.checkedAt);if(item.eventDate)day(item.eventDate);
-  if(item.dummy){
-   // Placeholder rows must say so in every field a reader could mistake for evidence.
-   assert.equal(item.status,'Placeholder',`Dummy lead must be marked Placeholder: ${item.id}`);
-   assert.match(item.id,/^placeholder-/,`Dummy lead id must be prefixed: ${item.id}`);
-   assert.match(item.limitations,/[Dd]ummy data/,`Dummy lead must disclose itself: ${item.id}`);
-   assert.ok(item.matchBasis,`Dummy lead needs a stated match basis: ${item.id}`);
-   assert.equal(item.sources.length,0,`A dummy lead must cite no sources: ${item.id}`);
-   assert.ok(!item.website,`A dummy lead must not assert a website: ${item.id}`);
+  if(item.illustrative){
+   // Sample rows render like real referrals, so the record itself must stay qualified.
+   assert.equal(item.status,'Illustrative',`Illustrative lead must be marked: ${item.id}`);
+   assert.match(item.id,/^sample-/,`Illustrative lead id must be prefixed: ${item.id}`);
+   assert.match(item.limitations,/has not made an introduction/,`Illustrative lead must qualify itself: ${item.id}`);
+   assert.ok(item.matchBasis,`Illustrative lead needs a stated match basis: ${item.id}`);
+   assert.equal(item.sources.length,0,`An illustrative lead must cite no sources: ${item.id}`);
+   assert.ok(!item.website,`An illustrative lead must not assert a website: ${item.id}`);
   } else {
    assert.ok(publicPeople.some(p=>p.companyId===item.companyId&&p.name===item.referrerPersonName),`Unmapped referral path: ${item.referrerPersonName}`);
    url(item.website);
@@ -74,7 +74,7 @@ try{
   }
   for(const privateField of ['email','referrerEmail','permission','stage','intake','fundraisingStatus'])assert.equal(item[privateField],undefined,`Public research cannot establish ${privateField}`);
  }
- assert.ok(opportunities.some(o=>!o.dummy),'At least one evidence-backed lead must remain');
+ assert.ok(opportunities.some(o=>!o.illustrative),'At least one evidence-backed lead must remain');
  const original=publicPeople.find(p=>p.research);
  assert.ok(original);
  const oldPublic={...original,id:'legacy-contact-id',email:'private@example.com',notes:'Private meeting context',relationshipStrength:'Strong',meetingNotes:[{id:'note-1',date:'2026-09-01',body:'Private discussion',topics:['Voice AI'],askedForReferrals:true}]};
@@ -123,5 +123,5 @@ try{
   assert.equal(readLocalData().movements.find(item=>item.id===m.id).evidence,'User annotation');
   assert.equal(readLocalData().movements.find(item=>item.id===m.id).confirmed,true);
  }
- console.log(`Passed: ${network.people.length} public profiles, ${feed.length} deep content briefs, ${feed.reduce((n,f)=>n+f.recipientAngles.length,0)} tailored messages, ${opportunities.filter(o=>!o.dummy).length} research leads + ${opportunities.filter(o=>o.dummy).length} marked placeholders; public refresh preserves private IDs, edits and history.`);
+ console.log(`Passed: ${network.people.length} public profiles, ${feed.length} deep content briefs, ${feed.reduce((n,f)=>n+f.recipientAngles.length,0)} tailored messages, ${opportunities.filter(o=>!o.illustrative).length} research leads + ${opportunities.filter(o=>o.illustrative).length} illustrative referrals; public refresh preserves private IDs, edits and history.`);
 }finally{await server.close()}
