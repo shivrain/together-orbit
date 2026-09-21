@@ -8,13 +8,14 @@ The complete React application runs on GitHub Pages. It does not redirect to or 
 
 ## Content
 
-The library answers one question: **why would this founder be glad we wrote?** Company announcements, podcasts, opinion newsletters and press releases were removed — a founder does not need their investor to forward them the news. What remains is research.
+The library answers one question: **why would this founder be glad we wrote?** The test is not whether an item is about the founder's sector — they follow their own sector more closely than we do — but whether it changes something they are deciding.
 
+- **This month (170)** — everything shipped in September 2026 that a portfolio founder should have an opinion about: model and API releases, agent infrastructure, security and identity for agents, pricing and packaging changes, benchmarks, India ecosystem moves, and the month's YC and Product Hunt launches. Thirty-four parallel research passes swept vendor changelogs, engineering blogs, newsrooms and the YC launch feed; every title, date, URL and quote comes from a page that was fetched and read. Items that could not be dated to a day, or that fell outside the month, were dropped rather than estimated.
 - **Research breakthrough (110)** — recent papers from arXiv, harvested through the public arXiv API across 38 topic areas mapped to what each portfolio company builds: agent tool use, agent memory, retrieval grounding, speech recognition, document extraction, clinical NLP, PII detection, prompt-injection defence, chip-design ML, recommender systems, evolutionary search and more. Every title, abstract, author list, date and URL comes from the API; takeaways are quoted verbatim from the abstract and labelled as such. Framing and questions are ours.
 - **Industry research (7)** — original datasets: RevenueHero's million-submission funnel benchmarks, ChartMogul segment persistence across 1,043 companies, Sumble GTM hiring across 22,988 job posts, DORA, LinkedIn.
 - **Buyer data (5)** — third-party surveys a founder can quote in their own sales calls: MGMA, Battery, Deloitte CFO Signals, FinOps, APTA.
 
-122 briefs cover 34 portfolio companies with 251 recipient-specific messages. Each carries publication and research dates, takeaways, an engagement move, a discussion question, and named recipients with a reason grounded in their public role. Recipients rotate across a company's mapped people rather than always addressing the CEO.
+292 briefs cover 34 portfolio companies with 813 recipient-specific messages. Each carries publication and research dates, takeaways, an engagement move, a discussion question, and named recipients with a reason grounded in their public role. Recipients rotate across a company's mapped people rather than always addressing the CEO.
 
 Choose a read and a person, then **Send in Gmail** opens a compose window already written and addressed — you press Send there. Outlook and your desktop email app are alongside it, and drafts save locally. Nothing is sent automatically, and a saved or archived draft never implies an email was sent.
 
