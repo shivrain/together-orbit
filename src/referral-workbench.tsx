@@ -9,7 +9,7 @@ const companyName=(id:string)=>id==='other'?'Other / unattributed':companies.fin
 const safe=(url?:string)=>url&&/^https:\/\//.test(url)?url:undefined;
 
 export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraft,onAskOpportunity}:Props){
-  const [query,setQuery]=useState(''),[companyId,setCompanyId]=useState('all'),[showPlaceholders,setShowPlaceholders]=useState(true);
+  const [query,setQuery]=useState(''),[companyId,setCompanyId]=useState('all');
   const all=data.opportunities||[];
   const researched=all.filter(item=>!item.dummy);
   const placeholders=all.filter(item=>item.dummy);
@@ -40,8 +40,7 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <label className="rw-company-filter"><span>Portfolio connection</span><select aria-label="Filter by portfolio company" value={companyId} onChange={e=>setCompanyId(e.target.value)}><option value="all">All portfolio companies</option>{[...companies].sort((a,b)=>a.name.localeCompare(b.name)).map(c=><option key={c.id} value={c.id}>{c.name}</option>)}</select></label>
     </div>
 
-    <h2 className="rw-group-title">Evidence-backed routes<span>{shownResearched.length}</span></h2>
-    <p className="rw-research-note">Each of these names a documented connection — an advisory listing, a disclosed angel investment, a recorded pitch, or a former employee. No introduction has been requested and none is implied.</p>
+    <p className="rw-research-note">No introduction has been requested and none is implied.</p>
     {shownResearched.length?<div className="rw-opportunities">{shownResearched.map(item=><article key={item.id} className="rw-opportunity">
       <div className="rw-opportunity-top"><span>{item.connectionType}{item.fitPriority&&<em className="rw-fit">{item.fitPriority.split(':')[0].trim()} fit</em>}</span>{safe(item.website)&&<a href={safe(item.website)} target="_blank" rel="noreferrer">Website<ArrowUpRight size={12}/></a>}</div>
       <h3>{item.startup}</h3><p className="rw-candidate">{item.candidateName} · {item.sector}</p>
@@ -51,16 +50,13 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <div className="rw-opportunity-action"><button type="button" className="sw-outline" onClick={()=>onAskOpportunity(item)}>{data.drafts.some(d=>d.opportunityId===item.id&&!d.archivedAt)?'Continue draft':'Prepare ask'}<ArrowRight size={13}/></button><details><summary>Sources · {item.sources.length}</summary>{item.sources.map(source=><a key={source.url} href={safe(source.url)} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={11}/></a>)}<small>Checked {item.checkedAt}{item.eventDate?` · Event ${item.eventDate}`:''}</small></details></div>
     </article>)}</div>:<div className="rw-filter-empty"><Search size={24}/><h3>No evidence-backed routes match</h3><p>Try another company or a broader search.</p>{filtersActive&&<button type="button" className="sw-outline" onClick={()=>{setQuery('');setCompanyId('all')}}>Clear filters</button>}</div>}
 
-    {placeholders.length>0&&<section className="rw-placeholder-block">
-      <h2 className="rw-group-title">Placeholder matches<span>{shownPlaceholders.length}</span><button type="button" className="rw-group-toggle" onClick={()=>setShowPlaceholders(!showPlaceholders)}>{showPlaceholders?'Hide':'Show'}</button></h2>
-      <p className="rw-dummy-banner"><strong>Dummy data.</strong> The startups are real companies from Together’s own dealflow, but the portfolio company beside each one is a placeholder matched on sector overlap. Nobody referred these. They are here to show the shape of the view until real referral data replaces them.</p>
-      {showPlaceholders&&(shownPlaceholders.length?<div className="rw-placeholder-grid">{shownPlaceholders.map(item=><article key={item.id} className="rw-placeholder">
-        <span className="rw-dummy-tag">Dummy</span>
+    {shownPlaceholders.length>0&&<section className="rw-placeholder-block">
+      <div className="rw-placeholder-grid">{shownPlaceholders.map(item=><article key={item.id} className="rw-placeholder">
         <h3>{item.startup}</h3>
         <p className="rw-placeholder-sector">{item.candidateName} · {item.sector}</p>
         <p className="rw-placeholder-referrer">Referred by <strong>{companyName(item.companyId)}</strong></p>
         <p className="rw-placeholder-basis">{item.matchBasis}</p>
-      </article>)}</div>:<div className="rw-filter-empty"><Search size={24}/><h3>No placeholder matches</h3><p>Try another company or a broader search.</p></div>)}
+      </article>)}</div>
     </section>}
 
     <div className="rw-intake-strip"><span>A name, a link and a little context are enough to get started.</span><button type="button" onClick={onShareForm}><Link2 size={14}/>Share referral form<ArrowRight size={13}/></button></div>
