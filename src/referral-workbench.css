@@ -6,6 +6,7 @@
 .rw-heading-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .rw-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:26px}
 .rw-research-note{font-size:14px;line-height:1.6;color:var(--o-muted);margin:0 0 18px;max-width:760px}
+.rw-referral-lead+.rw-group-title{margin-top:34px;padding-top:30px;border-top:1px solid var(--o-line)}
 .rw-group-title{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:650;color:var(--o-ink);margin:0 0 6px}
 .rw-group-title>span{font-size:12px;font-weight:600;color:var(--o-muted);background:var(--o-soft);border-radius:999px;padding:3px 10px}
 .rw-opportunities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
@@ -36,7 +37,7 @@
 .rw-opportunity-action>details small{display:block;font-size:12px;margin-top:10px;color:var(--o-faint)}
 .rw-opportunity details:focus-visible{outline:2px solid #9fc5ad;outline-offset:3px}
 
-.rw-referral-block{margin-top:34px}
+.rw-referral-lead{margin-bottom:34px}
 .rw-referral-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;align-items:start}
 .rw-referral{border:1px solid var(--o-line);border-radius:var(--o-radius);padding:20px 22px;background:#fff;min-width:0}
 .rw-referral h3{font-size:18px;font-weight:650;color:var(--o-ink);margin:0 0 4px;line-height:1.3}

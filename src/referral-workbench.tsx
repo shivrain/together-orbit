@@ -40,6 +40,17 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <label className="rw-company-filter"><span>Portfolio connection</span><select aria-label="Filter by portfolio company" value={companyId} onChange={e=>setCompanyId(e.target.value)}><option value="all">All portfolio companies</option>{[...companies].sort((a,b)=>a.name.localeCompare(b.name)).map(c=><option key={c.id} value={c.id}>{c.name}</option>)}</select></label>
     </div>
 
+    {shownReferrals.length>0&&<section className="rw-referral-lead">
+      <h2 className="rw-group-title">Referrals<span>{shownReferrals.length}</span></h2>
+      <div className="rw-referral-grid">{shownReferrals.map(item=><article key={item.id} className="rw-referral">
+        <h3>{item.startup}</h3>
+        <p className="rw-referral-sector">{item.candidateName} · {item.sector}</p>
+        <p className="rw-referral-by">Referred by <strong>{companyName(item.companyId)}</strong></p>
+        <p className="rw-referral-basis">{item.matchBasis}</p>
+      </article>)}</div>
+    </section>}
+
+
     <h2 className="rw-group-title">Researched routes<span>{shownResearched.length}</span></h2>
     <p className="rw-research-note">Documented connections into founders we have not met. No introduction has been requested and none is implied.</p>
     {shownResearched.length?<div className="rw-opportunities">{shownResearched.map(item=><article key={item.id} className="rw-opportunity">
@@ -50,16 +61,6 @@ export default function ReferralWorkbench({data,onRequest,onShareForm,onOpenDraf
       <details className="rw-research-detail"><summary>Why it is worth a conversation<ChevronRight size={13}/></summary><p>{item.whyRelevant}</p><h4>The specific ask</h4><p>{item.suggestedAsk}</p>{item.evidenceStrength&&<><h4>Evidence strength</h4><p>{item.evidenceStrength}</p></>}{item.fitPriority&&<><h4>Mandate fit</h4><p>{item.fitPriority}</p></>}<p className="rw-limitations">{item.limitations}</p></details>
       <div className="rw-opportunity-action"><button type="button" className="sw-outline" onClick={()=>onAskOpportunity(item)}>{data.drafts.some(d=>d.opportunityId===item.id&&!d.archivedAt)?'Continue draft':'Prepare ask'}<ArrowRight size={13}/></button><details><summary>Sources · {item.sources.length}</summary>{item.sources.map(source=><a key={source.url} href={safe(source.url)} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={11}/></a>)}<small>Checked {item.checkedAt}{item.eventDate?` · Event ${item.eventDate}`:''}</small></details></div>
     </article>)}</div>:<div className="rw-filter-empty"><Search size={24}/><h3>No evidence-backed routes match</h3><p>Try another company or a broader search.</p>{filtersActive&&<button type="button" className="sw-outline" onClick={()=>{setQuery('');setCompanyId('all')}}>Clear filters</button>}</div>}
-
-    {shownReferrals.length>0&&<section className="rw-referral-block">
-      <h2 className="rw-group-title">Referrals<span>{shownReferrals.length}</span></h2>
-      <div className="rw-referral-grid">{shownReferrals.map(item=><article key={item.id} className="rw-referral">
-        <h3>{item.startup}</h3>
-        <p className="rw-referral-sector">{item.candidateName} · {item.sector}</p>
-        <p className="rw-referral-by">Referred by <strong>{companyName(item.companyId)}</strong></p>
-        <p className="rw-referral-basis">{item.matchBasis}</p>
-      </article>)}</div>
-    </section>}
 
     <div className="rw-intake-strip"><span>A name, a link and a little context are enough to get started.</span><button type="button" onClick={onShareForm}><Link2 size={14}/>Share referral form<ArrowRight size={13}/></button></div>
 
