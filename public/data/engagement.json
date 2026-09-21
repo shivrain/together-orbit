@@ -1,1006 +1,6 @@
 {
   "feed": [
     {
-      "id": "nist-token-protection-2026-09-15",
-      "title": "NIST's final guidance on protecting identity tokens",
-      "publisher": "NIST",
-      "url": "https://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation",
-      "publishedAt": "2026-09-15",
-      "companyIds": [
-        "scalekit",
-        "securden",
-        "composio"
-      ],
-      "topic": "Agent security · identity and access",
-      "summary": "NIST IR 8587 addresses token forgery, theft and misuse through key management, verification and lifecycle controls for SSO, federation and APIs.",
-      "whyRelevant": "ScaleKit's authentication, Securden's privileged access and Composio's tool integrations all touch these boundaries. Useful material for an enterprise security review, without treating guidance as a certification.",
-      "emailSubject": "A useful reference for token-security reviews",
-      "emailBody": "Sharing NIST's final token-protection guidance from 15 September:\nhttps://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation\n\nThe practical value is its treatment of signing keys, verification and token lifecycle together. It could make a useful checklist for the security questions that arise as customers connect more systems.\n\nWhich part creates the most friction in your enterprise reviews: credential handling, revocation or auditability?",
-      "checkedAt": "2026-09-21",
-      "format": "Guide",
-      "takeaways": [
-        "NIST IR 8587 calls for explicit token audiences and rejection when the audience is absent or incorrect (section 5.3.1.3).",
-        "Immediate global revocation is not always possible with stateless tokens; the report discusses short lifetimes and revocation signals (5.3.1.2).",
-        "Signing-key rollover needs an overlap period and a documented retirement process, not just a rotation interval (5.1.1.4)."
-      ],
-      "discussionQuestion": "Which token control is hardest to prove across a customer’s whole integration chain?",
-      "recipientAngles": [
-        {
-          "companyId": "scalekit",
-          "personName": "Ravi Madabhushi",
-          "whyThisPerson": "ScaleKit’s co-founder publishes technical work on enterprise authentication.",
-          "angle": "Suggested technical discussion: demonstrate revocation behavior across relying applications.",
-          "emailSubject": "A useful revocation test for enterprise auth",
-          "emailBody": "NIST’s new report is unusually practical about revocation limits. For ScaleKit, I’d turn it into one customer-facing test: revoke access, then show what still works and for how long. Which relying applications make that hardest to demonstrate?\n\nhttps://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation"
-        },
-        {
-          "companyId": "securden",
-          "personName": "Kumaran Balan",
-          "whyThisPerson": "Securden identifies Kumaran as CTO for its agent security and governance platform.",
-          "angle": "Suggested product discussion: make the agent-access shutdown path observable.",
-          "emailSubject": "What actually stops when agent access is revoked?",
-          "emailBody": "Sharing NIST’s token guidance. The useful product question for Securden is how a security team verifies that an access shutdown reached every connected system. Would a revocation drill make a stronger demo than another permissions dashboard?\n\nhttps://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation"
-        },
-        {
-          "companyId": "composio",
-          "personName": "Karan Vaidya",
-          "whyThisPerson": "Composio’s co-founder works in infrastructure connecting agents to external tools.",
-          "angle": "Suggested integration discussion: expose authorization boundaries without complicating developer setup.",
-          "emailSubject": "A concrete trust question for tool integrations",
-          "emailBody": "NIST’s token guidance made me think about Composio’s integration boundary. Could a developer quickly show which tool a credential is valid for and what happens when access ends? That feels like useful enterprise-demo material. Where does the explanation get complicated today?\n\nhttps://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation"
-        }
-      ],
-      "sources": [
-        {
-          "title": "NIST's final guidance on protecting identity tokens",
-          "url": "https://www.nist.gov/publications/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation",
-          "publishedAt": "2026-09-15"
-        },
-        {
-          "title": "NIST IR 8587 · full implementation report",
-          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=962217",
-          "publishedAt": "2026-09-15"
-        }
-      ]
-    },
-    {
-      "id": "nist-agent-identity-2026-08-27",
-      "title": "NIST on identity and delegated authority for agents",
-      "publisher": "NIST",
-      "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
-      "publishedAt": "2026-08-27",
-      "companyIds": [
-        "composio",
-        "protecto",
-        "scalekit",
-        "securden"
-      ],
-      "topic": "Agent security · delegated access",
-      "summary": "NIST discusses familiar identity failures resurfacing in agent deployments, including shared credentials, excessive authority and dependence on human approvals.",
-      "whyRelevant": "A concrete discussion starter for founders building tool access, authorization and data protection. The useful question is how an agent's permissions remain bounded throughout a workflow.",
-      "emailSubject": "A sharp framing for agent permissions",
-      "emailBody": "This NIST piece connects agent security to identity practices enterprises already understand:\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation\n\nThe point that stood out is that human approval cannot substitute for clearly bounded authority. My takeaway is that a customer should be able to explain what an agent can do, on whose behalf, and how that permission ends.\n\nAre buyers asking for that level of delegation control yet, or mainly trying to get their first integrations working?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "NIST argues that agents need distinct identities and delegated rights; sharing a person’s credentials obscures accountability.",
-        "Frequent approval prompts can train users to approve reflexively. The post treats usability as part of authorization design."
-      ],
-      "discussionQuestion": "Can the customer explain an agent’s permitted actions without reading its prompt?",
-      "recipientAngles": [
-        {
-          "companyId": "protecto",
-          "personName": "Baskaran Alagarsamy",
-          "whyThisPerson": "Protecto’s co-founder and CTO has a publicly documented privacy and data-engineering remit.",
-          "angle": "Suggested architecture discussion: connect data-policy enforcement with delegated authority.",
-          "emailSubject": "Where identity stops and data policy begins",
-          "emailBody": "NIST’s agent-identity piece raises a useful boundary for Protecto: even an authenticated agent may request data it should not see. How would you show a buyer where identity checks end and data-policy enforcement begins, especially during a multi-tool workflow?\n\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation"
-        },
-        {
-          "companyId": "scalekit",
-          "personName": "Satya Devarakonda",
-          "whyThisPerson": "ScaleKit’s CEO publicly writes about agents in production and authentication.",
-          "angle": "Suggested positioning discussion: show bounded delegation in the buyer’s language.",
-          "emailSubject": "A clearer way to explain delegated agent access",
-          "emailBody": "This NIST piece gives a useful framing for ScaleKit: a customer should be able to explain who delegated access, what it permits, and how it ends. Which of those questions is already showing up in buyer conversations?\n\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation"
-        },
-        {
-          "companyId": "composio",
-          "personName": "Shawn Esquivel",
-          "whyThisPerson": "Composio’s official author biography identifies Shawn in Developer Relations.",
-          "angle": "Suggested developer-education discussion: contrast one safe integration pattern with credential sharing.",
-          "emailSubject": "An agent-auth example worth teaching",
-          "emailBody": "NIST warns that repeated permission prompts can become a reflex. For a Composio tutorial, a bounded authorization example could make that concrete. Which demo would teach the boundary best: reading a calendar, creating an event, or changing someone else’s event?\n\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation"
-        },
-        {
-          "companyId": "securden",
-          "personName": "Bala Venkatramani",
-          "whyThisPerson": "Securden identifies Bala as CEO of its identity-security company.",
-          "angle": "Suggested buyer discussion: make an agent-access policy understandable before increasing automation.",
-          "emailSubject": "Can the buyer explain the agent’s access?",
-          "emailBody": "NIST’s agent-identity piece suggests a useful Securden demo: ask the buyer to explain the access policy back. Which part is hardest to make clear: ownership, permitted actions or delegation?\n\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation"
-        }
-      ],
-      "sources": [
-        {
-          "title": "NIST on identity and delegated authority for agents",
-          "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
-          "publishedAt": "2026-08-27"
-        }
-      ]
-    },
-    {
-      "id": "google-a2ui-2025-12-15",
-      "title": "A2UI: exchanging agent-generated interfaces as structured data",
-      "publisher": "Google Developers Blog",
-      "url": "https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/",
-      "publishedAt": "2025-12-15",
-      "companyIds": [
-        "thesys",
-        "ui-flow"
-      ],
-      "topic": "Generative UI · interoperability",
-      "summary": "Google introduced A2UI, an open format that lets agents describe interfaces while the host application controls rendering through its own components.",
-      "whyRelevant": "An evergreen technical reference for Thesys's generative UI work and UI Flow's interface tooling: interoperability, renderer control and trust boundaries are concrete product design choices.",
-      "emailSubject": "A2UI and the boundary between generated UI and the host app",
-      "emailBody": "This older A2UI introduction is still a useful architecture reference:\nhttps://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/\n\nThe interesting choice is to pass a structured interface description while keeping rendering with the host application. That makes the component contract and update model particularly important.\n\nWhere do you see the harder customer problem: expressing the interaction, fitting their design system, or preserving state as the agent changes the interface?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "A2UI sends declarative component descriptions; the receiving application renders them with its own approved components.",
-        "The format supports incremental updates and separates the interface description from the client framework. This is an older architectural reference."
-      ],
-      "discussionQuestion": "What should remain under the host application’s control when an agent changes the interface?",
-      "recipientAngles": [
-        {
-          "companyId": "thesys",
-          "personName": "Parikshit Deshmukh",
-          "whyThisPerson": "Thesys’s co-founder previously led design at DevRev and Recko, according to its company biography.",
-          "angle": "Suggested design discussion: preserve user orientation as generated interfaces change.",
-          "emailSubject": "The interaction-design question inside A2UI",
-          "emailBody": "Revisiting A2UI’s split between generated descriptions and host-rendered components. For Thesys, I’m curious about the design consequence: when the agent changes a screen mid-task, what should stay stable so the user still knows where they are?\n\nhttps://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/"
-        },
-        {
-          "companyId": "thesys",
-          "personName": "Rabi Shanker Guha",
-          "whyThisPerson": "Thesys identifies Rabi as co-founder and CEO of its generative-UI infrastructure company.",
-          "angle": "Suggested infrastructure discussion: choose the interoperability boundary customers actually need.",
-          "emailSubject": "Where generative UI needs a common contract",
-          "emailBody": "A2UI is a useful architecture reference for Thesys. The product question I’d explore is which contract customers most need standardized: component descriptions, state updates, or user actions back to the agent. Which would remove the most integration work for them?\n\nhttps://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/"
-        },
-        {
-          "companyId": "ui-flow",
-          "personName": "Eric Rowell",
-          "whyThisPerson": "Eric’s YC biography documents earlier Uiflow and UI-architecture work; he is now Wayline CTO.",
-          "angle": "Suggested alumni conversation: draw on earlier interface-tooling experience, without assuming continued work at Uiflow.",
-          "emailSubject": "An interface question from your Uiflow experience",
-          "emailBody": "Given your earlier Uiflow work, I thought this A2UI architecture would be interesting. Where should a generated interface stop and the host app take control? Curious what your experience suggests.\n\nhttps://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "A2UI: exchanging agent-generated interfaces as structured data",
-          "url": "https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/",
-          "publishedAt": "2025-12-15"
-        },
-        {
-          "title": "Y Combinator · Eric Rowell’s current and prior founder roles",
-          "url": "https://www.ycombinator.com/companies/wayline"
-        }
-      ]
-    },
-    {
-      "id": "anthropic-app-harness-2026-03-24",
-      "title": "How Anthropic evaluates long-running app-building agents",
-      "publisher": "Anthropic Engineering",
-      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
-      "publishedAt": "2026-03-24",
-      "companyIds": [
-        "emergent",
-        "runable",
-        "rocket",
-        "thesys"
-      ],
-      "topic": "Coding agents · evaluation and application quality",
-      "summary": "Anthropic describes a planner, generator and evaluator architecture, using explicit criteria and structured handoffs to improve autonomous application development.",
-      "whyRelevant": "Emergent, Runable and Rocket turn requests into working applications. Thesys addresses generated interfaces. This provides a specific way to discuss usability and completion beyond code generation.",
-      "emailSubject": "A useful evaluator pattern for app-building agents",
-      "emailBody": "Sharing Anthropic's write-up on long-running application development:\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps\n\nIt separates generation from evaluation and makes design quality explicit enough to grade. My takeaway is that a working build needs checks for the user's actual task as well as functional correctness.\n\nWhich failure is currently harder to catch automatically in your product: an unfinished flow, a weak interface, or a feature that technically works but misses the request?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "Anthropic’s experiment separates planning, generation and evaluation; the evaluator tests the running app against explicit completion criteria.",
-        "Later experiments remove orchestration as model capability improves. The author treats evaluator cost as task-dependent, not universally worthwhile."
-      ],
-      "discussionQuestion": "Which failures justify an extra evaluator pass before a generated application reaches the user?",
-      "recipientAngles": [
-        {
-          "companyId": "emergent",
-          "personName": "Madhav Jha",
-          "whyThisPerson": "Emergent identifies Madhav as CTO, with machine-learning infrastructure experience.",
-          "angle": "Suggested technical discussion: spend verification where the base model is least reliable.",
-          "emailSubject": "Where should Emergent spend an extra verification pass?",
-          "emailBody": "Anthropic’s harness experiment has a useful tradeoff: evaluation helps, but its cost depends on the task. For Emergent, could verification be triggered by risky changes such as auth or payments? Which failure class would you put behind that gate first?\n\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps"
-        },
-        {
-          "companyId": "rocket",
-          "personName": "Nidhi Desai",
-          "whyThisPerson": "Rocket’s official biography names Nidhi Director of Engineering and describes agent-architecture work.",
-          "angle": "Suggested engineering discussion: test user-visible completion rather than apparent build success.",
-          "emailSubject": "A completion contract for generated apps",
-          "emailBody": "This Anthropic write-up made completion criteria concrete. For Rocket, I’d compare a successful build with a successful user journey: sign up, create something, return and find it saved. Which step still escapes automated evaluation most often?\n\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps"
-        },
-        {
-          "companyId": "runable",
-          "personName": "Saksham Sarda",
-          "whyThisPerson": "Together’s Runable investment note describes Saksham’s product-building role.",
-          "angle": "Suggested product discussion: prioritize verification around recurring small-business workflows.",
-          "emailSubject": "A practical QA boundary for Runable",
-          "emailBody": "Anthropic’s separate evaluator is an interesting reference for Runable. I’d test the business outcome before adding more features: did the workflow create the expected record and recover from a failed tool call? Which repeatable customer task would make the best first benchmark?\n\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps"
-        },
-        {
-          "companyId": "thesys",
-          "personName": "Parikshit Deshmukh",
-          "whyThisPerson": "Thesys documents Parikshit’s design leadership at DevRev and Recko before co-founding the company.",
-          "angle": "Suggested design-evaluation discussion: grade whether generated UI helps someone finish the intended task.",
-          "emailSubject": "A rubric for useful generated interfaces",
-          "emailBody": "Anthropic’s evaluator makes interface quality explicit. For Thesys, which rubric would best catch an attractive screen that fails its actual task? Your design perspective would make this an interesting comparison.\n\nhttps://www.anthropic.com/engineering/harness-design-long-running-apps"
-        }
-      ],
-      "sources": [
-        {
-          "title": "How Anthropic evaluates long-running app-building agents",
-          "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
-          "publishedAt": "2026-03-24"
-        }
-      ]
-    },
-    {
-      "id": "anthropic-agent-evals-2026-01-09",
-      "title": "Evaluate whether an agent completed the task",
-      "publisher": "Anthropic Engineering",
-      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
-      "publishedAt": "2026-01-09",
-      "companyIds": [
-        "confido",
-        "rapid-claims",
-        "runable",
-        "optexity"
-      ],
-      "topic": "Agent reliability · workflow evaluation",
-      "summary": "The guide distinguishes an agent's transcript from the final state it produced, and combines repeated trials, task grading, production monitoring and human review.",
-      "whyRelevant": "For healthcare administration and workflow automation, a persuasive response does not establish that an appointment, record update or other intended action actually happened.",
-      "emailSubject": "An evaluation idea for completed workflows",
-      "emailBody": "This guide has a useful distinction between what an agent says and the final state it leaves behind:\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n\nFor operational workflows, my takeaway is to test the completed system change and the exception handoff separately. That seems especially useful when a workflow crosses several tools.\n\nWhere do you still need the most human review: detecting incomplete work, checking the resulting records, or judging whether an escalation was appropriate?",
-      "checkedAt": "2026-09-21",
-      "format": "Guide",
-      "takeaways": [
-        "The guide distinguishes a convincing transcript from a verified change in the target system.",
-        "It separates tests of new capability from regression tests, and recommends repeated trials because an agent may pass once and fail later."
-      ],
-      "discussionQuestion": "What independent evidence proves the workflow completed correctly?",
-      "recipientAngles": [
-        {
-          "companyId": "confido",
-          "personName": "Vichar Shroff",
-          "whyThisPerson": "Confido’s dated company webinar identifies Vichar as co-founder and Chief Product Officer.",
-          "angle": "Suggested healthcare-product discussion: verify the administrative result independently of the conversation.",
-          "emailSubject": "A better pass condition for patient-access workflows",
-          "emailBody": "Anthropic’s eval guide separates what an agent says from what changed in the system. For Confido, that suggests checking the appointment record and exception handoff independently of call quality. Which incorrect outcome is hardest to catch before a patient notices?\n\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
-        },
-        {
-          "companyId": "runable",
-          "personName": "Umesh Kumar",
-          "whyThisPerson": "Together identifies Umesh as Runable’s CEO and describes his customer and growth focus.",
-          "angle": "Suggested customer-success discussion: make business-task completion inspectable.",
-          "emailSubject": "What would a customer accept as proof of completion?",
-          "emailBody": "This eval guide suggests a useful Runable customer question: what evidence would convince you a task is finished? For a business owner, that might be the resulting order, invoice or updated record. Which outcome would make the clearest customer-facing quality promise?\n\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
-        },
-        {
-          "companyId": "rapid-claims",
-          "personName": "Jot Sarup Singh",
-          "whyThisPerson": "RapidClaims’ engineering page identifies Jot as founder and CPTO focused on AI medical billing.",
-          "angle": "Suggested evaluation discussion: separate record correctness from a plausible coding explanation.",
-          "emailSubject": "An independent check for a coding result",
-          "emailBody": "This evaluation guide made me think of RapidClaims. What independent check best separates a plausible coding explanation from a correct resulting record? That seems useful for explaining quality to customers.\n\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
-        },
-        {
-          "companyId": "optexity",
-          "personName": "Sankalp Garg",
-          "whyThisPerson": "Together lists Sankalp as an Optexity co-founder, providing relevant experience in workflow automation. His current role has not been independently verified.",
-          "angle": "Suggested alumni discussion: reflect on previous cross-application automation experience.",
-          "emailSubject": "An eval question from your Optexity experience",
-          "emailBody": "Given your Optexity experience, this agent-evaluation guide seemed relevant. In a workflow spanning several apps, what was the hardest final-state check to get right? Curious which lesson has held up.\n\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Evaluate whether an agent completed the task",
-          "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
-          "publishedAt": "2026-01-09"
-        },
-        {
-          "title": "Together Fund · Optexity founder listing",
-          "url": "https://www.together.fund/portfolio/optexity"
-        }
-      ]
-    },
-    {
-      "id": "anthropic-coding-expertise-2026-06-16",
-      "title": "Coding-agent research: domain knowledge still matters",
-      "publisher": "Anthropic Research",
-      "url": "https://www.anthropic.com/research/claude-code-expertise",
-      "publishedAt": "2026-06-16",
-      "companyIds": [
-        "emergent",
-        "rocket",
-        "runable"
-      ],
-      "topic": "Coding agents · user onboarding",
-      "summary": "An observational study of roughly 400,000 Claude Code sessions links domain expertise with successful use. People generally direct planning while the agent handles execution.",
-      "whyRelevant": "A product question for platforms serving non-programmers: how can onboarding help people specify the problem and verify a useful result? The study is about Claude Code, not these companies' users.",
-      "emailSubject": "An onboarding question from real coding-agent usage",
-      "emailBody": "Anthropic's session study has an interesting angle for people building software without a coding background:\nhttps://www.anthropic.com/research/claude-code-expertise\n\nDomain understanding remains useful even when the agent writes the code. The product implication I take from it is to help users express constraints and recognize whether the result solves their problem.\n\nDo successful users arrive with a clearer problem, or does your product help them discover that clarity while building?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "Anthropic analyzed roughly 400,000 Claude Code sessions from October 2025 to April 2026; people generally directed planning while the agent handled execution.",
-        "Domain expertise was associated with success. These observational findings describe Claude Code use, not customers of portfolio companies."
-      ],
-      "discussionQuestion": "Does onboarding help users define a good problem before asking them to generate an application?",
-      "recipientAngles": [
-        {
-          "companyId": "emergent",
-          "personName": "Mukund Jha",
-          "whyThisPerson": "Emergent’s founder profile identifies Mukund as CEO of its AI application-building platform.",
-          "angle": "Suggested product discussion: capture domain understanding during onboarding.",
-          "emailSubject": "An onboarding hypothesis for nontechnical builders",
-          "emailBody": "Anthropic’s usage study points to problem understanding as a useful advantage. For Emergent, I’d test onboarding that asks for a real workflow, its current workaround and a clear success condition. Would that help more users reach a useful first app?\n\nhttps://www.anthropic.com/research/claude-code-expertise"
-        },
-        {
-          "companyId": "rocket",
-          "personName": "Khyati Brahmbhatt",
-          "whyThisPerson": "Rocket’s official biography identifies Khyati as Director of Product & Growth.",
-          "angle": "Suggested growth experiment: measure useful first outcomes, not initial generations.",
-          "emailSubject": "A sharper first-session experiment for Rocket",
-          "emailBody": "This coding-agent study suggests an onboarding experiment for Rocket: compare a blank prompt with a short problem-definition interview. I’d measure whether users return to use the app they built. What signal currently separates a useful first project from a curiosity-driven trial?\n\nhttps://www.anthropic.com/research/claude-code-expertise"
-        },
-        {
-          "companyId": "runable",
-          "personName": "Umesh Kumar",
-          "whyThisPerson": "Runable’s CEO has a publicly described focus on small-business customer problems.",
-          "angle": "Suggested customer discussion: use existing business artifacts to sharpen requests.",
-          "emailSubject": "Let the business workflow write the prompt",
-          "emailBody": "The domain-expertise finding here feels relevant to Runable’s small-business audience. Could an existing spreadsheet, invoice or process description help someone specify the job better than a blank prompt? Which customer artifact would be the most useful starting point?\n\nhttps://www.anthropic.com/research/claude-code-expertise"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Coding-agent research: domain knowledge still matters",
-          "url": "https://www.anthropic.com/research/claude-code-expertise",
-          "publishedAt": "2026-06-16"
-        }
-      ]
-    },
-    {
-      "id": "google-voice-models-2026-09-15",
-      "title": "Google's voice APIs combine conversation, tools and transcription",
-      "publisher": "Google DeepMind",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
-      "publishedAt": "2026-09-15",
-      "companyIds": [
-        "wispr-flow",
-        "confido"
-      ],
-      "topic": "Voice AI · speech-to-text and live agents",
-      "summary": "Google's announcement covers Gemini 3.8 Live and 3.5 Transcribe, including background tool calls, custom vocabulary and formatted transcription. These are vendor-described capabilities.",
-      "whyRelevant": "For Wispr, the changing baseline includes vocabulary and usable written output. For Confido, continued dialogue during tool use suggests a specific administrative-call evaluation case.",
-      "emailSubject": "A voice release worth testing against real workflows",
-      "emailBody": "Google's 15 September voice release looks worth a focused test:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\n\nTwo practical claims caught my attention: keeping dialogue moving while tools run, and improving transcription with custom vocabulary. I'd test these on real task completion and correction effort, alongside raw recognition accuracy.\n\nWhich is the bigger issue in your voice workflows today: latency, specialist vocabulary, or recovering gracefully when the system misunderstands?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "Google says Gemini 3.8 Live can continue speech while tool calls run in the background.",
-        "Its transcription release supports vocabulary lists up to 1,000 terms and formatted output. These are vendor claims to test on relevant recordings."
-      ],
-      "discussionQuestion": "Which voice error matters most in the actual workflow: delay, an incorrect entity, or an incorrect completed action?",
-      "recipientAngles": [
-        {
-          "companyId": "wispr-flow",
-          "personName": "Sahaj Garg",
-          "whyThisPerson": "Wispr’s media kit identifies Sahaj as CTO with speech and machine-learning experience.",
-          "angle": "Suggested technical evaluation: compare correction effort on specialist vocabulary.",
-          "emailSubject": "A useful transcription benchmark beyond word error rate",
-          "emailBody": "Google’s custom-vocabulary support looks worth a controlled comparison for Wispr. I’d measure corrections users make to names and specialist terms, alongside transcription accuracy. Which test set best predicts whether someone can trust the output without rereading it?\n\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"
-        },
-        {
-          "companyId": "wispr-flow",
-          "personName": "Tanay Kothari",
-          "whyThisPerson": "Wispr’s company biography identifies Tanay as co-founder and CEO.",
-          "angle": "Suggested product discussion: evaluate ready-to-use writing and habit formation.",
-          "emailSubject": "Does better transcription change the habit?",
-          "emailBody": "Google is bundling formatted transcription into its voice stack. For Wispr, the interesting product question is what makes output ready to use in the destination app. Which remaining correction most often breaks a user’s flow?\n\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"
-        },
-        {
-          "companyId": "confido",
-          "personName": "Vichar Shroff",
-          "whyThisPerson": "Confido’s co-founder and CPO works on healthcare administrative voice workflows.",
-          "angle": "Suggested workflow test: maintain correct state when conversation continues during an EHR lookup.",
-          "emailSubject": "One voice-agent test for a slow EHR lookup",
-          "emailBody": "Google’s background tool calls suggest a concrete test for Confido: the patient changes their request while the system is still looking up availability. Does the agent carry the correction into the eventual booking? That seems more revealing than a smooth demo call.\n\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Google's voice APIs combine conversation, tools and transcription",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
-          "publishedAt": "2026-09-15"
-        }
-      ]
-    },
-    {
-      "id": "anthropic-hiring-evaluations-2026-01-21",
-      "title": "A first-hand account of redesigning hiring assessments for AI",
-      "publisher": "Anthropic Engineering",
-      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
-      "publishedAt": "2026-01-21",
-      "companyIds": [
-        "kula",
-        "hunar",
-        "emergent"
-      ],
-      "topic": "Recruiting · assessment design",
-      "summary": "Anthropic's performance-engineering team explains three versions of its take-home assessment as improving models made earlier tests less discriminating.",
-      "whyRelevant": "A concrete employer case for Kula and Hunar when discussing evidence of candidate ability. It concerns one specialist engineering role and should not be generalized to all hiring.",
-      "emailSubject": "A concrete hiring-assessment problem to compare notes on",
-      "emailBody": "This first-hand account from Anthropic is a useful prompt for hiring teams:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nThey kept redesigning a take-home as models caught up. The broader question it raises for me is what evidence an assessment captures about the candidate's judgment, especially when AI help is permitted.\n\nAre your customers changing the assessment itself, or mainly asking how to interpret AI-assisted submissions?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "Anthropic explicitly allowed AI for this specialist assessment; that exception was not its general take-home policy.",
-        "Later versions traded some job realism for unfamiliar problems that better separated candidates from models."
-      ],
-      "discussionQuestion": "What candidate judgment can a hiring team observe separately from the finished AI-assisted submission?",
-      "recipientAngles": [
-        {
-          "companyId": "kula",
-          "personName": "Sathappan Muthupalaniappan",
-          "whyThisPerson": "Kula's CTO combines recruiting technology with engineering hiring context.",
-          "angle": "Help employers state what their assessments actually measure.",
-          "emailSubject": "What remains observable in an AI-assisted assessment?",
-          "emailBody": "Anthropic's assessment story suggests a useful Kula customer question: what evidence does the rubric capture beyond a completed answer? I'd separate the result, the candidate's verification steps and their explanation of tradeoffs. Would a hiring team be able to defend its decision from that record?\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
-        },
-        {
-          "companyId": "emergent",
-          "personName": "Madhav Jha",
-          "whyThisPerson": "Emergent's CTO works on AI coding and agent evaluation.",
-          "angle": "Review engineering hiring for evidence of judgment with coding agents.",
-          "emailSubject": "A small exercise for evaluating agent-assisted work",
-          "emailBody": "This Anthropic hiring case seems relevant to an AI-coding team. A possible interview exercise: ask a candidate to inspect an agent-produced change, choose what to verify, and explain one rejected shortcut. Which part would reveal judgment your normal coding assessment misses? This is a suggested exercise, not Anthropic's published test.\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
-        },
-        {
-          "companyId": "hunar",
-          "personName": "Shantanu Bhattacharyya",
-          "whyThisPerson": "Hunar's CTO leads technology for voice-based frontline workforce workflows.",
-          "angle": "Clarify what a role-specific screening conversation can and cannot establish.",
-          "emailSubject": "What does a screening answer actually demonstrate?",
-          "emailBody": "Anthropic's engineering test is a different hiring context from Hunar's frontline work. The transferable question is what an answer proves. For one frontline role, could a supervisor distinguish information verified in a screening conversation from ability that needs a practical check? Which distinction should the product make explicit?\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Designing AI-resistant technical evaluations",
-          "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
-          "publishedAt": "2026-01-21"
-        }
-      ]
-    },
-    {
-      "id": "linkedin-talent-research-2026-01-07",
-      "title": "LinkedIn's hiring research: more applicants, harder matching",
-      "publisher": "LinkedIn Research",
-      "url": "https://news.linkedin.com/2026/LinkedIn-Research-Talent-2026",
-      "publishedAt": "2026-01-07",
-      "companyIds": [
-        "kula",
-        "hunar"
-      ],
-      "topic": "Recruiting · candidate matching",
-      "summary": "LinkedIn reports that US applicants per open role doubled since spring 2022, while surveyed recruiters describe difficulty finding qualified talent and growing interest in AI screening.",
-      "whyRelevant": "This frames a useful product discussion about qualification quality versus application volume for Kula and Hunar. It is LinkedIn's own research, with US-specific applicant data.",
-      "emailSubject": "More applicants, but harder matching",
-      "emailBody": "LinkedIn's January research puts applicant growth and recruiter frustration side by side:\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026\n\nThe useful tension is that more applicants do not necessarily make the right candidate easier to find. It suggests measuring the quality of the shortlist, not just time saved in screening.\n\nWhat signal do your customers trust most when deciding that a candidate deserves a conversation?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "LinkedIn's US measure is applicants per open role; it does not measure quality of matches.",
-        "Recruiters' plans to expand AI screening are stated intentions, not demonstrated hiring outcomes."
-      ],
-      "discussionQuestion": "Which hiring-manager decision would prove a shortlist improved, and what evidence should accompany each recommendation?",
-      "recipientAngles": [
-        {
-          "companyId": "kula",
-          "personName": "Achuthanand Ravi",
-          "whyThisPerson": "Kula's CEO works on recruiting automation and talent networks.",
-          "angle": "Evaluate shortlist usefulness through downstream recruiter decisions.",
-          "emailSubject": "A shortlist-quality test for Kula",
-          "emailBody": "LinkedIn's hiring research made me think of a small Kula customer exercise: review one completed shortlist and record who earned an interview, what evidence persuaded the hiring manager, and where the recommendation was overridden. Which of those signals would you trust as a product-quality measure?\n\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026"
-        },
-        {
-          "companyId": "hunar",
-          "personName": "Krishna Khandelwal",
-          "whyThisPerson": "Hunar's CEO focuses on frontline workforce operations.",
-          "angle": "Test local qualification and attendance signals without importing US trends.",
-          "emailSubject": "A frontline-hiring version of the matching question",
-          "emailBody": "The LinkedIn research raises a useful matching question for Hunar, although its applicant-volume finding is US-specific. For one frontline role, would comparing availability, shift fit and interview attendance tell you more than completed screenings alone? Which piece of information would most improve the next candidate conversation?\n\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026"
-        }
-      ],
-      "sources": [
-        {
-          "title": "LinkedIn Research: Talent 2026",
-          "url": "https://news.linkedin.com/2026/LinkedIn-Research-Talent-2026",
-          "publishedAt": "2026-01-07"
-        }
-      ]
-    },
-    {
-      "id": "cms-epa-early-adopters-2026-05-13",
-      "title": "CMS's prior-authorization effort targets real workflow handoffs",
-      "publisher": "Centers for Medicare & Medicaid Services",
-      "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
-      "publishedAt": "2026-05-13",
-      "companyIds": [
-        "rapid-claims",
-        "confido",
-        "spry-therapeutics"
-      ],
-      "topic": "Healthcare operations · prior authorization",
-      "summary": "CMS named 29 early adopters working on electronic prior authorization, emphasizing integration, status visibility and handoffs across clinical and administrative systems.",
-      "whyRelevant": "Rapid Claims, Confido and SPRY serve different parts of healthcare administration. This is an ecosystem and workflow discussion, not an assertion about a company's regulatory obligations.",
-      "emailSubject": "Where prior-authorization handoffs still break",
-      "emailBody": "Sharing CMS's electronic prior-authorization initiative:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems. The named provider and EHR participants also give a concrete set of implementations to watch.\n\nIn the workflows you see, is the larger bottleneck getting the required information together, finding the authorization status, or moving the decision into the next system?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "The initiative prioritizes authorization status and handoffs between systems, beyond merely having an API.",
-        "Its early-adopter collaboration is separate from CMS's requirements for certain impacted payers."
-      ],
-      "discussionQuestion": "Who owns the next action when authorization information exists in one system but is missing from the next workflow?",
-      "recipientAngles": [
-        {
-          "companyId": "rapid-claims",
-          "personName": "Dushyant Mishra",
-          "whyThisPerson": "Rapid Claims' CEO works on healthcare revenue-cycle workflows.",
-          "angle": "Connect authorization evidence to downstream claim readiness.",
-          "emailSubject": "Following authorization evidence into the claim",
-          "emailBody": "CMS's initiative prompted a revenue-cycle question for Rapid Claims: could one case be followed from authorization decision to claim preparation, recording the reference, supporting evidence and next owner? I'd want to distinguish a missing handoff from a coding problem. Where would that distinction be most useful?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
-        },
-        {
-          "companyId": "confido",
-          "personName": "Vichar Shroff",
-          "whyThisPerson": "Confido's CPO works on patient access and EHR integrations.",
-          "angle": "Define a reliable answer to patient authorization-status calls.",
-          "emailSubject": "When a patient asks whether their visit is authorized",
-          "emailBody": "The CMS update made me think about the patient-access conversation at Confido. For an authorization-status call, what must an assistant know before answering: the source, when it was checked, and who can resolve uncertainty? Would those fields make a useful review sheet for one workflow?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
-        },
-        {
-          "companyId": "spry-therapeutics",
-          "personName": "Brijraj Bhuptani",
-          "whyThisPerson": "SPRY's CEO focuses on rehabilitation workflows and interoperability.",
-          "angle": "Carry authorization information into therapy scheduling decisions.",
-          "emailSubject": "Connecting authorization status to the next therapy visit",
-          "emailBody": "CMS is emphasizing the handoff between clinical and administrative systems. For SPRY, a useful walkthrough could start with a planned therapy visit and work backward: authorization status, approved scope, remaining visits and the person resolving exceptions. Which field would most change whether a clinic can schedule confidently?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
-        }
-      ],
-      "sources": [
-        {
-          "title": "CMS announces electronic prior-authorization early adopters",
-          "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
-          "publishedAt": "2026-05-13"
-        }
-      ]
-    },
-    {
-      "id": "apta-admin-burden-2025-11-05",
-      "title": "APTA's survey of administrative burden in physical therapy",
-      "publisher": "American Physical Therapy Association",
-      "url": "https://www.apta.org/advocacy/issues/administrative-burden/report",
-      "publishedAt": "2025-11-05",
-      "companyIds": [
-        "spry-therapeutics"
-      ],
-      "topic": "Healthcare operations · physical therapy",
-      "summary": "APTA's survey connects payer administration with staffing burden, delayed authorization and reported treatment abandonment. It captures respondents' experiences, not a causal trial.",
-      "whyRelevant": "Directly relevant to SPRY's physical-therapy practice workflows. An evergreen source for selecting measurable administrative outcomes that matter to clinic operators.",
-      "emailSubject": "A clinic-operator lens on administrative ROI",
-      "emailBody": "This APTA report from November is still a useful clinic-operator reference:\nhttps://www.apta.org/advocacy/issues/administrative-burden/report\n\nIt links administrative burden with staffing needs and delays in getting patients into treatment. My takeaway for a workflow product is to connect hours saved to a concrete operational result, such as fewer pending authorizations or less time until treatment starts.\n\nWhich of those outcomes is easiest for a clinic to measure and act on today?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "Thirty percent of surveyed respondents reported waiting one to two weeks for authorization.",
-        "Respondents also reported added staffing and payer-network exits; these are survey experiences, not measured causal effects."
-      ],
-      "discussionQuestion": "Can a clinic connect authorization delays to deferred appointments and staff effort using records it already keeps?",
-      "recipientAngles": [
-        {
-          "companyId": "spry-therapeutics",
-          "personName": "Riyaz Rehman",
-          "whyThisPerson": "SPRY's co-founder focuses on healthcare operations and practice management.",
-          "angle": "Turn a broad administrative-burden claim into a manageable clinic queue.",
-          "emailSubject": "A practical authorization queue for clinic operators",
-          "emailBody": "APTA's survey suggests an operating exercise for SPRY: take a week's pending authorizations and record payer, days waiting, next action and the appointment affected. Would a clinic manager get more value from that queue than a total-hours-saved figure? Which field could staff reliably maintain without extra work?\n\nhttps://www.apta.org/advocacy/issues/administrative-burden/report"
-        },
-        {
-          "companyId": "spry-therapeutics",
-          "personName": "Brijraj Bhuptani",
-          "whyThisPerson": "SPRY's CEO works across rehabilitation workflows and revenue cycle.",
-          "angle": "Measure clinic value through care access and capacity as well as efficiency.",
-          "emailSubject": "Showing administrative ROI in clinic terms",
-          "emailBody": "The APTA findings prompted a possible SPRY pilot scorecard: staff time spent chasing authorization, days until the first visit, and appointments postponed while waiting. I'd establish the baseline with the clinic before choosing a target. Which measure best captures value without claiming that software alone changes clinical outcomes?\n\nhttps://www.apta.org/advocacy/issues/administrative-burden/report"
-        }
-      ],
-      "sources": [
-        {
-          "title": "The Impact of Administrative Burden on Physical Therapist Services",
-          "url": "https://www.apta.org/advocacy/issues/administrative-burden/report",
-          "publishedAt": "2025-11-05"
-        }
-      ]
-    },
-    {
-      "id": "qualtrics-agentic-research-2026-05-11",
-      "title": "Qualtrics' agentic-research direction and its quality questions",
-      "publisher": "Qualtrics",
-      "url": "https://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/",
-      "publishedAt": "2026-05-11",
-      "companyIds": [
-        "metaforms"
-      ],
-      "topic": "Research operations · agentic workflows",
-      "summary": "Qualtrics describes an agentic research direction spanning the research lifecycle, while asking how methodology, uncertainty and the connection to decisions survive automation.",
-      "whyRelevant": "An incumbent's own positioning is useful context for Metaforms. It raises a practical question about reliable agency workflows across existing tools versus a single research platform.",
-      "emailSubject": "A useful research-automation positioning question",
-      "emailBody": "Qualtrics' agentic research piece seems relevant to Metaforms:\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/\n\nThe interesting questions are whether methodological rigor travels with automation and whether gaps are flagged rather than filled with plausible output. It's also a useful view of an incumbent's direction.\n\nWhere do agencies most want stronger automation today: coordinating fieldwork, checking quality, or turning the result into a decision-ready deliverable?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "Qualtrics describes agents it is developing; the lifecycle vision should not be mistaken for measured product performance.",
-        "Its proposed flow keeps researcher review of the plan and distinguishes directional synthetic exploration from deeper human research."
-      ],
-      "discussionQuestion": "Where should an agency approve the plan, inspect evidence gaps, or choose human fieldwork before an automated workflow proceeds?",
-      "recipientAngles": [
-        {
-          "companyId": "metaforms",
-          "personName": "Arjun Santhoshkumar",
-          "whyThisPerson": "Metaforms' listed CTPO focuses on AI products and survey automation.",
-          "angle": "Define research decisions that still need an explicit owner.",
-          "emailSubject": "Where should a research workflow pause for judgment?",
-          "emailBody": "Qualtrics' roadmap is useful context for Metaforms. I'd map one agency workflow into decisions an agent can execute and decisions a researcher must own, especially changes to audience or method. Which checkpoint should be visible to the client, and which should remain an internal quality review?\n\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/"
-        },
-        {
-          "companyId": "metaforms",
-          "personName": "Chris Gimenez",
-          "whyThisPerson": "Metaforms' enterprise GTM executive works with research organizations.",
-          "angle": "Make an agency evaluation specific instead of selling a broad AI promise.",
-          "emailSubject": "A sharper agency evaluation for research automation",
-          "emailBody": "The Qualtrics piece suggests a concrete agency discovery exercise: pick one delayed study, identify the handoff that consumed time, and agree what evidence would show improvement. For Metaforms, which buyer would own that result: research operations, the project lead or the client account owner?\n\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "How agentic AI is rebuilding market research",
-          "url": "https://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/",
-          "publishedAt": "2026-05-11"
-        }
-      ]
-    },
-    {
-      "id": "aapor-responsible-ai-2026-05-08",
-      "title": "AAPOR's framework for responsible AI in survey research",
-      "publisher": "AAPOR",
-      "url": "https://aapor.org/announcements/task-force-on-responsible-ai-integration-in-survey-research-report/",
-      "publishedAt": "2026-05-08",
-      "companyIds": [
-        "metaforms"
-      ],
-      "topic": "Research operations · quality and disclosure",
-      "summary": "AAPOR's task-force report covers AI across survey design, interviewing, processing and reporting, with attention to data quality, disclosure, transparency and human oversight.",
-      "whyRelevant": "A professional-association reference for Metaforms' conversations with research agencies about which checks and disclosures clients expect around automated research work.",
-      "emailSubject": "A research-quality reference for agency conversations",
-      "emailBody": "AAPOR's May report could be useful in agency conversations:\nhttps://aapor.org/announcements/task-force-on-responsible-ai-integration-in-survey-research-report/\n\nIt treats AI use across the survey lifecycle, including quality, human oversight and disclosure. My product question is whether these checks can be built into the workflow rather than left to the final report.\n\nAre clients already asking agencies to document where AI was used, and what evidence would make that easier?",
-      "checkedAt": "2026-09-21",
-      "format": "Guide",
-      "takeaways": [
-        "AAPOR evaluates AI by task using validity, performance, sensitivity and reliability, rather than one universal benchmark.",
-        "Its minimum-disclosure framework distinguishes interviewing, synthetic responding and analysis from ordinary drafting or report-writing assistance.",
-        "For covered uses, the report asks what AI did, how humans checked it and how many human respondents contributed."
-      ],
-      "discussionQuestion": "Could a completed study produce a short, accurate account of AI's role and its human validation without reconstructing the work afterward?",
-      "recipientAngles": [
-        {
-          "companyId": "metaforms",
-          "personName": "Sunny R. Gupta",
-          "whyThisPerson": "Metaforms' engineering leader works on research-operation agents.",
-          "angle": "Capture evidence of quality checks while research work happens.",
-          "emailSubject": "A lightweight evidence record for automated research",
-          "emailBody": "AAPOR's report suggests a small Metaforms design exercise: for one automated coding step, save the input version, reviewer decision and validation result alongside the output. Could that record explain a disputed classification to an agency researcher without requiring an engineer to reconstruct the run?\n\nhttps://aapor.org/wp-content/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf"
-        },
-        {
-          "companyId": "metaforms",
-          "personName": "Chris Gimenez",
-          "whyThisPerson": "Metaforms' enterprise GTM executive works with research buyers.",
-          "angle": "Use a sample methodology note to clarify buyer expectations.",
-          "emailSubject": "What would an agency want in its AI methodology note?",
-          "emailBody": "AAPOR's report could anchor a useful customer conversation. I'd bring a sample methodology note from a hypothetical automated study and ask an agency which statements it could substantiate, which its client would ask about, and what evidence is missing. That feels more concrete than asking whether it trusts AI.\n\nhttps://aapor.org/wp-content/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Responsible AI Integration in Survey Research, sections 4–5",
-          "url": "https://aapor.org/wp-content/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf",
-          "publishedAt": "2026-05-08"
-        },
-        {
-          "title": "AAPOR report release announcement",
-          "url": "https://aapor.org/announcements/task-force-on-responsible-ai-integration-in-survey-research-report/",
-          "publishedAt": "2026-05-08"
-        }
-      ]
-    },
-    {
-      "id": "finops-state-2026-02-19",
-      "title": "FinOps expands from cloud bills into SaaS and AI value",
-      "publisher": "FinOps Foundation",
-      "url": "https://data.finops.org/",
-      "publishedAt": "2026-02-19",
-      "companyIds": [
-        "spendflo",
-        "togai"
-      ],
-      "topic": "SaaS procurement · AI spend management",
-      "summary": "The 2026 survey shows FinOps teams broadening into SaaS and AI, with demand for granular cost visibility, forecasting and business-value attribution.",
-      "whyRelevant": "Spendflo's procurement workflow and Togai's usage-billing context intersect with how finance and engineering explain AI costs. The survey population is FinOps practitioners, not every software buyer.",
-      "emailSubject": "An interesting shift in who owns SaaS and AI spend",
-      "emailBody": "The State of FinOps 2026 report has a useful shift in buying context:\nhttps://data.finops.org/\n\nFinOps is increasingly covering SaaS and AI alongside cloud infrastructure. My takeaway is that buyers may need a shared view of commitments, usage and business value, beyond a renewal-saving number.\n\nAre your conversations moving toward variable AI consumption and attribution, or is the immediate need still visibility into existing contracts?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "Respondents want cost estimates before deployment and more granular AI cost data.",
-        "Allocation, forecasting and planning remain foundational as FinOps extends beyond cloud infrastructure."
-      ],
-      "discussionQuestion": "Before a variable-use software commitment, can the buyer name its consumption assumptions, budget owner and response if usage exceeds the estimate?",
-      "recipientAngles": [
-        {
-          "companyId": "spendflo",
-          "personName": "Rajiv Ramanan",
-          "whyThisPerson": "Spendflo's CPO works on procurement and SaaS-spend products.",
-          "angle": "Bring usage scenarios into purchasing and renewal decisions.",
-          "emailSubject": "A pre-purchase worksheet for variable AI spend",
-          "emailBody": "The FinOps survey suggests a Spendflo procurement worksheet: committed spend, expected usage range, overage terms and the owner of each assumption. I'd test it on one AI-software purchase before negotiating the discount. Which missing input is most likely to change the purchase decision?\n\nhttps://data.finops.org/"
-        },
-        {
-          "companyId": "togai",
-          "personName": "Tholkappiyan Velavan",
-          "whyThisPerson": "Togai's co-founder has public usage-billing and metering expertise; the company was acquired by Zuora.",
-          "angle": "Discuss billing explainability from metering experience, without assuming a current employer.",
-          "emailSubject": "A metering perspective on FinOps buyer questions",
-          "emailBody": "Given your work on Togai, the FinOps survey raised a billing question I'd value your view on: what should a customer receive to reconcile one usage charge without a support ticket? My starting list would be the billable event, unit, rate and treatment of retries. What would you add?\n\nhttps://data.finops.org/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "State of FinOps 2026",
-          "url": "https://data.finops.org/",
-          "publishedAt": "2026-02-19"
-        },
-        {
-          "title": "FinOps Foundation: State of FinOps 2026 first-look event",
-          "url": "https://community.finops.org/meeting/february-finops-foundation-summit",
-          "publishedAt": "2026-02-19"
-        }
-      ]
-    },
-    {
-      "id": "profound-ai-pricing-2026-09-03",
-      "title": "What AI answers say about software pricing",
-      "publisher": "Profound · Kyle Poyar and Nikolas Laskaris",
-      "url": "https://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing",
-      "publishedAt": "2026-09-03",
-      "companyIds": [
-        "revenue-hero",
-        "spendflo"
-      ],
-      "topic": "B2B GTM · pricing discovery",
-      "summary": "The authors tested 7,600 pricing responses across six AI engines and Cloud 100 companies, finding that company pricing pages often were not the primary cited source.",
-      "whyRelevant": "For RevenueHero, buyers may arrive at the demo with a preformed pricing view. For Spendflo, it is a prompt to examine how buyers research and compare vendors. Vendor-authored, time-bounded research.",
-      "emailSubject": "What buyers may believe before they request a demo",
-      "emailBody": "This pricing study from Kyle Poyar and Profound is worth a look:\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing\n\nThey tested AI-generated pricing answers and found that official pricing pages often were not the main source. A practical experiment would be to audit a handful of common buyer questions against the actual offer.\n\nAre pricing misunderstandings showing up earlier in your funnel, or only once a sales conversation begins?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "A visible pricing page may still hide its details from crawlers through rendering or interaction requirements.",
-        "The authors recommend consistent pricing, billing explanations and FAQs; their observed citation patterns are time-bounded."
-      ],
-      "discussionQuestion": "Which buyer pricing question produces an answer that differs from the current offer, and which source caused the mismatch?",
-      "recipientAngles": [
-        {
-          "companyId": "revenue-hero",
-          "personName": "Charanyan Venkataraghavan",
-          "whyThisPerson": "RevenueHero's marketing co-founder works on B2B acquisition and revenue operations.",
-          "angle": "Audit the pricing expectations buyers bring to a demo.",
-          "emailSubject": "A five-question audit before the demo request",
-          "emailBody": "Profound's pricing study suggests a small RevenueHero marketing exercise: ask five real buyer questions in an AI search tool, then compare each answer with the current offer. Record the wrong claim, its source and the page that should answer it. Which question would you start with?\n\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing"
-        },
-        {
-          "companyId": "spendflo",
-          "personName": "Rajiv Ramanan",
-          "whyThisPerson": "Spendflo's CPO works on SaaS purchasing and vendor comparisons.",
-          "angle": "Separate discovered pricing claims from verified procurement inputs.",
-          "emailSubject": "Keeping AI-discovered pricing separate from a quote",
-          "emailBody": "This Profound study prompted a Spendflo workflow idea: show a discovered vendor price beside its source, date, unit and verification status before it enters a comparison. Which assumption would you insist on confirming with the vendor before using that number in a buying recommendation?\n\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing"
-        }
-      ],
-      "sources": [
-        {
-          "title": "What AI agents really think about your pricing",
-          "url": "https://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing",
-          "publishedAt": "2026-09-03"
-        }
-      ]
-    },
-    {
-      "id": "aws-device-connectivity-2026-08-25",
-      "title": "AWS's practical map for diagnosing IoT fleet connectivity",
-      "publisher": "AWS IoT Blog",
-      "url": "https://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/",
-      "publishedAt": "2026-08-25",
-      "companyIds": [
-        "bytebeam"
-      ],
-      "topic": "IoT · fleet observability",
-      "summary": "AWS maps fleet indexing, live connection inspection, event notifications and historical logs to different diagnostic tasks, including rechecking status before acting on delayed events.",
-      "whyRelevant": "A concrete architecture and competitive reference for Bytebeam's device-management work. It separates knowing a device is offline from explaining why and safely recovering it.",
-      "emailSubject": "A useful fleet-connectivity comparison",
-      "emailBody": "AWS's August connectivity guide has a useful breakdown of device diagnostics:\nhttps://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/\n\nIt separates live status, connection inspection, event-driven recovery and historical evidence. The recheck-before-action advice is especially practical when disconnect events can arrive late or twice.\n\nFor Bytebeam customers, is the larger pain identifying the cause of an outage, or getting from diagnosis to a safe recovery action?",
-      "checkedAt": "2026-09-21",
-      "format": "Guide",
-      "takeaways": [
-        "AWS separates fleet-level trends from live per-client diagnostics, subscription inspection and explicit connection control.",
-        "An online client can still miss commands because of subscriptions. AWS’s diagnostic sequence checks subscriptions before forcing a reconnect."
-      ],
-      "discussionQuestion": "Can a support engineer distinguish offline hardware from a connected device that is not receiving commands?",
-      "recipientAngles": [
-        {
-          "companyId": "bytebeam",
-          "personName": "Raviteja Kommareddy",
-          "whyThisPerson": "Bytebeam lists Raviteja as CTO; Accel’s profile documents his Rust MQTT work.",
-          "angle": "Suggested MQTT discussion: diagnose subscriptions and session state before reconnecting.",
-          "emailSubject": "Connected does not mean receiving commands",
-          "emailBody": "AWS’s connectivity guide has a useful MQTT troubleshooting case: a client is online but not receiving commands. For Bytebeam, could support distinguish a missing subscription from a session problem without escalating to engineering? Which piece of evidence is usually missing?\n\nhttps://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/"
-        },
-        {
-          "companyId": "bytebeam",
-          "personName": "Bharadwaaj Ramakrishnan",
-          "whyThisPerson": "Bytebeam’s team page identifies Bharadwaaj as co-founder and VP Embedded.",
-          "angle": "Suggested embedded discussion: close the evidence gap between device and cloud.",
-          "emailSubject": "The device-side half of a connectivity incident",
-          "emailBody": "This AWS guide made me think about the device-side evidence Bytebeam could pair with cloud diagnostics. When a fleet disconnects, what would most quickly distinguish firmware behavior, a keep-alive issue and a network problem? That could be a useful incident-review template.\n\nhttps://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "AWS's practical map for diagnosing IoT fleet connectivity",
-          "url": "https://aws.amazon.com/blogs/iot/device-connectivity-in-aws-iot-core/",
-          "publishedAt": "2026-08-25"
-        }
-      ]
-    },
-    {
-      "id": "dora-ai-tensions-2026-03-10",
-      "title": "DORA: code-generation gains can shift work into verification",
-      "publisher": "DORA · Google Cloud",
-      "url": "https://dora.dev/insights/balancing-ai-tensions/",
-      "publishedAt": "2026-03-10",
-      "companyIds": [
-        "hivel",
-        "zipy"
-      ],
-      "topic": "Developer productivity · delivery quality",
-      "summary": "A qualitative analysis of 1,110 Google engineers' responses describes tradeoffs in AI-assisted development, including time saved creating code moving into auditing and verification.",
-      "whyRelevant": "Relevant to Hivel's engineering-performance context and Zipy's debugging workflows. It supports discussing end-to-end delivery measures rather than treating code-generation activity as productivity.",
-      "emailSubject": "A measurement question beyond code-generation speed",
-      "emailBody": "DORA's March analysis is useful for the AI-productivity conversation:\nhttps://dora.dev/insights/balancing-ai-tensions/\n\nEngineers describe some creation-time savings moving into review and verification. My takeaway is to look at the full delivery path, including rework and stability, when judging the impact of AI tools.\n\nWhich downstream measure gives your customers the clearest signal that faster development is actually improving delivery?",
-      "checkedAt": "2026-09-21",
-      "format": "Research",
-      "takeaways": [
-        "DORA analyzed 1,110 open-ended responses from Google engineers about AI-assisted work in Q3 2025.",
-        "The responses describe effort shifting from writing toward review and verification. They are qualitative reports, not a causal measurement of time saved."
-      ],
-      "discussionQuestion": "Is faster authoring reducing total delivery time, or moving work into review and rework?",
-      "recipientAngles": [
-        {
-          "companyId": "hivel",
-          "personName": "Sudheer Bandaru",
-          "whyThisPerson": "Hivel identifies Sudheer as founder and CEO with engineering-leadership experience.",
-          "angle": "Suggested measurement discussion: pair authoring speed with downstream review burden.",
-          "emailSubject": "The metric after AI makes coding faster",
-          "emailBody": "DORA’s write-up describes effort moving into review and verification. For Hivel, I’d pair authoring speed with review wait, rework and post-release failures. Which combination gives an engineering leader the clearest picture of whether AI actually improved delivery?\n\nhttps://dora.dev/insights/balancing-ai-tensions/"
-        },
-        {
-          "companyId": "zipy",
-          "personName": "Vishalini Paliwal",
-          "whyThisPerson": "Zipy’s official team page identifies Vishalini as co-founder and CEO of its debugging product.",
-          "angle": "Suggested product discussion: connect faster shipping to user-visible regressions.",
-          "emailSubject": "A customer story about the cost of faster shipping",
-          "emailBody": "This DORA research raises a useful Zipy customer question: when teams ship more AI-assisted code, what breaks after release? I’d look for one concrete example linking a faster change to extra debugging work. What evidence would make that story useful to an engineering buyer?\n\nhttps://dora.dev/insights/balancing-ai-tensions/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "DORA: code-generation gains can shift work into verification",
-          "url": "https://dora.dev/insights/balancing-ai-tensions/",
-          "publishedAt": "2026-03-10"
-        }
-      ]
-    },
-    {
-      "id": "sentry-agent-tracing-2026-09-11",
-      "title": "Sentry's own agent-debugging case: from bad query to regression test",
-      "publisher": "Sentry Engineering",
-      "url": "https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/",
-      "publishedAt": "2026-09-11",
-      "companyIds": [
-        "zipy",
-        "hivel",
-        "composio"
-      ],
-      "topic": "Developer tools · agent observability",
-      "summary": "Sentry traced a failed natural-language query through the prompt and tool-call data to a field-formatting error, then added an evaluation case and verified the fix in production.",
-      "whyRelevant": "A recent, concrete engineering example for debugging tools and agent integrations: connect a user-visible failure to the underlying API interaction and a reproducible check.",
-      "emailSubject": "A concrete example of debugging an agent failure",
-      "emailBody": "Sentry's September debugging case is useful:\nhttps://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/\n\nA natural-language query failed because tool output became the wrong field representation in the prompt. Following the conversation into the backend trace made the cause visible and gave them a regression case.\n\nIs connecting user-visible failures to the exact tool interaction becoming a common request from your customers?",
-      "checkedAt": "2026-09-21",
-      "format": "Article",
-      "takeaways": [
-        "Sentry traced a failed query to field metadata being inserted into the system prompt in the wrong syntax.",
-        "The team added a reproducing evaluation, shipped a fix, then checked both the returned data and the production trace."
-      ],
-      "discussionQuestion": "Can the engineer follow a wrong agent answer all the way to the tool response that shaped it?",
-      "recipientAngles": [
-        {
-          "companyId": "zipy",
-          "personName": "Anchal Rastogi",
-          "whyThisPerson": "Zipy’s official team page identifies Anchal as CTO.",
-          "angle": "Suggested engineering discussion: connect user-visible failure to prompt construction and backend evidence.",
-          "emailSubject": "A concrete agent-debugging case worth borrowing",
-          "emailBody": "Sentry’s case is useful because the bug lived between tool output and prompt construction. For Zipy, could an engineer follow a bad user result through that boundary in one investigation? Which missing link most often forces them into a separate tool?\n\nhttps://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/"
-        },
-        {
-          "companyId": "composio",
-          "personName": "Soham Ganatra",
-          "whyThisPerson": "Composio’s co-founder builds infrastructure between AI agents and external tools.",
-          "angle": "Suggested integration discussion: expose enough evidence to separate tool, mapping and model failures.",
-          "emailSubject": "Where an integration bug becomes an agent mistake",
-          "emailBody": "This Sentry incident is a useful reference for Composio: tool data reached the model in an incorrect representation. I’d use it to test whether a developer can distinguish a bad API response, a mapping error and a model error. Which boundary is least visible today?\n\nhttps://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/"
-        },
-        {
-          "companyId": "hivel",
-          "personName": "Sudheer Bandaru",
-          "whyThisPerson": "Hivel identifies Sudheer as founder and CEO with engineering-leadership experience.",
-          "angle": "Suggested measurement discussion: track the investigation work needed to resolve an agent failure.",
-          "emailSubject": "Measuring the work behind an agent bug",
-          "emailBody": "Sentry’s tracing example suggests a Hivel measurement question: how long does it take to isolate an agent failure across tools? Would diagnosis time reveal a bottleneck that coding-speed metrics miss?\n\nhttps://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Sentry's own agent-debugging case: from bad query to regression test",
-          "url": "https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/",
-          "publishedAt": "2026-09-11"
-        }
-      ]
-    },
-    {
       "id": "elena-plg-sales-2026-09-11",
       "title": "Elena Verna on where product-led growth and enterprise sales collide",
       "publisher": "Elena's Growth Scoop · Substack",
@@ -1072,6 +72,390 @@
           "title": "Congrats, your sales problems in PLG are completely unoriginal",
           "url": "https://www.elenaverna.com/p/congrats-your-sales-problems-in-plg",
           "publishedAt": "2026-09-11"
+        }
+      ],
+      "kind": "Operating playbook",
+      "engagementMove": "Send to self-serve founders weighing a first sales hire, and offer to compare notes on where their funnel stops being self-serve."
+    },
+    {
+      "id": "revenuehero-funnel-benchmarks-2026-09-10",
+      "title": "RevenueHero published inbound funnel benchmarks from a million form submissions",
+      "publisher": "RevenueHero · Charanyan",
+      "url": "https://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026",
+      "publishedAt": "2026-09-10",
+      "companyIds": [
+        "spendflo",
+        "kula",
+        "zipy",
+        "hivel",
+        "securden",
+        "protecto"
+      ],
+      "topic": "B2B GTM · inbound conversion benchmarks",
+      "kind": "Portfolio peer",
+      "summary": "RevenueHero co-founder Charanyan publishes qualified-to-booked benchmarks drawn from over one million B2B SaaS inbound form submissions across its customer base, segmented by company size.",
+      "whyRelevant": "A portfolio founder published a benchmark other portfolio founders can measure themselves against this week. It gives a specific number to compare rather than general advice.",
+      "engagementMove": "Send the 62% median as a yardstick, ask for their number, and offer a working session with the RevenueHero founders.",
+      "emailSubject": "A 62% benchmark to measure your inbound against",
+      "emailBody": "RevenueHero published inbound benchmarks from more than a million B2B form submissions:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nThe median qualified-to-booked rate is 62%, and booking probability falls from roughly 80% in the first minute to about 40% by the next business day. Worth knowing where you sit — happy to set up a conversation with their team.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "The baseline: “The median qualified-to-booked rate across all customers is 62%.” and “The top 10% hit 78% or higher.”",
+        "By segment: “SMB-focused companies convert at 63.2% with a 21.8% disqualification rate.”",
+        "Speed is the lever: “The probability of booking a meeting drops from roughly 80% in the first minute to around 40% by the next business day.”"
+      ],
+      "discussionQuestion": "What share of your qualified inbound actually converts into a booked meeting, and how quickly?",
+      "recipientAngles": [
+        {
+          "companyId": "spendflo",
+          "personName": "Siddharth Sridharan",
+          "whyThisPerson": "Spendflo runs an inbound-led motion into mid-market finance and procurement buyers.",
+          "angle": "Compare Spendflo’s qualified-to-booked rate against the 62% median.",
+          "emailSubject": "Where does Spendflo sit against 62%?",
+          "emailBody": "A portfolio peer published inbound benchmarks from over a million form submissions:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nMedian qualified-to-booked is 62%, top decile is 78% or higher. Do you measure this cleanly enough to know where Spendflo lands, and is speed-to-lead the lever you would pull first?"
+        },
+        {
+          "companyId": "kula",
+          "personName": "Achuthanand Ravi",
+          "whyThisPerson": "Kula sells recruiting software to HR and talent teams through demo requests.",
+          "angle": "Discuss whether speed-to-lead is worth engineering effort.",
+          "emailSubject": "The first minute matters more than the follow-up",
+          "emailBody": "RevenueHero published this from their own customer data:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nBooking probability drops from roughly 80% in the first minute to around 40% by the next business day. For a demo-led product like Kula, is that a routing problem you have already solved, or still a manual handoff?"
+        },
+        {
+          "companyId": "zipy",
+          "personName": "Vishalini Paliwal",
+          "whyThisPerson": "Zipy runs a mixed self-serve and sales-assisted inbound motion for a developer product.",
+          "angle": "Discuss qualification rules for a developer-led funnel.",
+          "emailSubject": "Qualification in a developer-led funnel",
+          "emailBody": "Sharing inbound benchmarks a portfolio peer just published:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nThe SMB segment shows a 21.8% disqualification rate, which struck me as high. For a developer product where small accounts can grow, how aggressively do you disqualify at the form?"
+        },
+        {
+          "companyId": "hivel",
+          "personName": "Sudheer Bandaru",
+          "whyThisPerson": "Hivel sells engineering analytics to CTOs and engineering leaders through inbound demos.",
+          "angle": "Compare demo conversion for a technical buyer.",
+          "emailSubject": "Does the 62% median hold for technical buyers?",
+          "emailBody": "RevenueHero published inbound conversion benchmarks across their customer base:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nThe median qualified-to-booked rate is 62%. My question is whether a technical buyer behaves differently — do engineering leaders book slower but show up more reliably?"
+        },
+        {
+          "companyId": "securden",
+          "personName": "Bala Venkatramani",
+          "whyThisPerson": "Securden runs a trial and demo-driven motion for privileged access software.",
+          "angle": "Discuss trial-to-demo conversion against the published benchmark.",
+          "emailSubject": "Benchmarks for a trial-led security funnel",
+          "emailBody": "A portfolio peer published inbound benchmarks worth comparing against:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nFor security software the trial often precedes the conversation. Does that change the shape of the funnel for Securden, or do you still see the same first-minute effect?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto sells enterprise data protection where inbound interest arrives from security teams.",
+          "angle": "Discuss speed-to-lead where the buyer is a security team.",
+          "emailSubject": "Speed to lead when the buyer is security",
+          "emailBody": "Sharing RevenueHero’s inbound benchmark data:\nhttps://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026\n\nThe first-minute effect is striking, but security buyers often research quietly before surfacing. Does responding fast help you, or does it arrive before they are ready to talk?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Demo Request to Booked Conversion Rate Benchmarks in 2026",
+          "url": "https://www.revenuehero.io/blog/demo-request-to-booked-conversion-rate-benchmarks-in-2026",
+          "publishedAt": "2026-09-10"
+        },
+        {
+          "title": "Booked to Held Meeting Benchmarks in 2026",
+          "url": "https://www.revenuehero.io/blog/booked-to-held-meeting-benchmarks-in-2026",
+          "publishedAt": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "id": "composio-security-review-2026-09-09",
+      "title": "Composio published the answers to the two questions every security review asks",
+      "publisher": "Composio · Brendan O’Leary",
+      "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+      "publishedAt": "2026-09-09",
+      "companyIds": [
+        "scalekit",
+        "protecto",
+        "sentra",
+        "optexity",
+        "thesys",
+        "zipstack"
+      ],
+      "topic": "Enterprise readiness · answering security review",
+      "kind": "Portfolio peer",
+      "summary": "Composio documents the two questions its enterprise security reviews always ask — whether staff can read customer tokens, and whether one customer can reach another’s data — and publishes the architectural answers rather than reassurance.",
+      "whyRelevant": "A portfolio company has published a reusable template for clearing enterprise security review. For any founder selling infrastructure into enterprises, this is a concrete artefact to copy rather than an opinion to consider.",
+      "engagementMove": "Forward as a template a peer already built, ask what their own two recurring questions are, and offer an introduction to the Composio team.",
+      "emailSubject": "A security-review template from inside the portfolio",
+      "emailBody": "Composio published the two questions every enterprise security review asks them, and their answers:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nIt is a useful template because it answers with architecture rather than reassurance. What are the two questions that keep coming back in your reviews? Happy to connect you with their team if useful.",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The two questions are named outright: “Can Composio staff read our users’ tokens?” and “Can another customer reach our data?”",
+        "The isolation unit is made explicit: “The project is the isolation boundary. Connected accounts, OAuth tokens, auth configs, and triggers each belong to exactly one project.”",
+        "Permissions are enforced in code, not prompts: “If you’ve said an agent may not delete, it cannot delete, regardless of what a prompt, a tool output, or the model’s own reasoning suggests.”"
+      ],
+      "discussionQuestion": "What are the two questions your own security reviews always come back to, and is the answer written down anywhere a buyer can read it?",
+      "recipientAngles": [
+        {
+          "companyId": "scalekit",
+          "personName": "Ravi Madabhushi",
+          "whyThisPerson": "ScaleKit builds authentication for software and agents, so token handling is the product itself.",
+          "angle": "Compare token-withholding design against what ScaleKit tells its own reviewers.",
+          "emailSubject": "How Composio answers the token question",
+          "emailBody": "Composio published their answers to the two questions enterprise security reviews always ask them:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nTheir position is that connected-account tokens never come back in API responses at all. Since token handling is ScaleKit’s product rather than its plumbing, does that match the answer you give reviewers, or do you draw the line differently?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto sells data protection to enterprise AI teams and faces the same review panels.",
+          "angle": "Discuss publishing a comparable public answer page.",
+          "emailSubject": "Worth publishing your own version of this",
+          "emailBody": "A portfolio peer put their security-review answers in public:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nFor a company selling data protection, having the answer already published seems like it would shorten a review rather than start one. Is there a reason most vendors keep this private that I am underrating?"
+        },
+        {
+          "companyId": "sentra",
+          "personName": "Ashwin Gopinath",
+          "whyThisPerson": "Sentra holds decisions and context drawn from a company’s work tools, so tenant isolation is a first-order buyer question.",
+          "angle": "Discuss how to describe the isolation boundary to a buyer.",
+          "emailSubject": "Describing the isolation boundary to a buyer",
+          "emailBody": "Composio published how they answer enterprise security reviews, and the clearest part is naming one isolation boundary:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nSentra holds a lot of organizational context, so I imagine you get this question early. What is the unit you point to when a buyer asks where their data stops and another customer’s begins?"
+        },
+        {
+          "companyId": "optexity",
+          "personName": "Sankalp Garg",
+          "whyThisPerson": "Optexity’s agents act inside enterprise applications, where permission enforcement is the review question.",
+          "angle": "Compare enforcing agent permissions in code versus in prompts.",
+          "emailSubject": "Enforcing agent permissions in code, not prompts",
+          "emailBody": "This Composio post makes a claim I would like your view on:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nThey argue an agent that may not delete must be unable to delete regardless of prompt or model reasoning. For agents acting inside customer applications, is that enforceable at the layer you operate, or does it have to live in the customer’s own system?"
+        },
+        {
+          "companyId": "thesys",
+          "personName": "Parikshit Deshmukh",
+          "whyThisPerson": "Thesys provides generative-UI infrastructure to product teams whose vendors go through review.",
+          "angle": "Discuss what infrastructure vendors should publish before a review starts.",
+          "emailSubject": "What infra vendors should publish before the review",
+          "emailBody": "Composio published their security-review answers rather than waiting to be asked:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nAs infrastructure sold to product teams, Thesys will meet the same panel. Which of these questions comes up first for you — data isolation, or what your own staff can see?"
+        },
+        {
+          "companyId": "zipstack",
+          "personName": "Shuveb Hussain",
+          "whyThisPerson": "Unstract processes customers’ business documents, making per-tenant isolation a standard procurement ask.",
+          "angle": "Compare document-processing isolation with Composio’s project boundary.",
+          "emailSubject": "Isolation questions in document processing",
+          "emailBody": "Sharing Composio’s public answer to enterprise security reviews:\nhttps://composio.dev/blog/two-questions-every-security-review-asks-us\n\nDocument processing raises this even more sharply, since the data in transit is the customer’s own paperwork. Does the project-level boundary they describe map onto how Unstract separates tenants, or do you need something stricter?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Two questions every security review asks us",
+          "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+          "publishedAt": "2026-09-09"
+        },
+        {
+          "title": "Wispr Flow: our path to a new, independent audit",
+          "url": "https://wisprflow.ai/post/new-independent-audit",
+          "publishedAt": "2026-03-27"
+        }
+      ]
+    },
+    {
+      "id": "profound-ai-pricing-2026-09-03",
+      "title": "What AI answers say about software pricing",
+      "publisher": "Profound · Kyle Poyar and Nikolas Laskaris",
+      "url": "https://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing",
+      "publishedAt": "2026-09-03",
+      "companyIds": [
+        "revenue-hero",
+        "spendflo"
+      ],
+      "topic": "B2B GTM · pricing discovery",
+      "summary": "The authors tested 7,600 pricing responses across six AI engines and Cloud 100 companies, finding that company pricing pages often were not the primary cited source.",
+      "whyRelevant": "For RevenueHero, buyers may arrive at the demo with a preformed pricing view. For Spendflo, it is a prompt to examine how buyers research and compare vendors. Vendor-authored, time-bounded research.",
+      "emailSubject": "What buyers may believe before they request a demo",
+      "emailBody": "This pricing study from Kyle Poyar and Profound is worth a look:\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing\n\nThey tested AI-generated pricing answers and found that official pricing pages often were not the main source. A practical experiment would be to audit a handful of common buyer questions against the actual offer.\n\nAre pricing misunderstandings showing up earlier in your funnel, or only once a sales conversation begins?",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "A visible pricing page may still hide its details from crawlers through rendering or interaction requirements.",
+        "The authors recommend consistent pricing, billing explanations and FAQs; their observed citation patterns are time-bounded."
+      ],
+      "discussionQuestion": "Which buyer pricing question produces an answer that differs from the current offer, and which source caused the mismatch?",
+      "recipientAngles": [
+        {
+          "companyId": "revenue-hero",
+          "personName": "Charanyan Venkataraghavan",
+          "whyThisPerson": "RevenueHero's marketing co-founder works on B2B acquisition and revenue operations.",
+          "angle": "Audit the pricing expectations buyers bring to a demo.",
+          "emailSubject": "A five-question audit before the demo request",
+          "emailBody": "Profound's pricing study suggests a small RevenueHero marketing exercise: ask five real buyer questions in an AI search tool, then compare each answer with the current offer. Record the wrong claim, its source and the page that should answer it. Which question would you start with?\n\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing"
+        },
+        {
+          "companyId": "spendflo",
+          "personName": "Rajiv Ramanan",
+          "whyThisPerson": "Spendflo's CPO works on SaaS purchasing and vendor comparisons.",
+          "angle": "Separate discovered pricing claims from verified procurement inputs.",
+          "emailSubject": "Keeping AI-discovered pricing separate from a quote",
+          "emailBody": "This Profound study prompted a Spendflo workflow idea: show a discovered vendor price beside its source, date, unit and verification status before it enters a comparison. Which assumption would you insist on confirming with the vendor before using that number in a buying recommendation?\n\nhttps://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing"
+        }
+      ],
+      "sources": [
+        {
+          "title": "What AI agents really think about your pricing",
+          "url": "https://www.tryprofound.com/blog/what-ai-agents-really-think-about-your-pricing",
+          "publishedAt": "2026-09-03"
+        }
+      ],
+      "kind": "Operating playbook",
+      "engagementMove": "Send with one question: what do buyers see when they ask an AI assistant what your product costs?"
+    },
+    {
+      "id": "mgma-prior-auth-2026-09-02",
+      "title": "Fewer than one in ten practices report faster prior authorization in 2026",
+      "publisher": "MGMA Stat",
+      "url": "https://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster",
+      "publishedAt": "2026-09-02",
+      "companyIds": [
+        "confido",
+        "rapid-claims",
+        "spry-therapeutics"
+      ],
+      "topic": "Healthcare operations · buyer-side burden data",
+      "kind": "Buyer data",
+      "summary": "An MGMA Stat poll of 178 medical group leaders, fielded 1 September 2026, finds prior-authorization turnaround has not improved despite new federal requirements on payer decision times.",
+      "whyRelevant": "This is third-party, recent, quotable buyer-side evidence for healthcare founders to use in their own sales conversations, rather than something they need to tell us about their market.",
+      "engagementMove": "Hand over as a dated stat pack for their outreach and deck, and ask which workflow their customers name first.",
+      "emailSubject": "Fresh prior-auth burden data you can quote",
+      "emailBody": "MGMA polled 178 medical group leaders on 1 September:\nhttps://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster\n\n44% say prior-authorization turnaround got slower this year and only 7% say faster, with 61% of practices touching seven or more payer portals a week. Recent and quotable for your own conversations.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "The headline finding: “44% of medical group leaders said payer prior authorization turnaround became slower in 2026 compared with 2025. Another 40% said turnaround is about the same, while 7% reported faster turnaround.”",
+        "The workflow detail that matters for product: “61% of practices had staff accessing seven or more payer portals each week.”",
+        "The poll is dated and sized: fielded 1 September 2026 with 178 applicable responses."
+      ],
+      "discussionQuestion": "Which part of the payer workflow do your customers complain about first — the wait, or the number of portals?",
+      "recipientAngles": [
+        {
+          "companyId": "confido",
+          "personName": "Dr. Raihan Faroqui",
+          "whyThisPerson": "Confido’s public team listing identifies Raihan as VP Partnerships, the role that carries payer and provider conversations.",
+          "angle": "Use the portal-count figure in partnership conversations.",
+          "emailSubject": "A number worth using in partner conversations",
+          "emailBody": "MGMA polled 178 medical group leaders on 1 September:\nhttps://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster\n\nThe figure I would put in front of a partner is that 61% of practices have staff in seven or more payer portals each week. Does that match what you hear, and is portal sprawl the framing partners respond to?"
+        },
+        {
+          "companyId": "rapid-claims",
+          "personName": "Dushyant Mishra",
+          "whyThisPerson": "Rapid Claims sells into provider organizations where authorization delays feed denials downstream.",
+          "angle": "Use the data to connect authorization delay to denial volume.",
+          "emailSubject": "Linking authorization delay to denials",
+          "emailBody": "Recent buyer-side data, fielded 1 September:\nhttps://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster\n\n44% of medical groups say prior-auth turnaround got slower this year despite the new federal requirements. Does that delay show up in your customers’ denial numbers in a way you can point to in a pitch?"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "personName": "Riyaz Rehman",
+          "whyThisPerson": "SPRY serves outpatient rehab clinics that carry both authorization and no-show burden.",
+          "angle": "Pair the prior-auth and no-show polls for clinic conversations.",
+          "emailSubject": "Two dated clinic-burden polls worth pairing",
+          "emailBody": "MGMA has published two recent polls that are useful for clinic conversations:\nhttps://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster\n\nThis one shows prior-auth turnaround worsening, and a companion poll from August covers rising no-shows. Which of the two is the sharper pain for the clinics you sell to right now?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fewer than 1 in 10 see prior auth turnarounds faster",
+          "url": "https://www.mgma.com/mgma-stat/fewer-than-1-in-10-see-prior-auth-turnarounds-faster",
+          "publishedAt": "2026-09-02"
+        },
+        {
+          "title": "About 1 in 3 medical groups see higher no-shows in 2026",
+          "url": "https://www.mgma.com/mgma-stat/about-1-in-3-medical-groups-see-higher-no-shows-in-2026-as-patients-face-higher-costs",
+          "publishedAt": "2026-08-12"
+        }
+      ]
+    },
+    {
+      "id": "together-runable-series-a-2026-08-26",
+      "title": "Together’s own write-up on why it backed Runable’s Series A",
+      "publisher": "Together Fund · Shubham Gupta",
+      "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+      "publishedAt": "2026-08-26",
+      "companyIds": [
+        "rocket",
+        "nex",
+        "dreamteam",
+        "emergent",
+        "presentations-ai"
+      ],
+      "topic": "Together thesis · SMB operating agents",
+      "kind": "Together",
+      "summary": "Shubham Gupta sets out why Together co-invested in Runable’s $21M Series A led by Susquehanna Venture Capital and Nexus, arguing that software creation is solved while the operational work that follows is not.",
+      "whyRelevant": "This is Together’s own published thesis, so sending it is a natural reason to write rather than a cold forward. It also gives SMB-facing founders in the portfolio a direct line to a peer working the same buyer.",
+      "engagementMove": "Send as “here is what we just published and why we think this way”, then offer to connect them with Umesh Kumar at Runable, who is working the same SMB buyer.",
+      "emailSubject": "What we published on Runable and the SMB gap",
+      "emailBody": "We published our thinking behind Runable’s Series A:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nThe argument is that creating software has become cheap while everything after the first landing page has not moved. I would value your reaction, since you see this buyer far more closely than we do.",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The wedge is stated plainly: “nobody starts a business because they want a landing page.”",
+        "The gap Together is betting on: “everything after that first landing page has not moved.”",
+        "Scale cited for the round: “1.5 million users across the US, UK, Japan, and Brazil run their businesses on Runable,” and “Runable crossed $2M in ARR within three weeks of turning on monetization.”"
+      ],
+      "discussionQuestion": "For the customers you serve, how much of the job is creating the software versus running the business afterwards?",
+      "recipientAngles": [
+        {
+          "companyId": "rocket",
+          "personName": "Vishal Virani",
+          "whyThisPerson": "Rocket builds AI app creation for non-developers, the same operator Runable targets after the build step.",
+          "angle": "Compare where your users stop needing a builder and start needing operations.",
+          "emailSubject": "Sales for the argument that building is no longer the bottleneck",
+          "emailBody": "We published our reasoning behind Runable’s Series A, and the line that stuck with me is that everything after the first landing page has not moved:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nRocket sees this earlier than most: your users finish an app and then face running the business around it. Where does your product currently hand that problem back to them?"
+        },
+        {
+          "companyId": "nex",
+          "personName": "Najmuzzaman Mohammad",
+          "whyThisPerson": "Nex sells an AI CRM into small teams, the buyer this piece describes as underserved after setup.",
+          "angle": "Test the thesis against what small teams actually ask Nex for after onboarding.",
+          "emailSubject": "Our SMB thesis, and where it might be wrong",
+          "emailBody": "Sharing what we just published on why we backed Runable:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nOur claim is that the unmet need sits in running the business, not creating the software. You talk to small teams every week. Does that match what they ask for after they are set up, or is the real gap somewhere else?"
+        },
+        {
+          "companyId": "dreamteam",
+          "personName": "Anand Venkatraman",
+          "whyThisPerson": "DreamTeam is building contextual AI teammates for customer workflows, adjacent to the operating layer described here.",
+          "angle": "Discuss where an AI teammate should take over from a builder tool.",
+          "emailSubject": "A thesis piece that overlaps with DreamTeam’s surface",
+          "emailBody": "We published our SMB operating thesis alongside Runable’s Series A:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nThe part relevant to DreamTeam is the handoff: once the tooling exists, who actually runs the workflow. Is that where your design partners are pulling you, or are they asking for something narrower first?"
+        },
+        {
+          "companyId": "emergent",
+          "personName": "Mukund Jha",
+          "whyThisPerson": "Emergent published its own 50,000-app SMB report in July 2026, which studies the same population from the build side.",
+          "angle": "Offer to connect the two datasets: Emergent’s app data and Runable’s operating data.",
+          "emailSubject": "Your SMB report and our Runable thesis point the same way",
+          "emailBody": "Your team’s 50,000-app report and the piece we just published on Runable seem to describe the same gap from two sides:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nYou have build-side data; Runable has operating-side data. Would a conversation between the two teams be useful, or have you already mapped what happens after an app ships?"
+        },
+        {
+          "companyId": "presentations-ai",
+          "personName": "Sumanth Raghavendra",
+          "whyThisPerson": "Presentations AI reaches prosumer and SMB users at volume, where distribution economics decide what an operating product can charge.",
+          "angle": "Compare notes on reaching SMB buyers without a sales motion.",
+          "emailSubject": "How SMB products actually find their users",
+          "emailBody": "Sharing our write-up on Runable, which reached 1.5 million users before monetizing:\nhttps://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow\n\nYou have run a high-volume SMB motion for longer. Does the sequence there — reach first, monetize after — match what worked for you, or would you now do it differently?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Together with Runable: Helping Small Businesses Build, Run, and Grow",
+          "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+          "publishedAt": "2026-08-26"
+        },
+        {
+          "title": "Emergent: what 50,000 deployed apps show about SMB software",
+          "url": "https://emergent.sh/blog/emergent-smb-report",
+          "publishedAt": "2026-07-22"
         }
       ]
     },
@@ -1166,7 +550,1070 @@
           "url": "https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by",
           "publishedAt": "2026-08-23"
         }
+      ],
+      "kind": "Operating playbook",
+      "engagementMove": "Send to founders still running sales themselves, and ask which step of Abel’s sequence breaks down for them."
+    },
+    {
+      "id": "together-wispr-series-b-2026-08-17",
+      "title": "Together on joining Wispr Flow’s $280M Series B",
+      "publisher": "Together Fund · Lakshmi Shankar",
+      "url": "https://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface",
+      "publishedAt": "2026-08-17",
+      "companyIds": [
+        "emergent",
+        "presentations-ai",
+        "composio",
+        "runable",
+        "rocket"
+      ],
+      "topic": "Together thesis · consumer-to-enterprise scaling",
+      "kind": "Together",
+      "summary": "Lakshmi Shankar explains Together’s participation in Wispr Flow’s $280M Series B at a $2B valuation, framing voice as the next interface and naming the fund’s own reason for joining: learning how a consumer product scales into enterprise.",
+      "whyRelevant": "Together wrote publicly that one reason it invested was to learn how consumer products scale into enterprise. That makes an honest, non-transactional opening with any founder facing the same transition.",
+      "engagementMove": "Send to founders crossing from self-serve into enterprise and offer a small-group session with Tanay Kothari or Sahaj Garg on that transition.",
+      "emailSubject": "Our write-up on Wispr, and the question behind it",
+      "emailBody": "We published why we joined Wispr Flow’s Series B:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nOne reason we said yes was to learn how a consumer-first product becomes an enterprise purchase. You are closer to that question than we are — what has actually changed in how companies buy from you?",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The interface argument: “Speaking is about three times faster than typing,” with lower error rates.",
+        "The defensibility claim: “The moat is real and widening,” built on proprietary data, purpose-built models and habit.",
+        "Wispr’s own Series B post reports $361M raised in total and more than 10,000 enterprises using the product."
+      ],
+      "discussionQuestion": "When a product is adopted by individuals first, what actually has to change for a company to buy it centrally?",
+      "recipientAngles": [
+        {
+          "companyId": "emergent",
+          "personName": "Mukund Jha",
+          "whyThisPerson": "Emergent grew through individual self-serve adoption and now sees team and company purchases.",
+          "angle": "Compare the trigger that turns individual users into a company contract.",
+          "emailSubject": "The consumer-to-enterprise question we are chasing",
+          "emailBody": "We wrote about joining Wispr’s Series B, and said openly that part of the reason was to learn how consumer-first products scale into enterprise:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nEmergent is living that question now. What is the actual trigger where individual users turn into a company buying centrally — is it seats, security review, or something else entirely?"
+        },
+        {
+          "companyId": "presentations-ai",
+          "personName": "Sumanth Raghavendra",
+          "whyThisPerson": "Presentations AI has a large prosumer base and an embedded-business opportunity ahead of it.",
+          "angle": "Discuss when a prosumer product should start selling to the company rather than the user.",
+          "emailSubject": "When does a prosumer product start selling to the company?",
+          "emailBody": "Sharing our piece on Wispr’s Series B:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nThe part I would put to you is timing. You have a large individual user base already. What would have to be true before you put real effort into selling to the company rather than the person?"
+        },
+        {
+          "companyId": "composio",
+          "personName": "Soham Ganatra",
+          "whyThisPerson": "Composio grows through developer self-serve adoption that later meets enterprise procurement.",
+          "angle": "Compare how developer adoption converts into a company-level contract.",
+          "emailSubject": "Developer adoption meeting enterprise procurement",
+          "emailBody": "Our write-up on Wispr’s Series B is about a product that individuals adopted first and companies bought later:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nComposio has the developer version of this. At what point does bottom-up usage start producing a real procurement conversation rather than a bigger credit card?"
+        },
+        {
+          "companyId": "runable",
+          "personName": "Umesh Kumar",
+          "whyThisPerson": "Runable reached large consumer and SMB scale before monetizing, and faces the business-buyer question next.",
+          "angle": "Discuss whether the enterprise transition is worth starting now or later.",
+          "emailSubject": "Worth reading before the enterprise question arrives",
+          "emailBody": "We published our reasoning on Wispr’s Series B, largely about how a consumer-first product becomes an enterprise one:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nGiven where Runable is after the Series A, is the business buyer something you want to start learning now, or deliberately postpone until the current motion is fully exhausted?"
+        },
+        {
+          "companyId": "rocket",
+          "personName": "Khyati Brahmbhatt",
+          "whyThisPerson": "Rocket’s public team page lists Khyati as Director of Product and Growth, the function that owns this transition.",
+          "angle": "Discuss which growth signals indicate a company-level buyer rather than an individual.",
+          "emailSubject": "Spotting the company buyer inside self-serve data",
+          "emailBody": "Sharing our piece on Wispr, which is really about self-serve products becoming enterprise purchases:\nhttps://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface\n\nFrom a growth standpoint, which signal in your data first tells you a company rather than an individual is behind a set of accounts?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Together with Wispr: Betting on a Voice-first Interface",
+          "url": "https://www.together.fund/perspectives/insights/together-with-wispr-betting-on-a-voice-first-interface",
+          "publishedAt": "2026-08-17"
+        },
+        {
+          "title": "Wispr Flow: our Series B",
+          "url": "https://wisprflow.ai/post/series-b",
+          "publishedAt": "2026-08-17"
+        }
       ]
+    },
+    {
+      "id": "saastr-gamma-sales-timing-2026-08-15",
+      "title": "Gamma reached $100M ARR with no sales team, and its CEO calls the timing a mistake",
+      "publisher": "SaaStr · Jason Lemkin",
+      "url": "https://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/",
+      "publishedAt": "2026-08-15",
+      "companyIds": [
+        "wispr-flow",
+        "presentations-ai",
+        "rocket",
+        "composio",
+        "runable"
+      ],
+      "topic": "B2B GTM · when to add sales to a self-serve business",
+      "kind": "Operating playbook",
+      "summary": "Jason Lemkin summarizes Gamma CEO Grant Lee’s SaaStr talk: Gamma reached $100M ARR with roughly 50 employees and no sales team, and only added sales once departmental purchase requests accumulated — which Lee describes as reacting rather than deciding.",
+      "whyRelevant": "Most self-serve founders postpone the sales decision until inbound forces it. A peer at $100M ARR saying that was the wrong way to decide is a more useful prompt than a framework.",
+      "engagementMove": "Send to self-serve founders and ask what their explicit trigger for a first sales hire is; the point is to make the decision deliberate.",
+      "emailSubject": "Gamma hit $100M with no sales team and regrets how it decided",
+      "emailBody": "Gamma’s CEO on reaching $100M ARR without a sales team, and why he would not recommend the way they got there:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nHis point is that self-serve signal starts to feel like strategy. What is your actual trigger for making the first sales hire?",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "Lee’s own verdict on the timing: “We've always for better or worse been sort of reacting... I would advise maybe not do that.”",
+        "The trap named: “Self-serve growth generates so much signal that it starts to feel like strategy.”",
+        "What organic demand actually buys: “A product with real word of mouth earns you something almost nobody in B2B gets, which is time to choose.”"
+      ],
+      "discussionQuestion": "What is your trigger for hiring sales, and did you choose it or will inbound choose it for you?",
+      "recipientAngles": [
+        {
+          "companyId": "wispr-flow",
+          "personName": "Tanay Kothari",
+          "whyThisPerson": "Wispr Flow already serves individual users and a large number of enterprises simultaneously.",
+          "angle": "Discuss choosing the enterprise motion rather than reacting to it.",
+          "emailSubject": "Choosing the enterprise motion rather than reacting",
+          "emailBody": "Gamma’s CEO on reaching $100M ARR without sales, and calling the way they decided a mistake:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nWispr is further into this than most. Did the enterprise motion start because you chose it, or because the requests piled up until you had to?"
+        },
+        {
+          "companyId": "presentations-ai",
+          "personName": "Sumanth Raghavendra",
+          "whyThisPerson": "Presentations AI competes in the same category as Gamma with a large self-serve base.",
+          "angle": "Compare directly with a close category peer’s sales timing.",
+          "emailSubject": "A direct comparison worth reading",
+          "emailBody": "This is Gamma’s CEO on their path to $100M ARR without a sales team:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nIt is the closest public comparison to your business I have seen this year. Where does your view diverge from his — particularly on when sales should have started?"
+        },
+        {
+          "companyId": "rocket",
+          "personName": "Vishal Virani",
+          "whyThisPerson": "Rocket runs a high-volume self-serve motion with a human-assisted services component.",
+          "angle": "Discuss how services revenue changes the sales-hire decision.",
+          "emailSubject": "When services revenue complicates the sales question",
+          "emailBody": "Sharing Gamma’s CEO on postponing sales to $100M ARR:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nRocket is a more complicated case because part of the revenue already involves people. Does that make a sales team more necessary, or less?"
+        },
+        {
+          "companyId": "composio",
+          "personName": "Soham Ganatra",
+          "whyThisPerson": "Composio grows through developer adoption that later produces enterprise contracts.",
+          "angle": "Discuss the trigger for adding sales to developer-led growth.",
+          "emailSubject": "The trigger for adding sales to developer growth",
+          "emailBody": "Gamma’s CEO argues self-serve signal can masquerade as strategy:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nDeveloper-led companies face this in a sharper form, because the adoption is real but the contract is not. What is the signal you would treat as the moment to build a sales function?"
+        },
+        {
+          "companyId": "runable",
+          "personName": "Umesh Kumar",
+          "whyThisPerson": "Runable has large self-serve volume and newly raised capital to deploy against GTM.",
+          "angle": "Discuss deciding the sales trigger before inbound forces it.",
+          "emailSubject": "Decide the trigger before inbound decides it",
+          "emailBody": "Worth reading with the round freshly closed — Gamma’s CEO on getting to $100M ARR without sales and regretting how that decision got made:\nhttps://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/\n\nWith capital to deploy, the risk is hiring sales because you can rather than because a trigger fired. What would yours be?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gamma’s CEO: Why Getting to $100M ARR Without A Sales Team Worked. And Why It Was a Mistake.",
+          "url": "https://www.saastr.com/gammas-ceo-why-getting-to-100m-arr-without-a-sales-team-worked-and-why-it-was-a-mistake/",
+          "publishedAt": "2026-08-15"
+        }
+      ]
+    },
+    {
+      "id": "bessemer-durable-pricing-2026-07-30",
+      "title": "Four AI companies on pricing that survives renewal",
+      "publisher": "Bessemer Venture Partners · Atlas",
+      "url": "https://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle",
+      "publishedAt": "2026-07-30",
+      "companyIds": [
+        "rapid-claims",
+        "confido",
+        "zipstack",
+        "metaforms",
+        "composio"
+      ],
+      "topic": "Pricing · usage, seat, outcome and hybrid models",
+      "kind": "Operating playbook",
+      "summary": "Bessemer profiles how Recall.ai (usage), Strella (seat), Graph AI (outcome) and Ada (hybrid) chose pricing models that held up through renewals, arguing durable pricing attaches to something the customer can check themselves.",
+      "whyRelevant": "Pricing is the decision most AI founders revisit under margin pressure, and this gives four named, dated examples rather than a framework. The verifiability test is a usable filter.",
+      "engagementMove": "Send with the verifiability test as the question, and offer a working session on pricing before their next renewal cycle.",
+      "emailSubject": "A pricing test: what can the customer verify themselves?",
+      "emailBody": "Bessemer walked through how four AI companies landed on pricing that survived renewals:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nThe useful filter is that durable pricing ties revenue to something a customer can independently verify rather than a claim. Which part of your value passes that test today?",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The organizing principle: “Durable AI pricing ties revenue to something a customer can independently verify, not to a claim.”",
+        "Usage pricing framed as alignment, from Recall.ai CEO David Gu: “if your product becomes very successful and you're now processing a lot of data, Recall.ai is going to cost more.”",
+        "Graph AI CEO Raghavendra Parvataraju describes the status quo it prices against: “customers are forced into a model where 75% of their spend goes toward human labor and only 25% toward the software.”"
+      ],
+      "discussionQuestion": "What can your customer independently verify about the value you charge for, without taking your word for it?",
+      "recipientAngles": [
+        {
+          "companyId": "rapid-claims",
+          "personName": "Jot Sarup Singh",
+          "whyThisPerson": "Rapid Claims produces coding and denial outcomes a provider can count in their own system.",
+          "angle": "Discuss outcome pricing where the customer already measures the outcome.",
+          "emailSubject": "Pricing against an outcome the customer already counts",
+          "emailBody": "Bessemer’s piece on pricing that survives renewal makes verifiability the test:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nRapid Claims is unusual because the customer already measures the outcome in their own system. Does that make outcome-linked pricing easier to defend, or does it just expose you to their measurement choices?"
+        },
+        {
+          "companyId": "confido",
+          "personName": "Vichar Shroff",
+          "whyThisPerson": "Confido’s agents complete discrete administrative tasks that can be counted per case.",
+          "angle": "Discuss per-case pricing for administrative workflows.",
+          "emailSubject": "Per-case pricing for administrative work",
+          "emailBody": "Sharing Bessemer’s pricing piece, which includes a company pricing per resolved case:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nThe caution they raise is delivery economics — outcome pricing only works if the human share of the work is small. Where does that ratio sit for the workflows Confido automates?"
+        },
+        {
+          "companyId": "zipstack",
+          "personName": "Shuveb Hussain",
+          "whyThisPerson": "Unstract processes documents at volumes that map naturally onto usage pricing.",
+          "angle": "Compare usage pricing against the Recall.ai example.",
+          "emailSubject": "Usage pricing when volume is the value",
+          "emailBody": "Bessemer profiles Recall.ai pricing on usage, with the founder arguing openly that heavy customers should pay more:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nDocument processing has the same shape. Does per-document pricing hold up in your renewals, or do customers push for a ceiling once volume becomes predictable?"
+        },
+        {
+          "companyId": "metaforms",
+          "personName": "Arjun Santhoshkumar",
+          "whyThisPerson": "Metaforms automates research operations where value can be counted in studies or seats.",
+          "angle": "Discuss seat versus usage pricing for research operations.",
+          "emailSubject": "Seat or usage for research operations?",
+          "emailBody": "This piece contrasts seat pricing and usage pricing with named examples:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nResearch operations could plausibly go either way — per seat for the team, or per study for the work. Which one matches how your buyers budget?"
+        },
+        {
+          "companyId": "composio",
+          "personName": "Karan Vaidya",
+          "whyThisPerson": "Composio meters tool calls, which puts consumption pricing directly against inference cost.",
+          "angle": "Discuss consumption pricing when costs move underneath you.",
+          "emailSubject": "Consumption pricing when your costs move",
+          "emailBody": "Bessemer’s pricing piece argues durable pricing attaches to verifiable value:\nhttps://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle\n\nFor metered infrastructure the harder problem is that your own costs move underneath the price. How do you handle that without renegotiating with customers every time a model price changes?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Durable monetization: How four AI founders solved the pricing puzzle",
+          "url": "https://www.bvp.com/atlas/durable-monetization-how-four-ai-founders-solved-the-pricing-puzzle",
+          "publishedAt": "2026-07-30"
+        }
+      ]
+    },
+    {
+      "id": "deloitte-cfo-signals-2026-07-23",
+      "title": "CFOs are using AI widely but only 43% are confident in their governance",
+      "publisher": "Deloitte · CFO Signals",
+      "url": "https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html",
+      "publishedAt": "2026-07-23",
+      "companyIds": [
+        "coreworks",
+        "spendflo",
+        "protecto",
+        "securden"
+      ],
+      "topic": "Finance buyers · AI adoption, governance and cost transparency",
+      "kind": "Buyer data",
+      "summary": "Deloitte’s Q2 2026 CFO Signals survey of 200 CFOs at North American organizations with at least $1 billion in revenue finds broad AI use alongside limited confidence in governance and a clear top concern about cost.",
+      "whyRelevant": "For anyone selling into the finance organization, this names the objection before it is raised: cost uncertainty, not capability, is what CFOs worry about most.",
+      "engagementMove": "Send to founders selling into finance and offer to pressure-test how their pricing answers the cost-uncertainty objection.",
+      "emailSubject": "What CFOs actually worry about when buying AI",
+      "emailBody": "Deloitte surveyed 200 CFOs at companies with $1B+ revenue:\nhttps://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html\n\nTheir top internal concern about AI is cost uncertainty or lack of transparency, not capability, and only 43% feel confident in their AI governance. Useful framing if the finance org is in your buying group.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "Governance confidence is thin: “While 43% say they feel confident, more than half (53.5%) feel only somewhat confident.”",
+        "The number one internal concern is cost: “46% of respondents say their biggest internal concern about their organization's use of AI is cost uncertainty or lack of transparency—the No.1 response.”",
+        "Finance functions are already using it: “44% of respondents are using AI for financial planning and budgeting.”"
+      ],
+      "discussionQuestion": "Does your pricing make the cost predictable enough for a CFO to approve without a contingency?",
+      "recipientAngles": [
+        {
+          "companyId": "coreworks",
+          "personName": "Prashant Kumar",
+          "whyThisPerson": "Coreworks sells directly into the finance function these CFOs lead.",
+          "angle": "Use the 44% adoption figure to frame where finance teams already are.",
+          "emailSubject": "Your buyer, surveyed",
+          "emailBody": "Deloitte surveyed 200 CFOs at $1B+ companies:\nhttps://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html\n\n44% already use AI for financial planning and budgeting, but cost uncertainty is their top concern. Does that match what you hear in demos — that the hesitation is about predictable cost rather than whether it works?"
+        },
+        {
+          "companyId": "spendflo",
+          "personName": "Rajiv Ramanan",
+          "whyThisPerson": "Spendflo’s product is about making software cost visible, which is the concern CFOs name first.",
+          "angle": "Use the cost-transparency finding directly in positioning.",
+          "emailSubject": "Cost transparency is the stated concern",
+          "emailBody": "This Deloitte CFO survey lands close to Spendflo’s pitch:\nhttps://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html\n\n46% of CFOs name cost uncertainty or lack of transparency as their biggest internal AI concern, the top response. Is AI spend showing up as a distinct category in your customers’ requests yet, or still bundled into software spend?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto sells governance-adjacent data protection where CFO confidence gaps affect budget.",
+          "angle": "Discuss whether the governance gap reaches the buying decision.",
+          "emailSubject": "Does the governance gap reach the budget?",
+          "emailBody": "Deloitte found only 43% of CFOs feel confident in their organization’s AI governance:\nhttps://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html\n\nThe question I would have is whether that discomfort translates into budget. Are you seeing governance concerns actually fund purchases, or do they stay as unfunded anxiety?"
+        },
+        {
+          "companyId": "securden",
+          "personName": "Bala Venkatramani",
+          "whyThisPerson": "Securden sells privileged access management into governance and risk budgets.",
+          "angle": "Discuss governance-driven demand in the finance-approved budget.",
+          "emailSubject": "Governance concern versus governance budget",
+          "emailBody": "Sharing Deloitte’s Q2 2026 CFO survey:\nhttps://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html\n\nMore than half of CFOs are only somewhat confident in their AI governance. For access management, does that uncertainty help you — or does it mostly slow down every purchase including yours?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2Q 2026 CFO Signals survey",
+          "url": "https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/2q-2026-cfo-signals-survey.html",
+          "publishedAt": "2026-07-23"
+        }
+      ]
+    },
+    {
+      "id": "battery-agentic-adoption-2026-06-30",
+      "title": "Enterprise buyers are deploying agents but cannot measure the return",
+      "publisher": "Battery Ventures",
+      "url": "https://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/",
+      "publishedAt": "2026-06-30",
+      "companyIds": [
+        "composio",
+        "protecto",
+        "scalekit",
+        "optexity",
+        "sentra",
+        "capitol"
+      ],
+      "topic": "Enterprise buying · agent adoption and ROI",
+      "kind": "Buyer data",
+      "summary": "Battery Ventures surveyed 100 senior technology leaders representing more than $66 billion in annual technology spend, finding agentic deployment rising sharply while ROI measurement remains largely unsolved.",
+      "whyRelevant": "The 94% figure is the most useful number here: it says buyers cannot measure value on their own, so the vendor that supplies the measurement wins the renewal. That is a sales-strategy prompt, not sector news.",
+      "engagementMove": "Send as buyer-side evidence and offer to review the ROI slide in their enterprise deck.",
+      "emailSubject": "94% of enterprise buyers have no way to measure AI ROI",
+      "emailBody": "Battery surveyed 100 senior technology leaders representing more than $66 billion in annual tech spend:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\n49% are actively deploying agents and 81% plan to increase spend, but 94% have no consistent framework for evaluating AI ROI. That last number seems like the opening — whoever supplies the measurement owns the renewal conversation.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "Adoption is moving fast: “49% of respondents said they're actively deploying agentic AI, up from 33% six months ago.”",
+        "Budget is following: “An impressive 81% plan to increase overall tech spending over the next 12 months, up from 65% in December 2025.”",
+        "The opening for vendors: “A very sizable 94% of respondents said their organizations lacked a consistent, enterprise-wide framework for evaluating AI's ROI.”"
+      ],
+      "discussionQuestion": "If 94% of buyers have no ROI framework, whose numbers does your champion use at renewal?",
+      "recipientAngles": [
+        {
+          "companyId": "composio",
+          "personName": "Soham Ganatra",
+          "whyThisPerson": "Composio sells agent infrastructure to exactly the technology leaders surveyed here.",
+          "angle": "Discuss supplying the ROI measurement buyers lack.",
+          "emailSubject": "Whoever supplies the measurement wins the renewal",
+          "emailBody": "Battery surveyed 100 senior technology leaders on agent adoption:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\n94% said they have no consistent framework for evaluating AI ROI. For infrastructure that sits underneath everything, does Composio report anything a buyer could take to their CFO, or does that stay with the application team?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Baskaran Alagarsamy",
+          "whyThisPerson": "Protecto’s co-founder and CTO owns the technical claims that enterprise buyers evaluate.",
+          "angle": "Discuss making security value measurable for a buyer.",
+          "emailSubject": "Making security value measurable",
+          "emailBody": "This Battery survey found 94% of enterprise technology leaders lack any consistent ROI framework for AI:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\nSecurity has always had the hardest version of this problem, since the value is an absence of incidents. What do you give a buyer that they can actually put in a business case?"
+        },
+        {
+          "companyId": "scalekit",
+          "personName": "Satya Devarakonda",
+          "whyThisPerson": "ScaleKit sells to the IT and security leaders whose budgets this survey measures.",
+          "angle": "Use the spend-increase figure in enterprise conversations.",
+          "emailSubject": "Budgets are rising faster than measurement",
+          "emailBody": "Battery’s survey of 100 technology leaders:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\n81% plan to raise tech spend, up from 65% in December, while 94% still lack an ROI framework. Are you seeing budget loosen in your deals, or is the approval bar rising at the same time?"
+        },
+        {
+          "companyId": "optexity",
+          "personName": "Sankalp Garg",
+          "whyThisPerson": "Optexity’s enterprise agents must clear the ROI bar this survey describes.",
+          "angle": "Discuss proving value inside a pilot.",
+          "emailSubject": "Proving value inside the pilot",
+          "emailBody": "Sharing buyer-side data on agent adoption and its ROI gap:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\nHalf are actively deploying agents, but almost none can measure the result. For workflow agents, is time saved something you instrument yourself during a pilot, or do you rely on the customer to notice?"
+        },
+        {
+          "companyId": "sentra",
+          "personName": "Ashwin Gopinath",
+          "whyThisPerson": "Sentra is sold to enterprise technology buyers as organizational memory, where value is diffuse.",
+          "angle": "Discuss measuring a product whose value is hard to attribute.",
+          "emailSubject": "Measuring a product with diffuse value",
+          "emailBody": "Battery found 94% of enterprise buyers lack a consistent AI ROI framework:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\nOrganizational memory is one of the hardest things to attribute value to. What is the measurable claim you lead with, given the benefit shows up across other people’s workflows?"
+        },
+        {
+          "companyId": "capitol",
+          "personName": "Shaun Modi",
+          "whyThisPerson": "Capitol sells AI research and content tooling into enterprise and public-sector budgets.",
+          "angle": "Discuss ROI framing for institutional budget cycles.",
+          "emailSubject": "ROI framing for institutional budgets",
+          "emailBody": "This Battery survey covers enterprise agent adoption and the ROI gap behind it:\nhttps://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/\n\nInstitutional buyers tend to need the business case written for them. Is that something you supply directly in your process, or does the champion build it themselves?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Survey Says: Agentic AI Penetrates the Enterprise, but Some ROI Questions Remain",
+          "url": "https://www.battery.com/blog/survey-says-agentic-ai-penetrates-the-enterprise-but-some-roi-questions-remain/",
+          "publishedAt": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "id": "poyar-segment-persistence-2026-06-03",
+      "title": "Segment choice at $10k MRR still predicts the business three years later",
+      "publisher": "Growth Unhinged · Kyle Poyar",
+      "url": "https://www.growthunhinged.com/p/startups-become-what-they-hunt",
+      "publishedAt": "2026-06-03",
+      "companyIds": [
+        "nex",
+        "dreamteam",
+        "zipy",
+        "metaforms",
+        "coreworks",
+        "hunar"
+      ],
+      "topic": "Company building · customer segment and retention",
+      "kind": "Operating playbook",
+      "summary": "Using ChartMogul data on 1,043 SaaS and AI companies that reached $10k MRR by May 2023 and were still operating in May 2026, Poyar shows that the customer segment a company serves early tends to persist, and that segment shapes growth.",
+      "whyRelevant": "A dated, sourced answer to a decision most early founders make implicitly. It is most useful before a company has locked in its segment, which is exactly where several portfolio companies sit.",
+      "engagementMove": "Send to pre-scale founders with one question about which segment they are actually converting, not which one they target.",
+      "emailSubject": "The segment you pick early tends to stick",
+      "emailBody": "Kyle Poyar looked at 1,043 companies from $10k MRR onward using ChartMogul data:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nThe finding that stayed with me is that 70% kept the same target customer three years later. Worth asking whether the segment converting today is the one you actually want.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "Segment choice is sticky: “When I mapped where companies started versus where they ended up, animal migrations turned out to be rare. 70% kept the same target customer.”",
+        "Mid-market compounds: “Companies that started as deer hunters and stayed there are growing revenue at an average of 22% year-over-year.”",
+        "Companies are grouped by average revenue per account: mouse under $30/month, rabbit $30–299, deer $300–2,999, elephant $3,000+."
+      ],
+      "discussionQuestion": "Is the segment you are winning today the segment you want to be serving in three years?",
+      "recipientAngles": [
+        {
+          "companyId": "nex",
+          "personName": "Najmuzzaman Mohammad",
+          "whyThisPerson": "Nex is early enough that its CRM segment is still being decided by which deals close.",
+          "angle": "Discuss whether the converting segment matches the intended one.",
+          "emailSubject": "Which segment is actually converting for Nex?",
+          "emailBody": "This analysis of 1,043 companies found that 70% kept the same target customer three years after reaching $10k MRR:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nThe uncomfortable version of the question for any early CRM: is the segment closing today the one you chose, or the one that happened to say yes first?"
+        },
+        {
+          "companyId": "dreamteam",
+          "personName": "Anand Venkatraman",
+          "whyThisPerson": "DreamTeam is choosing between small teams and larger customer organizations for its AI CRM.",
+          "angle": "Discuss the segment decision while design partners are still forming.",
+          "emailSubject": "Deciding the segment while partners are forming",
+          "emailBody": "Sharing Poyar’s data on how durable early segment choices turn out to be:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nSince you are still working with design partners, this feels like the moment the choice is actually made. Are your partners representative of the segment you want, or the one that was easiest to recruit?"
+        },
+        {
+          "companyId": "zipy",
+          "personName": "Vishalini Paliwal",
+          "whyThisPerson": "Zipy serves both smaller teams and mid-market engineering organizations.",
+          "angle": "Discuss whether to concentrate on the mid-market band.",
+          "emailSubject": "The case for concentrating on mid-market",
+          "emailBody": "This ChartMogul-based analysis found companies that stayed in the mid-market band grew about 22% year-over-year:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nZipy spans a range of account sizes. Is there a deliberate reason to keep the span wide, or would concentrating change what you build next?"
+        },
+        {
+          "companyId": "metaforms",
+          "personName": "Akshat Tyagi",
+          "whyThisPerson": "Metaforms sells into research agencies and has discussed moving toward direct brand buyers.",
+          "angle": "Discuss the cost of changing segment after it is established.",
+          "emailSubject": "What it costs to change segment later",
+          "emailBody": "Poyar’s data suggests changing target customer after the early years is rare:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nGiven the agency-versus-brand question, that finding cuts both ways. Do you read it as a reason to commit harder to agencies, or to make the move while it is still early enough to be possible?"
+        },
+        {
+          "companyId": "coreworks",
+          "personName": "Prashant Kumar",
+          "whyThisPerson": "Coreworks is early and choosing which size of finance team to serve first.",
+          "angle": "Discuss which finance-team size to build the first product around.",
+          "emailSubject": "Which finance teams should Coreworks build for first?",
+          "emailBody": "Sharing a data-backed piece on how sticky early segment choices are:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nFor finance tooling the gap between a ten-person team and a two-hundred-person one is enormous. Which end are you building for right now, and is that a decision or a default?"
+        },
+        {
+          "companyId": "hunar",
+          "personName": "Krishna Khandelwal",
+          "whyThisPerson": "Hunar serves employers hiring frontline workers, where employer size drives retention.",
+          "angle": "Discuss how employer size affects retention in frontline hiring.",
+          "emailSubject": "Employer size and retention in frontline hiring",
+          "emailBody": "This analysis links early segment choice to long-run retention and growth:\nhttps://www.growthunhinged.com/p/startups-become-what-they-hunt\n\nIn frontline hiring the employer size probably determines whether usage is seasonal or continuous. Which employer profile retains best for Hunar today?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Startups become what they hunt",
+          "url": "https://www.growthunhinged.com/p/startups-become-what-they-hunt",
+          "publishedAt": "2026-06-03"
+        }
+      ]
+    },
+    {
+      "id": "poyar-gtm-hiring-2026-05-20",
+      "title": "What GTM roles AI companies are actually hiring in 2026",
+      "publisher": "Growth Unhinged · Kyle Poyar",
+      "url": "https://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now",
+      "publishedAt": "2026-05-20",
+      "companyIds": [
+        "thesys",
+        "scalekit",
+        "optexity",
+        "sentra",
+        "jhana",
+        "coreworks"
+      ],
+      "topic": "Company building · first GTM hires",
+      "kind": "Operating playbook",
+      "summary": "Poyar analyses 22,988 US GTM job posts from Q1 2026 sourced from Sumble, showing which go-to-market roles digital-native and AI-native companies are actually opening.",
+      "whyRelevant": "Founders making a first commercial hire usually debate AE versus SDR in the abstract. This gives them what comparable companies are actually doing, with a dated dataset behind it.",
+      "engagementMove": "Send to founders hiring their first commercial person this quarter, and offer candidate introductions from Together’s network.",
+      "emailSubject": "What comparable teams are actually hiring in GTM",
+      "emailBody": "Kyle Poyar looked at 22,988 GTM job posts from Q1 2026:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nThree in five open roles are AEs or solution engineers, and GTM engineering has doubled. Useful if you are about to make a first commercial hire — happy to make candidate introductions.",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "AI-native companies are expanding outbound: “SDR headcount at AI-native companies has more than doubled year-on-year.”",
+        "The bulk of demand is closing and technical-sales roles: “3-in-5 open GTM roles are AEs or solution engineers.”",
+        "A newer function is establishing itself: “GTM engineering headcount has doubled. It’s coming into its own with 400+ GTM engineers at US digital natives.”"
+      ],
+      "discussionQuestion": "For your first commercial hire, is the bottleneck finding buyers, convincing them, or proving the product works in their stack?",
+      "recipientAngles": [
+        {
+          "companyId": "thesys",
+          "personName": "Rabi Shanker Guha",
+          "whyThisPerson": "Thesys sells developer infrastructure where the first hire is often a solution engineer rather than a closer.",
+          "angle": "Discuss AE versus solution engineer as the first hire.",
+          "emailSubject": "AE or solution engineer first?",
+          "emailBody": "Poyar’s Q1 2026 data on GTM hiring:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nThree in five open GTM roles are AEs or solution engineers. For developer infrastructure, my instinct is that the solution engineer comes first because the blocker is proving it works. Does that match how you are thinking about it?"
+        },
+        {
+          "companyId": "scalekit",
+          "personName": "Satya Devarakonda",
+          "whyThisPerson": "ScaleKit sells authentication infrastructure to engineering teams as it builds commercial capacity.",
+          "angle": "Discuss sequencing the first commercial hires.",
+          "emailSubject": "Sequencing the first commercial hires",
+          "emailBody": "Sharing GTM hiring data from Q1 2026 across nearly 23,000 job posts:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nAI-native companies more than doubled SDR headcount, which surprised me given how much of that work is being automated. For ScaleKit, is top-of-funnel or technical validation the tighter constraint right now?"
+        },
+        {
+          "companyId": "optexity",
+          "personName": "Sankalp Garg",
+          "whyThisPerson": "Optexity sells enterprise workflow agents that require validation inside a customer environment.",
+          "angle": "Discuss whether a technical seller is the right first hire.",
+          "emailSubject": "Does enterprise agent selling need a technical first hire?",
+          "emailBody": "This is a useful dataset on who is actually being hired in GTM:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nFor agents that run inside a customer’s applications, I would guess the first hire has to be technical enough to survive a deployment conversation. Is that how you see the first commercial role at Optexity?"
+        },
+        {
+          "companyId": "sentra",
+          "personName": "Ashwin Gopinath",
+          "whyThisPerson": "Sentra is early-stage and moving beyond founder-led selling.",
+          "angle": "Discuss when to stop selling as the founder.",
+          "emailSubject": "When to stop selling it yourself",
+          "emailBody": "Poyar’s Q1 2026 GTM hiring analysis:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nThe pattern is that companies hire closers and solution engineers well before marketing. At Sentra’s stage, what would have to be repeatable before you would hand a deal to someone else?"
+        },
+        {
+          "companyId": "jhana",
+          "personName": "Em McGlone",
+          "whyThisPerson": "Jhana sells legal AI in India, where the buyer is a firm or in-house team requiring domain credibility.",
+          "angle": "Discuss whether domain expertise outranks sales experience in the first hire.",
+          "emailSubject": "Domain credibility versus sales experience",
+          "emailBody": "Sharing data on what GTM roles companies are actually opening:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nFor legal buyers I would expect domain credibility to matter more than sales experience in a first hire. Is that borne out in who actually moves your deals forward?"
+        },
+        {
+          "companyId": "coreworks",
+          "personName": "Pavan Sondur",
+          "whyThisPerson": "Coreworks is pre-scale and has not yet fixed the profile of its first commercial hire.",
+          "angle": "Discuss the first GTM hire profile for a finance product.",
+          "emailSubject": "First GTM hire for a finance product",
+          "emailBody": "This Q1 2026 dataset covers nearly 23,000 GTM job posts:\nhttps://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now\n\nGTM engineering roles have doubled, which may matter for a product where the demo depends on the customer’s own data. Is your first hire more likely to be a seller or someone who can wire up a convincing trial?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Who’s actually hiring in GTM right now",
+          "url": "https://www.growthunhinged.com/p/who-s-actually-hiring-in-gtm-right-now",
+          "publishedAt": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "id": "cms-epa-early-adopters-2026-05-13",
+      "title": "CMS's prior-authorization effort targets real workflow handoffs",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
+      "publishedAt": "2026-05-13",
+      "companyIds": [
+        "rapid-claims",
+        "confido",
+        "spry-therapeutics"
+      ],
+      "topic": "Healthcare operations · prior authorization",
+      "summary": "CMS named 29 early adopters working on electronic prior authorization, emphasizing integration, status visibility and handoffs across clinical and administrative systems.",
+      "whyRelevant": "Rapid Claims, Confido and SPRY serve different parts of healthcare administration. This is an ecosystem and workflow discussion, not an assertion about a company's regulatory obligations.",
+      "emailSubject": "Where prior-authorization handoffs still break",
+      "emailBody": "Sharing CMS's electronic prior-authorization initiative:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems. The named provider and EHR participants also give a concrete set of implementations to watch.\n\nIn the workflows you see, is the larger bottleneck getting the required information together, finding the authorization status, or moving the decision into the next system?",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The initiative prioritizes authorization status and handoffs between systems, beyond merely having an API.",
+        "Its early-adopter collaboration is separate from CMS's requirements for certain impacted payers."
+      ],
+      "discussionQuestion": "Who owns the next action when authorization information exists in one system but is missing from the next workflow?",
+      "recipientAngles": [
+        {
+          "companyId": "rapid-claims",
+          "personName": "Dushyant Mishra",
+          "whyThisPerson": "Rapid Claims' CEO works on healthcare revenue-cycle workflows.",
+          "angle": "Connect authorization evidence to downstream claim readiness.",
+          "emailSubject": "Following authorization evidence into the claim",
+          "emailBody": "CMS's initiative prompted a revenue-cycle question for Rapid Claims: could one case be followed from authorization decision to claim preparation, recording the reference, supporting evidence and next owner? I'd want to distinguish a missing handoff from a coding problem. Where would that distinction be most useful?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
+        },
+        {
+          "companyId": "confido",
+          "personName": "Vichar Shroff",
+          "whyThisPerson": "Confido's CPO works on patient access and EHR integrations.",
+          "angle": "Define a reliable answer to patient authorization-status calls.",
+          "emailSubject": "When a patient asks whether their visit is authorized",
+          "emailBody": "The CMS update made me think about the patient-access conversation at Confido. For an authorization-status call, what must an assistant know before answering: the source, when it was checked, and who can resolve uncertainty? Would those fields make a useful review sheet for one workflow?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "personName": "Brijraj Bhuptani",
+          "whyThisPerson": "SPRY's CEO focuses on rehabilitation workflows and interoperability.",
+          "angle": "Carry authorization information into therapy scheduling decisions.",
+          "emailSubject": "Connecting authorization status to the next therapy visit",
+          "emailBody": "CMS is emphasizing the handoff between clinical and administrative systems. For SPRY, a useful walkthrough could start with a planned therapy visit and work backward: authorization status, approved scope, remaining visits and the person resolving exceptions. Which field would most change whether a clinic can schedule confidently?\n\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum"
+        }
+      ],
+      "sources": [
+        {
+          "title": "CMS announces electronic prior-authorization early adopters",
+          "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
+          "publishedAt": "2026-05-13"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Policy context for healthcare buyers; ask where authorization data becomes usable downstream for them."
+    },
+    {
+      "id": "wispr-independent-audit-2026-03-27",
+      "title": "Wispr Flow’s CTO on rebuilding compliance after an audit vendor cut corners",
+      "publisher": "Wispr Flow · Sahaj Garg",
+      "url": "https://wisprflow.ai/post/new-independent-audit",
+      "publishedAt": "2026-03-27",
+      "companyIds": [
+        "confido",
+        "rapid-claims",
+        "spry-therapeutics",
+        "kula",
+        "metaforms",
+        "runable"
+      ],
+      "topic": "Enterprise readiness · SOC 2, HIPAA and auditor selection",
+      "kind": "Portfolio peer",
+      "summary": "Sahaj Garg explains that after Wispr’s prior compliance vendor failed to properly verify its controls, the company moved to Drata for compliance automation and engaged A-LIGN as auditor, pursuing SOC 2, HIPAA verification and ISO 27001.",
+      "whyRelevant": "A first-hand account from inside the portfolio of choosing compliance vendors and handling the fallout when one fails. Useful to any founder about to buy SOC 2 or HIPAA tooling on a deadline.",
+      "engagementMove": "Send to founders starting SOC 2, HIPAA or ISO this year and offer an introduction to Sahaj Garg for a candid thirty minutes on vendor selection.",
+      "emailSubject": "A compliance war story worth reading before you buy",
+      "emailBody": "Wispr Flow’s CTO wrote up what happened when their compliance vendor failed to properly verify controls, and how they rebuilt with a new platform and auditor:\nhttps://wisprflow.ai/post/new-independent-audit\n\nIt is the most useful thing I have read on choosing these vendors, mostly because it is written after something went wrong. Happy to introduce you to Sahaj if you are making this decision.",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "The failure was verification, not controls: “The question was never whether our controls exist; it was whether they were properly verified.”",
+        "The vendors are named: “We’ve formally engaged Drata as our new compliance automation platform, replacing Delve,” and “We’ve signed an engagement letter with A-LIGN.”",
+        "On timeline pressure: “We are not rushing this process. The entire reason we’re here is because a vendor cut corners on verification.”"
+      ],
+      "discussionQuestion": "Who verifies that your compliance automation vendor has actually verified anything?",
+      "recipientAngles": [
+        {
+          "companyId": "confido",
+          "personName": "Chetan Reddy",
+          "whyThisPerson": "Confido’s agents work inside healthcare administration, where HIPAA scope is a precondition for buying.",
+          "angle": "Discuss how health-system buyers check the provenance of an audit.",
+          "emailSubject": "Do your buyers check who signed the audit?",
+          "emailBody": "Wispr’s CTO published what happened when their compliance vendor did not properly verify controls:\nhttps://wisprflow.ai/post/new-independent-audit\n\nIn health systems the audit is usually a gate rather than a document. Have you had a buyer actually interrogate who performed yours, or does the certificate still travel on its own?"
+        },
+        {
+          "companyId": "rapid-claims",
+          "personName": "Dushyant Mishra",
+          "whyThisPerson": "Rapid Claims handles PHI for provider organizations whose procurement scrutinizes vendor attestations.",
+          "angle": "Compare how much diligence buyers apply to the auditor itself.",
+          "emailSubject": "The audit behind the audit",
+          "emailBody": "Sharing a candid post from Wispr’s CTO about rebuilding compliance after a vendor cut corners:\nhttps://wisprflow.ai/post/new-independent-audit\n\nGiven the size of the systems you sell into, I would be curious whether their security teams ever look past the certificate to who issued it."
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "personName": "Brijraj Bhuptani",
+          "whyThisPerson": "SPRY stores patient data for outpatient clinics, where HIPAA posture is checked during sales.",
+          "angle": "Discuss compliance tooling choices at clinic-sales scale.",
+          "emailSubject": "Compliance tooling, from someone who had to redo it",
+          "emailBody": "This is a useful first-hand account of compliance vendor selection, written after it went wrong:\nhttps://wisprflow.ai/post/new-independent-audit\n\nAt clinic scale the cost of redoing an audit is mostly lost selling time. Is your current setup something you would be comfortable re-verifying, or is it inherited?"
+        },
+        {
+          "companyId": "kula",
+          "personName": "Achuthanand Ravi",
+          "whyThisPerson": "Kula holds candidate personal data, so SOC 2 is a routine mid-market HR procurement requirement.",
+          "angle": "Discuss whether SOC 2 timing is gating deals.",
+          "emailSubject": "Is SOC 2 timing gating any of your deals?",
+          "emailBody": "Wispr published what they learned about compliance vendors the hard way:\nhttps://wisprflow.ai/post/new-independent-audit\n\nFor recruiting software the certificate usually shows up as a procurement checkbox. Is that currently slowing any deals for you, or is it handled well enough that it never surfaces?"
+        },
+        {
+          "companyId": "metaforms",
+          "personName": "Akshat Tyagi",
+          "whyThisPerson": "Metaforms handles respondent data for enterprise research buyers who apply vendor security review.",
+          "angle": "Discuss the security expectations enterprise research buyers bring.",
+          "emailSubject": "What research buyers ask about data handling",
+          "emailBody": "Sharing Wispr’s account of rebuilding their audit trail after a vendor failure:\nhttps://wisprflow.ai/post/new-independent-audit\n\nEnterprise research buyers handle respondent data carefully. How deep does their security review actually go for you — a questionnaire, or a real audit conversation?"
+        },
+        {
+          "companyId": "runable",
+          "personName": "Umesh Kumar",
+          "whyThisPerson": "Runable’s agents act on business data at a scale that attracts formal vendor review after a Series A.",
+          "angle": "Discuss getting compliance in place before enterprise demand arrives.",
+          "emailSubject": "Worth sorting before the enterprise questions start",
+          "emailBody": "Now that the round is done, this may be timely — Wispr’s CTO on choosing compliance vendors, written after one failed them:\nhttps://wisprflow.ai/post/new-independent-audit\n\nThe useful part is the sequencing: they argue against rushing it. Is compliance something you are planning deliberately, or waiting for the first enterprise deal to force?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Our path to a new, independent audit",
+          "url": "https://wisprflow.ai/post/new-independent-audit",
+          "publishedAt": "2026-03-27"
+        },
+        {
+          "title": "Composio: two questions every security review asks us",
+          "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+          "publishedAt": "2026-09-09"
+        }
+      ]
+    },
+    {
+      "id": "dora-ai-tensions-2026-03-10",
+      "title": "DORA: code-generation gains can shift work into verification",
+      "publisher": "DORA · Google Cloud",
+      "url": "https://dora.dev/insights/balancing-ai-tensions/",
+      "publishedAt": "2026-03-10",
+      "companyIds": [
+        "hivel",
+        "zipy"
+      ],
+      "topic": "Developer productivity · delivery quality",
+      "summary": "A qualitative analysis of 1,110 Google engineers' responses describes tradeoffs in AI-assisted development, including time saved creating code moving into auditing and verification.",
+      "whyRelevant": "Relevant to Hivel's engineering-performance context and Zipy's debugging workflows. It supports discussing end-to-end delivery measures rather than treating code-generation activity as productivity.",
+      "emailSubject": "A measurement question beyond code-generation speed",
+      "emailBody": "DORA's March analysis is useful for the AI-productivity conversation:\nhttps://dora.dev/insights/balancing-ai-tensions/\n\nEngineers describe some creation-time savings moving into review and verification. My takeaway is to look at the full delivery path, including rework and stability, when judging the impact of AI tools.\n\nWhich downstream measure gives your customers the clearest signal that faster development is actually improving delivery?",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "DORA analyzed 1,110 open-ended responses from Google engineers about AI-assisted work in Q3 2025.",
+        "The responses describe effort shifting from writing toward review and verification. They are qualitative reports, not a causal measurement of time saved."
+      ],
+      "discussionQuestion": "Is faster authoring reducing total delivery time, or moving work into review and rework?",
+      "recipientAngles": [
+        {
+          "companyId": "hivel",
+          "personName": "Sudheer Bandaru",
+          "whyThisPerson": "Hivel identifies Sudheer as founder and CEO with engineering-leadership experience.",
+          "angle": "Suggested measurement discussion: pair authoring speed with downstream review burden.",
+          "emailSubject": "The metric after AI makes coding faster",
+          "emailBody": "DORA’s write-up describes effort moving into review and verification. For Hivel, I’d pair authoring speed with review wait, rework and post-release failures. Which combination gives an engineering leader the clearest picture of whether AI actually improved delivery?\n\nhttps://dora.dev/insights/balancing-ai-tensions/"
+        },
+        {
+          "companyId": "zipy",
+          "personName": "Vishalini Paliwal",
+          "whyThisPerson": "Zipy’s official team page identifies Vishalini as co-founder and CEO of its debugging product.",
+          "angle": "Suggested product discussion: connect faster shipping to user-visible regressions.",
+          "emailSubject": "A customer story about the cost of faster shipping",
+          "emailBody": "This DORA research raises a useful Zipy customer question: when teams ship more AI-assisted code, what breaks after release? I’d look for one concrete example linking a faster change to extra debugging work. What evidence would make that story useful to an engineering buyer?\n\nhttps://dora.dev/insights/balancing-ai-tensions/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "DORA: code-generation gains can shift work into verification",
+          "url": "https://dora.dev/insights/balancing-ai-tensions/",
+          "publishedAt": "2026-03-10"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Use as third-party data in an engineering-leader pitch; ask whether their customers measure verification work at all."
+    },
+    {
+      "id": "firstround-fde-hiring-2026-02-24",
+      "title": "When a forward-deployed engineer is the right hire, and when it makes you a services business",
+      "publisher": "First Round Review",
+      "url": "https://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/",
+      "publishedAt": "2026-02-24",
+      "companyIds": [
+        "optexity",
+        "confido",
+        "protecto",
+        "coreworks",
+        "capitol"
+      ],
+      "topic": "Company building · deployment and services risk",
+      "kind": "Operating playbook",
+      "summary": "First Round interviews James Honsa (Genera, formerly Ironclad), Jake Stauch (Serval), Shilpa Balaji (Promise, formerly Palantir), Frank Bien and Lloyd Tabb (both formerly Looker) and First Round’s Tiffany Siu on when forward-deployed engineering fits and how to scope it.",
+      "whyRelevant": "Several portfolio companies already do forward-deployed work without calling it that. This is the clearest published guide on scoping it before it quietly becomes the business model.",
+      "engagementMove": "Send to founders deploying into large customers, and ask which current engagements have no route back into the product.",
+      "emailSubject": "Are you already running an FDE motion without saying so?",
+      "emailBody": "First Round’s guide to forward-deployed engineering is the most practical one I have read:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nThe test they give is whether the work has a clear path to software upside, and to break it off when it does not. Worth reading before deployment work becomes the business model.",
+      "checkedAt": "2026-09-21",
+      "format": "Guide",
+      "takeaways": [
+        "The fit test is blunt: “Forward deployed engineering is definitionally an upmarket motion. You should not be doing this if you believe the end shape of your product is some sort of product-led growth freemium fit.”",
+        "Reserve the model: one team “bifurcated our post-sales team into legal engineers, who we reserved for high ACV customers.”",
+        "Cut work that will not become product: if a use case is “endlessly iterating, and there was no clear path toward a software upside,” break the work off."
+      ],
+      "discussionQuestion": "Which deployment work are you doing today that has no path to becoming product?",
+      "recipientAngles": [
+        {
+          "companyId": "optexity",
+          "personName": "Sankalp Garg",
+          "whyThisPerson": "Optexity trains agents on enterprise workflows, which usually requires engineers inside the customer’s environment.",
+          "angle": "Discuss keeping deployment work on a path back to product.",
+          "emailSubject": "Keeping deployment work on a path to product",
+          "emailBody": "This First Round guide on forward-deployed engineering seems close to what Optexity already does:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nTheir rule is to break off work that has no clear path to software upside. When you train agents on a customer’s workflow, how much of that generalizes to the next customer?"
+        },
+        {
+          "companyId": "confido",
+          "personName": "Chetan Reddy",
+          "whyThisPerson": "Confido’s health-system deployments typically need embedded engineering during rollout.",
+          "angle": "Discuss how much of go-live work becomes reusable product.",
+          "emailSubject": "How much of go-live becomes product?",
+          "emailBody": "Sharing First Round’s guide on forward-deployed engineering:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nHealth-system rollouts are the textbook case. Of the work it takes to get one customer live, what share do you expect to reuse at the next one?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto’s enterprise deployments involve integration across varied customer data architectures.",
+          "angle": "Discuss whether integration work should be priced separately.",
+          "emailSubject": "Should integration work be priced separately?",
+          "emailBody": "First Round’s piece on forward-deployed engineering is useful on scoping:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nThey reserve the model for high-ACV customers rather than offering it broadly. For enterprise data protection, is integration effort something you price, absorb, or use to qualify?"
+        },
+        {
+          "companyId": "coreworks",
+          "personName": "Prashant Kumar",
+          "whyThisPerson": "Coreworks connects to a finance team’s own data, which often requires bespoke work per customer.",
+          "angle": "Discuss avoiding bespoke work at an early stage.",
+          "emailSubject": "Bespoke work is hardest to refuse early",
+          "emailBody": "This guide argues forward-deployed engineering is an upmarket motion that does not mix with product-led growth:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nEarly on, custom work is the hardest thing to say no to. How are you deciding which finance-data integrations to build once versus per customer?"
+        },
+        {
+          "companyId": "capitol",
+          "personName": "Shaun Modi",
+          "whyThisPerson": "Capitol deploys AI research and content tooling into enterprise and government customers.",
+          "angle": "Discuss scoping deployment work for institutional buyers.",
+          "emailSubject": "Scoping deployment for institutional buyers",
+          "emailBody": "Sharing First Round’s guide on forward-deployed engineering:\nhttps://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/\n\nGovernment and large enterprise buyers tend to pull vendors toward bespoke delivery. How do you keep that scoped so it stays a software business?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "So You Want to Hire a Forward Deployed Engineer",
+          "url": "https://review.firstround.com/so-you-want-to-hire-a-forward-deployed-engineer/",
+          "publishedAt": "2026-02-24"
+        }
+      ]
+    },
+    {
+      "id": "finops-state-2026-02-19",
+      "title": "FinOps expands from cloud bills into SaaS and AI value",
+      "publisher": "FinOps Foundation",
+      "url": "https://data.finops.org/",
+      "publishedAt": "2026-02-19",
+      "companyIds": [
+        "spendflo",
+        "togai"
+      ],
+      "topic": "SaaS procurement · AI spend management",
+      "summary": "The 2026 survey shows FinOps teams broadening into SaaS and AI, with demand for granular cost visibility, forecasting and business-value attribution.",
+      "whyRelevant": "Spendflo's procurement workflow and Togai's usage-billing context intersect with how finance and engineering explain AI costs. The survey population is FinOps practitioners, not every software buyer.",
+      "emailSubject": "An interesting shift in who owns SaaS and AI spend",
+      "emailBody": "The State of FinOps 2026 report has a useful shift in buying context:\nhttps://data.finops.org/\n\nFinOps is increasingly covering SaaS and AI alongside cloud infrastructure. My takeaway is that buyers may need a shared view of commitments, usage and business value, beyond a renewal-saving number.\n\nAre your conversations moving toward variable AI consumption and attribution, or is the immediate need still visibility into existing contracts?",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "Respondents want cost estimates before deployment and more granular AI cost data.",
+        "Allocation, forecasting and planning remain foundational as FinOps extends beyond cloud infrastructure."
+      ],
+      "discussionQuestion": "Before a variable-use software commitment, can the buyer name its consumption assumptions, budget owner and response if usage exceeds the estimate?",
+      "recipientAngles": [
+        {
+          "companyId": "spendflo",
+          "personName": "Rajiv Ramanan",
+          "whyThisPerson": "Spendflo's CPO works on procurement and SaaS-spend products.",
+          "angle": "Bring usage scenarios into purchasing and renewal decisions.",
+          "emailSubject": "A pre-purchase worksheet for variable AI spend",
+          "emailBody": "The FinOps survey suggests a Spendflo procurement worksheet: committed spend, expected usage range, overage terms and the owner of each assumption. I'd test it on one AI-software purchase before negotiating the discount. Which missing input is most likely to change the purchase decision?\n\nhttps://data.finops.org/"
+        },
+        {
+          "companyId": "togai",
+          "personName": "Tholkappiyan Velavan",
+          "whyThisPerson": "Togai's co-founder has public usage-billing and metering expertise; the company was acquired by Zuora.",
+          "angle": "Discuss billing explainability from metering experience, without assuming a current employer.",
+          "emailSubject": "A metering perspective on FinOps buyer questions",
+          "emailBody": "Given your work on Togai, the FinOps survey raised a billing question I'd value your view on: what should a customer receive to reconcile one usage charge without a support ticket? My starting list would be the billable event, unit, rate and treatment of retries. What would you add?\n\nhttps://data.finops.org/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "State of FinOps 2026",
+          "url": "https://data.finops.org/",
+          "publishedAt": "2026-02-19"
+        },
+        {
+          "title": "FinOps Foundation: State of FinOps 2026 first-look event",
+          "url": "https://community.finops.org/meeting/february-finops-foundation-summit",
+          "publishedAt": "2026-02-19"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Use as buyer-side evidence in procurement and spend conversations; ask which line item their champion is defending this year."
+    },
+    {
+      "id": "anthropic-hiring-evaluations-2026-01-21",
+      "title": "A first-hand account of redesigning hiring assessments for AI",
+      "publisher": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "publishedAt": "2026-01-21",
+      "companyIds": [
+        "kula",
+        "hunar",
+        "emergent"
+      ],
+      "topic": "Recruiting · assessment design",
+      "summary": "Anthropic's performance-engineering team explains three versions of its take-home assessment as improving models made earlier tests less discriminating.",
+      "whyRelevant": "A concrete employer case for Kula and Hunar when discussing evidence of candidate ability. It concerns one specialist engineering role and should not be generalized to all hiring.",
+      "emailSubject": "A concrete hiring-assessment problem to compare notes on",
+      "emailBody": "This first-hand account from Anthropic is a useful prompt for hiring teams:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nThey kept redesigning a take-home as models caught up. The broader question it raises for me is what evidence an assessment captures about the candidate's judgment, especially when AI help is permitted.\n\nAre your customers changing the assessment itself, or mainly asking how to interpret AI-assisted submissions?",
+      "checkedAt": "2026-09-21",
+      "format": "Article",
+      "takeaways": [
+        "Anthropic explicitly allowed AI for this specialist assessment; that exception was not its general take-home policy.",
+        "Later versions traded some job realism for unfamiliar problems that better separated candidates from models."
+      ],
+      "discussionQuestion": "What candidate judgment can a hiring team observe separately from the finished AI-assisted submission?",
+      "recipientAngles": [
+        {
+          "companyId": "kula",
+          "personName": "Sathappan Muthupalaniappan",
+          "whyThisPerson": "Kula's CTO combines recruiting technology with engineering hiring context.",
+          "angle": "Help employers state what their assessments actually measure.",
+          "emailSubject": "What remains observable in an AI-assisted assessment?",
+          "emailBody": "Anthropic's assessment story suggests a useful Kula customer question: what evidence does the rubric capture beyond a completed answer? I'd separate the result, the candidate's verification steps and their explanation of tradeoffs. Would a hiring team be able to defend its decision from that record?\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
+        },
+        {
+          "companyId": "emergent",
+          "personName": "Madhav Jha",
+          "whyThisPerson": "Emergent's CTO works on AI coding and agent evaluation.",
+          "angle": "Review engineering hiring for evidence of judgment with coding agents.",
+          "emailSubject": "A small exercise for evaluating agent-assisted work",
+          "emailBody": "This Anthropic hiring case seems relevant to an AI-coding team. A possible interview exercise: ask a candidate to inspect an agent-produced change, choose what to verify, and explain one rejected shortcut. Which part would reveal judgment your normal coding assessment misses? This is a suggested exercise, not Anthropic's published test.\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
+        },
+        {
+          "companyId": "hunar",
+          "personName": "Shantanu Bhattacharyya",
+          "whyThisPerson": "Hunar's CTO leads technology for voice-based frontline workforce workflows.",
+          "angle": "Clarify what a role-specific screening conversation can and cannot establish.",
+          "emailSubject": "What does a screening answer actually demonstrate?",
+          "emailBody": "Anthropic's engineering test is a different hiring context from Hunar's frontline work. The transferable question is what an answer proves. For one frontline role, could a supervisor distinguish information verified in a screening conversation from ability that needs a practical check? Which distinction should the product make explicit?\n\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Designing AI-resistant technical evaluations",
+          "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+          "publishedAt": "2026-01-21"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Give to recruiting founders as a talking point with hiring teams rethinking assessments."
+    },
+    {
+      "id": "linkedin-talent-research-2026-01-07",
+      "title": "LinkedIn's hiring research: more applicants, harder matching",
+      "publisher": "LinkedIn Research",
+      "url": "https://news.linkedin.com/2026/LinkedIn-Research-Talent-2026",
+      "publishedAt": "2026-01-07",
+      "companyIds": [
+        "kula",
+        "hunar"
+      ],
+      "topic": "Recruiting · candidate matching",
+      "summary": "LinkedIn reports that US applicants per open role doubled since spring 2022, while surveyed recruiters describe difficulty finding qualified talent and growing interest in AI screening.",
+      "whyRelevant": "This frames a useful product discussion about qualification quality versus application volume for Kula and Hunar. It is LinkedIn's own research, with US-specific applicant data.",
+      "emailSubject": "More applicants, but harder matching",
+      "emailBody": "LinkedIn's January research puts applicant growth and recruiter frustration side by side:\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026\n\nThe useful tension is that more applicants do not necessarily make the right candidate easier to find. It suggests measuring the quality of the shortlist, not just time saved in screening.\n\nWhat signal do your customers trust most when deciding that a candidate deserves a conversation?",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "LinkedIn's US measure is applicants per open role; it does not measure quality of matches.",
+        "Recruiters' plans to expand AI screening are stated intentions, not demonstrated hiring outcomes."
+      ],
+      "discussionQuestion": "Which hiring-manager decision would prove a shortlist improved, and what evidence should accompany each recommendation?",
+      "recipientAngles": [
+        {
+          "companyId": "kula",
+          "personName": "Achuthanand Ravi",
+          "whyThisPerson": "Kula's CEO works on recruiting automation and talent networks.",
+          "angle": "Evaluate shortlist usefulness through downstream recruiter decisions.",
+          "emailSubject": "A shortlist-quality test for Kula",
+          "emailBody": "LinkedIn's hiring research made me think of a small Kula customer exercise: review one completed shortlist and record who earned an interview, what evidence persuaded the hiring manager, and where the recommendation was overridden. Which of those signals would you trust as a product-quality measure?\n\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026"
+        },
+        {
+          "companyId": "hunar",
+          "personName": "Krishna Khandelwal",
+          "whyThisPerson": "Hunar's CEO focuses on frontline workforce operations.",
+          "angle": "Test local qualification and attendance signals without importing US trends.",
+          "emailSubject": "A frontline-hiring version of the matching question",
+          "emailBody": "The LinkedIn research raises a useful matching question for Hunar, although its applicant-volume finding is US-specific. For one frontline role, would comparing availability, shift fit and interview attendance tell you more than completed screenings alone? Which piece of information would most improve the next candidate conversation?\n\nhttps://news.linkedin.com/2026/LinkedIn-Research-Talent-2026"
+        }
+      ],
+      "sources": [
+        {
+          "title": "LinkedIn Research: Talent 2026",
+          "url": "https://news.linkedin.com/2026/LinkedIn-Research-Talent-2026",
+          "publishedAt": "2026-01-07"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Use as market evidence in recruiting-buyer conversations about applicant volume and matching."
+    },
+    {
+      "id": "apta-admin-burden-2025-11-05",
+      "title": "APTA's survey of administrative burden in physical therapy",
+      "publisher": "American Physical Therapy Association",
+      "url": "https://www.apta.org/advocacy/issues/administrative-burden/report",
+      "publishedAt": "2025-11-05",
+      "companyIds": [
+        "spry-therapeutics"
+      ],
+      "topic": "Healthcare operations · physical therapy",
+      "summary": "APTA's survey connects payer administration with staffing burden, delayed authorization and reported treatment abandonment. It captures respondents' experiences, not a causal trial.",
+      "whyRelevant": "Directly relevant to SPRY's physical-therapy practice workflows. An evergreen source for selecting measurable administrative outcomes that matter to clinic operators.",
+      "emailSubject": "A clinic-operator lens on administrative ROI",
+      "emailBody": "This APTA report from November is still a useful clinic-operator reference:\nhttps://www.apta.org/advocacy/issues/administrative-burden/report\n\nIt links administrative burden with staffing needs and delays in getting patients into treatment. My takeaway for a workflow product is to connect hours saved to a concrete operational result, such as fewer pending authorizations or less time until treatment starts.\n\nWhich of those outcomes is easiest for a clinic to measure and act on today?",
+      "checkedAt": "2026-09-21",
+      "format": "Research",
+      "takeaways": [
+        "Thirty percent of surveyed respondents reported waiting one to two weeks for authorization.",
+        "Respondents also reported added staffing and payer-network exits; these are survey experiences, not measured causal effects."
+      ],
+      "discussionQuestion": "Can a clinic connect authorization delays to deferred appointments and staff effort using records it already keeps?",
+      "recipientAngles": [
+        {
+          "companyId": "spry-therapeutics",
+          "personName": "Riyaz Rehman",
+          "whyThisPerson": "SPRY's co-founder focuses on healthcare operations and practice management.",
+          "angle": "Turn a broad administrative-burden claim into a manageable clinic queue.",
+          "emailSubject": "A practical authorization queue for clinic operators",
+          "emailBody": "APTA's survey suggests an operating exercise for SPRY: take a week's pending authorizations and record payer, days waiting, next action and the appointment affected. Would a clinic manager get more value from that queue than a total-hours-saved figure? Which field could staff reliably maintain without extra work?\n\nhttps://www.apta.org/advocacy/issues/administrative-burden/report"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "personName": "Brijraj Bhuptani",
+          "whyThisPerson": "SPRY's CEO works across rehabilitation workflows and revenue cycle.",
+          "angle": "Measure clinic value through care access and capacity as well as efficiency.",
+          "emailSubject": "Showing administrative ROI in clinic terms",
+          "emailBody": "The APTA findings prompted a possible SPRY pilot scorecard: staff time spent chasing authorization, days until the first visit, and appointments postponed while waiting. I'd establish the baseline with the clinic before choosing a target. Which measure best captures value without claiming that software alone changes clinical outcomes?\n\nhttps://www.apta.org/advocacy/issues/administrative-burden/report"
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Impact of Administrative Burden on Physical Therapist Services",
+          "url": "https://www.apta.org/advocacy/issues/administrative-burden/report",
+          "publishedAt": "2025-11-05"
+        }
+      ],
+      "kind": "Buyer data",
+      "engagementMove": "Quotable burden data for clinic conversations; ask which admin task their customers name first."
     }
   ]
 }

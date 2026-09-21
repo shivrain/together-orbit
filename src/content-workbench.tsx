@@ -1,7 +1,7 @@
 import {useEffect, useMemo, useState} from 'react';
 import {ArrowRight, ArrowUpRight, BookOpen, ChevronLeft, FileText, Search, X} from 'lucide-react';
 import {companies} from './data';
-import type {Contact, FeedItem, MailDraft, PlatformData} from './platform-types';
+import {contentKinds, type Contact, type ContentKind, type FeedItem, type MailDraft, type PlatformData} from './platform-types';
 import {recipientAngle} from './engagement-message';
 import './content-workbench.css';
 
@@ -27,13 +27,15 @@ export default function ContentWorkbench({data, onCompose, onOpenDraft}: Props) 
   const [recipientCompany, setRecipientCompany] = useState('');
   const [recipientId, setRecipientId] = useState('');
   const [showHandled, setShowHandled] = useState(false);
+  const [kindFilter, setKindFilter] = useState<ContentKind | 'all'>('all');
   const [mobileDetail, setMobileDetail] = useState(false);
   const search = query.trim().toLowerCase();
 
   const items = useMemo(() => data.feed.filter(item =>
     (companyFilter === 'all' || item.companyIds.includes(companyFilter)) &&
-    (!search || [item.title, item.publisher, item.topic, item.summary, ...(item.takeaways||[]), ...(item.recipientAngles||[]).map(angle=>`${angle.personName} ${angle.angle}`), ...item.companyIds.map(nameOf)].join(' ').toLowerCase().includes(search))
-  ).sort((a, b) => timestamp(b.publishedAt) - timestamp(a.publishedAt)), [data.feed, companyFilter, search]);
+    (kindFilter === 'all' || item.kind === kindFilter) &&
+    (!search || [item.title, item.publisher, item.topic, item.summary, item.url, ...(item.takeaways||[]), ...(item.sources||[]).map(source=>`${source.title} ${source.url}`), ...(item.recipientAngles||[]).map(angle=>`${angle.personName} ${angle.angle}`), ...item.companyIds.map(nameOf)].join(' ').toLowerCase().includes(search))
+  ).sort((a, b) => timestamp(b.publishedAt) - timestamp(a.publishedAt)), [data.feed, companyFilter, kindFilter, search]);
   const article = items.find(item => item.id === articleId) || items[0];
   const engagementDrafts = useMemo(() => data.drafts.filter(draft => !draft.dealId && draft.purpose !== 'referral-ask' && draft.purpose !== 'referral-reply'), [data.drafts]);
   const openDraftCount = engagementDrafts.filter(draft => !draft.archivedAt).length;
@@ -89,42 +91,49 @@ export default function ContentWorkbench({data, onCompose, onOpenDraft}: Props) 
       {view === 'drafts' && <button className="cw-history-toggle" type="button" onClick={() => setShowHandled(!showHandled)}>{showHandled ? 'Show active drafts' : 'View archived'}</button>}
     </div>
 
+    {view === 'reads' && <div className="cw-kinds" aria-label="Filter by why it earns a reply">
+      <button type="button" className={kindFilter === 'all' ? 'active' : ''} aria-pressed={kindFilter === 'all'} onClick={() => setKindFilter('all')}>Everything<span>{data.feed.length}</span></button>
+      {contentKinds.map(kind => {const n = data.feed.filter(item => item.kind === kind).length; return n ? <button type="button" key={kind} className={kindFilter === kind ? 'active' : ''} aria-pressed={kindFilter === kind} onClick={() => setKindFilter(kind)}>{kind}<span>{n}</span></button> : null;})}
+    </div>}
+
     {view === 'reads' ? (article ? <div className={`cw-workbench ${mobileDetail ? 'cw-show-detail' : ''}`}>
       <aside className="cw-read-list" aria-label="Useful reads">
         <div className="cw-list-label"><span>{items.length} {items.length === 1 ? 'useful read' : 'useful reads'}</span><span>Newest first</span></div>
-        {items.map(item => <button type="button" key={item.id} className={`cw-read ${article.id === item.id ? 'active' : ''}`} aria-pressed={article.id === item.id} onClick={() => selectArticle(item)}>
+        {items.map(item => {const angles=(item.recipientAngles||[]).length;const sent=engagementDrafts.some(draft=>draft.resourceId===item.id);return <button type="button" key={item.id} className={`cw-read ${article.id === item.id ? 'active' : ''}`} aria-pressed={article.id === item.id} onClick={() => selectArticle(item)}>
           <span className="cw-read-meta">{item.publisher}<span>{dateOf(item.publishedAt)}</span></span>
           <strong>{item.title}</strong>
           <span className="cw-read-topic">{item.topic}</span>
-          <span className="cw-read-companies">{item.companyIds.map(nameOf).slice(0, 3).join(' · ')}{item.companyIds.length > 3 ? ` +${item.companyIds.length - 3}` : ''}</span>
-        </button>)}
+          {item.kind && <span className={`cw-kind-tag cw-kind-${item.kind.toLowerCase().replace(/ /g, '-')}`}>{item.kind}</span>}
+          <span className="cw-read-foot"><span className="cw-read-companies">{item.companyIds.map(nameOf).slice(0, 3).join(' · ')}{item.companyIds.length > 3 ? ` +${item.companyIds.length - 3}` : ''}</span>{angles>0&&<em className="cw-read-count">{angles} {angles===1?'person':'people'}</em>}{sent&&<em className="cw-read-done">Drafted</em>}</span>
+        </button>})}
       </aside>
 
       <article className="cw-detail" key={article.id}>
         <button className="cw-back" type="button" onClick={() => setMobileDetail(false)}><ChevronLeft size={14}/>All useful reads</button>
         <div className="cw-detail-meta"><span>{article.topic}</span><a href={sourceLink(article.url)} target="_blank" rel="noreferrer">Read source<ArrowUpRight size={13}/></a></div>
         <h2>{article.title}</h2>
-        <p className="cw-byline">{article.publisher}{article.format&&<span>{article.format}</span>}<span>Published {dateOf(article.publishedAt)}</span></p>
+        <p className="cw-byline">{article.publisher}{article.format&&<span>{article.format}</span>}<span>Published {dateOf(article.publishedAt)}</span>{article.kind&&<span className={`cw-kind-tag cw-kind-${article.kind.toLowerCase().replace(/ /g, '-')}`}>{article.kind}</span>}</p>
         <section className="cw-insight"><h3>The useful idea</h3><p>{article.summary}</p></section>
         {!!article.takeaways?.length&&<section className="cw-takeaways"><h3>What to take from it</h3><ul>{article.takeaways.map(takeaway=><li key={takeaway}>{takeaway}</li>)}</ul></section>}
         <section className="cw-relevance"><h3>Why share it</h3><p>{article.whyRelevant}</p></section>
+        {article.discussionQuestion&&<section className="cw-question"><h3>A question worth asking</h3><p>{article.discussionQuestion}</p></section>}
 
         <section className="cw-share">
-          <div className="cw-share-title"><span className="cw-step">↗</span><div><h3>Turn this into a conversation</h3><p>Choose who it would be useful for.</p></div></div>
+          <div className="cw-share-title"><span className="cw-step">↗</span><div><h3>Turn this into a conversation</h3><p>{article.engagementMove || 'Choose who it would be useful for.'}</p></div></div>
           {recipient && activeCompany ? <>
             <div className="cw-recipient-fields">
               <label>Company<select value={activeCompany.id} onChange={event => {setRecipientCompany(event.target.value); setRecipientId('');}}>{relevantCompanies.map(company => <option key={company.id} value={company.id}>{company.name}</option>)}</select></label>
               <label>Person<select value={recipient.id} onChange={event => setRecipientId(event.target.value)}>{recipients.map(person => <option key={person.id} value={person.id}>{person.name}</option>)}</select></label>
             </div>
             <p className="cw-recipient-role">{recipient.name} · {recipient.role}</p>
-            {angle?<div className="cw-person-angle"><h4>Why {recipient.name.split(' ')[0]}</h4><p>{angle.whyThisPerson}</p><h4>The conversation to open</h4><p>{angle.angle}</p><details><summary>Preview the personal note</summary><p>{angle.emailBody}</p></details></div>:article.discussionQuestion&&<div className="cw-person-angle"><h4>A question to explore</h4><p>{article.discussionQuestion}</p></div>}
+            {angle?<div className="cw-person-angle"><h4>Why {recipient.name.split(' ')[0]}</h4><p>{angle.whyThisPerson}</p><h4>The conversation to open</h4><p>{angle.angle}</p><details><summary>Preview the personal note</summary><p>{angle.emailBody}</p></details></div>:<div className="cw-person-angle"><h4>No researched note for {recipient.name.split(' ')[0]} yet</h4><p>The message will start from the brief’s general note. Add your own observation before sending, or choose a person with a researched angle.</p></div>}
             <div className="cw-share-action"><button type="button" className="cw-primary" onClick={() => matchingDraft ? onOpenDraft(matchingDraft) : onCompose(recipient, article)}>{matchingDraft ? 'Continue draft' : 'Prepare message'}<ArrowRight size={15}/></button><span>A personal note you can review and edit.</span></div>
           </> : <p className="cw-no-recipient">No saved contact is mapped to this read yet. You can still use the source in a conversation.</p>}
         </section>
         {!!article.sources?.length&&<details className="cw-sources"><summary>Research sources</summary>{article.sources.map(source=><a key={source.url} href={sourceLink(source.url)} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={12}/></a>)}{recipient?.research?.sources?.map(source=><a key={source.url} href={sourceLink(source.url)} target="_blank" rel="noreferrer">Recipient context · {source.title}<ArrowUpRight size={12}/></a>)}</details>}
         <p className="cw-source-note">Source checked {dateOf(article.checkedAt)} · Suggested relevance for your next conversation.</p>
       </article>
-    </div> : <div className="cw-empty"><BookOpen size={25}/><h2>{data.feed.length ? 'No reads match this selection.' : 'Useful reads will appear here.'}</h2><p>{data.feed.length ? 'Try another company or a broader topic.' : 'A read will include its source, the useful idea and a message you can tailor.'}</p>{(query || companyFilter !== 'all') && <button type="button" className="cw-secondary" onClick={() => {setQuery(''); changeCompany('all');}}>Clear filters</button>}</div>) : <section className="cw-drafts" aria-label="Saved content drafts">
+    </div> : <div className="cw-empty"><BookOpen size={25}/><h2>{data.feed.length ? 'No reads match this selection.' : 'Useful reads will appear here.'}</h2><p>{data.feed.length ? 'Try another company or a broader topic.' : 'A read will include its source, the useful idea and a message you can tailor.'}</p>{(query || companyFilter !== 'all' || kindFilter !== 'all') && <button type="button" className="cw-secondary" onClick={() => {setQuery(''); setKindFilter('all'); changeCompany('all');}}>Clear filters</button>}</div>) : <section className="cw-drafts" aria-label="Saved content drafts">
       <div className="cw-drafts-label"><h2>{showHandled ? 'Archived drafts' : 'Ready when you are'}</h2><p>{showHandled ? 'Archived notes stay here for reference.' : 'Saved in this browser. Open a draft to edit or copy it.'}</p></div>
       {drafts.length ? drafts.map(draft => {
         const person = data.contacts.find(contact => contact.id === draft.personId && contact.companyId === draft.companyId);

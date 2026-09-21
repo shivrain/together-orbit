@@ -49,12 +49,32 @@ export async function loadLocalData():Promise<PlatformData>{
  return readLocalData();
 }
 export function resetLocalData(){localStorage.removeItem(storageKey);localStorage.removeItem('together-orbit-public-demo-v1')}
+export type ImportSummary={deals:number;contacts:number;drafts:number;movements:number;skipped:string[];mailbox?:string};
+/** Merge a workspace export into this browser. Records upsert by id; nothing is deleted. Invalid records are skipped and reported. */
+export async function importLocalData(text:string):Promise<ImportSummary>{
+ let value:any;try{value=JSON.parse(text)}catch{throw Error('This file is not valid JSON.')}
+ const lists=['deals','contacts','drafts','movements'] as const;
+ if(!value||typeof value!=='object'||![1,2].includes(value.version)||!lists.every(key=>value[key]===undefined||Array.isArray(value[key]))||!lists.some(key=>Array.isArray(value[key])))throw Error('Choose a Together Orbit export file (version 2).');
+ const summary:ImportSummary={deals:0,contacts:0,drafts:0,movements:0,skipped:[]};
+ const run=async(kind:'contact'|'deal'|'draft'|'movement',items:any[],count:keyof Omit<ImportSummary,'skipped'|'mailbox'>)=>{
+  for(const item of items){
+   if(!item||typeof item!=='object'||typeof item.id!=='string'||!item.id.trim()){summary.skipped.push(`${kind}: missing id`);continue}
+   try{await localRequest('/api/platform',{kind,value:item});summary[count]++}catch(error){summary.skipped.push(`${kind} ${item.id}: ${error instanceof Error?error.message:'invalid record'}`)}
+  }
+ };
+ await run('contact',value.contacts||[],'contacts');
+ await run('deal',value.deals||[],'deals');
+ await run('draft',value.drafts||[],'drafts');
+ await run('movement',value.movements||[],'movements');
+ if(typeof value.settings?.mailbox==='string'&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.settings.mailbox)){await localRequest('/api/platform',{kind:'settings',value:{mailbox:value.settings.mailbox}});summary.mailbox=value.settings.mailbox}
+ return summary;
+}
 export function exportLocalData(){const state=readLocalData();const value={version:2,exportedAt:new Date().toISOString(),deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements,settings:state.settings};const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='together-orbit-workspace.json';a.click();URL.revokeObjectURL(url)}
 export async function localRequest(path:string,body:unknown){
  if(path!=='/api/platform')throw Error('This integration is not connected. Use your email app or the GitHub scan workflow.');
  const {kind,value}=body as {kind:string;value:any};const state=readLocalData();const now=new Date().toISOString();
  const upsert=<T extends {id:string}>(items:T[],v:T)=>{const i=items.findIndex(x=>x.id===v.id);if(i<0)items.unshift(v);else items[i]={...items[i],...v};};
- if(kind==='deal'){const prior=state.deals.find(d=>d.id===value.id);const d:Deal={...prior,...value,intake:value.intake??prior?.intake??'Passed to Together',messages:prior?.messages||[],source:prior?.source||'manual',updatedAt:now,unread:false};if(!d.companyId||!d.name||!d.startup)throw Error('Choose a portfolio company and enter a founder and startup.');if(!['Known to referrer','Passed to Together'].includes(d.intake!))throw Error('Choose whether the founder is known to the referrer or passed to Together.');if(d.intake==='Known to referrer'&&['In conversation','Meeting scheduled','Evaluating'].includes(d.stage))throw Error('Mark this referral as Passed to Together first before advancing the Together conversation stage.');upsert(state.deals,d);}
+ if(kind==='deal'){const prior=state.deals.find(d=>d.id===value.id);const d:Deal={...prior,...value,intake:value.intake??prior?.intake??'Passed to Together',messages:prior?.messages||(Array.isArray(value.messages)?value.messages:[]),source:prior?.source||(value.source==='email'?'email':'manual'),updatedAt:!prior&&validDate(value.updatedAt)?value.updatedAt:now,unread:false};if(!d.companyId||!d.name||!d.startup)throw Error('Choose a portfolio company and enter a founder and startup.');if(!['Known to referrer','Passed to Together'].includes(d.intake!))throw Error('Choose whether the founder is known to the referrer or passed to Together.');if(d.intake==='Known to referrer'&&['In conversation','Meeting scheduled','Evaluating'].includes(d.stage))throw Error('Mark this referral as Passed to Together first before advancing the Together conversation stage.');upsert(state.deals,d);}
  else if(kind==='contact'){if(!value.id||!value.companyId||!value.name?.trim())throw Error('Choose a portfolio company and enter a person’s name.');if(state.contacts.some(person=>person.id!==value.id&&personIdentity(person)===personIdentity(value)))throw Error('This person is already mapped at this company. Edit the existing relationship instead.');upsert(state.contacts,value as Contact);}
  else if(kind==='meeting-note'){
   const person=state.contacts.find(person=>person.id===value.personId),note=value.note;

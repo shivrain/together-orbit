@@ -199,13 +199,112 @@
       "limitations": "Adjacent fit: consumer AI, not an established B2B-software opportunity. The historical announcement verifies an angel connection but does not establish current fundraising, Tanay's recommendation to Together, willingness to introduce, or consent.",
       "evidenceStrength": "Strong: candidate founder explicitly names the portfolio founder as an angel investor",
       "fitPriority": "Adjacent: consumer AI; confirm mandate fit before asking for an introduction"
+    },
+    {
+      "id": "research-glen-nikos-dritsakos",
+      "status": "Research candidate",
+      "companyId": "composio",
+      "referrerPersonName": "Soham Ganatra",
+      "candidateName": "Nikos Dritsakos",
+      "startup": "Glen",
+      "website": "https://www.tryglen.com/",
+      "sector": "AI infrastructure · shared organizational context for coding agents",
+      "connectionType": "Portfolio alumnus",
+      "connectionEvidence": "Glen's Y Combinator page describes its solo founder as \"Ex Head of Special Projects (MTS) at Composio\". Its YC launch post adds that \"Composio was my first design partner\" and that Glen is \"now used across the company\".",
+      "whyRelevant": "A Composio alumnus building an institutional learning layer that supplies organizational context to coding agents — adjacent to Composio's own surface without being the same product. YC lists the batch as Summer 2026 and team size as one.",
+      "suggestedAsk": "Glen's YC page says Nikos ran special projects at Composio and that Composio was his first design partner. Before anything else: is that relationship one you would want us near? If so, what did he do at Composio that we should know, and would he welcome an introduction?",
+      "sources": [
+        {
+          "title": "Y Combinator: Glen — founder biography and batch",
+          "url": "https://www.ycombinator.com/companies/glen"
+        },
+        {
+          "title": "Glen: product site",
+          "url": "https://www.tryglen.com/"
+        },
+        {
+          "title": "Together portfolio: Composio founders",
+          "url": "https://www.together.fund/portfolio/composio"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Composio is Glen's paying design-partner customer, so an introduction request touches a live commercial relationship — ask permission before approaching. Departure date and tenure are not stated, and the role title differs between sources. Solo founder, already YC-backed; no fundraising need, consent or endorsement is established.",
+      "evidenceStrength": "Strong: the founder's own YC profile names the Composio role, and the launch post documents the ongoing customer relationship",
+      "fitPriority": "High: B2B agent infrastructure, direct portfolio-alumni route"
+    },
+    {
+      "id": "research-lab0-lakshya-gupta",
+      "status": "Research candidate",
+      "companyId": "emergent",
+      "referrerPersonName": "Mukund Jha",
+      "candidateName": "Lakshya Gupta",
+      "startup": "Lab0",
+      "website": "https://lab0.ai/",
+      "sector": "Applied AI · enterprise software implementation",
+      "connectionType": "Portfolio alumnus",
+      "connectionEvidence": "Lab0's Y Combinator page states that co-founder and CTO Lakshya Gupta \"was a founding engineer at Emergent (YC S24) - scaled it from 0 to $70M ARR - leading integrations, evals and deployments\".",
+      "whyRelevant": "An Emergent founding engineer now building agents that run enterprise software implementation — the forward-deployed work that First Round's February 2026 guide argues is an upmarket motion. YC lists Spring 2026, team size seven, San Francisco.",
+      "suggestedAsk": "Lab0's YC page lists Lakshya Gupta as a founding engineer at Emergent who led integrations and evals. Would you be open to telling us what he worked on, and if you think well of him, introducing us? Onkar Borade is the CEO, so the introduction may need to run through him.",
+      "sources": [
+        {
+          "title": "Y Combinator: Lab0 — founder biographies and batch",
+          "url": "https://www.ycombinator.com/companies/lab0"
+        },
+        {
+          "title": "Lab0: product site",
+          "url": "https://lab0.ai/"
+        },
+        {
+          "title": "Together portfolio: Emergent founders",
+          "url": "https://www.together.fund/portfolio/emergent"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Employer-alumnus link only; no reporting line, departure date or tenure is stated, and two sources give different scale figures ($70M and $100M ARR). Lakshya is CTO rather than CEO, so the introduction path may run through Onkar Borade. Already YC-backed; no fundraising need or consent established.",
+      "evidenceStrength": "Strong: the new company's own YC page states both the founding role and the prior Emergent role",
+      "fitPriority": "High: B2B enterprise software automation, direct portfolio-alumni route"
+    },
+    {
+      "id": "research-avora-daniel-bessonov",
+      "status": "Research candidate",
+      "companyId": "wispr-flow",
+      "referrerPersonName": "Tanay Kothari",
+      "candidateName": "Daniel Bessonov",
+      "startup": "Avora",
+      "website": "https://www.getavora.ai/",
+      "sector": "Vertical AI · dental practice operations",
+      "connectionType": "Portfolio alumnus",
+      "connectionEvidence": "Avora's Y Combinator page states that co-founder Daniel Bessonov \"most recently lead product intelligence at Wispr.ai\", previously at Ramp, Anduril and Lumos. The domain wispr.ai redirects to wisprflow.ai, the same company.",
+      "whyRelevant": "A Wispr Flow alumnus building an operations platform for dental groups: agents that listen to appointments, surface coaching moments and chart notes. That is the same clinical-administration shape as Confido and SPRY, in a different specialty.",
+      "suggestedAsk": "Avora's YC page says Daniel Bessonov led product intelligence at Wispr before founding it. Would you be willing to share what he worked on, and if you rate him, introduce us? We would want to understand how much of the charting workload the agents actually complete.",
+      "sources": [
+        {
+          "title": "Y Combinator: Avora — founder biographies and batch",
+          "url": "https://www.ycombinator.com/companies/avora"
+        },
+        {
+          "title": "Avora: product site",
+          "url": "https://www.getavora.ai/"
+        },
+        {
+          "title": "Together portfolio: Wispr Flow founders",
+          "url": "https://www.together.fund/portfolio/wispr-flow"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Employer-alumnus link only; seniority and tenure at Wispr are not stated on any verified page, and the YC batch is Fall 2024, so this is a historical career link rather than a recent departure. No fundraising need, relationship quality or consent is established.",
+      "evidenceStrength": "Strong for the employment link: the new company's own YC page names the prior Wispr role",
+      "fitPriority": "High: B2B vertical healthcare software, adjacent to Confido and SPRY"
     }
   ],
   "notes": [
-    "Audit completed 2026-09-21 against primary relationship and product sources. Publish the five entries as Research candidates only, never as referrals received. First Voyage must retain its adjacent consumer-fit label.",
+    "Audit completed 2026-09-21 against primary relationship and product sources. Publish these nine entries as Research candidates only, never as referrals received. First Voyage must retain its adjacent consumer-fit label.",
     "Wayline has direct portfolio-alumni evidence and B2B vertical-AI relevance. Meshi and MoltPod have organizational AI workflows plus organizer-confirmed pitch interactions. ARVAM has a verified pitch interaction and B2B EAM product, but AI capability and venture-scale fit are unverified.",
     "Meshi, MoltPod and ARVAM come from one organizer-published session recap. This establishes actual pitch and feedback interactions, not positive sentiment, ongoing mentorship, investment, willingness to introduce or consent. These are historical events, not evidence that Rao is a current active referrer.",
     "First Voyage has a strong founder-disclosed Tanay Kothari angel connection. It remains separately marked adjacent consumer fit because no enterprise offering was established. Its inclusion is useful as an evidenced founder-network route, not a claim of core B2B mandate fit.",
+    "Glen, Lab0 and Avora were added on 2026-09-21 from an exhaustive sweep of Y Combinator founder biographies across batches W22 to S26 (2,959 company pages). Each names a Together portfolio company as the founder's prior employer on the new company's own YC page. These are employer-alumnus links, not investments, advisory roles or endorsements.",
+    "Glen's case carries an extra caution: Composio is Glen's paying design-partner customer, so any approach touches a live commercial relationship. Ask the portfolio founder before contacting the company.",
+    "The YC sweep is exhaustive only for YC-backed alumni founders. Alumni who founded companies outside YC — likely across Kula, Zipy, RevenueHero, Spendflo, Togai, Securden, Bytebeam and DhiWise — were not reachable in that pass and remain unsearched. No qualifying Togai alumnus was found.",
     "Factors.ai was removed: Nivas publicly endorsed the product, but no primary evidence established a personal connection to a named Factors founder. Sharing an event agenda on separate panels is insufficient.",
     "Together portfolio page text extraction exposes an Exited label across several pages, including Wispr Flow. This may be hidden template text; do not infer current portfolio exit status from these extracts. Portfolio founder identity is verified independently of that label.",
     "No private email address, relationship score, NPS, fundraising intent or consent was inferred. Exact publication/event dates were omitted where sources exposed only inconsistent relative labels. Self-reported product and customer claims need diligence.",
@@ -242,5 +341,5 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T17:49:58.555461+00:00"
+  "generatedAt": "2026-09-21T18:52:09.759Z"
 }

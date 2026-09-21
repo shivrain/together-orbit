@@ -77,14 +77,24 @@ export default function ReferralWorkbench({data,onOpen,onAdd,onRequest,onShareFo
       <label className="rw-search"><Search size={16} aria-hidden="true"/><input aria-label="Search referrals" placeholder="Search founder, startup or referrer" value={query} onChange={e=>setQuery(e.target.value)}/>{query&&<button type="button" aria-label="Clear search" onClick={()=>setQuery('')}><X size={14}/></button>}</label>
       <label className="rw-company-filter"><span>Portfolio connection</span><select aria-label="Filter by portfolio company" value={companyId} onChange={e=>setCompanyId(e.target.value)}><option value="all">All portfolio companies</option>{[...companies].sort((a,b)=>a.name.localeCompare(b.name)).map(c=><option key={c.id} value={c.id}>{c.name}</option>)}<option value="other">Other / unattributed</option></select></label>
     </div>
+    {section==='received'&&actualDeals.length>0&&<div className="rw-pulse" aria-label="Pipeline summary">
+      {[{key:'Need introduction',n:actualDeals.filter(d=>viewFor(d)==='Need introduction').length,hint:'waiting on an intro'},
+        {key:'In conversation',n:actualDeals.filter(d=>viewFor(d)==='In conversation').length,hint:'live with Together'},
+        {key:'Overdue',n:actualDeals.filter(d=>followUp(d.followUp)?.overdue&&d.stage!=='Closed').length,hint:'follow-up date passed'},
+        {key:'No next step',n:actualDeals.filter(d=>!d.notes.trim()&&!d.followUp&&d.stage!=='Closed').length,hint:'nothing recorded'}].map(item=>
+        <button type="button" key={item.key} className={`rw-pulse-item${item.n>0&&(item.key==='Overdue')?' rw-pulse-warn':''}`} onClick={()=>{if(item.key==='Need introduction'||item.key==='In conversation')setView(item.key as View)}}>
+          <strong>{item.n}</strong><span>{item.key}</span><small>{item.hint}</small>
+        </button>)}
+    </div>}
+
     {section==='research'?<>
       <p className="rw-research-note">Publicly researched connections to explore. Introductions and recommendations have not been verified.</p>
       {opportunities.length?<div className="rw-opportunities">{opportunities.map(item=><article key={item.id} className="rw-opportunity">
-        <div className="rw-opportunity-top"><span>{item.connectionType}</span><a href={/^https:\/\//.test(item.website)?item.website:undefined} target="_blank" rel="noreferrer">Website<ArrowUpRight size={12}/></a></div>
+        <div className="rw-opportunity-top"><span>{item.connectionType}{item.fitPriority&&<em className="rw-fit">{item.fitPriority.split(':')[0].trim()} fit</em>}</span><a href={/^https:\/\//.test(item.website)?item.website:undefined} target="_blank" rel="noreferrer">Website<ArrowUpRight size={12}/></a></div>
         <h2>{item.startup}</h2><p className="rw-candidate">{item.candidateName} · {item.sector}</p>
         <p className="rw-connection-person">{item.referrerPersonName===item.candidateName?'Reconnect with':'Ask'} <strong>{item.referrerPersonName}</strong><span>{companyName(item.companyId)}</span></p>
         <p className="rw-evidence">{item.connectionEvidence}</p>
-        <details className="rw-research-detail"><summary>Why it is worth a conversation<ChevronRight size={13}/></summary><p>{item.whyRelevant}</p><h3>The specific ask</h3><p>{item.suggestedAsk}</p><p className="rw-limitations">{item.limitations}</p></details>
+        <details className="rw-research-detail"><summary>Why it is worth a conversation<ChevronRight size={13}/></summary><p>{item.whyRelevant}</p><h3>The specific ask</h3><p>{item.suggestedAsk}</p>{item.evidenceStrength&&<><h3>Evidence strength</h3><p>{item.evidenceStrength}</p></>}{item.fitPriority&&<><h3>Mandate fit</h3><p>{item.fitPriority}</p></>}<p className="rw-limitations">{item.limitations}</p></details>
         <div className="rw-opportunity-action"><button type="button" className="sw-outline" onClick={()=>onAskOpportunity(item)}>{data.drafts.some(d=>d.opportunityId===item.id&&!d.archivedAt)?'Continue draft':'Prepare ask'}<ArrowRight size={13}/></button><details><summary>Sources · {item.sources.length}</summary>{item.sources.map(source=><a key={source.url} href={/^https:\/\//.test(source.url)?source.url:undefined} target="_blank" rel="noreferrer">{source.title}<ArrowUpRight size={11}/></a>)}<small>Checked {item.checkedAt}{item.eventDate?` · Event ${item.eventDate}`:''}</small></details></div>
       </article>)}</div>:<div className="rw-filter-empty"><Search size={24}/><h2>No researched connections match</h2><p>Try another company or a broader search.</p><button type="button" className="sw-outline" onClick={clearFilters}>Clear filters</button></div>}
     </>:<>

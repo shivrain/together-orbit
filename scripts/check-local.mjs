@@ -124,5 +124,21 @@ try{
  assert.equal(readLocalData().movements.length,initialMoves.length);
  assert.equal(readLocalData().contacts.length,publicCount);
  assert.equal(readLocalData().reports[0].results.length,35);
+ // Import merges an export back without duplicating public people or deleting records.
+ const {importLocalData}=await server.ssrLoadModule('/src/local-data.ts');
+ const chetan=readLocalData().contacts.find(c=>c.companyId==='confido'&&c.name==='Chetan Reddy');
+ const importFile={version:2,exportedAt:new Date().toISOString(),deals:[{id:'import-deal',companyId:'confido',name:'Imported Founder',startup:'Imported Co',link:'',reason:'Mentioned in a founder catch-up',referrer:'Chetan Reddy',referrerEmail:'',referrerPersonId:chetan.id,category:'Founder inbound',stage:'New',owner:'Shivam',permission:'Ask first',followUp:'',notes:'',messages:[{id:'import-mail',from:'Chetan Reddy',to:'shivam@together.fund',subject:'Intro',body:'Hi',at:'2026-08-27T10:00:00Z',direction:'inbound'}],updatedAt:'2026-08-27T12:00:00Z',unread:false,source:'manual',intake:'Passed to Together'},{id:'',companyId:'confido',name:'No id',startup:'Skip me'}],contacts:[{...chetan,lastContactAt:'2026-08-27',notes:'Monthly catch-up'}],drafts:[],movements:[],settings:{mailbox:'shivam@together.fund'}};
+ const summary=await importLocalData(JSON.stringify(importFile));
+ assert.equal(summary.deals,1);assert.equal(summary.contacts,1);assert.equal(summary.skipped.length,1);
+ const afterImport=readLocalData();
+ assert.equal(afterImport.contacts.length,publicCount,'Import must not duplicate a public person');
+ assert.equal(afterImport.contacts.find(c=>c.id===chetan.id).lastContactAt,'2026-08-27');
+ const importedDeal=afterImport.deals.find(d=>d.id==='import-deal');
+ assert.equal(importedDeal.messages.length,1);assert.equal(importedDeal.updatedAt,'2026-08-27T12:00:00Z');assert.equal(importedDeal.source,'manual');assert.equal(importedDeal.referrerPersonId,chetan.id);
+ await importLocalData(JSON.stringify(importFile));
+ assert.equal(readLocalData().deals.filter(d=>d.id==='import-deal').length,1,'Re-importing must not duplicate');
+ await assert.rejects(()=>importLocalData('not json'),/valid JSON/);
+ await assert.rejects(()=>importLocalData('{"version":9}'),/export file/);
+ resetLocalData();
  console.log('Passed: original content, public founder map, legacy-contact migration, collision-safe IDs, duplicate rejection without data loss, relationship links, sample provenance, unchanged draft touchpoint dates, movement metadata, browser persistence, complete export, and honest disconnected integrations.');
 }finally{await server.close()}

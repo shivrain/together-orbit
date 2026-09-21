@@ -1,10 +1,10 @@
 import {useEffect,useState} from 'react';
-import {ArrowRight,ArrowUpRight,Check,Copy,Download,Mail,Settings2} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,Check,Copy,Download,Mail,Settings2,Upload} from 'lucide-react';
 import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Toaster} from '@/components/ui/sonner';
 import {toast} from 'sonner';
 import {companies} from './data';
-import {loadLocalData,readLocalData,localRequest,exportLocalData,resetLocalData} from './local-data';
+import {loadLocalData,readLocalData,localRequest,exportLocalData,importLocalData,resetLocalData} from './local-data';
 import {stages,type Contact,type Deal,type MailDraft,type FeedItem,type PlatformData,type ReferralOpportunity} from './platform-types';
 import {givenName,resourceBody,resourceSubject} from './engagement-message';
 import {matchReferrer,parseReferralEmail,referralReply,referralRequest,requestOptions,type RequestKind} from './referral-workflow';
@@ -125,7 +125,7 @@ export default function Workspace(){
 
   {modal==='settings'&&<>
    <form onSubmit={e=>{e.preventDefault();const fields=new FormData(e.currentTarget);void perform(async()=>{await save('settings',{mailbox:String(fields.get('mailbox'))});toast.success('Referral address saved')})}}><label>Where founders send referrals<input name="mailbox" required type="email" defaultValue={data.settings.mailbox}/></label><button className="sw-outline" disabled={busy}>Save address</button></form>
-   <div className="sw-backup"><p>Drafts and referral records save in this browser. Email import and shared team storage are not connected.</p><button className="sw-text" onClick={exportLocalData}><Download size={14}/>Export saved records</button></div>
+   <div className="sw-backup"><p>Drafts, referral records and relationship notes save in this browser only. Export a backup, or import a Together Orbit export from a teammate or a prepared file. Imports add and update records by id; nothing is deleted. Email import and shared team storage are not connected.</p><div className="sw-actions"><button className="sw-text" onClick={exportLocalData}><Download size={14}/>Export saved records</button><label className="sw-import"><Upload size={14}/>Import saved records<input type="file" accept="application/json,.json" disabled={busy} onChange={e=>{const file=e.target.files?.[0];e.currentTarget.value='';if(!file)return;void perform(async()=>{const summary=await importLocalData(await file.text());setData(readLocalData());toast.success(`Imported ${summary.deals} referrals, ${summary.contacts} people, ${summary.drafts} drafts and ${summary.movements} moves${summary.skipped.length?` · ${summary.skipped.length} skipped`:''}`);if(summary.skipped.length)toast.message('Skipped records',{description:summary.skipped.slice(0,3).join(' · ')})})}}/></label></div></div>
   </>}
   </DialogContent></Dialog>
  </div>;
