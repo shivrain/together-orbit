@@ -1937,6 +1937,130 @@
         }
       ],
       "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "alum-composio-nikos-dritsakos",
+      "companyId": "composio",
+      "name": "Nikos Dritsakos",
+      "role": "Former Head of Special Projects, Composio; now founder of Glen",
+      "kind": "Alumni",
+      "interests": [
+        "AI agents",
+        "Organizational context",
+        "Developer tools"
+      ],
+      "summary": "His Y Combinator founder profile describes him as ex-Head of Special Projects at Composio and, before that, VP of Technology at FliteHouse. Glen builds a shared learning layer supplying organizational context to coding agents.",
+      "networkAngles": [
+        "A Composio alumnus now building adjacent infrastructure. Composio is also Glen's design-partner customer, so approach through the portfolio founder first.",
+        "Ask what he saw at Composio about where agents lose organizational context."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: Glen — founder biography",
+          "url": "https://www.ycombinator.com/companies/glen",
+          "evidence": "Founder bio reads: Founder at Glen. Ex Head of Special Projects (MTS) at Composio."
+        },
+        {
+          "title": "Y Combinator launch: Glen",
+          "url": "https://www.ycombinator.com/launches/SvL-glen-a-shared-learning-layer-for-all-the-agents-in-your-organization",
+          "evidence": "Launch post states Composio was the first design partner and Glen is now used across the company.",
+          "publishedAt": "2026-08-20"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "alum-emergent-abhinav-soni",
+      "companyId": "emergent",
+      "name": "Abhinav Soni",
+      "role": "Emergent hire #1; now co-founder of BentoLabs AI",
+      "kind": "Alumni",
+      "interests": [
+        "AI agents",
+        "Agent observability",
+        "Developer tools"
+      ],
+      "summary": "BentoLabs' Y Combinator page describes him as Emergent's first hire, crediting him with helping the company top SWE-Bench and scale to $100M ARR. BentoLabs builds a monitoring and learning layer for long-running agents.",
+      "networkAngles": [
+        "An Emergent alumnus building agent observability. One conversation with Emergent's founders covers this and Lab0.",
+        "Ask what broke most often when operating production coding agents at Emergent's scale."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: BentoLabs AI — founder biographies",
+          "url": "https://www.ycombinator.com/companies/bentolabs-ai",
+          "evidence": "Bio states Abhinav was hire #1 and helped Emergent hit SWE-Bench #1 and scale from $0 to $100M ARR in just 8 months."
+        },
+        {
+          "title": "Y Combinator launch: BentoLabs AI",
+          "url": "https://www.ycombinator.com/launches/Qcw-bentolabs-ai-monitoring-and-learning-layer-for-long-running-agents",
+          "evidence": "Launch post: After spending two years at Emergent (YC S24), building and operating production coding agents used by 5M+ users.",
+          "publishedAt": "2026-06-01"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "alum-emergent-kaushik-asp",
+      "companyId": "emergent",
+      "name": "Kaushik ASP",
+      "role": "Emergent hire #2, full-stack engineering; now co-founder of BentoLabs AI",
+      "kind": "Alumni",
+      "interests": [
+        "AI agents",
+        "Agent observability",
+        "Infrastructure"
+      ],
+      "summary": "BentoLabs' Y Combinator page describes him as Emergent's second hire, leading full-stack engineering and building the initial infrastructure for long-running agents. Previously at Decathlon, Pazcare and Synup.",
+      "networkAngles": [
+        "The technical half of the BentoLabs founding pair; both are Emergent alumni.",
+        "Ask what infrastructure long-running agents needed that off-the-shelf tooling did not provide."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: BentoLabs AI — founder biographies",
+          "url": "https://www.ycombinator.com/companies/bentolabs-ai",
+          "evidence": "Bio states Kaushik was hire #2 at Emergent (YC S24), where he led full-stack engineering and built the initial infrastructure for long-running agents."
+        },
+        {
+          "title": "Y Combinator launch: BentoLabs AI",
+          "url": "https://www.ycombinator.com/launches/Qcw-bentolabs-ai-monitoring-and-learning-layer-for-long-running-agents",
+          "evidence": "Launch post names Abhinav and Kaushik as co-founders of BentoLabs AI.",
+          "publishedAt": "2026-06-01"
+        }
+      ],
+      "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "alum-emergent-lakshya-gupta",
+      "companyId": "emergent",
+      "name": "Lakshya Gupta",
+      "role": "Former founding engineer, Emergent; now co-founder & CTO of Lab0",
+      "kind": "Alumni",
+      "interests": [
+        "AI agents",
+        "Enterprise deployment",
+        "Evaluation"
+      ],
+      "summary": "Lab0's Y Combinator page states he was a founding engineer at Emergent leading integrations, evaluations and deployments. Lab0 builds agents that run enterprise software implementation.",
+      "networkAngles": [
+        "An Emergent founding engineer now working on deployment automation. Onkar Borade is Lab0's CEO, so an introduction may run through him.",
+        "Ask what made enterprise deployments slow when he owned integrations at Emergent."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: Lab0 — founder biographies",
+          "url": "https://www.ycombinator.com/companies/lab0",
+          "evidence": "Bio states he was previously a founding engineer at Emergent (YC S24), scaling it from 0 to $70M ARR, leading integrations, evals and deployments."
+        },
+        {
+          "title": "Y Combinator launch: Lab0",
+          "url": "https://www.ycombinator.com/launches/QQr-lab0-ai-fde-for-enterprise-software",
+          "evidence": "Launch post describes Lakshya Gupta as an early engineer at Emergent Labs who scaled the agent platform from 0 to $100M in ARR.",
+          "publishedAt": "2026-05-20"
+        }
+      ],
+      "checkedAt": "2026-09-21"
     }
   ],
   "movements": [
@@ -1957,6 +2081,78 @@
       "confirmed": false,
       "personId": "research-wispr-flow-ariya-rastrow",
       "eventDate": "2026-07-24"
+    },
+    {
+      "id": "move-composio-nikos-dritsakos-2026-08-20",
+      "companyId": "composio",
+      "personId": "alum-composio-nikos-dritsakos",
+      "person": "Nikos Dritsakos",
+      "profile": "https://www.tryglen.com/",
+      "previousRole": "Head of Special Projects (MTS)",
+      "previousCompany": "Composio",
+      "currentRole": "Founder & CEO",
+      "currentCompany": "Glen",
+      "type": "Started company",
+      "observedAt": "2026-09-21",
+      "eventDate": "2026-08-20",
+      "sourceUrl": "https://www.ycombinator.com/companies/glen",
+      "provider": "Public source",
+      "evidence": "Glen's Y Combinator page describes its solo founder as \"Ex Head of Special Projects (MTS) at Composio\". The launch post dated 20 August 2026 adds that Composio was Glen's first design partner and the product is now used across that company. The departure date and tenure are not stated anywhere, and the ongoing commercial relationship means any approach should go through Composio first.",
+      "confirmed": false
+    },
+    {
+      "id": "move-emergent-abhinav-soni-2026-06-01",
+      "companyId": "emergent",
+      "personId": "alum-emergent-abhinav-soni",
+      "person": "Abhinav Soni",
+      "profile": "https://bentolabs.ai/",
+      "previousRole": "Hire #1, led agent systems",
+      "previousCompany": "Emergent",
+      "currentRole": "Co-founder",
+      "currentCompany": "BentoLabs AI",
+      "type": "Started company",
+      "observedAt": "2026-09-21",
+      "eventDate": "2026-06-01",
+      "sourceUrl": "https://www.ycombinator.com/companies/bentolabs-ai",
+      "provider": "Public source",
+      "evidence": "BentoLabs' Y Combinator page states Abhinav was Emergent's first hire and helped it top SWE-Bench and scale from $0 to $100M ARR in eight months. The launch post of 1 June 2026 says the founders spent two years at Emergent. No exact departure date is stated.",
+      "confirmed": false
+    },
+    {
+      "id": "move-emergent-kaushik-asp-2026-06-01",
+      "companyId": "emergent",
+      "personId": "alum-emergent-kaushik-asp",
+      "person": "Kaushik ASP",
+      "profile": "https://bentolabs.ai/",
+      "previousRole": "Hire #2, led full-stack engineering",
+      "previousCompany": "Emergent",
+      "currentRole": "Co-founder",
+      "currentCompany": "BentoLabs AI",
+      "type": "Started company",
+      "observedAt": "2026-09-21",
+      "eventDate": "2026-06-01",
+      "sourceUrl": "https://www.ycombinator.com/companies/bentolabs-ai",
+      "provider": "Public source",
+      "evidence": "BentoLabs' Y Combinator page states Kaushik was hire #2 at Emergent, where he led full-stack engineering and built the initial infrastructure for long-running agents. The launch post of 1 June 2026 names both co-founders. No exact departure date is stated.",
+      "confirmed": false
+    },
+    {
+      "id": "move-emergent-lakshya-gupta-2026-05-20",
+      "companyId": "emergent",
+      "personId": "alum-emergent-lakshya-gupta",
+      "person": "Lakshya Gupta",
+      "profile": "https://lab0.ai/",
+      "previousRole": "Founding engineer, integrations and evaluations",
+      "previousCompany": "Emergent",
+      "currentRole": "Co-founder & CTO",
+      "currentCompany": "Lab0",
+      "type": "Started company",
+      "observedAt": "2026-09-21",
+      "eventDate": "2026-05-20",
+      "sourceUrl": "https://www.ycombinator.com/companies/lab0",
+      "provider": "Public source",
+      "evidence": "Lab0's Y Combinator page states Lakshya was a founding engineer at Emergent leading integrations, evals and deployments. The launch post of 20 May 2026 repeats the Emergent background with a different ARR figure ($100M rather than $70M), so treat the scale claim as unverified.",
+      "confirmed": false
     }
   ]
 }

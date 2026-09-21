@@ -34,9 +34,21 @@ Update both `public/data/engagement.json` and `docs/data/engagement.json` identi
 
 Profile conversation angles are editorial suggestions, not established personal networks. Keep private assessments, email addresses, meeting notes and referral activity out of public research. Existing private browser IDs and edits take precedence; public provenance refreshes independently. Review `scripts/check-network-research.mjs` when changing the data contract.
 
+## Talent movement (Activity)
+
+`public/data/network.json` carries a `movements` array behind the Activity view. Priority is people who LEFT a portfolio company **to start something**; people who moved to another employer are secondary context.
+
+Each movement needs a matching person in `network.people` with the same `companyId` and `name` (usually `kind: "Alumni"`), a `sourceUrl` on a page that was actually fetched, an `eventDate` with day precision, `provider: "Public source"` and `confirmed: false` until a human reads the source. Y Combinator launch pages show only relative dates in their visible text; the absolute date is in the embedded JSON as `created_at` — grep for it rather than guessing from "4 months ago". YC company pages carry no date at all, so a company page alone cannot establish an `eventDate`.
+
+The most productive channel found so far is the Y Combinator public directory: enumerate company pages and grep founder biographies for `ex-<company>`, `previously at <company>`, `founding engineer at <company>`. That is exhaustive for YC-backed alumni and blind to everyone else. LinkedIn is login-walled and is never acceptable evidence.
+
+Never infer that a departure means someone is fundraising, and never imply consent to be contacted.
+
 ## Referral research
 
-`public/data/referral-opportunities.json` contains prospects to ask about, never introductions received. Each entry needs a named portfolio connection and primary-source evidence of an actual interaction, advisory relationship, investment or alumni link. Shared schools, former employers, social tags and event co-attendance alone do not establish a warm introduction path. Include product context, a specific ask, research date, limitations and at least two source references. Qualify adjacent mandate fit explicitly.
+`public/data/referral-opportunities.json` contains prospects to ask about, never introductions received.
+
+Entries marked `dummy: true` are placeholders for demonstration. `scripts/check-network-research.mjs` enforces their honesty: a dummy lead must use a `placeholder-` id prefix, carry `status: "Placeholder"`, disclose itself in `limitations`, state a `matchBasis`, and cite **no** sources and **no** website — so a fabricated match can never borrow the credibility of a real one. At least one evidence-backed lead must always remain. Delete the placeholders once real referral data exists; do not let them accumulate. Each entry needs a named portfolio connection and primary-source evidence of an actual interaction, advisory relationship, investment or alumni link. Shared schools, former employers, social tags and event co-attendance alone do not establish a warm introduction path. Include product context, a specific ask, research date, limitations and at least two source references. Qualify adjacent mandate fit explicitly.
 
 Portfolio alumni who founded companies are the most productive source found so far. The Y Combinator public company index can be enumerated and every founder biography grepped for portfolio-company names; a September 2026 pass over batches W22–S26 (2,959 pages) produced four qualifying alumni across three companies. That method is exhaustive for YC-backed founders only and says nothing about alumni outside YC.
 

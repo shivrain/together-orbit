@@ -20,15 +20,24 @@ Choose a read and a person, then **Send in Gmail** opens a compose window alread
 
 Source findings and our suggested applications are distinct. Quoting an abstract is not the same as having read the paper, and the briefs say so. Public roles inform relevance; they do not establish private interests, current company problems, relationships or consent.
 
-## Referrals
+## Leads
 
-**Founders to ask about** contains nine researched paths: five portfolio alumni now founding companies, a named advisor relationship, three documented founder pitches, and one explicitly adjacent consumer-AI angel connection. Each includes the relationship evidence, product context, suggested ask, source links and limitations. Research candidates are separate from actual referrals.
+**Founders to ask about.** Someone in the portfolio is already one step away from a founder worth meeting; these are the routes worth asking about.
 
-The alumni entries came from an exhaustive sweep of Y Combinator founder biographies across batches W22–S26 (2,959 company pages), matching prior employers against the portfolio. That sweep is exhaustive for YC-backed alumni only; alumni who founded companies outside YC remain unsearched.
+- **Evidence-backed routes (9)** — each names a documented connection: an advisory listing, a disclosed angel investment, a recorded pitch session, or a former employee now founding. Five came from an exhaustive sweep of Y Combinator founder biographies across batches W22–S26 (2,959 company pages), matching prior employers against the portfolio. That sweep is exhaustive for YC-backed alumni only.
+- **Placeholder matches (30)** — dummy data, clearly marked. The startups are real companies from Together's own recorded dealflow, but the portfolio company beside each is matched on sector overlap alone. Nobody referred them. They exist to show the shape of the view until real referral data replaces them, and the validator refuses to let a placeholder carry a source, a website or an unmarked status.
 
-**Referral pipeline** records who shared a founder, the originating portfolio company, permission, conversation stage and next action. It distinguishes a lead known to a referrer from an introduction passed to Together. A summary strip counts what needs an introduction, what is live, what is overdue and what has no next step recorded. Fictional workflow examples are hidden by default and clearly labeled.
+The public referral form at `#refer` prepares a structured email to `shivam@together.fund` (or the mailbox named in a shared link). The founder sends it from their own email app. There is no live inbox connection.
 
-The public referral form at `#refer` prepares a structured email to `shivam@together.fund` (or the explicitly chosen mailbox in a shared link). The founder sends it from their email app. Paste the received email into Add referral to fill its fields, review and save. There is no live inbox connection or automatic import.
+The referral pipeline — the stage-tracked table of introductions received — was removed. `Deal`, `localRequest('deal')`, export and import still hold that data, so restoring the view is a small change.
+
+## Activity
+
+Who just left a portfolio company, and what they are building now. People who left **to start something** sort first; people who moved to another company are context.
+
+Each row shows the person, the role they held, where they are now, the evidence quoted from a public page, the event date and a link to the source. Nothing is marked reviewed until a human opens the source. "Ask <founder>" drafts a note to the portfolio founder asking what that person was like to work with.
+
+A departure is not evidence that someone is raising money, and none of this implies consent to be contacted.
 
 ## Storage and research
 
