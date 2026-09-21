@@ -16,8 +16,12 @@ Referrals, recipients and drafts are stored only in each visitor's browser. Expo
 
 ## Development
 
-Use Node.js 22.13 or newer. Run `npm ci`, then `npm run dev`. Run `npm run build` to regenerate `docs/`. GitHub Pages publishes the built files in `docs/`.
+Use Node.js 22.13 or newer. Run `npm ci`, then `npm run dev`. Run `npm run build` to regenerate `docs/`. GitHub Actions publishes the built files in `docs/` after relevant commits.
+
+Public website scans run through GitHub Actions daily at 10:00 IST, with a due check for the configured two-day or weekly cadence. The first independent scan completed successfully and processed all 35 companies (32 sources checked, 3 failures recorded).
 
 The published report is `public/data/monitoring.json`; the same data is copied to `docs/data/monitoring.json`. Website scans report source text changes and failures, not employee departures or startup intent.
+
+The engagement feed is independently published as `public/data/engagement.json` and `docs/data/engagement.json`; editing those files does not require rebuilding the UI.
 
 No credentials belong in this repository or browser bundle.

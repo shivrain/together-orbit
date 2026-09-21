@@ -1,0 +1,164 @@
+{
+  "feed": [
+    {
+      "id": "nist-token-protection-2026-09-15",
+      "title": "NIST's new token-protection recommendations",
+      "publisher": "NIST",
+      "url": "https://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587",
+      "publishedAt": "2026-09-15",
+      "companyIds": [
+        "scalekit"
+      ],
+      "topic": "Final report announcement",
+      "summary": "NIST finalized recommendations covering token verification, key management and workload identity, including a preference for short-lived credentials.",
+      "whyRelevant": "ScaleKit builds authentication for software and agents. This provides a current reference for architecture discussions and enterprise security reviews.",
+      "emailSubject": "New NIST token guidance that may be useful for ScaleKit",
+      "emailBody": "Hi Satya,\n\nSharing NIST's 15 September release of its final token-protection report:\nhttps://csrc.nist.gov/news/2026/protecting-tokens-and-assertions-nist-ir-8587\n\nThe workload-identity section and updated guidance on signing keys stood out given ScaleKit's authentication focus. It could be useful context for enterprise security conversations, particularly around short-lived tokens and lifecycle controls.\n\nAre customers asking more about workload identity or token governance at the moment?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "google-voice-models-2026-09-15",
+      "title": "Google's new real-time voice developer models",
+      "publisher": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
+      "publishedAt": "2026-09-15",
+      "companyIds": [
+        "wispr-flow"
+      ],
+      "topic": "Model release",
+      "summary": "Google announced Gemini 3.8 Live models for real-time dialogue and described its transcription offering for developers.",
+      "whyRelevant": "Wispr Flow turns speech into text across applications. New voice APIs are relevant to its input technology options and evolving user expectations.",
+      "emailSubject": "Google's latest voice release \u2014 relevant context for Flow",
+      "emailBody": "Hi Tanay,\n\nGoogle published a new voice developer release on 15 September:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\n\nThe interesting shift for Flow is the combination of dialogue, task execution and dedicated transcription in one developer suite. It seems useful context for where users may start expecting dictation to become interaction.\n\nDoes that boundary match what you're hearing from Flow users, or is focused dictation still the stronger need?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "nist-agent-identity-2026-08-27",
+      "title": "NIST on agent identity and delegated access",
+      "publisher": "NIST",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+      "publishedAt": "2026-08-27",
+      "companyIds": [
+        "composio"
+      ],
+      "topic": "Technical policy analysis",
+      "summary": "NIST examines credential sharing, excessive permissions and approval fatigue in agent deployments, connecting these problems to established identity practices.",
+      "whyRelevant": "Composio connects agents to external tools. Delegated authority and permission boundaries are directly relevant to those integrations and buyer discussions.",
+      "emailSubject": "NIST's agent identity piece looks relevant to Composio",
+      "emailBody": "Hi Soham,\n\nThis NIST article from 27 August seemed relevant to Composio's role connecting agents to tools:\nhttps://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation\n\nIt puts credential sharing, tightly scoped delegation and approval fatigue in the same conversation. The discussion could be useful for explaining the distinction between a working integration and one an enterprise can govern.\n\nWhich of those is creating the most friction in customer deployments today?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "google-transcribe-2026-08-26",
+      "title": "Speech cleanup and formatting enter Google's transcription model",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "publishedAt": "2026-08-26",
+      "companyIds": [
+        "wispr-flow"
+      ],
+      "topic": "Speech-to-text model release",
+      "summary": "Google introduced a transcription model with streaming and recorded-audio modes, including handling of self-corrections, filler words and formatting.",
+      "whyRelevant": "Those features overlap with voice-to-written-text workflows. Flow can use the release as a concrete prompt to assess differentiation beyond recognition accuracy.",
+      "emailSubject": "A concrete transcription development to compare notes on",
+      "emailBody": "Hi Sahaj,\n\nSharing Google's 26 August Transcribe announcement:\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/\n\nThe self-correction and formatting features felt especially relevant to Flow. My takeaway is that a useful comparison now includes correction effort, vocabulary and application context, alongside transcription accuracy.\n\nWould that be the right way to frame the changing baseline, or is there another dimension you think matters more?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-coding-expertise-2026-06-16",
+      "title": "What 400,000 coding-agent sessions suggest about user expertise",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publishedAt": "2026-06-16",
+      "companyIds": [
+        "emergent"
+      ],
+      "topic": "Original usage research",
+      "summary": "Anthropic analyzed roughly 400,000 interactive sessions and found an association between task-domain expertise and successful agent use.",
+      "whyRelevant": "Emergent helps people build software with agents. The study suggests a useful onboarding question: how to help users express requirements and recognize errors.",
+      "emailSubject": "An onboarding angle from Anthropic's coding-agent research",
+      "emailBody": "Hi Mukund,\n\nAnthropic's June study of roughly 400,000 sessions has a useful angle for Emergent:\nhttps://www.anthropic.com/research/claude-code-expertise\n\nIts finding is that domain understanding remains valuable even when the agent does the coding. My product question is whether onboarding can help users state requirements and verify results more effectively, without making them learn to code.\n\nDoes that line up with the difference you see between users who finish an app and those who get stuck?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "cms-epa-early-adopters-2026-05-13",
+      "title": "CMS names early adopters for electronic prior authorization",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum",
+      "publishedAt": "2026-05-13",
+      "companyIds": [
+        "rapid-claims"
+      ],
+      "topic": "Healthcare interoperability initiative",
+      "summary": "CMS announced 29 early adopters working on prior-authorization implementation barriers, including system integration, status visibility and technical handoffs.",
+      "whyRelevant": "Rapid Claims works on healthcare billing and claims. Upstream authorization handoffs offer a relevant product and partnership discussion, without assuming its roadmap.",
+      "emailSubject": "CMS's prior-authorization implementation push",
+      "emailBody": "Hi Dushyant,\n\nSharing CMS's May announcement of early adopters for electronic prior authorization:\nhttps://www.cms.gov/newsroom/press-releases/cms-announces-early-adopters-advance-solutions-electronic-prior-authorization-accelerating-momentum\n\nThe practical emphasis is on status visibility and handoffs between systems, alongside the list of participating providers and EHR companies. Given Rapid Claims' billing focus, it seems worth watching where authorization data becomes usable downstream.\n\nAre these handoff problems coming up in customer conversations, or is the immediate pain elsewhere?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "qualtrics-agentic-research-2026-05-11",
+      "title": "Qualtrics lays out its agentic research direction",
+      "publisher": "Qualtrics",
+      "url": "https://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/",
+      "publishedAt": "2026-05-11",
+      "companyIds": [
+        "metaforms"
+      ],
+      "topic": "Product direction and industry analysis",
+      "summary": "Qualtrics describes agents it is developing for planning, study design, fieldwork and synthesis, with explicit attention to methodology and knowledge gaps.",
+      "whyRelevant": "Metaforms automates research operations. This incumbent roadmap is useful context for positioning around agency workflows, interoperability and reliable execution.",
+      "emailSubject": "Qualtrics' research-agent direction \u2014 relevant for Metaforms",
+      "emailBody": "Hi Akshat,\n\nQualtrics laid out its agentic research direction in May:\nhttps://www.qualtrics.com/articles/strategy-research/agentic-ai-market-research/\n\nThe interesting part for Metaforms is how broadly it connects planning, fieldwork and synthesis, while emphasizing methodological rigor. It could sharpen the positioning discussion around what agencies need across their existing tools versus inside one platform.\n\nAre agencies asking for end-to-end orchestration, or still buying around a specific operational bottleneck?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-hiring-evaluations-2026-01-21",
+      "title": "How AI is changing technical hiring assessments",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "publishedAt": "2026-01-21",
+      "companyIds": [
+        "kula"
+      ],
+      "topic": "First-hand hiring case study",
+      "summary": "Anthropic describes repeatedly redesigning a performance-engineering take-home as newer models reduced its ability to distinguish candidates.",
+      "whyRelevant": "Kula serves hiring teams. This is a concrete customer-conversation resource on assessment validity as AI assistance becomes common.",
+      "emailSubject": "A useful customer discussion on AI and hiring assessments",
+      "emailBody": "Hi Achuthanand,\n\nThis January account from Anthropic feels relevant to the assessment discussions Kula's customers may be having:\nhttps://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n\nIt describes three redesigns of a technical take-home as model capabilities improved. The useful question is what evidence a hiring process should capture when a polished submission no longer reveals how the candidate reached it.\n\nAre your customers changing assessment formats, or mainly asking for clearer policies on AI use?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "anthropic-agent-evals-2026-01-09",
+      "title": "Evaluating complete agent workflows",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "publishedAt": "2026-01-09",
+      "companyIds": [
+        "confido"
+      ],
+      "topic": "Technical evaluation guide",
+      "summary": "Anthropic explains task-based evaluation for agents that use tools and change state over multiple turns, including repeated trials and outcome grading.",
+      "whyRelevant": "Confido automates healthcare administration. The evaluation approach can inform checks on completed workflows, human handoffs and system updates.",
+      "emailSubject": "A workflow-evaluation resource for Confido's agents",
+      "emailBody": "Hi Chetan,\n\nSharing Anthropic's January guide to evaluating multi-step agents:\nhttps://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n\nThe distinction between a convincing response and a correctly completed task seems especially useful for healthcare administration. My thought for Confido is to make system updates and successful human handoffs explicit test outcomes.\n\nWhich parts of an administrative workflow are proving hardest to evaluate consistently?",
+      "checkedAt": "2026-09-20"
+    },
+    {
+      "id": "qualtrics-synthetic-research-2026-01-05",
+      "title": "Qualtrics' study of synthetic survey responses",
+      "publisher": "Qualtrics",
+      "url": "https://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/",
+      "publishedAt": "2026-01-05",
+      "companyIds": [
+        "metaforms"
+      ],
+      "topic": "Vendor-authored research",
+      "summary": "Qualtrics presents research comparing its fine-tuned approach with general-use language models for synthetic survey responses.",
+      "whyRelevant": "Metaforms serves research operations teams. Synthetic response quality may affect client expectations, validation workflows and where human panels remain necessary.",
+      "emailSubject": "Synthetic survey quality: a useful research-methods discussion",
+      "emailBody": "Hi Arjun,\n\nSharing Qualtrics' January research on synthetic survey responses:\nhttps://www.qualtrics.com/articles/strategy-research/qualtrics-ai-outperforms-general-use-llms/\n\nIt's vendor-authored, so I'd treat the comparisons as something to examine rather than settled proof. For Metaforms, the useful conversation may be where agencies draw the boundary between exploratory synthetic work and research that needs human respondents.\n\nIs that boundary becoming part of client briefs yet?",
+      "checkedAt": "2026-09-20"
+    }
+  ]
+}

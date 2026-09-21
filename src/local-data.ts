@@ -4,16 +4,18 @@ import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice} 
 const storageKey='together-orbit-standalone-v1';
 export const workflowUrl='https://github.com/shivrain/together-orbit/actions/workflows/portfolio-monitor.yml';
 type Published={reports:MonitorReport[];notices:Notice[];settings:Pick<Settings,'enabled'|'frequencyDays'|'schedulerRegistered'>;generatedAt:string};
+let engagement=seed.feed;
 let published:Published={reports:seed.reports as MonitorReport[],notices:seed.notices,settings:{enabled:seed.settings.enabled,frequencyDays:2,schedulerRegistered:false},generatedAt:seed.reports[0]?.completedAt||''};
 function saved():Partial<PlatformData>{const raw=localStorage.getItem(storageKey)||localStorage.getItem('together-orbit-public-demo-v1');if(!raw)return {};try{const d=JSON.parse(raw);if(!Array.isArray(d.deals)||!Array.isArray(d.drafts)||!Array.isArray(d.contacts))throw Error();return d}catch{throw Error('Saved browser data could not be read. Use Reset local data to restore the initial workspace.')}}
 export function readLocalData():PlatformData{
  const local=saved();const base=seed as unknown as PlatformData;const settings={...base.settings,...local.settings,...published.settings};
  const readNotices=new Set((local.notices||[]).filter(n=>n.read).map(n=>n.id));
- return structuredClone({...base,deals:local.deals||[...base.deals,...sampleDeals],contacts:local.contacts||base.contacts,drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:base.feed,movements:base.movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
+ return structuredClone({...base,deals:local.deals||[...base.deals,...sampleDeals],contacts:local.contacts||base.contacts,drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements:base.movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
 }
 export async function loadLocalData():Promise<PlatformData>{
  try{const response=await fetch(new URL('data/monitoring.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.reports)&&Array.isArray(value.notices)&&[2,7].includes(value.settings?.frequencyDays))published=value;}}
  catch{/* The bundled last published report remains available offline. */}
+ try{const response=await fetch(new URL('data/engagement.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.feed))engagement=value.feed;}}catch{}
  return readLocalData();
 }
 export function resetLocalData(){localStorage.removeItem(storageKey);localStorage.removeItem('together-orbit-public-demo-v1')}
