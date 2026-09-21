@@ -1,0 +1,246 @@
+{
+  "opportunities": [
+    {
+      "id": "research-wayline-eric-rowell",
+      "status": "Research candidate",
+      "companyId": "ui-flow",
+      "referrerPersonName": "Eric Rowell",
+      "candidateName": "Eric Rowell",
+      "startup": "Wayline",
+      "website": "https://wayline.com/",
+      "sector": "Vertical AI · property management",
+      "connectionType": "Portfolio alumnus",
+      "connectionEvidence": "Together lists Eric as Uiflow's co-founder and CTO. His current YC founder bio identifies him as Wayline's co-founder and CTO and explicitly describes Uiflow as a previous company.",
+      "whyRelevant": "A repeat portfolio founder now building voice and text agents for leasing, maintenance and tenant operations. The specific diligence angle is whether property-specific knowledge and workflow integrations create durable differentiation beyond a voice interface.",
+      "suggestedAsk": "I saw that you and Jason are building Wayline for property managers. Would you be open to reconnecting with Together? I'd love to understand which leasing or maintenance workflow you can now complete end to end, and where the team could use help.",
+      "sources": [
+        {
+          "title": "Together portfolio: UI Flow founders",
+          "url": "https://www.together.fund/portfolio/ui-flow"
+        },
+        {
+          "title": "Wayline on Y Combinator: active founders and product",
+          "url": "https://www.ycombinator.com/companies/wayline"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Historical alumni connection, not a newly detected departure. YC lists Wayline as founded in 2025. No referral, current fundraising need or permission to contact has been recorded. Current relationship strength is unverified; do not treat this as an introduction received.",
+      "evidenceStrength": "Strong: Together founder listing plus the same founder’s current YC biography",
+      "fitPriority": "High: B2B vertical AI, direct portfolio-alumni reconnect"
+    },
+    {
+      "id": "research-bohocap-vishalini-paliwal",
+      "status": "Research candidate",
+      "companyId": "zipy",
+      "referrerPersonName": "Vishalini Paliwal",
+      "candidateName": "Dhaval Makwana",
+      "startup": "Bohocap.ai",
+      "website": "https://bohocap.ai/",
+      "sector": "B2B AI · trading and execution infrastructure",
+      "connectionType": "Named company advisor",
+      "connectionEvidence": "Bohocap.ai's own team page names Dhaval Makwana as Founder & CEO and Vishalini Paliwal as Advisor. Zipy's company page and Together's portfolio page identify Vishalini as Zipy's co-founder.",
+      "whyRelevant": "The company describes AI technology for businesses, including trading execution, order handling, risk controls and monitoring. Its institutional use cases create a concrete infrastructure conversation. The key qualification is whether customers buy a repeatable software product or mainly custom development and trading strategies.",
+      "suggestedAsk": "Bohocap's team page lists you as an advisor to Dhaval's company. Is the execution infrastructure becoming a repeatable product for institutional customers? If you think the software opportunity fits Together and Dhaval would welcome it, would you introduce us for a product conversation?",
+      "sources": [
+        {
+          "title": "Bohocap.ai: founder, advisor, products and business focus",
+          "url": "https://bohocap.ai/"
+        },
+        {
+          "title": "Zipy: Vishalini Paliwal, Co-Founder & CEO",
+          "url": "https://www.zipy.ai/about-us"
+        },
+        {
+          "title": "Together portfolio: Zipy founders",
+          "url": "https://www.together.fund/portfolio/zipy"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "The advisor listing is undated; current involvement and willingness to introduce need confirmation. No referral, fundraising need or consent is established. Product and institutional-use descriptions are company claims; no returns, scale or customer results are independently verified.",
+      "evidenceStrength": "Strong: the target company's own page names both its founder and the portfolio founder as advisor",
+      "fitPriority": "Medium: B2B AI infrastructure; product repeatability and venture fit need qualification"
+    },
+    {
+      "id": "research-meshi-rao-cherukuri",
+      "status": "Research candidate",
+      "companyId": "zipstack",
+      "referrerPersonName": "Rao Cherukuri",
+      "candidateName": "Tom O'Malley",
+      "startup": "Meshi AI",
+      "website": "https://meshi.io/",
+      "sector": "Applied AI · professional relationship intelligence",
+      "connectionType": "Founder pitched directly to portfolio founder",
+      "connectionEvidence": "Venture Dock's own session recap names Tom O'Malley of Meshi among three founders who pitched to Rao Cherukuri and received investor feedback. Together lists Rao as Zipstack's co-founder and executive chairman.",
+      "whyRelevant": "Meshi applies agents to contact enrichment, introductions and ongoing network coordination, with products for organizations, events and membership groups. A useful question is whether its organizational workflow has a repeatable buyer and measurable value beyond personal networking.",
+      "suggestedAsk": "Venture Dock's recap mentioned Tom O'Malley's Meshi pitch in your session. Did the relationship-intelligence product stand out to you? If you think we should meet him and he is open to it, a short introduction would be helpful.",
+      "sources": [
+        {
+          "title": "Venture Dock: three founders pitch to Rao Cherukuri",
+          "url": "https://www.linkedin.com/posts/joinventuredock_wherefoundersbelong-startupfunding-venturecapital-activity-7436855060623699976-Dcco"
+        },
+        {
+          "title": "Together portfolio: Zipstack founders",
+          "url": "https://www.together.fund/portfolio/zipstack"
+        },
+        {
+          "title": "Meshi: product and organizational use cases",
+          "url": "https://meshi.io/about"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "The source establishes a pitch and feedback interaction only; it does not establish ongoing mentorship, investment, an endorsement or consent to an introduction. Exact session date was not established. Company product descriptions are self-reported. Confirm the current relationship with Rao before using this historical event as an introduction route.",
+      "evidenceStrength": "Strong for an actual pitch interaction; ongoing relationship and endorsement unverified",
+      "fitPriority": "High: applied AI with identifiable organizational workflows"
+    },
+    {
+      "id": "research-moltpod-rao-cherukuri",
+      "status": "Research candidate",
+      "companyId": "zipstack",
+      "referrerPersonName": "Rao Cherukuri",
+      "candidateName": "Aditya Advani",
+      "startup": "MoltPod",
+      "website": "https://moltpod.com/",
+      "sector": "Applied AI · event operations and GTM automation",
+      "connectionType": "Founder pitched directly to portfolio founder",
+      "connectionEvidence": "Venture Dock identifies MoltPod CEO Aditya Advani as a founder who pitched in Rao Cherukuri's feedback session. MoltPod's own workshop page names Aditya and Dominic Damoah as its co-founders.",
+      "whyRelevant": "MoltPod is building agents for event preparation, participant context, sponsor outreach and follow-up across CRM and communication tools. This is a concrete B2B workflow in which execution, integrations and customer-specific context can be evaluated.",
+      "suggestedAsk": "What was your take on Aditya's MoltPod pitch? The event-operations entry point into GTM agents looks worth understanding. If he would welcome a conversation, could you introduce us to learn which work customers already trust the product to execute?",
+      "sources": [
+        {
+          "title": "Venture Dock: three founders pitch to Rao Cherukuri",
+          "url": "https://www.linkedin.com/posts/joinventuredock_wherefoundersbelong-startupfunding-venturecapital-activity-7436855060623699976-Dcco"
+        },
+        {
+          "title": "Together portfolio: Zipstack founders",
+          "url": "https://www.together.fund/portfolio/zipstack"
+        },
+        {
+          "title": "MoltPod: AI employees for event workflows",
+          "url": "https://moltpod.com/"
+        },
+        {
+          "title": "MoltPod-hosted workshop: co-founders and product",
+          "url": "https://luma.com/z0s52dxq"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "The public pitch is evidence of an interaction, not of Rao's recommendation or a standing advisory relationship. No fundraising status, revenue or consent is verified. The current website is more focused on event/GTM work than the older workshop's general agent-orchestration description. Confirm the current relationship with Rao before using this historical event as an introduction route.",
+      "evidenceStrength": "Strong for an actual pitch interaction; ongoing relationship and endorsement unverified",
+      "fitPriority": "High: applied AI with identifiable organizational workflows"
+    },
+    {
+      "id": "research-arvam-rao-cherukuri",
+      "status": "Research candidate",
+      "companyId": "zipstack",
+      "referrerPersonName": "Rao Cherukuri",
+      "candidateName": "Adhiyaman A",
+      "startup": "ARVAM Solutions",
+      "website": "https://arvamtech.com/",
+      "sector": "Enterprise SaaS · industrial asset management",
+      "connectionType": "Founder pitched directly to portfolio founder",
+      "connectionEvidence": "Venture Dock's recap identifies Adhiyaman A, co-founder of ARVAM Technology Solutions, as a participant who pitched to Rao Cherukuri. ARVAM's company page describes enterprise asset-management software.",
+      "whyRelevant": "A focused industrial-software business connecting inspections, maintenance, inventory and procurement. Its site includes customer implementation testimonials. The question for Together is whether this is a scalable software product with a repeatable deployment model, rather than mainly custom implementation work.",
+      "suggestedAsk": "After hearing Adhiyaman's ARVAM pitch, did you see a scalable product opportunity in the maintenance and asset-management workflow? If so, and he is open to it, could you connect us to understand deployment effort and the product's repeatability across factories?",
+      "sources": [
+        {
+          "title": "Venture Dock: three founders pitch to Rao Cherukuri",
+          "url": "https://www.linkedin.com/posts/joinventuredock_wherefoundersbelong-startupfunding-venturecapital-activity-7436855060623699976-Dcco"
+        },
+        {
+          "title": "Together portfolio: Zipstack founders",
+          "url": "https://www.together.fund/portfolio/zipstack"
+        },
+        {
+          "title": "ARVAM Solutions: enterprise asset-management product",
+          "url": "https://arvamtech.com/"
+        },
+        {
+          "title": "ARVAM company page: website and EAM focus",
+          "url": "https://www.linkedin.com/company/arvamtech-solutions"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Evidence establishes a pitch, not an investment or recommendation. AI capabilities and venture-scale suitability are not established. Product and customer claims come from ARVAM's own pages and require validation. Candidate name is preserved exactly as named in the primary event source. Confirm the current relationship with Rao before using this historical event as an introduction route.",
+      "evidenceStrength": "Strong for an actual pitch interaction; ongoing relationship and endorsement unverified",
+      "fitPriority": "Medium: B2B SaaS; AI capability and venture suitability require qualification"
+    },
+    {
+      "id": "research-first-voyage-tanay-kothari",
+      "status": "Research candidate",
+      "companyId": "wispr-flow",
+      "referrerPersonName": "Tanay Kothari",
+      "candidateName": "Besart Çopa",
+      "startup": "First Voyage",
+      "website": "https://firstvoyage.com/",
+      "sector": "Consumer AI · habit formation · adjacent fit",
+      "connectionType": "Publicly disclosed angel investment",
+      "connectionEvidence": "In his own funding announcement, First Voyage co-founder Besart Çopa explicitly names Tanay Kothari, CEO of Wispr Flow, among the company's angel investors. Together lists Tanay as Wispr Flow's founder and CEO.",
+      "whyRelevant": "A directly verified example of a portfolio founder backing another founding team. First Voyage builds generative-AI consumer experiences, including Momo for habit formation. This is an adjacent-fit conversation about Tanay's founder judgment and personal-AI network; an enterprise-software offering was not established.",
+      "suggestedAsk": "I saw Besart's announcement naming you as a First Voyage angel. What gave you conviction in him and Egehan? The product is consumer AI, so I'd first value your perspective on the team and whether a Together conversation would be useful. If so, and they are open to it, would you introduce us?",
+      "sources": [
+        {
+          "title": "Besart Çopa announces First Voyage funding and names Tanay Kothari",
+          "url": "https://www.linkedin.com/posts/besartcopa_first-voyage-raises-25m-for-its-ai-companion-activity-7406387398713974784-VYah"
+        },
+        {
+          "title": "First Voyage: company purpose",
+          "url": "https://firstvoyage.com/"
+        },
+        {
+          "title": "SignalFire confirms its backing of First Voyage",
+          "url": "https://www.linkedin.com/posts/signalfire_first-voyage-raises-25m-for-its-ai-companion-activity-7406458142831632385-urNV"
+        },
+        {
+          "title": "Together portfolio: Wispr Flow founders",
+          "url": "https://www.together.fund/portfolio/wispr-flow"
+        }
+      ],
+      "checkedAt": "2026-09-21",
+      "limitations": "Adjacent fit: consumer AI, not an established B2B-software opportunity. The historical announcement verifies an angel connection but does not establish current fundraising, Tanay's recommendation to Together, willingness to introduce, or consent.",
+      "evidenceStrength": "Strong: candidate founder explicitly names the portfolio founder as an angel investor",
+      "fitPriority": "Adjacent: consumer AI; confirm mandate fit before asking for an introduction"
+    }
+  ],
+  "notes": [
+    "Audit completed 2026-09-21 against primary relationship and product sources. Publish the five entries as Research candidates only, never as referrals received. First Voyage must retain its adjacent consumer-fit label.",
+    "Wayline has direct portfolio-alumni evidence and B2B vertical-AI relevance. Meshi and MoltPod have organizational AI workflows plus organizer-confirmed pitch interactions. ARVAM has a verified pitch interaction and B2B EAM product, but AI capability and venture-scale fit are unverified.",
+    "Meshi, MoltPod and ARVAM come from one organizer-published session recap. This establishes actual pitch and feedback interactions, not positive sentiment, ongoing mentorship, investment, willingness to introduce or consent. These are historical events, not evidence that Rao is a current active referrer.",
+    "First Voyage has a strong founder-disclosed Tanay Kothari angel connection. It remains separately marked adjacent consumer fit because no enterprise offering was established. Its inclusion is useful as an evidenced founder-network route, not a claim of core B2B mandate fit.",
+    "Factors.ai was removed: Nivas publicly endorsed the product, but no primary evidence established a personal connection to a named Factors founder. Sharing an event agenda on separate panels is insufficient.",
+    "Together portfolio page text extraction exposes an Exited label across several pages, including Wispr Flow. This may be hidden template text; do not infer current portfolio exit status from these extracts. Portfolio founder identity is verified independently of that label.",
+    "No private email address, relationship score, NPS, fundraising intent or consent was inferred. Exact publication/event dates were omitted where sources exposed only inconsistent relative labels. Self-reported product and customer claims need diligence.",
+    "The final bounded replacement pass found no additional active-portfolio B2B relationship with sufficient primary evidence. OSSO has an explicit Brijraj Bhuptani investor link, but clinics/care delivery is outside the software focus and was excluded. Rajiv Ramanan connections to CultureMonkey and Paybee appeared only in accessible third-party profiles and were not added.",
+    "Bohocap.ai adds a named advisor connection through Vishalini Paliwal. Verify current advisory involvement and software-product fit before asking for an introduction."
+  ],
+  "excludedAfterAudit": [
+    {
+      "id": "research-factors-nivas-ravichandran",
+      "startup": "Factors.ai",
+      "candidateName": "Praveen Das",
+      "referrerPersonName": "Nivas Ravichandran",
+      "reason": "No verified introduction path. A real historical product endorsement does not establish that Nivas knows Praveen or another Factors founder. G2 lists them at the same event on separate panels, which does not establish contact.",
+      "evidenceStrength": "Product use verified; founder-to-founder relationship unverified",
+      "checkedAt": "2026-09-21",
+      "sources": [
+        {
+          "title": "Nivas Ravichandran's first-person app-stack interview",
+          "url": "https://www.saastr.com/my-app-stack-nivas-ravichandran-head-of-marketing-at-spendflo/"
+        },
+        {
+          "title": "Factors.ai: founders",
+          "url": "https://www.factors.ai/company/about"
+        },
+        {
+          "title": "Factors.ai: current AI ABM product",
+          "url": "https://www.factors.ai/"
+        },
+        {
+          "title": "G2 Live Bangalore: separate panel agendas",
+          "url": "https://sell.g2.com/g2-live-bangalore"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T17:49:58.555461+00:00"
+}

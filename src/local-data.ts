@@ -1,14 +1,16 @@
 import seed from './seed.json';
 import bundledNetwork from '../public/data/network.json';
 import bundledEngagement from '../public/data/engagement.json';
+import bundledOpportunities from '../public/data/referral-opportunities.json';
 import {sampleDeals} from './sample-referrals';
 import {mergePeopleContacts,personIdentity} from './people';
 import {companies} from './data';
-import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement,MeetingNote,NetworkResearch,FeedItem} from './platform-types';
+import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement,MeetingNote,NetworkResearch,FeedItem,ReferralOpportunity} from './platform-types';
 const storageKey='together-orbit-standalone-v1';
 export const workflowUrl='https://github.com/shivrain/together-orbit/actions/workflows/portfolio-monitor.yml';
 type Published={reports:MonitorReport[];notices:Notice[];settings:Pick<Settings,'enabled'|'frequencyDays'|'schedulerRegistered'>;generatedAt:string};
-let engagement:FeedItem[]=bundledEngagement.feed;
+let engagement=bundledEngagement.feed as FeedItem[];
+let opportunities=bundledOpportunities.opportunities as ReferralOpportunity[];
 let network=bundledNetwork as NetworkResearch;
 type MovementEdit={changes:Partial<Movement>;sourceAtReview?:string};
 type SavedData=Partial<PlatformData>&{publicMovementEdits?:Record<string,MovementEdit>};
@@ -36,13 +38,14 @@ export function readLocalData():PlatformData{
   const person=source&&contacts.find(p=>personIdentity(p)===personIdentity(source));
   return person?{...m,personId:person.id}:m;
  });
- return structuredClone({...base,deals:(local.deals||[...base.deals,...sampleDeals]).map(deal=>({...deal,intake:deal.intake??'Passed to Together'})),contacts,drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
+ return structuredClone({...base,deals:(local.deals||[...base.deals,...sampleDeals]).map(deal=>({...deal,intake:deal.intake??'Passed to Together'})),contacts,drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,opportunities,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
 }
 export async function loadLocalData():Promise<PlatformData>{
  try{const response=await fetch(new URL('data/monitoring.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.reports)&&Array.isArray(value.notices)&&[2,7].includes(value.settings?.frequencyDays))published=value;}}
  catch{/* The bundled last published report remains available offline. */}
  try{const response=await fetch(new URL('data/engagement.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.feed))engagement=value.feed;}}catch{}
  try{const response=await fetch(new URL('data/network.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(value.schemaVersion===1&&Array.isArray(value.people)&&Array.isArray(value.movements))network=value;}}catch{}
+ try{const response=await fetch(new URL('data/referral-opportunities.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(value.schemaVersion===1&&Array.isArray(value.opportunities))opportunities=value.opportunities;}}catch{}
  return readLocalData();
 }
 export function resetLocalData(){localStorage.removeItem(storageKey);localStorage.removeItem('together-orbit-public-demo-v1')}

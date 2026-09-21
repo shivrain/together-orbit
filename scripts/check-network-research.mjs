@@ -4,12 +4,13 @@ import {createServer} from 'vite';
 
 const network=JSON.parse(readFileSync('public/data/network.json','utf8'));
 const feed=JSON.parse(readFileSync('public/data/engagement.json','utf8')).feed;
+const opportunities=JSON.parse(readFileSync('public/data/referral-opportunities.json','utf8')).opportunities;
 const server=await createServer({configFile:'vite.config.ts',server:{middlewareMode:true,hmr:false,ws:false},optimizeDeps:{noDiscovery:true,include:[]},appType:'custom'});
 try{
  const {companies}=await server.ssrLoadModule('/src/data.ts');
  const {mergePeopleContacts}=await server.ssrLoadModule('/src/people.ts');
  const {getNextAction}=await server.ssrLoadModule('/src/next-action.ts');
- const {resourceBody}=await server.ssrLoadModule('/src/engagement-message.ts');
+ const {resourceBody,resourceSubject,recipientAngle}=await server.ssrLoadModule('/src/engagement-message.ts');
  const companyIds=new Set(companies.map(c=>c.id));
  const day=value=>assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value))&&Date.parse(value)<=Date.now(),`Invalid research date: ${value}`);
  const url=value=>assert.match(value,/^https:\/\//);
@@ -39,6 +40,29 @@ try{
   assert.ok(item.emailBody.includes(item.url),'Draft should include its verified source');
  }
  const publicPeople=mergePeopleContacts([],network.people);
+ for(const item of feed){
+  assert.ok(item.takeaways?.length>=2&&item.discussionQuestion&&item.format,`Missing content depth: ${item.id}`);
+  assert.ok(item.sources?.some(source=>source.url===item.url));
+  for(const source of item.sources){url(source.url);if(source.publishedAt)day(source.publishedAt)}
+  assert.ok(item.companyIds.every(id=>item.recipientAngles.some(a=>a.companyId===id)),`Missing company-specific draft: ${item.id}`);
+  assert.equal(new Set(item.recipientAngles.map(a=>`${a.companyId}:${a.personName}`)).size,item.recipientAngles.length);
+  for(const angle of item.recipientAngles){
+   const person=publicPeople.find(p=>p.companyId===angle.companyId&&p.name===angle.personName);
+   assert.ok(person,`Unmapped recipient: ${angle.personName}`);
+   assert.ok(item.companyIds.includes(angle.companyId)&&angle.whyThisPerson&&angle.angle&&angle.emailSubject&&item.sources.some(source=>angle.emailBody.includes(source.url)),`Missing source or angle details: ${item.id}/${angle.personName}`);
+   assert.equal(resourceSubject(person,item),angle.emailSubject);
+   assert.ok(resourceBody(person,item).includes(angle.emailBody));
+   assert.equal(recipientAngle({...person,name:'A different colleague'},item),undefined,'A person-specific draft must not attach to a different colleague');
+  }
+ }
+ assert.equal(new Set(opportunities.map(o=>o.id)).size,opportunities.length);
+ for(const item of opportunities){
+  assert.ok(companyIds.has(item.companyId)&&item.candidateName&&item.startup&&item.connectionEvidence&&item.whyRelevant&&item.suggestedAsk&&item.limitations);
+  assert.ok(publicPeople.some(p=>p.companyId===item.companyId&&p.name===item.referrerPersonName),`Unmapped referral path: ${item.referrerPersonName}`);
+  day(item.checkedAt);if(item.eventDate)day(item.eventDate);url(item.website);
+  assert.ok(item.sources.length>=2);for(const source of item.sources){url(source.url);if(source.publishedAt)day(source.publishedAt)}
+  for(const privateField of ['email','referrerEmail','permission','stage','intake','fundraisingStatus'])assert.equal(item[privateField],undefined,`Public research cannot establish ${privateField}`);
+ }
  const original=publicPeople.find(p=>p.research);
  assert.ok(original);
  const oldPublic={...original,id:'legacy-contact-id',email:'private@example.com',notes:'Private meeting context',relationshipStrength:'Strong',meetingNotes:[{id:'note-1',date:'2026-09-01',body:'Private discussion',topics:['Voice AI'],askedForReferrals:true}]};
@@ -87,5 +111,5 @@ try{
   assert.equal(readLocalData().movements.find(item=>item.id===m.id).evidence,'User annotation');
   assert.equal(readLocalData().movements.find(item=>item.id===m.id).confirmed,true);
  }
- console.log(`Passed: ${network.people.length} public profiles, ${network.movements.length} dated movement signals, ${feed.length} sourced engagement items; public refresh preserves private IDs, edits and history.`);
+ console.log(`Passed: ${network.people.length} public profiles, ${feed.length} deep content briefs, ${feed.reduce((n,f)=>n+f.recipientAngles.length,0)} tailored messages, ${opportunities.length} research leads; public refresh preserves private IDs, edits and history.`);
 }finally{await server.close()}

@@ -14,7 +14,7 @@ Read the published `data/monitoring.json` and the latest GitHub workflow status.
 
 ## Weekly founder engagement research
 
-Once a week, inspect the existing `public/data/engagement.json` feed and research current primary sources relevant to the portfolio sectors. Verify original publication dates and URLs. Add at most six useful items with factual summaries, specific relevance, existing company IDs, and an email draft. Follow FeedItem in `src/platform-types.ts`. Reuse stable IDs per source to avoid duplicates. Do not invent relationships or recipients.
+Once a week, inspect the existing `public/data/engagement.json` feed and research current primary sources relevant to the portfolio sectors. Verify original publication dates and URLs. Add at most six useful items with factual summaries, specific relevance, existing company IDs, 2–3 concrete takeaways, a discussion question, source links, and recipient-specific email drafts. Every mapped company should have at least one named recipient angle, grounded in public professional context. Do not invent a private relationship or company pain point. Follow FeedItem in `src/platform-types.ts`. Reuse stable IDs per source to avoid duplicates. Do not invent relationships or recipients.
 
 The checkout may contain user changes. Inspect git status, preserve those changes, and use a fast-forward pull before edits. Never reset or overwrite user work. Read the current remote file SHA first if using the GitHub connector instead of local Git.
 
@@ -25,6 +25,14 @@ Update both `public/data/engagement.json` and `docs/data/engagement.json` identi
 `public/data/network.json` contains source-backed professional profiles and dated movement evidence. Copy updates identically to `docs/data/network.json`, or rebuild. Stable IDs and company IDs are required. `checkedAt` is the research date; movement `eventDate` is the actual announcement date. Never infer startup intent from a departure or from absence on a team page. Mark historical events explicitly, and do not fabricate recent signals to fill an empty company panel.
 
 Profile conversation angles are editorial suggestions, not established personal networks. Keep private assessments, email addresses, meeting notes and referral activity out of public research. Existing private browser IDs and edits take precedence; public provenance refreshes independently. Review `scripts/check-network-research.mjs` when changing the data contract.
+
+## Referral research
+
+`public/data/referral-opportunities.json` contains prospects to ask about, never introductions received. Each entry needs a named portfolio connection and primary-source evidence of an actual interaction, advisory relationship, investment or alumni link. Shared schools, former employers, social tags and event co-attendance alone do not establish a warm introduction path. Include product context, a specific ask, research date, limitations and at least two source references. Qualify adjacent mandate fit explicitly.
+
+Keep researched prospects out of private `deals`; neither reading research nor saving an ask creates a referral. Undated advisor listings require confirmation of current involvement. Do not present historical events as new scans. Do not infer portfolio exit status from generic labels in extracted page text; check the visible page or explicit announcement.
+
+Copy public research changes to `docs/data/` or rebuild before deploying. Run `scripts/check-network-research.mjs` to check recipients, source links, company coverage and private/public separation.
 
 ## Records and email
 
