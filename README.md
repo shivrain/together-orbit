@@ -6,13 +6,18 @@ A standalone Together Fund portfolio sourcing dashboard hosted directly on GitHu
 
 The website serves its own React application, styles, public portfolio report and engagement content. It does not redirect, embed another site, or call a ChatGPT-hosted backend.
 
-## Workflows
+## Sourcing flow
 
-- Referral inbox: eight clearly marked sample introductions, editable stages and notes, manual referrals, and email-based referral sharing.
-- Portfolio monitoring: dated source reports for all 35 portfolio companies, report history, notifications, CSV export, and a GitHub scan workflow.
-- Founder engagement: ten researched resources with source links, reusable templates, recipients, local drafts, copy, and open-in-email actions.
+The default screen is the people map, with a persistent three-step workflow and a separate referral outcome:
 
-Referrals, recipients and drafts are stored only in each visitor's browser. Export creates a local backup. They are not synchronized between teammates. Email and people-data providers are not connected.
+1. **Map your people:** public portfolio founder records for 35 companies, plus manually added leadership, teammates and alumni. Search by company or person, keep source links, relationship notes and follow-up dates together.
+2. **Follow their moves:** record and review sourced departures, new roles and startup launches, then prepare a check-in for the same person. Automatic people tracking explicitly remains disconnected. Existing scheduled website reports sit in a secondary source-check section.
+3. **Stay in touch:** choose a person and intent—share something useful, maintain the relationship, or ask about builders in their network. Ten researched resources and eight reusable templates support local email drafts. Log a real conversation separately from saving a draft.
+4. **Referral inbox:** capture an introduction with its referring person/company and context; track permission, owner, conversation stage and follow-up. Eight fictional samples are hidden by default and remain labelled when shown or edited.
+
+“Walk through an example” demonstrates the complete narrative without adding fabricated movements or contacts to operational records.
+
+People, relationship notes, manual movements, referrals and drafts are stored only in each visitor’s browser. Export creates a local backup including all those records. They are not synchronized between teammates. Email and people-data providers are not connected; there is no automatic outreach. Public founder listings are a starter map, not verification of current employment.
 
 ## Development
 
