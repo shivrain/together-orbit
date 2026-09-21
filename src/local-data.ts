@@ -1,18 +1,25 @@
 import seed from './seed.json';
 import {sampleDeals} from './sample-referrals';
 import {mergePeopleContacts,personIdentity} from './people';
-import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement} from './platform-types';
+import {companies} from './data';
+import type {PlatformData,Deal,Contact,MailDraft,Settings,MonitorReport,Notice,Movement,MeetingNote} from './platform-types';
 const storageKey='together-orbit-standalone-v1';
 export const workflowUrl='https://github.com/shivrain/together-orbit/actions/workflows/portfolio-monitor.yml';
 type Published={reports:MonitorReport[];notices:Notice[];settings:Pick<Settings,'enabled'|'frequencyDays'|'schedulerRegistered'>;generatedAt:string};
 let engagement=seed.feed;
 let published:Published={reports:seed.reports as MonitorReport[],notices:seed.notices,settings:{enabled:seed.settings.enabled,frequencyDays:2,schedulerRegistered:false},generatedAt:seed.reports[0]?.completedAt||''};
 function saved():Partial<PlatformData>{const raw=localStorage.getItem(storageKey)||localStorage.getItem('together-orbit-public-demo-v1');if(!raw)return {};try{const d=JSON.parse(raw);if(!Array.isArray(d.deals)||!Array.isArray(d.drafts)||!Array.isArray(d.contacts)||(d.movements!==undefined&&!Array.isArray(d.movements)))throw Error();return d}catch{throw Error('Saved browser data could not be read. Use Reset local data to restore the initial workspace.')}}
+function validDate(value:unknown):value is string{
+ if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(value))return false;
+ const day=value.slice(0,10),dayTime=Date.parse(`${day}T00:00:00Z`);
+ return Number.isFinite(Date.parse(value))&&Number.isFinite(dayTime)&&new Date(dayTime).toISOString().slice(0,10)===day;
+}
+function latestDate(dates:(string|undefined)[]):string|undefined{return dates.filter(validDate).sort((a,b)=>Date.parse(b)-Date.parse(a))[0]}
 export function readLocalData():PlatformData{
  const local=saved();const base=seed as unknown as PlatformData;const settings={...base.settings,...local.settings,...published.settings};
  const readNotices=new Set((local.notices||[]).filter(n=>n.read).map(n=>n.id));
  const movements=[...new Map([...base.movements,...(local.movements||[])].map(m=>[m.id,m])).values()];
- return structuredClone({...base,deals:local.deals||[...base.deals,...sampleDeals],contacts:mergePeopleContacts(local.contacts||base.contacts),drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
+ return structuredClone({...base,deals:(local.deals||[...base.deals,...sampleDeals]).map(deal=>({...deal,intake:deal.intake??'Passed to Together'})),contacts:mergePeopleContacts(local.contacts||base.contacts),drafts:local.drafts||base.drafts,settings,reports:published.reports,feed:engagement,movements,notices:published.notices.map(n=>({...n,read:readNotices.has(n.id)})),connections:{...base.connections,gmail:false,gmailConfigured:false,people:false,peopleProvider:'Not connected',scheduler:published.settings.schedulerRegistered,mailbox:settings.mailbox}});
 }
 export async function loadLocalData():Promise<PlatformData>{
  try{const response=await fetch(new URL('data/monitoring.json',document.baseURI),{cache:'no-cache'});if(response.ok){const value=await response.json();if(Array.isArray(value.reports)&&Array.isArray(value.notices)&&[2,7].includes(value.settings?.frequencyDays))published=value;}}
@@ -21,16 +28,40 @@ export async function loadLocalData():Promise<PlatformData>{
  return readLocalData();
 }
 export function resetLocalData(){localStorage.removeItem(storageKey);localStorage.removeItem('together-orbit-public-demo-v1')}
-export function exportLocalData(){const state=readLocalData();const value={version:2,exportedAt:new Date().toISOString(),deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements};const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='together-orbit-workspace.json';a.click();URL.revokeObjectURL(url)}
+export function exportLocalData(){const state=readLocalData();const value={version:2,exportedAt:new Date().toISOString(),deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements,settings:state.settings};const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='together-orbit-workspace.json';a.click();URL.revokeObjectURL(url)}
 export async function localRequest(path:string,body:unknown){
  if(path!=='/api/platform')throw Error('This integration is not connected. Use your email app or the GitHub scan workflow.');
  const {kind,value}=body as {kind:string;value:any};const state=readLocalData();const now=new Date().toISOString();
  const upsert=<T extends {id:string}>(items:T[],v:T)=>{const i=items.findIndex(x=>x.id===v.id);if(i<0)items.unshift(v);else items[i]={...items[i],...v};};
- if(kind==='deal'){const prior=state.deals.find(d=>d.id===value.id);const d:Deal={...prior,...value,messages:prior?.messages||[],source:prior?.source||'manual',updatedAt:now,unread:false};if(!d.companyId||!d.name||!d.startup)throw Error('Choose a portfolio company and enter a founder and startup.');upsert(state.deals,d);}
+ if(kind==='deal'){const prior=state.deals.find(d=>d.id===value.id);const d:Deal={...prior,...value,intake:value.intake??prior?.intake??'Passed to Together',messages:prior?.messages||[],source:prior?.source||'manual',updatedAt:now,unread:false};if(!d.companyId||!d.name||!d.startup)throw Error('Choose a portfolio company and enter a founder and startup.');if(!['Known to referrer','Passed to Together'].includes(d.intake!))throw Error('Choose whether the founder is known to the referrer or passed to Together.');if(d.intake==='Known to referrer'&&['In conversation','Meeting scheduled','Evaluating'].includes(d.stage))throw Error('Mark this referral as Passed to Together first before advancing the Together conversation stage.');upsert(state.deals,d);}
  else if(kind==='contact'){if(!value.id||!value.companyId||!value.name?.trim())throw Error('Choose a portfolio company and enter a person’s name.');if(state.contacts.some(person=>person.id!==value.id&&personIdentity(person)===personIdentity(value)))throw Error('This person is already mapped at this company. Edit the existing relationship instead.');upsert(state.contacts,value as Contact);}
+ else if(kind==='meeting-note'){
+  const person=state.contacts.find(person=>person.id===value.personId),note=value.note;
+  if(!person)throw Error('Choose a mapped person for this meeting.');
+  if(!note||typeof note.id!=='string'||!note.id.trim()||typeof note.body!=='string'||!note.body.trim())throw Error('Add meeting notes before saving.');
+  if(!validDate(note.date)||Date.parse(note.date)>Date.parse(now))throw Error('Choose a valid meeting date that is not in the future.');
+  if(!Array.isArray(note.topics)||!note.topics.every((topic:unknown)=>typeof topic==='string')||typeof note.askedForReferrals!=='boolean')throw Error('Choose meeting topics and record whether referrals were requested.');
+  if(value.nextFollowUpAt!==undefined&&value.nextFollowUpAt!==''&&!validDate(value.nextFollowUpAt))throw Error('Choose a valid follow-up date.');
+  const topics:string[]=[];
+  for(const raw of note.topics as string[]){const topic=raw.trim();if(topic&&!topics.some(existing=>existing.toLowerCase()===topic.toLowerCase()))topics.push(topic)}
+  const entry:MeetingNote={id:note.id.trim(),date:note.date,body:note.body.trim(),topics,askedForReferrals:note.askedForReferrals};
+  const history=[...(person.meetingNotes||[])];upsert(history,entry);
+  person.meetingNotes=history.sort((a,b)=>Date.parse(b.date)-Date.parse(a.date)||a.id.localeCompare(b.id));
+  person.lastContactAt=latestDate([person.lastContactAt,...history.map(note=>note.date)]);
+  person.referralAskAt=latestDate([person.referralAskAt,...history.filter(note=>note.askedForReferrals).map(note=>note.date)]);
+  if(value.nextFollowUpAt!==undefined)person.nextFollowUpAt=value.nextFollowUpAt;
+ }
  else if(kind==='movement'){if(!value.id||!value.companyId||!value.person?.trim()||!value.sourceUrl?.trim()||!value.evidence?.trim())throw Error('Add a person, source link and evidence for this move.');upsert(state.movements,value as Movement);}
  else if(kind==='draft')upsert(state.drafts,{...value,status:'Draft'} as MailDraft);
- else if(kind==='settings')state.settings={...state.settings,mailbox:value.mailbox,emailQuery:value.emailQuery};
+ else if(kind==='settings'){
+  if(typeof value.mailbox==='string')state.settings.mailbox=value.mailbox;
+  if(typeof value.emailQuery==='string')state.settings.emailQuery=value.emailQuery;
+  if(Object.prototype.hasOwnProperty.call(value,'focusCompanyIds')){
+   if(!Array.isArray(value.focusCompanyIds))throw Error('Choose portfolio companies for the focus list.');
+   const validIds=new Set(companies.map(company=>company.id));
+   state.settings.focusCompanyIds=[...new Set<string>(value.focusCompanyIds.filter((id:unknown):id is string=>typeof id==='string'&&validIds.has(id)))];
+  }
+ }
  else if(kind==='notice'){const n=state.notices.find(n=>n.id===value.id);if(n)n.read=true;}
  else throw Error('This action is not supported.');
  localStorage.setItem(storageKey,JSON.stringify({deals:state.deals,contacts:state.contacts,drafts:state.drafts,movements:state.movements,settings:state.settings,notices:state.notices}));return {ok:true};

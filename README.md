@@ -6,18 +6,19 @@ A standalone Together Fund portfolio sourcing dashboard hosted directly on GitHu
 
 The website serves its own React application, styles, public portfolio report and engagement content. It does not redirect, embed another site, or call a ChatGPT-hosted backend.
 
-## Sourcing flow
+## A single relationship workspace
 
-The default screen is the people map, with a persistent three-step workflow and a separate referral outcome:
+Choose a company and see one suggested next step, followed by its people. There are two main views: Network and Referrals. Sources, editors, meeting history and connection details open only when needed.
 
-1. **Map your people:** public portfolio founder records for 35 companies, plus manually added leadership, teammates and alumni. Search by company or person, keep source links, relationship notes and follow-up dates together.
-2. **Follow their moves:** record and review sourced departures, new roles and startup launches, then prepare a check-in for the same person. Automatic people tracking explicitly remains disconnected. Existing scheduled website reports sit in a secondary source-check section.
-3. **Stay in touch:** choose a person and intent—share something useful, maintain the relationship, or ask about builders in their network. Ten researched resources and eight reusable templates support local email drafts. Log a real conversation separately from saving a draft.
-4. **Referral inbox:** capture an introduction with its referring person/company and context; track permission, owner, conversation stage and follow-up. Eight fictional samples are hidden by default and remain labelled when shown or edited.
+The built-in relationship database holds people, owners, explicit expertise/interests, meeting notes, follow-up dates, referral awareness, fund sentiment, relationship strength, and whether a founder understands why introductions matter. None of those assessments are invented from a public profile or extracted from meeting prose. Users can keep a private focus list of core referring companies; the full public portfolio stays available.
 
-“Walk through an example” demonstrates the complete narrative without adding fabricated movements or contacts to operational records.
+The next-step selector uses recorded evidence: pending introductions, movements requiring source review, reviewed role changes, follow-ups, unfinished drafts, relevant resources, and relationship-qualified requests for the top three founders someone has met. Explicit topic tags can match research across portfolio sectors. Unknown/weak relationships receive a helpful check-in or resource; generic referral asks require recorded positive sentiment and a strong relationship. Handled drafts do not occupy the queue or repeat the same resource/person suggestion.
 
-People, relationship notes, manual movements, referrals and drafts are stored only in each visitor’s browser. Export creates a local backup including all those records. They are not synchronized between teammates. Email and people-data providers are not connected; there is no automatic outreach. Public founder listings are a starter map, not verification of current employment.
+Introductions distinguish **Known to referrer** from **Passed to Together**. The same record carries the source person/company, reason for contact, permission and Together conversation stage. Examples stay explicitly labelled and do not drive real next actions.
+
+Meeting notes live on the person, with date, topic tags and whether the top-three-founder question was actually asked. Saving or handling a draft never counts as a conversation or sent email. This has no dependency on NetworkDB or its Replit app.
+
+People, notes, assessments, focus choices, manual movements, introductions and drafts are stored only in each visitor's browser. Export backs up those records. They are not synchronized between teammates. Public founder listings are a starter map, not verification of current employment. Gmail and people-data providers are not connected; no automatic outreach is represented as live.
 
 ## Development
 
