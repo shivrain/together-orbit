@@ -1,6 +1,297 @@
 {
   "reports": [
     {
+      "id": "report-67d8f519-6ac3-4069-8133-f8a2fe73a922",
+      "startedAt": "2026-09-27T10:07:23Z",
+      "completedAt": "2026-09-27T10:07:37Z",
+      "status": "Partial",
+      "results": [
+        {
+          "companyId": "composio",
+          "status": "No change",
+          "url": "https://composio.dev/blog",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "emergent",
+          "status": "No change",
+          "url": "https://emergent.sh/blog",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "kula",
+          "status": "No change",
+          "url": "https://www.kula.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "confido",
+          "status": "No change",
+          "url": "https://www.confido.health/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "runable",
+          "status": "No change",
+          "url": "https://runable.com/careers",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "rapid-claims",
+          "status": "No change",
+          "url": "https://www.rapidclaims.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "bytebeam",
+          "status": "No change",
+          "url": "https://www.bytebeam.io/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "spendflo",
+          "status": "No change",
+          "url": "https://www.spendflo.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "thesys",
+          "status": "No change",
+          "url": "https://www.thesys.dev/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:23Z"
+        },
+        {
+          "companyId": "zipy",
+          "status": "No change",
+          "url": "https://www.zipy.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "scalekit",
+          "status": "No change",
+          "url": "https://www.scalekit.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "status": "No change",
+          "url": "https://www.sprypt.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "wispr-flow",
+          "status": "No change",
+          "url": "https://wisprflow.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "metaforms",
+          "status": "No change",
+          "url": "https://www.metaforms.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "protecto",
+          "status": "No change",
+          "url": "https://www.protecto.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "securden",
+          "status": "No change",
+          "url": "https://www.securden.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "revenue-hero",
+          "status": "No change",
+          "url": "https://www.revenuehero.io/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "hunar",
+          "status": "No change",
+          "url": "https://hunar.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "hivel",
+          "status": "No change",
+          "url": "https://www.hivel.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "rocket",
+          "status": "No change",
+          "url": "https://www.rocket.new/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "architect-labs",
+          "status": "Failed",
+          "url": "https://architectchips.com/",
+          "summary": "No readable public page text; the source may require JavaScript or sign-in",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:24Z"
+        },
+        {
+          "companyId": "capitol",
+          "status": "No change",
+          "url": "https://www.capitol.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:25Z"
+        },
+        {
+          "companyId": "chaotix-ai",
+          "status": "No change",
+          "url": "https://chaotix.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:25Z"
+        },
+        {
+          "companyId": "coreworks",
+          "status": "No change",
+          "url": "https://www.coreworks.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:25Z"
+        },
+        {
+          "companyId": "dreamteam",
+          "status": "No change",
+          "url": "https://dreamteam.co/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:25Z"
+        },
+        {
+          "companyId": "gibran",
+          "status": "No change",
+          "url": "https://gibran.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "jhana",
+          "status": "No change",
+          "url": "https://jhana.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "nex",
+          "status": "Content changed",
+          "url": "https://nex.ai/",
+          "summary": "Revenue Chief of Staff\nExecutive Assistant\nRevenue Recovery Agent\nCustomer Onboarding Manager\nChurn Prevention Agent\nCompetitive Intel Analyst\nTry the free agent builder\nMeeting Prep Agent\nBook a FREE session with an agent expert. Get your first agent before the call ends.\nBook free agent building session",
+          "before": "Book a FREE call with an agent builder. Get your first agent before the call ends.\nBook call with an agent expert\nTry the agent builder\nClosed-Lost Re-engagement\nPrepare for Any Meeting",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "optexity",
+          "status": "No change",
+          "url": "https://optexity.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "presentations-ai",
+          "status": "No change",
+          "url": "https://www.presentations.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "privado",
+          "status": "No change",
+          "url": "https://www.privado.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:26Z"
+        },
+        {
+          "companyId": "sentra",
+          "status": "No change",
+          "url": "https://www.sentra.app/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:27Z"
+        },
+        {
+          "companyId": "togai",
+          "status": "Failed",
+          "url": "https://www.togai.com/",
+          "summary": "Website redirected outside its company domain; review the source manually",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:27Z"
+        },
+        {
+          "companyId": "ui-flow",
+          "status": "Failed",
+          "url": "https://uiflow.com/",
+          "summary": "timed out",
+          "before": "",
+          "checkedAt": "2026-09-27T10:07:27Z"
+        },
+        {
+          "companyId": "zipstack",
+          "status": "Content changed",
+          "url": "https://unstract.com/",
+          "summary": "Jev and where a System One model fits in document processing",
+          "before": "Intelligent Document Processing for Insurance: From Submission Packets to Structured Data",
+          "checkedAt": "2026-09-27T10:07:27Z"
+        }
+      ],
+      "nextIndex": 35,
+      "trigger": "Scheduled",
+      "peopleStatus": "Public website text only. Employee departures, new roles and new companies require a connected people-data provider and separate evidence."
+    },
+    {
       "id": "report-0f492ec4-6c73-4c20-af21-e5c8bd0560c8",
       "startedAt": "2026-09-25T09:43:39Z",
       "completedAt": "2026-09-25T09:43:54Z",
@@ -1167,6 +1458,14 @@
   ],
   "notices": [
     {
+      "id": "notice-report-67d8f519-6ac3-4069-8133-f8a2fe73a922",
+      "title": "2 portfolio website changes to review",
+      "detail": "32/35 company websites checked. 3 sources unavailable. Public website changes do not establish employee moves.",
+      "reportId": "report-67d8f519-6ac3-4069-8133-f8a2fe73a922",
+      "read": false,
+      "createdAt": "2026-09-27T10:07:37Z"
+    },
+    {
       "id": "notice-report-0f492ec4-6c73-4c20-af21-e5c8bd0560c8",
       "title": "8 portfolio website changes to review",
       "detail": "32/35 company websites checked. 3 sources unavailable. Public website changes do not establish employee moves.",
@@ -1204,5 +1503,5 @@
     "frequencyDays": 2,
     "schedulerRegistered": true
   },
-  "generatedAt": "2026-09-25T09:43:54Z"
+  "generatedAt": "2026-09-27T10:07:37Z"
 }
