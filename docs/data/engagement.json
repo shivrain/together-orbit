@@ -1,6 +1,336 @@
 {
   "feed": [
     {
+      "id": "capitol-enterprise-ai-evaluation-2026-09-28",
+      "title": "Capitol's buying guide: test an approved workflow, including its exceptions",
+      "publisher": "Capitol AI · Shaun Modi",
+      "url": "https://www.capitol.ai/blog/enterprise-ai-platform-comparison",
+      "publishedAt": "2026-09-28",
+      "companyIds": [
+        "metaforms",
+        "protecto"
+      ],
+      "topic": "Portfolio operating playbook · enterprise proof of value",
+      "kind": "Industry research",
+      "format": "Guide",
+      "summary": "Capitol proposes evaluating vendors on the same real workflow, including an exception, then comparing approval time, corrections and total cost. Its six questions cover customization, data handling, permissions, reusable methods, verification and model choice. This is vendor-authored guidance, not buyer-survey evidence.",
+      "whyRelevant": "A practical starting point for enterprise sellers to propose acceptance criteria before a pilot. Tailor the checklist to the buyer rather than forwarding another company's product pitch.",
+      "engagementMove": "Offer a one-page pilot scorecard for one buyer workflow. Ask the recipient to choose the exception and sign-off criterion that would make it credible.",
+      "takeaways": [
+        "“Then ask your team to change one step and run it again.” Suggested application: include a buyer-requested revision in the pilot.",
+        "“User access alone does not define these controls.” Capitol distinguishes permission to use a workflow from permission to change or approve it.",
+        "Suggested scorecard: finished work accepted, corrections needed, reviewer time and total operating cost. Agree the acceptance bar with the buyer before testing."
+      ],
+      "discussionQuestion": "What one exception would you add to a pilot so that the buyer tests the real workflow rather than a prepared demo?",
+      "emailSubject": "A pilot scorecard from Capitol's enterprise buying guide",
+      "emailBody": "Capitol published a practical buying guide:\nhttps://www.capitol.ai/blog/enterprise-ai-platform-comparison\n\nI would adapt it into a pilot scorecard with one exception case and an agreed sign-off bar. Which buyer workflow would make that worth doing?",
+      "checkedAt": "2026-09-30",
+      "recipientAngles": [
+        {
+          "companyId": "metaforms",
+          "personName": "Chris Gimenez",
+          "whyThisPerson": "Metaforms publicly lists Chris as its founding GTM executive for enterprise accounts.",
+          "angle": "Invite the enterprise seller to define a research buyer's acceptance test, including a late change request.",
+          "emailSubject": "Chris — could a buyer-owned scorecard improve a pilot?",
+          "emailBody": "Hi Chris,\n\nCapitol's new enterprise buying guide sparked a Metaforms pilot idea:\nhttps://www.capitol.ai/blog/enterprise-ai-platform-comparison\n\nCould the buyer supply one research brief, add a late revision, and judge the completed work against criteria agreed upfront? I can draft that scorecard. Which revision would best distinguish a convincing demo from a useful workflow?"
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto's founder leads an AI data-security company and has a public background in enterprise AI products.",
+          "angle": "Offer a proof-of-value exercise that makes data handling inspectable to the buyer.",
+          "emailSubject": "Amar — one test a privacy buyer could inspect",
+          "emailBody": "Hi Amar,\n\nSharing Capitol's enterprise evaluation guide:\nhttps://www.capitol.ai/blog/enterprise-ai-platform-comparison\n\nMy suggested adaptation for Protecto is a buyer-supplied example containing sensitive fields, with an agreed expected result and evidence the buyer can inspect. Would that help a proof of value, or is a different test more persuasive? I can turn your answer into a short evaluation brief."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Capitol: How to Evaluate an Enterprise AI Platform Before You Buy",
+          "url": "https://www.capitol.ai/blog/enterprise-ai-platform-comparison",
+          "publishedAt": "2026-09-28"
+        },
+        {
+          "title": "Metaforms: current team",
+          "url": "https://www.metaforms.ai/about"
+        },
+        {
+          "title": "Protecto: leadership",
+          "url": "https://www.protecto.ai/about/"
+        }
+      ]
+    },
+    {
+      "id": "gmo-vess-agent-authority-poc-2026-09-24",
+      "title": "Agent-authority experiment tests approval binding, replay and revocation",
+      "publisher": "GMO GlobalSign Holdings and VESS Labs",
+      "url": "https://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority",
+      "publishedAt": "2026-09-24",
+      "companyIds": [
+        "scalekit",
+        "securden"
+      ],
+      "topic": "Delegated authority and adversarial authorization tests",
+      "kind": "Industry research",
+      "format": "Research",
+      "summary": "GMO GlobalSign and VESS published a cross-company agent experiment using verifiable credentials for identity and transaction authority. They report 281 automated tests and checks rejecting reused authentication, revoked credentials and altered purchase contents. Transactions and payments were simulated; this is a proof of concept, not production-security validation.",
+      "whyRelevant": "ScaleKit builds agent authentication, and Securden publicly offers agent security and governance. Binding a person's approval to the action actually executed gives both teams a specific design and evaluation discussion beyond whether an agent can authenticate.",
+      "engagementMove": "Share the three negative cases with Ravi and Kumaran and offer to turn their feedback into a short buyer-demo checklist. Ask Satya which test best communicates delegated authority to an enterprise buyer. Do not present the experiment as a standard or certification.",
+      "takeaways": [
+        "The English announcement distinguishes “identity and transaction authority”. Suggested design question: what evidence establishes who the agent is, and separately what it may do?",
+        "Its tests include “simulated fraudulent operations”. The detailed Japanese release specifically describes replay, revoked-credential and changed-purchase checks; these are concrete cases to discuss in a demo.",
+        "The Japanese release says the approved transaction was linked to the actual order. No real commercial transactions or payments occurred, and the test count is reported as of August 28, not the September 24 publication day."
+      ],
+      "discussionQuestion": "If an agent's order changes after human approval, what must be reauthorized, and what evidence should a buyer see that enforcement worked?",
+      "emailSubject": "Three negative tests for delegated agent authority",
+      "emailBody": "Hi Ravi,\n\nThis September 24 experiment gives us concrete agent-authorization cases to discuss:\nhttps://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority\n\nThe useful cases are replay, revoked credentials and changing an order after approval. It is a simulated proof of concept.\n\nGiven your authentication writing, which case would best expose the boundary between a valid identity and a valid action? I could turn your answer into a short evaluation checklist.",
+      "checkedAt": "2026-09-30",
+      "recipientAngles": [
+        {
+          "companyId": "scalekit",
+          "personName": "Ravi Madabhushi",
+          "whyThisPerson": "Scalekit's author page identifies Ravi as cofounder and publishes his technical writing about OAuth, MCP and authentication.",
+          "angle": "Stress-test the distinction between authenticated identity and action-specific authorization using three negative cases.",
+          "emailSubject": "Three negative tests for delegated agent authority",
+          "emailBody": "Hi Ravi,\n\nThis September 24 experiment gives us concrete agent-authorization cases to discuss:\nhttps://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority\n\nThe useful cases are replay, revoked credentials and changing an order after approval. It is a simulated proof of concept.\n\nGiven your authentication writing, which case would best expose the boundary between a valid identity and a valid action? I could turn your answer into a short evaluation checklist."
+        },
+        {
+          "companyId": "scalekit",
+          "personName": "Satya Devarakonda",
+          "whyThisPerson": "Together identifies Satya as ScaleKit's CEO and cofounder; ScaleKit's publicly described product provides authentication infrastructure for software and agents.",
+          "angle": "Use a narrowly scoped authorization experiment to ask which enterprise demo proves a meaningful buying requirement.",
+          "emailSubject": "Which agent-authorization demo earns buyer confidence?",
+          "emailBody": "Hi Satya,\n\nSharing a September 24 agent-authority proof of concept:\nhttps://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority\n\nMy buyer-demo question is simple: would blocking an altered order after approval explain delegated authority better than showing a successful login?\n\nFor ScaleKit's positioning, which proof would you put first? I can help reduce the answer to a single evaluation question a buyer can actually test."
+        },
+        {
+          "companyId": "securden",
+          "personName": "Kumaran Balan",
+          "whyThisPerson": "Securden's June 2026 agent-security launch identifies Kumaran as CTO; Together identifies him as cofounder.",
+          "angle": "Discuss how a negative authorization test should appear in an enterprise audit trail, including revoked delegation and attempted execution.",
+          "emailSubject": "What should a blocked agent action leave in the audit trail?",
+          "emailBody": "Hi Kumaran,\n\nThis September 24 agent-authority experiment suggests a useful governance demo:\nhttps://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority\n\nFor Securden's agent-security work, I would pair a blocked action with the evidence an administrator can inspect: original approval, delegated scope and rejection reason. That is a proposed checklist, not a claim about your implementation.\n\nWhat evidence would make that demo convincing to a security buyer?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "GMO GlobalSign and VESS: agent-identity experiment announcement",
+          "url": "https://www.gmogshd.com/news-en/gmo-globalsign-hd-and-vess-labs-validate-trust-framework-for-ai-agent-identity-and-authority",
+          "publishedAt": "2026-09-24"
+        },
+        {
+          "title": "GMO GlobalSign: detailed Japanese experiment release",
+          "url": "https://www.gmogshd.com/news/news-17359",
+          "publishedAt": "2026-09-24"
+        },
+        {
+          "title": "Scalekit: Ravi Madabhushi",
+          "url": "https://www.scalekit.com/authors/ravi-madabhushi"
+        },
+        {
+          "title": "Together: ScaleKit founders",
+          "url": "https://www.together.fund/portfolio/scalekit"
+        },
+        {
+          "title": "Securden: agent-security and governance launch",
+          "url": "https://www.securden.com/news/unified-ai-agent-security-and-governance-platform.html",
+          "publishedAt": "2026-06-17"
+        }
+      ]
+    },
+    {
+      "id": "veris-vamos-livekit-2026-09-23",
+      "title": "Voice-stack selection: separate task completion, latency and operating cost",
+      "publisher": "Veris AI",
+      "url": "https://veris.ai/blog/vamos-bench-livekit",
+      "publishedAt": "2026-09-23",
+      "companyIds": [
+        "confido",
+        "wispr-flow"
+      ],
+      "topic": "Voice-agent evaluation and operating economics",
+      "kind": "Industry research",
+      "format": "Research",
+      "summary": "Veris's new analysis of its existing banking-call benchmark compares LiveKit and pipecat with the same speech, language and voice models. Completion was 70.3% versus 71.0%, insufficient to establish a winner; median response latency was 2.37 versus 1.95 seconds. This is a synthetic banking workload, not healthcare or dictation evidence.",
+      "whyRelevant": "Confido's healthcare voice workflows make completed tasks and safe handoffs useful evaluation units. For Wispr, the narrower discussion is how to measure user-visible delay. The partner can contribute an evaluation worksheet without assuming either company uses these stacks or has a reliability problem.",
+      "engagementMove": "Send Chetan or Vichar the analysis with a proposed three-column scorecard: task completed, user wait, fully loaded cost. Ask which outcome should be a release gate. Use the separate latency angle for Sahaj; do not forward banking scores as a verdict on Flow.",
+      "takeaways": [
+        "The report says, “Completion is scored end-to-end, tool calls included”. Suggested operating use: define the successful system action before judging how fluent the call sounds.",
+        "Its cost note says, “Telephony and hosting are excluded”. Add those costs before using the table in a build-versus-buy decision.",
+        "The underlying study repeats 100 scenarios three times. The methodology discloses a single LLM judge without a human-labelled gold set; use this as an evaluation design prompt, not a universal product ranking."
+      ],
+      "discussionQuestion": "Which would change a shipping decision first: task-completion failures, user-visible delay, or cost per successfully completed workflow?",
+      "emailSubject": "A practical voice-agent scorecard for Confido",
+      "emailBody": "Hi Chetan,\n\nThis September 23 analysis separates voice-agent completion, latency and cost:\nhttps://veris.ai/blog/vamos-bench-livekit\n\nFor Confido, I would turn it into a buyer-facing scorecard: completed workflow, safe escalation and fully loaded cost. The underlying banking simulation is only a design prompt.\n\nWould a one-page version help a customer evaluation, or is another outcome more persuasive?",
+      "checkedAt": "2026-09-30",
+      "recipientAngles": [
+        {
+          "companyId": "confido",
+          "personName": "Chetan Reddy",
+          "whyThisPerson": "Confido's source-backed public profile identifies Chetan as CEO and cofounder, focused on healthcare administrative automation.",
+          "angle": "Turn a technical comparison into a buyer scorecard based on completed administrative work and its full cost.",
+          "emailSubject": "A practical voice-agent scorecard for Confido",
+          "emailBody": "Hi Chetan,\n\nThis September 23 analysis separates voice-agent completion, latency and cost:\nhttps://veris.ai/blog/vamos-bench-livekit\n\nFor Confido, I would turn it into a buyer-facing scorecard: completed workflow, safe escalation and fully loaded cost. The underlying banking simulation is only a design prompt.\n\nWould a one-page version help a customer evaluation, or is another outcome more persuasive?"
+        },
+        {
+          "companyId": "confido",
+          "personName": "Vichar Shroff",
+          "whyThisPerson": "Confido's March 2026 webinar identifies Vichar as CPO and cofounder; his public work concerns patient access and practice workflows.",
+          "angle": "Discuss release criteria for scheduling changes, cancellation and human handoffs, rather than general voice quality.",
+          "emailSubject": "Which voice-workflow outcomes should block a release?",
+          "emailBody": "Hi Vichar,\n\nVeris's September 23 voice evaluation prompted a product question:\nhttps://veris.ai/blog/vamos-bench-livekit\n\nFor a healthcare workflow, I would separately test a changed appointment, a cancellation and a human handoff against the intended system state. That is my proposed adaptation, not a finding about Confido.\n\nWhich of those would you make a hard release gate, and what would a transcript-only review miss?"
+        },
+        {
+          "companyId": "wispr-flow",
+          "personName": "Sahaj Garg",
+          "whyThisPerson": "Wispr's media kit identifies Sahaj as CTO and cofounder with ML systems and generative-model research experience.",
+          "angle": "Use the latency decomposition as a prompt to distinguish speech-end detection from transport and model delay; do not transfer call-agent rankings to dictation.",
+          "emailSubject": "A latency-budget question for speech interfaces",
+          "emailBody": "Hi Sahaj,\n\nThis September 23 voice-stack analysis made me think about delay budgets:\nhttps://veris.ai/blog/vamos-bench-livekit\n\nThe scores concern banking calls, so I would not carry their ranking into dictation. My narrower question for Flow is how to separate speech-end detection, transport and processing when measuring perceived responsiveness.\n\nWhich timing metric best predicts whether a voice interface feels immediate to a user?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Veris AI: LiveKit benchmark analysis",
+          "url": "https://veris.ai/blog/vamos-bench-livekit",
+          "publishedAt": "2026-09-23"
+        },
+        {
+          "title": "VAmoS Bench methodology and limitations",
+          "url": "https://veris.ai/leaderboard"
+        },
+        {
+          "title": "Together: Confido founders",
+          "url": "https://www.together.fund/portfolio/confido"
+        },
+        {
+          "title": "Confido: Vichar's role and practice-workflow webinar",
+          "url": "https://www.confido.health/resources/webinars/ai-in-dental-ops-how-practices-are-moving-from-missed-calls-to-maximized-chairs",
+          "publishedAt": "2026-03-25"
+        },
+        {
+          "title": "Wispr Flow: founder biographies",
+          "url": "https://wisprflow.ai/media-kit"
+        }
+      ]
+    },
+    {
+      "id": "composio-yang-software-factory-2026-09-22",
+      "title": "Composio's repair loop: when does an agent's fix count as done?",
+      "publisher": "Composio · Brendan O'Leary",
+      "url": "https://composio.dev/blog/yang-software-factory",
+      "publishedAt": "2026-09-22",
+      "companyIds": [
+        "emergent",
+        "rocket"
+      ],
+      "topic": "Portfolio engineering playbook · agent repair and release criteria",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "Composio describes Yang, its toolkit build-and-repair system: durable agent sessions, automated code review, human merge approval and seven days of production observation. This is the team's operating account, not an independent reliability benchmark.",
+      "whyRelevant": "Useful cross-portfolio material for coding-product teams deciding what evidence should close a repair. A concrete release checklist gives the recipient something to improve or challenge.",
+      "engagementMove": "Send the post with a proposed repair checklist: acceptance case, review owner, post-release evidence. Ask for one missing check; offer a peer discussion only if wanted.",
+      "takeaways": [
+        "“Each stage has explicit passing criteria.” Suggested application: define observable completion before delegating a coding task.",
+        "“A human approves every merge to main.” Composio enforces this through repository permissions.",
+        "Composio observes production failures for seven days after a fix. Suggested discussion: choose a verification window appropriate to the recipient's own usage."
+      ],
+      "discussionQuestion": "Which evidence should close an agent-generated repair: passing tests, reviewer approval, or successful use after deployment?",
+      "emailSubject": "A repair checklist from Composio's engineering write-up",
+      "emailBody": "Composio published its toolkit-repair approach:\nhttps://composio.dev/blog/yang-software-factory\n\nMy suggested checklist is: acceptance case, review owner, post-release evidence. Which missing check would make this useful for your team?",
+      "checkedAt": "2026-09-30",
+      "recipientAngles": [
+        {
+          "companyId": "emergent",
+          "personName": "Madhav Jha",
+          "whyThisPerson": "Emergent's CTO works on AI coding; his public profile includes machine-learning infrastructure research.",
+          "angle": "Ask what closes a repair in a generated application, using a peer's implementation as discussion material.",
+          "emailSubject": "Madhav — what should close a coding-agent repair?",
+          "emailBody": "Hi Madhav,\n\nComposio's engineering write-up may be useful for Emergent:\nhttps://composio.dev/blog/yang-software-factory\n\nI would turn it into a repair checklist: reproduce the bug, name the reviewer, check what happened after release. Which step would you change for a generated application? Happy to put your feedback into a one-page template."
+        },
+        {
+          "companyId": "rocket",
+          "personName": "Nidhi Desai",
+          "whyThisPerson": "Rocket's engineering-director biography describes her work on agent architectures and AI products.",
+          "angle": "Discuss which failures a release checklist misses and what evidence the engineering team would need.",
+          "emailSubject": "Nidhi — a peer example for agent release checks",
+          "emailBody": "Hi Nidhi,\n\nSharing Composio's account of its agent repair system:\nhttps://composio.dev/blog/yang-software-factory\n\nFor Rocket, my discussion prompt is one bug that passes tests but still fails for a user. What evidence would you require before closing it? Your answer could anchor a useful engineering checklist."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Composio: Yang, the software factory behind its toolkits",
+          "url": "https://composio.dev/blog/yang-software-factory",
+          "publishedAt": "2026-09-22"
+        },
+        {
+          "title": "Y Combinator: Emergent founders",
+          "url": "https://www.ycombinator.com/companies/emergent"
+        },
+        {
+          "title": "Rocket: Nidhi Desai",
+          "url": "https://www.rocket.new/author/nidhi-desai"
+        }
+      ]
+    },
+    {
+      "id": "verna-pricing-constitution-2026-09-22",
+      "title": "Your company needs a pricing constitution.",
+      "publisher": "Elena’s Growth Scoop · Elena Verna",
+      "url": "https://www.elenaverna.com/p/pricing-constitution",
+      "publishedAt": "2026-09-22",
+      "companyIds": [
+        "rocket",
+        "emergent"
+      ],
+      "topic": "Pricing · packaging rules for AI products",
+      "summary": "Elena Verna proposes shared monetization rules and a small cross-functional council, using examples from Lovable. This is an operating playbook, not a buyer survey.",
+      "whyRelevant": "AI app builders can use one upcoming feature to examine the tension between iteration costs and customer-visible value. The useful conversation is about an explicit charging boundary; no pricing problem at either company is assumed.",
+      "emailSubject": "A one-feature pricing exercise",
+      "emailBody": "Elena Verna’s September 22 pricing playbook:\nhttps://www.elenaverna.com/p/pricing-constitution\n\nA proposed exercise: take one upcoming feature and write down its billable outcome, the usage needed to reach it, and the rule for failed attempts. Which of those three decisions is hardest to make explicit?",
+      "checkedAt": "2026-09-30",
+      "format": "Newsletter",
+      "kind": "Industry research",
+      "engagementMove": "Bring a one-page worksheet for a single feature: customer outcome, cost ceiling, failure/retry treatment, and exception owner. Ask the recipient to challenge one rule. This worksheet is our proposed application, not a published template.",
+      "takeaways": [
+        "“Never manufacture pain to monetize it.” — Verna argues against charging to undo deliberately introduced friction.",
+        "“Monetize the outcome. Not the steps required to get there.” — She favors measurable customer value while acknowledging LLM costs.",
+        "A small cross-functional council resolves exceptions. Treat these as an operator’s proposed rules, not measured evidence of revenue improvement."
+      ],
+      "discussionQuestion": "For your next AI feature, which customer-visible outcome would justify a charge, and what should remain unmetered?",
+      "recipientAngles": [
+        {
+          "companyId": "rocket",
+          "personName": "Deepak Dhanak",
+          "whyThisPerson": "Rocket’s official biography identifies Deepak as co-founder and COO leading strategy, finance, GTM and operations. That remit directly spans the cost, packaging and sales trade-offs in this exercise.",
+          "angle": "Stress-test one proposed package against the cost of a successful build, the customer’s budget ceiling and a clear retry/refund rule. Ask which constraint should override the others.",
+          "emailSubject": "Which pricing rule should override the others at Rocket?",
+          "emailBody": "This pricing playbook intersects your finance and GTM remit:\nhttps://www.elenaverna.com/p/pricing-constitution\n\nFor Rocket, I’d test one proposed package against three constraints: cost per successful build, the customer’s budget ceiling, and the retry/refund rule. Which would you make non-negotiable? That seems a useful way to turn a pricing discussion into one explicit decision."
+        },
+        {
+          "companyId": "emergent",
+          "personName": "Mukund Jha",
+          "whyThisPerson": "Emergent’s founder-written YC profile identifies Mukund as CEO and describes a product that generates, tests and deploys applications from plain-language intent. He is an existing named recipient in the public network.",
+          "angle": "Ask how a buyer could distinguish productive iteration from correcting a failed build when defining the billable outcome. This is a proposed product/pricing question, not a claim about Emergent’s current billing.",
+          "emailSubject": "Where would you draw the billable-outcome boundary?",
+          "emailBody": "Elena Verna’s pricing piece prompted a concrete question for an app builder:\nhttps://www.elenaverna.com/p/pricing-constitution\n\nIf you were defining a billable outcome for one Emergent workflow, where would you draw the boundary between useful iteration and fixing an unsuccessful build? I’d put that boundary and the evidence a customer can inspect on one page before debating the price."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Elena Verna: Your company needs a pricing constitution.",
+          "url": "https://www.elenaverna.com/p/pricing-constitution",
+          "publishedAt": "2026-09-22"
+        },
+        {
+          "title": "Rocket: Deepak Dhanak, co-founder and COO",
+          "url": "https://www.rocket.new/author/deepak-dhanak"
+        },
+        {
+          "title": "Y Combinator: Emergent and its active founders",
+          "url": "https://www.ycombinator.com/companies/emergent"
+        }
+      ]
+    },
+    {
       "id": "launch-retrochimera-predicts-synthesis-routes-chemi",
       "title": "RetroChimera predicts synthesis routes chemists actually accept",
       "publisher": "Microsoft Research AI for Science",
