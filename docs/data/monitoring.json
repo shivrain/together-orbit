@@ -1,6 +1,297 @@
 {
   "reports": [
     {
+      "id": "report-364ced75-4429-4416-84bd-6566403ce6d7",
+      "startedAt": "2026-10-01T11:05:30Z",
+      "completedAt": "2026-10-01T11:05:45Z",
+      "status": "Partial",
+      "results": [
+        {
+          "companyId": "composio",
+          "status": "Content changed",
+          "url": "https://composio.dev/blog",
+          "summary": "All21AI Agents8Composio2Engineering6Release6Security1Updates2\nCPUMaxxing our CI Runners\nHow we cut Composio's PR checks from about seven minutes to about two by backgrounding installs, caching with a fallback key, sharding Vitest, and watching one CPU chart.\nSep 30, 2026Brendan O'Leary",
+          "before": "All20AI Agents8Composio2Engineering5Release6Security1Updates2",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "emergent",
+          "status": "Content changed",
+          "url": "https://emergent.sh/blog",
+          "summary": "Emergent Apps Can Now Run on Your Own MongoDB Atlas\nEmergent Pro users can now move a published app's database to their own MongoDB Atlas M10+ cluster in 6 steps, with the migration and setup handled for them.",
+          "before": "Visual Edits on Emergent turns app changes into a click. Point at any element, say the change, stack your edits, and apply them all in 1 batch to ship.",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "kula",
+          "status": "No change",
+          "url": "https://www.kula.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "confido",
+          "status": "No change",
+          "url": "https://www.confido.health/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "runable",
+          "status": "No change",
+          "url": "https://runable.com/careers",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "rapid-claims",
+          "status": "No change",
+          "url": "https://www.rapidclaims.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "bytebeam",
+          "status": "No change",
+          "url": "https://www.bytebeam.io/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "spendflo",
+          "status": "No change",
+          "url": "https://www.spendflo.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "thesys",
+          "status": "No change",
+          "url": "https://www.thesys.dev/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "zipy",
+          "status": "No change",
+          "url": "https://www.zipy.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:30Z"
+        },
+        {
+          "companyId": "scalekit",
+          "status": "No change",
+          "url": "https://www.scalekit.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "spry-therapeutics",
+          "status": "No change",
+          "url": "https://www.sprypt.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "wispr-flow",
+          "status": "No change",
+          "url": "https://wisprflow.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "metaforms",
+          "status": "No change",
+          "url": "https://www.metaforms.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "protecto",
+          "status": "No change",
+          "url": "https://www.protecto.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "securden",
+          "status": "No change",
+          "url": "https://www.securden.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "revenue-hero",
+          "status": "No change",
+          "url": "https://www.revenuehero.io/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "hunar",
+          "status": "No change",
+          "url": "https://hunar.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "hivel",
+          "status": "No change",
+          "url": "https://www.hivel.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "rocket",
+          "status": "Content changed",
+          "url": "https://www.rocket.new/",
+          "summary": "Vibe Solutioning is the practice of thinking rigorously before building— and building directly from that thinking— all in one system. Research. Decide. Build. Operate. Grow.\nVibe coding starts at line one. Vibe Solutioning starts before it. The most expensive mistake in any business is not a bad execution. It is a good execution of the wrong thing. Vibe Solutioning is the answer to that problem.\nRocket is the first platform built around this practice. Every capability— Solve, Build, Intelligence — is connected by one shared context that makes every decision smarter than the last.\nRocket has three capabilities, all connected by one shared context.\nSolve — Describe any market problem, business decision, or opportunity. Rocket researches it, returns evidence, and delivers a clear recommendation. Board decks, market entry analyses, competitor briefs, campaign strategies, regulatory research. In hours, not weeks.\nBuild — Take any brief or decision into production. Web apps, mobile apps, landing pages, internal dashboards, customer portals. Production-grade from the first generation, built from the full context of everything already decided in the project.\nIntelligence — Rocket watches y",
+          "before": "No previous text removed.",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "architect-labs",
+          "status": "Failed",
+          "url": "https://architectchips.com/",
+          "summary": "No readable public page text; the source may require JavaScript or sign-in",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:31Z"
+        },
+        {
+          "companyId": "capitol",
+          "status": "No change",
+          "url": "https://www.capitol.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:32Z"
+        },
+        {
+          "companyId": "chaotix-ai",
+          "status": "No change",
+          "url": "https://chaotix.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:32Z"
+        },
+        {
+          "companyId": "coreworks",
+          "status": "No change",
+          "url": "https://www.coreworks.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:32Z"
+        },
+        {
+          "companyId": "dreamteam",
+          "status": "Content changed",
+          "url": "https://dreamteam.co/",
+          "summary": "One memory, one deal\nAll four agents work from the same memory of your team's emails and meetings, so each one picks up where the last left off. Click an agent to see its part in the deal.",
+          "before": "Your Personalized AI Team\nNot AI features. AI agents that own a slice of the revenue job - the researcher, the engagement rep, the RevOps lead, the CRM admin. They work overnight. Click any teammate to see how.",
+          "checkedAt": "2026-10-01T11:05:33Z"
+        },
+        {
+          "companyId": "gibran",
+          "status": "No change",
+          "url": "https://gibran.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:33Z"
+        },
+        {
+          "companyId": "jhana",
+          "status": "Content changed",
+          "url": "https://jhana.ai/",
+          "summary": "Neoeconomica by jhana\nBuild the law firm\nYou keep the judgment.\nWe’ll run everything else.\nDiscuss your practice →\nSan Francisco, CACambridge, MABangalore, IND\n300,000+case files processed in courts16,150+lawyers have used jhana650judges have used jhana5M+pages processed a week\nWhere can we help?\nFor owner-led, ambitious law firms\nWe run everything else.\nPractice transformation for everything outside your legal judgment: technology, people, workflows, and growth.\nExplore the consortium →\nFor enterprise & scale\nReview its returns, controls, and exposure before the next investment.\nExplore the AI audit →\nFor businesses & clients\nFind the right lawyer.\nTell us what you need. An independent lawyer in our network takes the matter, with our systems doing the reading.\nExplore services →\nFor government and courts\nBuild for public service.\nEnd-to-end automation for courts, from filing to judgment, built with registries and judges.\nExplore public sector →\n56% of firms say AI has delivered no significant financial benefit yet. Time saved is not money earned. The difference is what happens to the hours, and that is the whole of our work.\nPwC, 29th Global CEO Survey, January 2026\nBefore we aske",
+          "before": "jhana — India's First AI Paralegal | National Legal Archive | Frontier Legal Intelligence Lab | Founded at Harvard, ₹15Cr Funded\nPUBSEC, a new GovTech benchmark\njhana is your legal AI\nSearch across 16M+ judgments, statutes & your own case files—\nwith instant citations you can trust.\nJoin our Free Tier\nBrute-forced best citations\nArguments, opinions, drafts\nBulk upload to extraction\nExhaustive, not exhausting\nAI brute-forces research and reads citations till correct.\nAI handles prompts, keywords, and booleans\nIterative search with filtering for best results\nAuto detects contradictions or outdated citations\nIndia's first AI paralegal—works till done, shows its work. Transparent & honest.\nVerifiably comprehensive review from bulk uploads. Any file, any size.\nParallel semantic + boolean searches from your client story. AI filters & headnotes.\nSee jhana in action\nTell your story. Ask for exactly what you need.\nBuilt for long context and precise footnotes\nCompare redlines → check compliance & enforceability\nPropositions, chronologies, issues, claims, risks\n“[jhana] is taking on AI hallucinations by creating a corpus of over 15 million documents of Indian law, spanning judgments, statutes",
+          "checkedAt": "2026-10-01T11:05:33Z"
+        },
+        {
+          "companyId": "nex",
+          "status": "Content changed",
+          "url": "https://nex.ai/",
+          "summary": "Text was removed; no new text was added.",
+          "before": "We build and deploy AI agents that manage prospecting, qualification, CRM hygiene, forecasting, lead routing, revenue recovery, and all the complex revenue work in between, on autopilot.\nTry the free agent builder",
+          "checkedAt": "2026-10-01T11:05:33Z"
+        },
+        {
+          "companyId": "optexity",
+          "status": "No change",
+          "url": "https://optexity.com/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:34Z"
+        },
+        {
+          "companyId": "presentations-ai",
+          "status": "No change",
+          "url": "https://www.presentations.ai/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:34Z"
+        },
+        {
+          "companyId": "privado",
+          "status": "Content changed",
+          "url": "https://www.privado.ai/",
+          "summary": "Webinar: CCPA & Colorado ADMT Requirements Are Coming: What Must Be Ready by January 1, 2027",
+          "before": "Webinar: How to close website privacy findings & reduce risk.\nRead agenda and register",
+          "checkedAt": "2026-10-01T11:05:34Z"
+        },
+        {
+          "companyId": "sentra",
+          "status": "No change",
+          "url": "https://www.sentra.app/",
+          "summary": "Readable page text matches the previous check; line ordering is ignored.",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:34Z"
+        },
+        {
+          "companyId": "togai",
+          "status": "Failed",
+          "url": "https://www.togai.com/",
+          "summary": "Website redirected outside its company domain; review the source manually",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:35Z"
+        },
+        {
+          "companyId": "ui-flow",
+          "status": "Failed",
+          "url": "https://uiflow.com/",
+          "summary": "timed out",
+          "before": "",
+          "checkedAt": "2026-10-01T11:05:35Z"
+        },
+        {
+          "companyId": "zipstack",
+          "status": "Content changed",
+          "url": "https://unstract.com/",
+          "summary": "Ai powered document intelligence\ninto Clean, Structured\nFrom unstructured documents to automated workflows.\nHandle a wide variety of document formats without manual annotations\nDo differentiating work-pick your battles\nView API Documentation\nGo big on scale-and small on bills\nBegin your AI driven\ndocument processing automation today\nStart turning unstructured documents into reliable, actionable data.\nAutomate the three most difficult parts of document extraction.\nAgentic Prompt Studio uses multi-agent pipelines to define schemas, generate extraction prompts, and validate accuracy across your documents.\nExplore Agentic Prompt Studio\nAuto-define schemas\nUpload documents, generate production-ready schemas and prompts, then edit, version, and roll back with one click.\nExtract structured data\nApply schemas and prompts to documents for clean, structured data across variants—no templates or training required.\nValidate every extraction\nCompare runs, score prompt accuracy, trace mismatches to sources, and catch regressions before production.\nGet complex documents ready for LLM consumption\nA unique layout-preserving model\nlets LLMs understand multi-column layouts, forms and tables.\nState-of-",
+          "before": "Turn Unstructured Documents into Structured Data. Instantly.\nWhy Unstract is great for agentic document processing?\nHandle a wide variety of document formats without\nmanual annotations\nGive your Agents superpowers\nEmpower agents to turn complex, real-world ‘human-only’ tasks into fully automated solutions.\nBegin your AI driven document processing automation today\nDo differentiating work—pick your battles\nGo big on scale—and small on bills\nWelcome to Prompt Studio\nThe prompt engineering environment purpose-built for\nstructured document data extraction.\nBuild generic prompts at speed\nPrompt Studio is an environment designed for prompt engineers to create generic prompts quickly from a small sample of representative documents.\nVersioning built-in\nStop maintaining prompts in spreadsheets. Test new versions of your prompts thoroughly. Rollback easily should you spot a problem.\nView and compare responses from and the cost of multiple LLMs side-by-side.\nKnow the cost, comparatively\nAs you build. keep an eye on how much your extraction is costing you side-by-side comparison for your chosen LLMs.\nLLMWhisperer: Get complex documents ready for LLM consumption\nLLM output is as good as the inpu",
+          "checkedAt": "2026-10-01T11:05:35Z"
+        }
+      ],
+      "nextIndex": 35,
+      "trigger": "Scheduled",
+      "peopleStatus": "Public website text only. Employee departures, new roles and new companies require a connected people-data provider and separate evidence."
+    },
+    {
       "id": "report-f01e1407-f302-40fd-a2c7-ac50adf901c3",
       "startedAt": "2026-09-29T10:49:43Z",
       "completedAt": "2026-09-29T10:49:56Z",
@@ -1749,6 +2040,14 @@
   ],
   "notices": [
     {
+      "id": "notice-report-364ced75-4429-4416-84bd-6566403ce6d7",
+      "title": "8 portfolio website changes to review",
+      "detail": "32/35 company websites checked. 3 sources unavailable. Public website changes do not establish employee moves.",
+      "reportId": "report-364ced75-4429-4416-84bd-6566403ce6d7",
+      "read": false,
+      "createdAt": "2026-10-01T11:05:45Z"
+    },
+    {
       "id": "notice-report-f01e1407-f302-40fd-a2c7-ac50adf901c3",
       "title": "3 portfolio website changes to review",
       "detail": "32/35 company websites checked. 3 sources unavailable. Public website changes do not establish employee moves.",
@@ -1802,5 +2101,5 @@
     "frequencyDays": 2,
     "schedulerRegistered": true
   },
-  "generatedAt": "2026-09-29T10:49:56Z"
+  "generatedAt": "2026-10-01T11:05:45Z"
 }
