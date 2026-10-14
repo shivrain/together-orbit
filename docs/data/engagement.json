@@ -1,6 +1,125 @@
 {
   "feed": [
     {
+      "id": "composio-instant-spend-controls-2026-10-08",
+      "title": "Agent-paid tools: define the spend and approval boundary",
+      "publisher": "Composio",
+      "url": "https://composio.dev/blog/composio-instant",
+      "publishedAt": "2026-10-08",
+      "checkedAt": "2026-10-14",
+      "companyIds": [
+        "runable",
+        "emergent"
+      ],
+      "topic": "Portfolio product learning · tool costs and user control",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "Composio launched Instant, a wallet for pay-per-call access to supported paid tools without separate provider accounts. The announcement describes charge reporting and no charge for failed calls. These are vendor claims; suitability and controls need evaluation for each workflow.",
+      "whyRelevant": "An agent builder can use a peer's launch to discuss one concrete product decision: when a tool expense needs the user's approval. Offer a test worksheet grounded in the recipient's public product role.",
+      "engagementMove": "Offer a worksheet for one workflow: permitted tools, spend ceiling, approval point and retry treatment. Ask which boundary the founder would change. This is a proposed evaluation, not a claim that Instant supplies these controls.",
+      "takeaways": [
+        "“You see every charge.” Composio describes per-call visibility; suggested test: can the user attribute cost to a completed task?",
+        "“Failed calls are free.” Suggested test: distinguish provider failure from a technically successful call that produces an unusable result.",
+        "Suggested product exercise: write down which expense needs approval before execution. The announcement does not establish that this proposed approval policy is enforced."
+      ],
+      "discussionQuestion": "For one agent workflow, which paid tool call should require approval, and what should happen when a retry crosses the budget?",
+      "emailSubject": "A paid-tool evaluation question from Composio",
+      "emailBody": "Composio's October 8 launch prompted a product question:\nhttps://composio.dev/blog/composio-instant\n\nMy suggested exercise: choose one workflow and write down allowed tools, a spend ceiling, and the approval point. Which boundary would make that useful for your users? I can draft the worksheet.",
+      "recipientAngles": [
+        {
+          "companyId": "runable",
+          "personName": "Saksham Sarda",
+          "whyThisPerson": "Together's investment account describes Saksham leading product development for Runable's small-business workflows.",
+          "angle": "Discuss the user-facing approval boundary for a workflow that pays for outside services.",
+          "emailSubject": "Saksham — where should a workflow ask before spending?",
+          "emailBody": "Hi Saksham,\n\nSharing Composio's paid-tool launch:\nhttps://composio.dev/blog/composio-instant\n\nFor a Runable workflow, I would sketch one user journey with a budget and an explicit approval point. Where would you put that prompt so a small-business user understands the expense without breaking the flow? Happy to draft a one-page example for you to critique."
+        },
+        {
+          "companyId": "emergent",
+          "personName": "Madhav Jha",
+          "whyThisPerson": "Emergent's public founder profile identifies Madhav as CTO with machine-learning infrastructure experience.",
+          "angle": "Use a peer launch to discuss how a generated application explains paid-tool retries and completion costs.",
+          "emailSubject": "Madhav — one test for paid-tool retries",
+          "emailBody": "Hi Madhav,\n\nComposio's new wallet is a useful discussion prompt:\nhttps://composio.dev/blog/composio-instant\n\nMy proposed test for a generated app is a paid call that succeeds technically but needs another attempt to satisfy the user. What should the user see and approve before that retry? I can turn your answer into a small acceptance-test worksheet."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Composio Instant launch",
+          "url": "https://composio.dev/blog/composio-instant",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "title": "Together: Runable investment account",
+          "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+          "publishedAt": "2026-08-26"
+        },
+        {
+          "title": "Y Combinator: Emergent founders",
+          "url": "https://www.ycombinator.com/companies/emergent"
+        }
+      ]
+    },
+    {
+      "id": "poyar-predictable-usage-pricing-2026-10-07",
+      "title": "Before changing pricing, test whether a buyer can predict the bill",
+      "publisher": "Growth Unhinged · Kyle Poyar",
+      "url": "https://www.growthunhinged.com/p/usage-based-pricing-for-ai",
+      "publishedAt": "2026-10-07",
+      "checkedAt": "2026-10-14",
+      "companyIds": [
+        "rocket",
+        "metaforms"
+      ],
+      "topic": "Operating playbook · predictable pricing and adoption",
+      "kind": "Industry research",
+      "format": "Newsletter",
+      "summary": "Kyle Poyar's October 7 playbook examines predictable bills, adoption before expansion, and sales incentives under usage pricing. Its recommendations are operating advice, not new buyer-survey findings or evidence that a particular pricing model improves revenue.",
+      "whyRelevant": "A simple bill-estimation exercise gives an AI product founder or enterprise seller a concrete way to challenge packaging without assuming a current pricing problem.",
+      "engagementMove": "Offer a three-scenario worksheet: expected usage, a busy month and repeated unsuccessful attempts. Ask the recipient to identify the hardest bill to explain and who should own the adoption milestone.",
+      "takeaways": [
+        "“Can my customers predict their bill?” Suggested exercise: ask a prospective buyer to estimate spend from one realistic workflow.",
+        "“Adoption needs to happen before expansion can materialize.” Suggested discussion: define a useful adoption milestone and its owner before discussing upsell.",
+        "Poyar discusses caps, annual drawdowns and included usage as possible structures. Evaluate the fit to customer behavior and cost exposure rather than copying a model."
+      ],
+      "discussionQuestion": "Could a buyer estimate the bill for a normal month and a heavy month, and which assumption would they struggle to explain?",
+      "emailSubject": "A buyer bill-estimation exercise",
+      "emailBody": "This October 7 pricing playbook prompted a practical exercise:\nhttps://www.growthunhinged.com/p/usage-based-pricing-for-ai\n\nTry three cases: normal usage, a busy month and repeated unsuccessful attempts. Which bill would be hardest for a buyer to explain internally? I can put the examples on one page before any pricing discussion.",
+      "recipientAngles": [
+        {
+          "companyId": "rocket",
+          "personName": "Deepak Dhanak",
+          "whyThisPerson": "Rocket's official biography identifies Deepak as COO with strategy, finance, GTM and operations responsibilities.",
+          "angle": "Invite the COO to stress-test customer predictability alongside operating cost in a hypothetical package.",
+          "emailSubject": "Deepak — could a buyer explain these three bills?",
+          "emailBody": "Hi Deepak,\n\nA practical pricing exercise for your finance and GTM remit:\nhttps://www.growthunhinged.com/p/usage-based-pricing-for-ai\n\nFor one hypothetical Rocket package, I would show normal usage, a busy month and repeated unsuccessful builds. Which bill would be hardest to explain to a customer, and where would you put the cost boundary? I can draft the three examples for a quick review."
+        },
+        {
+          "companyId": "metaforms",
+          "personName": "Chris Gimenez",
+          "whyThisPerson": "Metaforms publicly lists Chris as its founding GTM executive for enterprise accounts.",
+          "angle": "Ask an enterprise seller which workload assumptions a research buyer can estimate before a pilot.",
+          "emailSubject": "Chris — which workload can a buyer estimate upfront?",
+          "emailBody": "Hi Chris,\n\nSharing a pricing playbook with a buyer-facing question:\nhttps://www.growthunhinged.com/p/usage-based-pricing-for-ai\n\nFor a research-agency pilot, what workload could a buyer estimate confidently before starting? I would use that estimate to sketch a normal-month and busy-month bill, then ask which assumption needs validation. Would a one-page version be useful in an enterprise evaluation?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kyle Poyar: The AI monetization debate shifts again",
+          "url": "https://www.growthunhinged.com/p/usage-based-pricing-for-ai",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "title": "Rocket: Deepak Dhanak",
+          "url": "https://www.rocket.new/author/deepak-dhanak"
+        },
+        {
+          "title": "Metaforms: current team",
+          "url": "https://www.metaforms.ai/about"
+        }
+      ]
+    },
+    {
       "id": "capitol-enterprise-ai-evaluation-2026-09-28",
       "title": "Capitol's buying guide: test an approved workflow, including its exceptions",
       "publisher": "Capitol AI · Shaun Modi",
