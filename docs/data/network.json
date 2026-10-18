@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-10-18",
   "people": [
     {
       "id": "research-composio-soham-ganatra",
@@ -2061,6 +2061,38 @@
         }
       ],
       "checkedAt": "2026-09-21"
+    },
+    {
+      "id": "alum-wispr-flow-daniel-bessonov",
+      "companyId": "wispr-flow",
+      "name": "Daniel Bessonov",
+      "role": "Former product intelligence lead at Wispr; now Avora co-founder",
+      "kind": "Alumni",
+      "interests": [
+        "AI agents",
+        "Healthcare operations",
+        "Dental practices",
+        "Fintech payments"
+      ],
+      "summary": "Y Combinator identifies him as an Avora founder (Fall 2024). His bio says he most recently led product intelligence at Wispr.ai and was earlier at Ramp, Anduril and Lumos. Avora launched in November 2024 as ShowAndTell, building AI agents for dental patient operations.",
+      "networkAngles": [
+        "A historical alumni-founder reconnect from 2024, not a new departure.",
+        "Reconnect around voice and agent workflows in dental and healthcare front offices."
+      ],
+      "sources": [
+        {
+          "title": "Y Combinator: Avora",
+          "url": "https://www.ycombinator.com/companies/avora",
+          "evidence": "Founder bio names Wispr.ai as his most recent role, leading product intelligence."
+        },
+        {
+          "title": "Launch YC: ShowAndTell",
+          "url": "https://www.ycombinator.com/launches/MIQ-showandtell-ai-agents-for-dental-patient-operations",
+          "evidence": "Launch post naming Danny and Justin as co-founders; embedded created_at is 2024-11-19.",
+          "publishedAt": "2024-11-19"
+        }
+      ],
+      "checkedAt": "2026-10-18"
     }
   ],
   "movements": [
@@ -2152,6 +2184,24 @@
       "sourceUrl": "https://www.ycombinator.com/companies/lab0",
       "provider": "Public source",
       "evidence": "Lab0's Y Combinator page states Lakshya was a founding engineer at Emergent leading integrations, evals and deployments. The launch post of 20 May 2026 repeats the Emergent background with a different ARR figure ($100M rather than $70M), so treat the scale claim as unverified.",
+      "confirmed": false
+    },
+    {
+      "id": "move-wispr-flow-daniel-bessonov-2024-11-19",
+      "companyId": "wispr-flow",
+      "personId": "alum-wispr-flow-daniel-bessonov",
+      "person": "Daniel Bessonov",
+      "profile": "https://www.getavora.ai",
+      "previousRole": "Led product intelligence",
+      "previousCompany": "Wispr Flow",
+      "currentRole": "Co-founder",
+      "currentCompany": "Avora (launched as ShowAndTell)",
+      "type": "Started company",
+      "observedAt": "2026-10-18",
+      "eventDate": "2024-11-19",
+      "sourceUrl": "https://www.ycombinator.com/companies/avora",
+      "provider": "Public source",
+      "evidence": "Historical (2024), not a recent departure. Avora's Y Combinator page (Fall 2024) says Danny most recently led product intelligence at Wispr.ai, Wispr Flow's company, and was previously at Ramp, Anduril and Lumos. The Launch YC post 'ShowAndTell: AI agents for dental patient operations' (https://www.ycombinator.com/launches/MIQ-showandtell-ai-agents-for-dental-patient-operations) has embedded created_at 2024-11-19 and names Danny and Justin Zhou as co-founders. The launch post itself does not mention Wispr, and no departure date is stated.",
       "confirmed": false
     }
   ]
