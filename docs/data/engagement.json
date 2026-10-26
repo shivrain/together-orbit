@@ -1,6 +1,125 @@
 {
   "feed": [
     {
+      "id": "composio-firewall-intent-tests-2026-10-21",
+      "title": "A peer security launch: test intent separately from permission",
+      "publisher": "Composio",
+      "url": "https://composio.dev/blog/introducing-composio-firewall",
+      "publishedAt": "2026-10-21",
+      "checkedAt": "2026-10-26",
+      "companyIds": [
+        "protecto",
+        "securden"
+      ],
+      "topic": "Portfolio product learning · agent security evaluation",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "Composio describes Firewall checks before tool execution and before returned content reaches an agent, comparing actions with the user's task and configured boundaries. This is a vendor launch account; it supplies no independent effectiveness benchmark.",
+      "whyRelevant": "For privacy and identity founders, a peer launch can anchor a useful buyer-demo exercise: show an action that credentials permit but the task does not justify.",
+      "engagementMove": "Offer a three-case evaluation outline: an authorized task, an unrelated action with valid credentials, and a malicious instruction in returned content. Ask the recipient which expected result or evidence is missing.",
+      "takeaways": [
+        "“Permissions don't capture intent” — the post distinguishes available access from whether a particular action belongs to the user's task.",
+        "“No safety layer eliminates every risk.” Treat the launch as a design discussion; establish false-block and missed-attack criteria before evaluating a product.",
+        "Suggested evaluation: record the requested task, attempted action, enforcement decision and supporting evidence. This is our proposed checklist, not a claim about either recipient's implementation."
+      ],
+      "discussionQuestion": "What evidence would convince a buyer that an action with valid credentials was correctly blocked because it fell outside the requested task?",
+      "emailSubject": "A buyer-demo question from Composio's security launch",
+      "emailBody": "Composio's October 21 launch suggests a concrete evaluation:\nhttps://composio.dev/blog/introducing-composio-firewall\n\nTake one permitted workflow and one action its credentials allow but the user did not request. What evidence should a buyer inspect when that second action is blocked? I can draft the test outline for you to challenge.",
+      "recipientAngles": [
+        {
+          "companyId": "protecto",
+          "personName": "Baskaran Alagarsamy",
+          "whyThisPerson": "Protecto identifies Baskaran as CTO with privacy-engineering and large-scale data experience.",
+          "angle": "Ask which data-boundary test distinguishes valid access from an inappropriate use in a specific task.",
+          "emailSubject": "Baskaran — what would make this data-boundary test credible?",
+          "emailBody": "Hi Baskaran,\n\nA peer launch prompted a test idea for a privacy buyer:\nhttps://composio.dev/blog/introducing-composio-firewall\n\nI would contrast a permitted data lookup with an attempted use outside the requested task, using synthetic records. What should the buyer see to understand why one passes and the other fails? Happy to turn your answer into a short evaluation outline."
+        },
+        {
+          "companyId": "securden",
+          "personName": "Kumaran Balan",
+          "whyThisPerson": "Securden names Kumaran as CTO in its AI Agent Security and Governance announcement.",
+          "angle": "Invite an identity-security founder to define the audit evidence for a blocked action despite valid credentials.",
+          "emailSubject": "Kumaran — which evidence should a blocked action leave?",
+          "emailBody": "Hi Kumaran,\n\nSharing Composio's new security write-up:\nhttps://composio.dev/blog/introducing-composio-firewall\n\nMy proposed buyer demo pairs a legitimate task with an unrelated action using the same credentials. For Securden's governance audience, which evidence would explain the rejection best: the user's request, delegated scope, or decision trace? I can assemble a one-page checklist from your preferred example."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Composio: Introducing Composio Firewall",
+          "url": "https://composio.dev/blog/introducing-composio-firewall",
+          "publishedAt": "2026-10-21"
+        },
+        {
+          "title": "Protecto: leadership",
+          "url": "https://www.protecto.ai/about/"
+        },
+        {
+          "title": "Securden: agent-security announcement",
+          "url": "https://www.securden.com/news/unified-ai-agent-security-and-governance-platform.html",
+          "publishedAt": "2026-06-17"
+        }
+      ]
+    },
+    {
+      "id": "kwan-positioning-evidence-test-2026-10-21",
+      "title": "Test a positioning claim before rewriting every touchpoint",
+      "publisher": "Growth Unhinged · Melissa Kwan",
+      "url": "https://www.growthunhinged.com/p/ai-brain-for-your-positioning",
+      "publishedAt": "2026-10-21",
+      "checkedAt": "2026-10-26",
+      "companyIds": [
+        "metaforms",
+        "runable"
+      ],
+      "topic": "Founder operating playbook · customer evidence and positioning",
+      "kind": "Industry research",
+      "format": "Newsletter",
+      "summary": "eWebinar cofounder Melissa Kwan describes assembling customer evidence and messaging rules in an AI project, then testing a proposed positioning with prospects before extending it across touchpoints. This is a first-person operating account, not a controlled study of conversion improvement.",
+      "whyRelevant": "A founder can critique one sentence and its supporting evidence much faster than a complete marketing plan. The useful contribution is a small test template, without assuming either company needs repositioning.",
+      "engagementMove": "Offer a blank worksheet: intended buyer, problem, expected result, supporting quote and evidence that would disprove the claim. Ask the founder to choose one sentence and one external reader to test it with.",
+      "takeaways": [
+        "“Don’t outsource your own thinking.” Kwan describes choosing the method and direction herself before asking AI to help apply them.",
+        "“Everything up to this point was still a hypothesis.” She tested the proposed messaging with prospects before expanding the rewrite.",
+        "Suggested exercise: ask a reader with little context to explain the product back in their own words. Record misunderstandings before changing more copy."
+      ],
+      "discussionQuestion": "After hearing one sentence about the product, what should the intended buyer believe it replaces, and what evidence would show they misunderstood?",
+      "emailSubject": "A small positioning test from a founder's write-up",
+      "emailBody": "Melissa Kwan's October 21 account suggests a small exercise:\nhttps://www.growthunhinged.com/p/ai-brain-for-your-positioning\n\nChoose one product sentence and ask a reader to explain what it does, who it serves and what it replaces. Which misunderstanding would matter most? I can put the test and evidence fields on a single page.",
+      "recipientAngles": [
+        {
+          "companyId": "metaforms",
+          "personName": "Akshat Tyagi",
+          "whyThisPerson": "Metaforms identifies Akshat as founder and CEO and describes building agents for research agencies and survey-panel businesses.",
+          "angle": "Ask which words help a research buyer recognize an operational job rather than a broad AI category.",
+          "emailSubject": "Akshat — what should a research buyer repeat back?",
+          "emailBody": "Hi Akshat,\n\nThis founder account prompted a positioning test for research buyers:\nhttps://www.growthunhinged.com/p/ai-brain-for-your-positioning\n\nAfter one sentence about Metaforms, which operational job should an agency leader say it helps with? I would ask a reader to repeat that back, then note where the interpretation diverges. Would a blank one-page test be useful for a message you are considering?"
+        },
+        {
+          "companyId": "runable",
+          "personName": "Umesh Kumar",
+          "whyThisPerson": "Together identifies Umesh as Runable's CEO and describes its product as a general AI agent for digital tasks.",
+          "angle": "Invite the founder to select one concrete task and contrast the buyer's existing approach with an agent-based workflow.",
+          "emailSubject": "Umesh — which task makes the agent story clearest?",
+          "emailBody": "Hi Umesh,\n\nSharing a founder's practical positioning write-up:\nhttps://www.growthunhinged.com/p/ai-brain-for-your-positioning\n\nFor Runable's broad agent scope, I would test one concrete task rather than start with a category label. Which task would you choose, and what would a new user say they do instead today? I can draft a comparison worksheet for that example."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Melissa Kwan: How to build an AI brain for your positioning",
+          "url": "https://www.growthunhinged.com/p/ai-brain-for-your-positioning",
+          "publishedAt": "2026-10-21"
+        },
+        {
+          "title": "Metaforms: team and mission",
+          "url": "https://www.metaforms.ai/about"
+        },
+        {
+          "title": "Together: Runable founders and product",
+          "url": "https://www.together.fund/portfolio/runable"
+        }
+      ]
+    },
+    {
       "id": "launch-20vc-harrison-chase-on-why-routing-and-memor",
       "title": "20VC: Harrison Chase on why routing and memory live in the harness",
       "publisher": "20VC (Harry Stebbings)",
