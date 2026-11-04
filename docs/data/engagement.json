@@ -1,6 +1,124 @@
 {
   "feed": [
     {
+      "id": "irrational-labs-agent-messaging-2026-11-04",
+      "title": "Buyer experiment: explain the jobs before adding agent labels",
+      "publisher": "Irrational Labs · Isabel Macdonald, via Growth Unhinged",
+      "url": "https://www.growthunhinged.com/p/ai-agent-messaging-study",
+      "publishedAt": "2026-11-04",
+      "checkedAt": "2026-11-04",
+      "companyIds": [
+        "runable",
+        "metaforms"
+      ],
+      "topic": "Buyer research · agent messaging and comprehension",
+      "kind": "Buyer data",
+      "format": "Research",
+      "summary": "Irrational Labs reports an experiment with 1,014 U.S. software buyers viewing three small-business tools. Team-of-agents wording raised stated purchase interest by 6.3 percentage points versus one-agent wording, but its advantage over no-agent wording was not significant. Willingness-to-pay differences were not significant; actual purchases were not observed.",
+      "whyRelevant": "This gives founders a bounded reason to test how clearly buyers understand individual jobs. It does not establish that changing a category label will improve either portfolio company's sales.",
+      "engagementMove": "Offer a three-variant message test using identical features: job description, one agent, and named jobs. Ask the founder to choose one workflow and measure comprehension as well as interest before changing copy.",
+      "takeaways": [
+        "For willingness to pay, the authors report that “none of these differences is statistically significant.” Keep this distinct from the purchase-interest result.",
+        "“So unpack the jobs that matter and leave out the filler.” Suggested application: choose only tasks that the intended buyer recognizes and values.",
+        "Suggested follow-up: validate a promising message against qualified pilot starts and completed workflows. Survey purchase intent alone cannot establish real conversion."
+      ],
+      "discussionQuestion": "For one buyer workflow, which jobs should the message make visible, and how would you distinguish greater interest from genuine understanding?",
+      "emailSubject": "A buyer experiment worth turning into a small message test",
+      "emailBody": "Irrational Labs published a buyer-messaging experiment today:\nhttps://www.growthunhinged.com/p/ai-agent-messaging-study\n\nI would use it to test one workflow with identical features and three ways of explaining the jobs. Which wording would a buyer understand best, and what should they be able to repeat back? I can draft the test worksheet.",
+      "recipientAngles": [
+        {
+          "companyId": "runable",
+          "personName": "Umesh Kumar",
+          "whyThisPerson": "Together lists Umesh as Runable's CEO and describes a general agent for digital tasks.",
+          "angle": "Ask which concrete jobs make a broad agent useful to a first-time buyer, then test comprehension without changing product capabilities.",
+          "emailSubject": "Umesh — which jobs should a new user see first?",
+          "emailBody": "Hi Umesh,\n\nThis new buyer experiment gives us a useful test prompt:\nhttps://www.growthunhinged.com/p/ai-agent-messaging-study\n\nFor one Runable use case, I would compare a broad promise with the specific jobs a user gets done, keeping features identical. Which jobs would you show first, and what should a new user explain back? I can put the variants on one page for your critique."
+        },
+        {
+          "companyId": "metaforms",
+          "personName": "Akshat Tyagi",
+          "whyThisPerson": "Metaforms identifies Akshat as CEO and describes agents for research agencies and survey-panel businesses.",
+          "angle": "Translate a small-business survey into a question for research buyers, explicitly testing the fit rather than transferring its result.",
+          "emailSubject": "Akshat — does naming the research jobs help a buyer?",
+          "emailBody": "Hi Akshat,\n\nSharing a buyer-messaging study with a narrow application question:\nhttps://www.growthunhinged.com/p/ai-agent-messaging-study\n\nFor an agency evaluation, would spelling out the research jobs make the value clearer than a broad agent description? I would test buyer comprehension and a qualified next step before changing anything. Which workflow would make that comparison useful? Happy to draft a blank worksheet."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Isabel Macdonald: AI agent messaging study",
+          "url": "https://www.growthunhinged.com/p/ai-agent-messaging-study",
+          "publishedAt": "2026-11-04"
+        },
+        {
+          "title": "Together: Runable founders and product",
+          "url": "https://www.together.fund/portfolio/runable"
+        },
+        {
+          "title": "Metaforms: team and mission",
+          "url": "https://www.metaforms.ai/about"
+        }
+      ]
+    },
+    {
+      "id": "composio-docs-validation-2026-10-26",
+      "title": "A documentation check that starts in a fresh project",
+      "publisher": "Composio",
+      "url": "https://composio.dev/blog/python-typescript-api-docs-examples",
+      "publishedAt": "2026-10-26",
+      "checkedAt": "2026-11-04",
+      "companyIds": [
+        "scalekit",
+        "emergent"
+      ],
+      "topic": "Portfolio engineering playbook · runnable documentation",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "Composio describes adding equivalent Python, TypeScript and REST examples with syntax, SDK, schema and rendering checks. The work exposed SDK response mistakes and a project-setup requirement that compilation alone missed. It is a maintenance account with explicit validation limits, not a benchmark of developer conversion.",
+      "whyRelevant": "For API and coding-product teams, a peer's implementation can anchor a small onboarding experiment: can a new reader complete one task from the published instructions?",
+      "engagementMove": "Offer a one-example review sheet covering project setup, dependencies, authentication fixture, expected output and rendered documentation. Ask which step needs execution rather than a static check.",
+      "takeaways": [
+        "“Compiler validation alone would not establish that the tutorial runs as documented.” Suggested test: start from the setup instructions in a fresh project.",
+        "“It checks structure, not whether two implementations mean the same thing.” Composio distinguishes its language-tab checks from semantic equivalence.",
+        "Suggested acceptance criterion: a reader can reach the documented output and see any unsupported operation clearly identified. Treat static checks as one layer of evidence."
+      ],
+      "discussionQuestion": "Which step in a first-use example requires a real execution test, and what should the expected output prove?",
+      "emailSubject": "A peer example for testing the first-use path",
+      "emailBody": "Composio's documentation write-up suggests a small review:\nhttps://composio.dev/blog/python-typescript-api-docs-examples\n\nChoose one example and follow it from a fresh project to its expected output. Which setup or runtime step would a static check miss? I can draft a one-page review sheet for the example you choose.",
+      "recipientAngles": [
+        {
+          "companyId": "scalekit",
+          "personName": "Ravi Madabhushi",
+          "whyThisPerson": "Scalekit's author page identifies Ravi as cofounder and lists his authentication and MCP engineering guides.",
+          "angle": "Ask an authentication author which part of an onboarding example must be exercised with a test fixture rather than merely compiled.",
+          "emailSubject": "Ravi — what should an auth quickstart prove?",
+          "emailBody": "Hi Ravi,\n\nComposio published a useful account of checking its examples:\nhttps://composio.dev/blog/python-typescript-api-docs-examples\n\nFor one auth quickstart, I would trace setup through a test fixture to the expected result. Which failure would a compiling snippet still miss? Given your technical guides, I would value your choice of the one runtime check worth making mandatory. I can sketch the review sheet."
+        },
+        {
+          "companyId": "emergent",
+          "personName": "Madhav Jha",
+          "whyThisPerson": "Emergent's existing source-backed public founder profile identifies Madhav as CTO with machine-learning infrastructure experience.",
+          "angle": "Discuss whether a coding system sees the same complete instructions that a human sees in rendered documentation.",
+          "emailSubject": "Madhav — test the instructions a coding agent actually reads",
+          "emailBody": "Hi Madhav,\n\nSharing a peer engineering write-up on documentation checks:\nhttps://composio.dev/blog/python-typescript-api-docs-examples\n\nFor a coding-product evaluation, I would compare the rendered guide with the text an agent reads, then ask it to complete one task from a fresh project. Which missing instruction would be most costly to discover late? I can turn that into a small acceptance-test outline."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Composio: documentation example validation",
+          "url": "https://composio.dev/blog/python-typescript-api-docs-examples",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "title": "Scalekit: Ravi Madabhushi",
+          "url": "https://www.scalekit.com/authors/ravi-madabhushi"
+        },
+        {
+          "title": "Y Combinator: Emergent founders",
+          "url": "https://www.ycombinator.com/companies/emergent"
+        }
+      ]
+    },
+    {
       "id": "composio-firewall-intent-tests-2026-10-21",
       "title": "A peer security launch: test intent separately from permission",
       "publisher": "Composio",
