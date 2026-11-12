@@ -1,6 +1,129 @@
 {
   "feed": [
     {
+      "id": "clay-meeting-prep-review-2026-11-08",
+      "title": "Automate one meeting-prep task, keep the relationship owner involved",
+      "publisher": "Growth Unhinged · Kyle Poyar, interviewing Clay's Osman Sheikhnureldin",
+      "url": "https://www.growthunhinged.com/p/inside-clay-s-gtm-machine",
+      "publishedAt": "2026-11-08",
+      "checkedAt": "2026-11-12",
+      "companyIds": [
+        "metaforms",
+        "hivel"
+      ],
+      "topic": "Operating playbook · meeting preparation and follow-through",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "In an interview with Clay's head of GTM engineering, Kyle Poyar describes preparing account briefs, proposing CRM updates and using human review in customer workflows. This is a Clay-sponsored operating account; its examples are not independent evidence of sales improvement.",
+      "whyRelevant": "Enterprise sales leaders can use one narrow preparation task to decide where automation would help a customer conversation. A blank brief is a useful contribution without asking them to adopt an entire GTM system.",
+      "engagementMove": "Offer a one-page meeting brief template: buyer's job, supporting evidence, unresolved question and next-step owner. Ask which field would most improve one existing customer conversation. Review that before proposing more automation.",
+      "takeaways": [
+        "“Data informs, then people act.” The account frames automation as preparation for relationship work.",
+        "“The rep just has to confirm the form.” Clay describes proposed CRM updates with rep confirmation; a suggested adaptation is to make uncertain fields explicit.",
+        "Suggested starting point: automate preparation of one brief, then ask its human owner whether it changed the conversation. Do not treat a completed template as evidence of sales impact."
+      ],
+      "discussionQuestion": "Which part of a customer brief is useful enough to automate, and which judgment should stay with the person taking the meeting?",
+      "emailSubject": "One meeting-prep workflow worth simplifying",
+      "emailBody": "This November 8 interview prompted a small GTM exercise:\nhttps://www.growthunhinged.com/p/inside-clay-s-gtm-machine\n\nI would start with one blank meeting brief: the buyer's job, evidence, an unresolved question and a next-step owner. Which field would most improve the conversation? I can draft the template for you to challenge.",
+      "recipientAngles": [
+        {
+          "companyId": "metaforms",
+          "personName": "Chris Gimenez",
+          "whyThisPerson": "Metaforms lists Chris as its founding GTM executive for enterprise accounts.",
+          "angle": "Ask which research-buyer context helps an enterprise rep prepare a useful evaluation conversation.",
+          "emailSubject": "Chris — what should a research-buyer brief contain?",
+          "emailBody": "Hi Chris,\n\nSharing an operating interview on preparation around customer conversations:\nhttps://www.growthunhinged.com/p/inside-clay-s-gtm-machine\n\nFor a Metaforms evaluation, I would put the agency's intended research job, the evidence still needed and one open question on a page. Which field would you add or remove before a rep used it? Happy to draft a blank version around your preferred workflow."
+        },
+        {
+          "companyId": "hivel",
+          "personName": "Harish Dittakavi",
+          "whyThisPerson": "Hivel identifies Harish as cofounder and CRO with experience in GTM, sales operations and analytics.",
+          "angle": "Invite a CRO to choose the one piece of preparation that helps a rep understand an engineering buyer's decision.",
+          "emailSubject": "Harish — which buyer question should prep resolve first?",
+          "emailBody": "Hi Harish,\n\nThis interview suggests a useful one-workflow test:\nhttps://www.growthunhinged.com/p/inside-clay-s-gtm-machine\n\nBefore an engineering leader evaluates Hivel, which question should a rep be able to answer about the buyer's decision? I would use that as the first field in a short preparation brief, with an explicit unknown when evidence is missing. I can sketch the template for your critique."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kyle Poyar: Inside Clay's GTM machine",
+          "url": "https://www.growthunhinged.com/p/inside-clay-s-gtm-machine",
+          "publishedAt": "2026-11-08"
+        },
+        {
+          "title": "Metaforms: current team",
+          "url": "https://www.metaforms.ai/about"
+        },
+        {
+          "title": "Hivel: leadership",
+          "url": "https://www.hivel.ai/about-us"
+        }
+      ]
+    },
+    {
+      "id": "composio-batched-timers-tradeoffs-2026-11-05",
+      "title": "Batching background work: define delay and duplicate handling first",
+      "publisher": "Composio",
+      "url": "https://composio.dev/blog/replacing-our-postgres-queue-at-45-million-polls-a-day",
+      "publishedAt": "2026-11-05",
+      "checkedAt": "2026-11-12",
+      "companyIds": [
+        "emergent",
+        "runable"
+      ],
+      "topic": "Portfolio engineering playbook · background task trade-offs",
+      "kind": "Industry research",
+      "format": "Article",
+      "summary": "Composio's November 5 account describes a September migration: Temporal workflows hold and batch timers while Postgres retains durable trigger records. The design accepts batching delay and repeated timer deliveries. It is a workload-specific operating account, not a general recommendation to replace database queues.",
+      "whyRelevant": "A peer example can help agent-product founders define acceptable delay and repeated execution before choosing infrastructure. The useful deliverable is a decision worksheet for one task, not a migration recommendation.",
+      "engagementMove": "Offer a worksheet for one background task: acceptable delay, retry behavior, duplicate protection and evidence of a bottleneck. Ask which user-visible behavior must be preserved before considering batching.",
+      "takeaways": [
+        "“A timer fires at least once.” Suggested test: make repeated delivery safe before changing scheduling infrastructure.",
+        "“At a few thousand timers, a plain Postgres table can work fine.” The case explicitly limits where its added complexity is worthwhile.",
+        "Suggested decision rule: measure the current bottleneck and state the latency budget. The migration changed both scheduling and database placement, so its reported results do not isolate one cause."
+      ],
+      "discussionQuestion": "For one background task, how much delay can the user tolerate, and what must remain safe if the task is delivered twice?",
+      "emailSubject": "A peer example for deciding when to batch background work",
+      "emailBody": "Composio published a useful scheduling case on November 5:\nhttps://composio.dev/blog/replacing-our-postgres-queue-at-45-million-polls-a-day\n\nI would use it to write down one task's latency budget and duplicate-delivery behavior before debating infrastructure. Which user-visible requirement would rule out batching? I can draft a short decision worksheet.",
+      "recipientAngles": [
+        {
+          "companyId": "emergent",
+          "personName": "Madhav Jha",
+          "whyThisPerson": "Emergent's existing source-backed public profile identifies Madhav as CTO with machine-learning infrastructure experience.",
+          "angle": "Ask which behavior a generated application's background task should guarantee before adopting a scheduling pattern.",
+          "emailSubject": "Madhav — what must a background task preserve?",
+          "emailBody": "Hi Madhav,\n\nSharing a peer engineering account with a useful design question:\nhttps://composio.dev/blog/replacing-our-postgres-queue-at-45-million-polls-a-day\n\nFor a generated app's background task, I would define acceptable delay and the result of receiving the same task twice before picking infrastructure. Which user-facing invariant would you put first? I can turn that example into a small evaluation outline."
+        },
+        {
+          "companyId": "runable",
+          "personName": "Saksham Sarda",
+          "whyThisPerson": "Together lists Saksham as Runable's cofounder; its investment account describes his product-engineering role.",
+          "angle": "Discuss the difference between work that can wait for a batch and an action whose delay or repetition changes the user outcome.",
+          "emailSubject": "Saksham — which agent task can safely wait?",
+          "emailBody": "Hi Saksham,\n\nComposio's scheduling write-up prompted a workflow question:\nhttps://composio.dev/blog/replacing-our-postgres-queue-at-45-million-polls-a-day\n\nFor one Runable task, which step could wait briefly for a batch, and which must happen immediately? I would add a repeated-delivery case before discussing the design. Happy to put those choices on one page for your team to critique."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Composio: batching polling timers",
+          "url": "https://composio.dev/blog/replacing-our-postgres-queue-at-45-million-polls-a-day",
+          "publishedAt": "2026-11-05"
+        },
+        {
+          "title": "Y Combinator: Emergent founders",
+          "url": "https://www.ycombinator.com/companies/emergent"
+        },
+        {
+          "title": "Together: Runable founders",
+          "url": "https://www.together.fund/portfolio/runable"
+        },
+        {
+          "title": "Together: Runable investment account",
+          "url": "https://www.together.fund/perspectives/insights/together-with-runable-helping-small-businesses-build-run-and-grow",
+          "publishedAt": "2026-08-26"
+        }
+      ]
+    },
+    {
       "id": "irrational-labs-agent-messaging-2026-11-04",
       "title": "Buyer experiment: explain the jobs before adding agent labels",
       "publisher": "Irrational Labs · Isabel Macdonald, via Growth Unhinged",
