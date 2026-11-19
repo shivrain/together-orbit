@@ -1,6 +1,65 @@
 {
   "feed": [
     {
+      "id": "b2b-ai-buyer-answer-check-2026-11-18",
+      "title": "Check what AI tells a buyer about your product before the demo",
+      "publisher": "Growth Unhinged · Kyle Poyar with Profound",
+      "url": "https://www.growthunhinged.com/p/the-b2b-buyer-journey-with-ai",
+      "publishedAt": "2026-11-18",
+      "checkedAt": "2026-11-19",
+      "companyIds": [
+        "scalekit",
+        "protecto"
+      ],
+      "topic": "Buyer research · pricing, product fit and integrations",
+      "kind": "Buyer data",
+      "format": "Research",
+      "summary": "Kyle Poyar and Profound analyzed 27,374 English-language prompts across six software categories, drawn from opt-in consumer panels. Their sponsor-linked analysis highlights evaluation questions about price, fit and compatibility. Prompts are not unique buyers, verified enterprise purchases or evidence of conversion impact.",
+      "whyRelevant": "A short worksheet can give an enterprise software founder something concrete to challenge: what would a prospective buyer misunderstand before speaking to the team?",
+      "engagementMove": "Offer a blank three-row worksheet for one hypothetical buyer scenario: price, product fit and integrations. Record an AI answer, its public supporting documentation and any uncertainty. Ask the founder which row to check first; this is a proposed exercise, not an audit already performed.",
+      "takeaways": [
+        "“AI tagged the prompts by topic” — the categorization uses AI; the panel sample does not establish a representative enterprise buying journey.",
+        "“what’s being said in these answers.” The author urges checking answer accuracy, beyond tracking mentions.",
+        "Suggested application: start with one buyer scenario and mark unsupported statements explicitly before proposing content changes."
+      ],
+      "discussionQuestion": "For one prospective buyer, which answer would you want verified first: cost, product fit or integration requirements?",
+      "emailSubject": "Which pre-demo answer would you check first?",
+      "emailBody": "This November 18 analysis suggests a small exercise:\nhttps://www.growthunhinged.com/p/the-b2b-buyer-journey-with-ai\n\nChoose one hypothetical buyer scenario and check three answers against public documentation: cost, product fit and integrations. Which would you want verified first? I can sketch a blank worksheet for your feedback.",
+      "recipientAngles": [
+        {
+          "companyId": "scalekit",
+          "personName": "Satya Devarakonda",
+          "whyThisPerson": "Together identifies Satya as Scalekit co-founder and CEO; its public description covers authentication and actions for AI applications.",
+          "angle": "Invite Satya to choose one developer evaluation question about agent authentication or tool access for a documentation-backed answer check.",
+          "emailSubject": "Satya — which agent-auth answer should a buyer get right?",
+          "emailBody": "Hi Satya,\n\nThis prompted a simple buyer-question exercise:\nhttps://www.growthunhinged.com/p/the-b2b-buyer-journey-with-ai\n\nFor a developer evaluating Scalekit, I would start with one hypothetical agent-to-tool workflow and list what public documentation supports about access, integration steps and cost. Which question should we check first? I can draft the blank worksheet for your critique."
+        },
+        {
+          "companyId": "protecto",
+          "personName": "Amar Kanagaraj",
+          "whyThisPerson": "Protecto identifies Amar as founder and CEO and publicly describes AI data protection and access-control products.",
+          "angle": "Ask Amar which product boundary an enterprise evaluator must understand before discussing a privacy deployment.",
+          "emailSubject": "Amar — one product boundary to clarify before a demo?",
+          "emailBody": "Hi Amar,\n\nSharing a prompt for a small evaluation exercise:\nhttps://www.growthunhinged.com/p/the-b2b-buyer-journey-with-ai\n\nFor a hypothetical Protecto buyer, I would put the intended data-protection job, required integrations and explicit product limitations on one page, using public documentation. Which boundary would you want a buyer to understand before a demo? I can sketch the worksheet around your choice."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kyle Poyar: The B2B buyer journey with AI",
+          "url": "https://www.growthunhinged.com/p/the-b2b-buyer-journey-with-ai",
+          "publishedAt": "2026-11-18"
+        },
+        {
+          "title": "Together: Scalekit founders and product",
+          "url": "https://www.together.fund/portfolio/scalekit"
+        },
+        {
+          "title": "Protecto: leadership and products",
+          "url": "https://www.protecto.ai/about/"
+        }
+      ]
+    },
+    {
       "id": "clay-meeting-prep-review-2026-11-08",
       "title": "Automate one meeting-prep task, keep the relationship owner involved",
       "publisher": "Growth Unhinged · Kyle Poyar, interviewing Clay's Osman Sheikhnureldin",
